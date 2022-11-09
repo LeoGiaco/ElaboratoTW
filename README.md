@@ -1,4 +1,5 @@
 # ElaboratoTW
+- Pensare a tema (videogiochi o cinema?) e fare che questo ogni tanto si veda nel sito, ad esempio in fase di iscrizione chiede gusti film/videogiochi con checkbox oppure tipo post divisi in generico, recensione, critica, reazione all'uscita di un film/videogioco
 - Fare mockup sia per versione mobile che desktop
 - Fare mockup mobile e DB
 - Post composto da titolo (30 caratteri + puntini), immagine, testo, autore, data
