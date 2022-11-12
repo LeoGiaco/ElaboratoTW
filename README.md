@@ -8,8 +8,10 @@
 - Pensare a cosa mettere nei footer dei mockup e capire dove vanno e dove no
 - Per la ricerca no nuova pagina ma si apre menu a tendina sotto. Comportamento simile anche per commento
 - Se clicchi su notifica comportamento varia in base a tipo notifica (segui --> pagina seguace, like/creato post --> post, commento --> post con commento)
+- Notifica è solo quando qualcuno mi segue, commenta un mio post o reagisce (like o dislike) a un mio post
 - POSSIBILE PUNTO WOW --> scelta del layout da parte dell'utente (menu a destra o sinistra, intestazione in alto o basso)
 - POSSIBILE PUNTO WOW --> Sondaggi come tipo di post
 - POSSIBILE PUNTO WOW --> Segnalazione post
 - OPZIONALE --> Nella pagina di Iscrizione fare accettazione privacy (magari ironica)
 - OPZIONALE --> Nella pagina Iscrizione chiedere 2 volte la password come verifica
+
