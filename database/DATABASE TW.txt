@@ -1,4 +1,7 @@
 VINCOLO IN POST e MESSAGGIO: almeno uno tra Testo e Media dev'esserci
 VINCOLO IN REAZIONE: non possono esserci sia like che dislike in contemporanea nè nessuno dei due 
+VINCOLO: una conversazione deve avere 2 utenti partecipanti diversi
+VINCOLO: un messaggio in una conversazione dev'essere stato inviato da uno dei due utenti partecipanti alla stessa, non da altri
+VINCOLO: ID conversazione univoco
 
 Dire che ID impostazione è l'utente?
