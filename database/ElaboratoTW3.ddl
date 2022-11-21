@@ -22,7 +22,7 @@ use AppWeb;
 create table Commento (
      ID int NOT NULL AUTO_INCREMENT,
      Testo varchar(200) not null,
-     Data date not null,
+     Data datetime not null,
      Post int NOT NULL,
      Utente varchar(50) not null,
      constraint IDCommento primary key (ID));
@@ -46,7 +46,7 @@ create table Follower (
 
 create table Impostazione (
      Utente varchar(50) not null,
-     LayoutClassico char not null,
+     LayoutClassico boolean not null,
      constraint FKScelta_ID primary key (Utente));
 
 create table Inerente (
@@ -61,7 +61,7 @@ create table Interesse (
 create table Messaggio (
      ID int NOT NULL AUTO_INCREMENT,
      Testo varchar(200),
-     Data date not null,
+     Data datetime not null,
      Media varchar(50),
      Username2 varchar(50) not null,
      Username1 varchar(50) not null,
@@ -71,7 +71,7 @@ create table Messaggio (
 create table Notifica (
      ID int NOT NULL AUTO_INCREMENT,
      Testo varchar(200) not null,
-     Data date not null,
+     Data datetime not null,
      Visualizzata char not null,
      Utente varchar(50) not null,
      Tipologia varchar(50) not null,
@@ -79,7 +79,7 @@ create table Notifica (
 
 create table Post (
      ID int NOT NULL AUTO_INCREMENT,
-     Data date not null,
+     Data datetime not null,
      Testo varchar(200),
      Media varchar(50),
      Tipologia varchar(50) not null,
@@ -94,8 +94,8 @@ create table Preferenza (
 create table Reazione (
      PostID int NOT NULL,
      Username varchar(50) not null,
-     Dislike char,
-     `Like` char,
+     Dislike boolean,
+     `Like` boolean,
      constraint IDReazione primary key (PostID, Username));
 
 create table TipologiaNotifica (
@@ -112,7 +112,7 @@ create table Utente (
      Cognome varchar(50) not null,
      Sesso char(1) not null,
      DataNascita date not null,
-     Online char not null,
+     Online boolean not null,
      constraint IDUtente_ID primary key (Username));
 
 
