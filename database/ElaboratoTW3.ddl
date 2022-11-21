@@ -3,7 +3,7 @@
 -- *--------------------------------------------
 -- * DB-MAIN version: 11.0.2              
 -- * Generator date: Sep 14 2021              
--- * Generation date: Mon Nov 21 20:13:31 2022 
+-- * Generation date: Mon Nov 21 21:40:35 2022 
 -- * LUN file: C:\Users\andre\Desktop\ProgettoWEB\ElaboratoTW\database\ERTW.lun 
 -- * Schema: Logico/1 
 -- ********************************************* 
@@ -12,18 +12,18 @@
 -- Database Section
 -- ________________ 
 
-create database Logico;
-use Logico;
+create database AppWeb;
+use AppWeb;
 
 
 -- Tables Section
 -- _____________ 
 
 create table Commento (
-     ID -- Index attribute not implemented -- not null,
+     ID int NOT NULL AUTO_INCREMENT,
      Testo varchar(200) not null,
      Data date not null,
-     Post -- Index attribute not implemented -- not null,
+     Post int NOT NULL,
      Utente varchar(50) not null,
      constraint IDCommento primary key (ID));
 
@@ -50,7 +50,7 @@ create table Impostazione (
      constraint FKScelta_ID primary key (Utente));
 
 create table Inerente (
-     Post -- Index attribute not implemented -- not null,
+     Post int NOT NULL,
      Interesse varchar(50) not null,
      constraint IDInerente primary key (Post, Interesse));
 
@@ -59,7 +59,7 @@ create table Interesse (
      constraint IDInteresse primary key (Nome));
 
 create table Messaggio (
-     ID -- Index attribute not implemented -- not null,
+     ID int NOT NULL AUTO_INCREMENT,
      Testo varchar(200),
      Data date not null,
      Media varchar(50),
@@ -69,7 +69,7 @@ create table Messaggio (
      constraint IDMessaggio primary key (ID));
 
 create table Notifica (
-     ID -- Index attribute not implemented -- not null,
+     ID int NOT NULL AUTO_INCREMENT,
      Testo varchar(200) not null,
      Data date not null,
      Visualizzata char not null,
@@ -78,7 +78,7 @@ create table Notifica (
      constraint IDNotifica primary key (ID));
 
 create table Post (
-     ID -- Index attribute not implemented -- not null,
+     ID int NOT NULL AUTO_INCREMENT,
      Data date not null,
      Testo varchar(200),
      Media varchar(50),
@@ -86,17 +86,17 @@ create table Post (
      Utente varchar(50) not null,
      constraint IDPost primary key (ID));
 
-create table Preferenze (
-     Interesse varchar(50) not null,
-     Utente varchar(50) not null,
-     constraint IDEsprime primary key (Utente, Interesse));
+create table Preferenza (
+     InterNome varchar(50) not null,
+     Username varchar(50) not null,
+     constraint IDPreferenza primary key (InterNome, Username));
 
 create table Reazione (
-     Utente varchar(50) not null,
-     Post -- Index attribute not implemented -- not null,
-     Like char,
+     PostID int NOT NULL,
+     Username varchar(50) not null,
      Dislike char,
-     constraint IDReazione primary key (Utente, Post));
+     `Like` char,
+     constraint IDReazione primary key (PostID, Username));
 
 create table TipologiaNotifica (
      Nome varchar(50) not null,
@@ -183,21 +183,21 @@ alter table Post add constraint FKCreazione
      foreign key (Utente)
      references Utente (Username);
 
-alter table Preferenze add constraint FKUtente
-     foreign key (Utente)
+alter table Preferenza add constraint FKUtentePref
+     foreign key (Username)
      references Utente (Username);
 
-alter table Preferenze add constraint FKInteresse
-     foreign key (Interesse)
+alter table Preferenza add constraint FKInteressePref
+     foreign key (InterNome)
      references Interesse (Nome);
 
-alter table Reazione add constraint FKPost
-     foreign key (Post)
-     references Post (ID);
-
-alter table Reazione add constraint FKUtente
-     foreign key (Utente)
+alter table Reazione add constraint FKUtenteReaz
+     foreign key (Username)
      references Utente (Username);
+
+alter table Reazione add constraint FKPostReaz
+     foreign key (PostID)
+     references Post (ID);
 
 -- Not implemented
 -- alter table Utente add constraint IDUtente_CHK
