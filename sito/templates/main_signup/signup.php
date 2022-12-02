@@ -22,98 +22,75 @@
             <div class="col-10 col-md-6 text-center">
                 <form action="#" method="post">
                     <div class="card">
-                        <div class="row py-2">
-                            <div class="col-lg-2">
+                        <div class="row">
+                            <div class="col-lg-2"></div>
+                            <div class="col-md-12 col-lg-3">
+                                <div class="row">
+                                    <div class="col-md-12 col-lg-3 my-auto">
+                                        <label for="nome">Nome: </label>
+                                    </div>
+                                    <div class="col-md-12 col-lg-5">
+                                        <input type="text" id="nome" name="nome" required autofocus/>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 col-lg-3 my-auto">
+                                        <label for="cognone">Cognome: </label>
+                                    </div>
+                                    <div class="col-md-12 col-lg-5">
+                                        <input type="text" id="cognome" name="cognome" required/>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 col-lg-3 my-auto">
+                                        <label for="email">Email: </label>
+                                    </div>
+                                    <div class="col-md-12 col-lg-5">
+                                        <input type="email" id="email" name="email" required/>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 col-lg-3 my-auto">
+                                        <label for="nascita">Data di nascita: </label>
+                                    </div>
+                                    <div class="col-md-12 col-lg-5">
+                                        <input type="date" id="nascita" name="nascita" required/>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 col-lg-3 my-auto">
+                                        <label for="genere">Genere: </label>
+                                    </div>
+                                    <div class="col-md-12 col-lg-5">
+                                        <label><input class="mx-1" type="radio" value="uomo"  name="genere"/>Uomo</label>
+                                        <label class="mx-1"><input class="mx-1" type="radio" value="donna" name="genere"/>Donna</label>
+                                        <label><input class="mx-1" type="radio" value="altro" name="genere"/>Altro</label>
+                                    </div>
+                                </div>
+                                <!--  -->
+                                <div class="row">
+                                    <div class="col-md-12 col-lg-3 my-auto">
+                                        <label for="username">Username: </label>
+                                    </div>
+                                    <div class="col-md-12 col-lg-5">
+                                        <input type="username" id="username" name="username" required/>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 col-lg-3 my-auto">
+                                        <label for="password">Password: </label>
+                                    </div>
+                                    <div class="col-md-12 col-lg-5">
+                                        <input type="password" id="password" name="password" required/>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <input class="btn btn-outline-success" type="submit" value="Crea nuovo account"/>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col-md-12 col-lg-3 my-auto">
-                                <label for="nome">Nome: </label>
-                            </div>
-                            <div class="col-md-12 col-lg-5">
-                                <input type="text" id="nome" name="nome" required autofocus/>
-                            </div>
-                            <div class="col-lg-2">
-                            </div>
-                        </div>
-                        <div class="row pb-2">
-                            <div class="col-lg-2">
-                            </div>
-                            <div class="col-md-12 col-lg-3 my-auto">
-                                <label for="cognone">Cognome: </label>
-                            </div>
-                            <div class="col-md-12 col-lg-5">
-                                <input type="text" id="cognome" name="cognome" required/>
-                            </div>
-                            <div class="col-lg-2">
-                            </div>
-                        </div>
-                        <div class="row pb-2">
-                            <div class="col-lg-2">
-                            </div>
-                            <div class="col-md-12 col-lg-3 my-auto">
-                                <label for="email">Email: </label>
-                            </div>
-                            <div class="col-md-12 col-lg-5">
-                                <input type="email" id="email" name="email" required/>
-                            </div>
-                            <div class="col-lg-2">
-                            </div>
-                        </div>
-                        <div class="row pb-2">
-                            <div class="col-lg-2">
-                            </div>
-                            <div class="col-md-12 col-lg-3 my-auto">
-                                <label for="nascita">Data di nascita: </label>
-                            </div>
-                            <div class="col-md-12 col-lg-5">
-                                <input type="date" id="nascita" name="nascita" required/>
-                            </div>
-                            <div class="col-lg-2">
-                            </div>
-                        </div>
-                        <div class="row pb-2">
-                            <div class="col-lg-2">
-                            </div>
-                            <div class="col-md-12 col-lg-3 my-auto">
-                                <label for="genere">Genere: </label>
-                            </div>
-                            <div class="col-md-12 col-lg-5">
-                                <label><input class="mx-1" type="radio" value="uomo"  name="genere"/>Uomo</label>
-                                <label class="mx-1"><input class="mx-1" type="radio" value="donna" name="genere"/>Donna</label>
-                                <label><input class="mx-1" type="radio" value="altro" name="genere"/>Altro</label>
-                            </div>
-                            <div class="col-lg-2">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card my-4">
-                        <div class="row py-2">
-                            <div class="col-lg-2">
-                            </div>
-                            <div class="col-md-12 col-lg-3 my-auto">
-                                <label for="username">Username: </label>
-                            </div>
-                            <div class="col-md-12 col-lg-5">
-                                <input type="username" id="username" name="username" required/>
-                            </div>
-                            <div class="col-lg-2">
-                            </div>
-                        </div>
-                        <div class="row pb-2">
-                            <div class="col-lg-2">
-                            </div>
-                            <div class="col-md-12 col-lg-3 my-auto">
-                                <label for="password">Password: </label>
-                            </div>
-                            <div class="col-md-12 col-lg-5">
-                                <input type="password" id="password" name="password" required/>
-                            </div>
-                            <div class="col-lg-2">
-                            </div>
-                        </div>
-                        <div class="row py-3">
-                            <div class="col-lg-12">
-                                <input class="btn btn-outline-success" type="submit" value="Crea nuovo account"/>
-                            </div>
+                            <div class="col-lg-2"></div>
                         </div>
                     </div>
                 </form>
