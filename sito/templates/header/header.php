@@ -13,7 +13,7 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
             </div>
-            <div class="navbar-collapse collapse order-0 order-md-0 dual-collapse2">
+            <div class="navbar-collapse collapse order-4 order-md-0 dual-collapse2">
                 <form class="d-flex">
                     <input type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn-outline-success" type="submit">Search</button>

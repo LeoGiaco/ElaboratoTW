@@ -6,7 +6,7 @@
     $templateParams["title"] = "Uv - Crea account";
 
     $templateParams["pieces"] = array(
-        SITE_ROOT . 'templates/header/header.php',
+        // SITE_ROOT . 'templates/header/header.php',
         SITE_ROOT . 'templates/main_signup/signup.php',
         SITE_ROOT . 'templates/footer/footer.php'
     );
