@@ -24,7 +24,7 @@
                     <div class="card">
                         <div class="row">
                             <div class="col-lg-2"></div>
-                            <div class="col-md-12 col-lg-3">
+                            <div class="col-lg-8">
                                 <div class="row mt-2 mb-1">
                                     <div class="col-md-12 col-lg-3 my-auto">
                                         <label for="nome">Nome: </label>
