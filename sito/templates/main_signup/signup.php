@@ -1,6 +1,6 @@
 <main>
     <div class="container-fluid p-0 overflow-hidden">
-        <header class="py-5">
+        <header>
             <div class="row">
                 <div class="col-12 col-lg-6 d-flex justify-content-center d-lg-block justify-content-lg-start" id="iscrivitiImg">
                     <img src="../../img/icon2x.svg" alt="Logo sito"/>
@@ -17,7 +17,7 @@
                 </div>
             </div>
         </header>   
-        <div class="row">
+        <div class="row my-5">
             <div class="col-1 col-md-3"></div>
             <div class="col-10 col-md-6 text-center">
                 <form action="#" method="post">
