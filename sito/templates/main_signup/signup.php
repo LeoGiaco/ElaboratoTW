@@ -25,7 +25,7 @@
                         <div class="row">
                             <div class="col-lg-2"></div>
                             <div class="col-lg-8">
-                                <div class="row mt-2 mb-1">
+                                <div class="row my-2">
                                     <div class="col-md-12 col-lg-4 my-auto">
                                         <label for="nome">Nome: </label>
                                     </div>
@@ -33,7 +33,7 @@
                                         <input type="text" id="nome" name="nome" required autofocus/>
                                     </div>
                                 </div>
-                                <div class="row my-1">
+                                <div class="row my-2">
                                     <div class="col-md-12 col-lg-4 my-auto">
                                         <label for="cognone">Cognome: </label>
                                     </div>
@@ -41,7 +41,7 @@
                                         <input type="text" id="cognome" name="cognome" required/>
                                     </div>
                                 </div>
-                                <div class="row my-1">
+                                <div class="row my-2">
                                     <div class="col-md-12 col-lg-4 my-auto">
                                         <label for="email">Email: </label>
                                     </div>
@@ -49,7 +49,7 @@
                                         <input type="email" id="email" name="email" required/>
                                     </div>
                                 </div>
-                                <div class="row my-1">
+                                <div class="row my-2">
                                     <div class="col-md-12 col-lg-4 my-auto">
                                         <label for="nascita">Data di nascita: </label>
                                     </div>
@@ -57,7 +57,7 @@
                                         <input type="date" id="nascita" name="nascita" required/>
                                     </div>
                                 </div>
-                                <div class="row my-1">
+                                <div class="row my-2">
                                     <div class="col-md-12 col-lg-4 my-auto">
                                         <label for="genere">Genere: </label>
                                     </div>
@@ -68,7 +68,7 @@
                                     </div>
                                 </div>
                                 <!--  -->
-                                <div class="row my-1">
+                                <div class="row my-2">
                                     <div class="col-md-12 col-lg-4 my-auto">
                                         <label for="username">Username: </label>
                                     </div>
@@ -76,7 +76,7 @@
                                         <input type="username" id="username" name="username" required/>
                                     </div>
                                 </div>
-                                <div class="row my-1">
+                                <div class="row my-2">
                                     <div class="col-md-12 col-lg-4 my-auto">
                                         <label for="password">Password: </label>
                                     </div>
@@ -84,7 +84,7 @@
                                         <input type="password" id="password" name="password" required/>
                                     </div>
                                 </div>
-                                <div class="row mt-1 mb-2">
+                                <div class="row my-2">
                                     <div class="col-lg-12">
                                         <input class="btn btn-outline-success" type="submit" value="Crea nuovo account"/>
                                     </div>
