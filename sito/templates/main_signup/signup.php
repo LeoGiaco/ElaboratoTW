@@ -26,42 +26,42 @@
                             <div class="col-lg-2"></div>
                             <div class="col-lg-8">
                                 <div class="row mt-2 mb-1">
-                                    <div class="col-md-12 col-lg-3 my-auto">
+                                    <div class="col-md-12 col-lg-4 my-auto">
                                         <label for="nome">Nome: </label>
                                     </div>
-                                    <div class="col-md-12 col-lg-5">
+                                    <div class="col-md-12 col-lg-8">
                                         <input type="text" id="nome" name="nome" required autofocus/>
                                     </div>
                                 </div>
                                 <div class="row my-1">
-                                    <div class="col-md-12 col-lg-3 my-auto">
+                                    <div class="col-md-12 col-lg-4 my-auto">
                                         <label for="cognone">Cognome: </label>
                                     </div>
-                                    <div class="col-md-12 col-lg-5">
+                                    <div class="col-md-12 col-lg-8">
                                         <input type="text" id="cognome" name="cognome" required/>
                                     </div>
                                 </div>
                                 <div class="row my-1">
-                                    <div class="col-md-12 col-lg-3 my-auto">
+                                    <div class="col-md-12 col-lg-4 my-auto">
                                         <label for="email">Email: </label>
                                     </div>
-                                    <div class="col-md-12 col-lg-5">
+                                    <div class="col-md-12 col-lg-8">
                                         <input type="email" id="email" name="email" required/>
                                     </div>
                                 </div>
                                 <div class="row my-1">
-                                    <div class="col-md-12 col-lg-3 my-auto">
+                                    <div class="col-md-12 col-lg-4 my-auto">
                                         <label for="nascita">Data di nascita: </label>
                                     </div>
-                                    <div class="col-md-12 col-lg-5">
+                                    <div class="col-md-12 col-lg-8">
                                         <input type="date" id="nascita" name="nascita" required/>
                                     </div>
                                 </div>
                                 <div class="row my-1">
-                                    <div class="col-md-12 col-lg-3 my-auto">
+                                    <div class="col-md-12 col-lg-4 my-auto">
                                         <label for="genere">Genere: </label>
                                     </div>
-                                    <div class="col-md-12 col-lg-5">
+                                    <div class="col-md-12 col-lg-8">
                                         <label><input class="mx-1" type="radio" value="uomo"  name="genere"/>Uomo</label>
                                         <label class="mx-1"><input class="mx-1" type="radio" value="donna" name="genere"/>Donna</label>
                                         <label><input class="mx-1" type="radio" value="altro" name="genere"/>Altro</label>
@@ -69,18 +69,18 @@
                                 </div>
                                 <!--  -->
                                 <div class="row my-1">
-                                    <div class="col-md-12 col-lg-3 my-auto">
+                                    <div class="col-md-12 col-lg-4 my-auto">
                                         <label for="username">Username: </label>
                                     </div>
-                                    <div class="col-md-12 col-lg-5">
+                                    <div class="col-md-12 col-lg-8">
                                         <input type="username" id="username" name="username" required/>
                                     </div>
                                 </div>
                                 <div class="row my-1">
-                                    <div class="col-md-12 col-lg-3 my-auto">
+                                    <div class="col-md-12 col-lg-4 my-auto">
                                         <label for="password">Password: </label>
                                     </div>
-                                    <div class="col-md-12 col-lg-5">
+                                    <div class="col-md-12 col-lg-8">
                                         <input type="password" id="password" name="password" required/>
                                     </div>
                                 </div>
