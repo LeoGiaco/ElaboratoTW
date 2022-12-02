@@ -25,7 +25,7 @@
                         <div class="row">
                             <div class="col-lg-2"></div>
                             <div class="col-lg-8">
-                                <div class="row my-2">
+                                <div class="row mt-4 mb-2">
                                     <div class="col-md-12 col-lg-4 my-auto">
                                         <label for="nome">Nome: </label>
                                     </div>
@@ -67,7 +67,7 @@
                                         <label><input class="mx-1" type="radio" value="altro" name="genere"/>Altro</label>
                                     </div>
                                 </div>
-                                <!--  -->
+                                <div class="row mx-4 my-3"></div>
                                 <div class="row my-2">
                                     <div class="col-md-12 col-lg-4 my-auto">
                                         <label for="username">Username: </label>
@@ -84,7 +84,7 @@
                                         <input type="password" id="password" name="password" required/>
                                     </div>
                                 </div>
-                                <div class="row my-2">
+                                <div class="row my-4">
                                     <div class="col-lg-12">
                                         <input class="btn btn-outline-success" type="submit" value="Crea nuovo account"/>
                                     </div>
