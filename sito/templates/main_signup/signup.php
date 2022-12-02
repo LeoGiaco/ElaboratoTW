@@ -2,11 +2,13 @@
     <div class="container-fluid p-0 overflow-hidden">
         <header class="py-5">
             <div class="row">
-                <div class="col-12 col-lg-6" id="iscrivitiImg">
+                <div class="col-12 col-lg-6 d-flex justify-content-center d-lg-block justify-content-lg-start" id="iscrivitiImg">
                     <img src="../../img/icon2x.svg" alt="Logo sito"/>
                 </div>   
-                <div class="col-12 col-lg-6" id="iscrivitiP">
-                    <p class="pt-10">Registrati ora al 1° social network italiano a tema universitario!</p>
+                <div class="col-12 col-lg-6 d-flex justify-content-center d-lg-block justify-content-lg-start" id="iscrivitiP">
+                    <p class="pt-10 w-75 text-center text-lg-start">
+                    <span class="text-uppercase fs-3 fw-bold">Registrati ora</span><span> al 1° social network italiano a tema universitario!</span>
+                    </p>
                 </div>
             </div>
             <div class="row">
