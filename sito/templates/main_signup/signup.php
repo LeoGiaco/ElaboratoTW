@@ -67,7 +67,7 @@
                                         <label><input class="mx-1" type="radio" value="altro" name="genere"/>Altro</label>
                                     </div>
                                 </div>
-                                <div class="row mx-4 my-3"></div>
+                                <div class="row mx-4 my-3 border-bottom"></div>
                                 <div class="row my-2">
                                     <div class="col-md-12 col-lg-4 my-auto">
                                         <label for="username">Username: </label>
