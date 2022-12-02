@@ -1,6 +1,6 @@
 <header>
     <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-        <div class="container-fluid">
+        <div class="container-fluid justify-content-end text-end">
             <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
@@ -14,7 +14,7 @@
                 </button>
             </div>
             <div class="navbar-collapse collapse order-4 order-md-0 dual-collapse2">
-                <form class="d-flex">
+                <form class="d-flex justify-content-end">
                     <input type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn-outline-success" type="submit">Search</button>
                 </form>
