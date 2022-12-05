@@ -1,15 +1,21 @@
 $(document).ready(function() {
     $("#button").click(function() {
-        
-        let data = getFormData("form_sign");
+        const datas = getFormData("form_sign");
+        if(new Date(datas.nascita) >= new Date()){
+            addAlert("alert","alert-danger","Data nascita errata!","");
+            return;
+        }
         $.ajax({
             type: "POST",
             url: "../templates/main_signup/signup_api.php",
-            data:  data
+            data:  datas
         })
         .done(function(data,success,response) {
-            console.log(data);
-           alert("Inserimento avventuo con succeso");
+            if(data["state"]===false){
+                addAlert("alert","alert-danger",data["msg"],"");
+            } else {
+                window.location.href="login.php?iscr=1";
+            }
         })
         .fail(function(response) {
             console.log(response);

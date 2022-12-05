@@ -26,20 +26,6 @@ function getFormData(id_form)
             $.extend(indexed_array, indexed_array_p);
         }
     }
-    else if(id_form=='form_session_generale')//caso dell'iframe
-    {
-        var window_parent = window.parent;
-
-        while(window_parent != window.top)
-            window_parent = window_parent.parent;
-
-        var $form = $("#" + id_form, window_parent.parent.document);
-        var unindexed_array = $form.serializeArray();
-
-        $.map(unindexed_array, function(n, i) {
-            indexed_array[n['name']] = n['value'];
-        });
-    }
     else
     {
         $("#"+id_form).each(function() {
@@ -58,4 +44,17 @@ function getFormData(id_form)
     }
 
     return indexed_array;
+}
+
+function addAlert(id_append,classe,message,time_remove)
+{
+    
+    var alert = $('<div class="alert '+classe+'">' + message + '</div>');
+
+    if(time_remove=='x')
+        setTimeout(function () { alert.remove(); }, 5000);
+    else if(time_remove!='' && time_remove!=undefined)
+        setTimeout(function () { alert.remove(); }, time_remove);
+
+    $('#'+id_append).html(alert);
 }

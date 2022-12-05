@@ -2,7 +2,7 @@
     <div class="container-fluid p-0 overflow-hidden">
         <header>
             <div class="row">
-                <div class="col-12 col-lg-6 d-flex justify-content-center d-lg-block justify-content-lg-start" id="iscrivitiImg">
+                <div class="mt-2 col-12 col-lg-6 d-flex justify-content-center d-lg-block justify-content-lg-start" id="iscrivitiImg">
                     <img src="../../img/icon2x.svg" alt="Logo sito"/>
                 </div>   
                 <div class="col-12 col-lg-6 d-flex justify-content-center d-lg-block justify-content-lg-start" id="iscrivitiP">
@@ -20,8 +20,9 @@
         <div class="row my-5">
             <div class="col-1 col-md-3"></div>
             <div class="col-10 col-md-6 text-center">
-                <form id="form_sign" action="#" method="post">
+                <form id="form_sign">
                     <div class="card">
+                        <div id="alert" ìrole="alert"></div>
                         <div class="row">
                             <div class="col-lg-2"></div>
                             <div class="col-lg-8">
@@ -35,7 +36,7 @@
                                 </div>
                                 <div class="row my-2">
                                     <div class="col-md-12 col-lg-4 my-auto">
-                                        <label for="cognone">Cognome: </label>
+                                        <label for="cognome">Cognome: </label>
                                     </div>
                                     <div class="col-md-12 col-lg-8">
                                         <input type="text" id="cognome" name="cognome" required/>
@@ -86,7 +87,7 @@
                                 </div>
                                 <div class="row my-4">
                                     <div class="col-lg-12">
-                                        <input id="button" class="btn btn-outline-success" type="button" value="Crea nuovo account"/>
+                                        <button id="button" class="btn btn-outline-success" type="button">Crea nuovo account</button>
                                     </div>
                                 </div>
                             </div>
