@@ -2,7 +2,7 @@ $(document).ready(function() {
     if($("#login").val()==1){
         addAlert("alert","alert-success","Iscrizione completata! Eseguire l'accesso.","");
     }
-    $("#button").click(function() {
+    $("#btnAccedi").click(function() {
         const datas = getFormData("form_login");
         $.ajax({
             type: "POST",
@@ -10,7 +10,6 @@ $(document).ready(function() {
             data:  datas
         })
         .done(function(data,success,response) {
-            console.log(data);
             if(data["state"]===false){
                 addAlert("alert","alert-danger",data["msg"],"");
             } else {
@@ -21,4 +20,10 @@ $(document).ready(function() {
             console.log(response);
         });
     });
+
+    $("#btnIscriviti").click(function() {
+        window.location.href="signup.php";
+    });
+
+
 });

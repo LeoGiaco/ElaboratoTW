@@ -7,6 +7,7 @@ if(count($mailResult)!=0){
     $loginResult = $dbh->login($_POST["email"], $_POST["password"]);
     if(count($loginResult)==1){
         $result["state"]=true;
+        registerLoggedUser($_POST["email"]);
     }
     else{
         $result["state"]=false;
@@ -20,4 +21,3 @@ else{
 header('Content-Type: application/json');
 echo json_encode($result);
 ?>
-

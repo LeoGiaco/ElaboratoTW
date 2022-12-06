@@ -21,12 +21,13 @@
         <div class="row my-5">
             <div class="col-1 col-md-3"></div>
             <div class="col-10 col-md-6 text-center">
-                <form id="form_login">
-                    <div class="card">
-                        <div id="alert" ìrole="alert"></div>
-                        <div class="row">
-                            <div class="col-lg-2"></div>
-                            <div class="col-lg-8">
+                <div id="alert" role="alert"></div>
+                <section class="card">
+                    <h2>Inserisci credenziali</h2>
+                    <div class="row">
+                        <div class="col-lg-2"></div>
+                        <div class="col-lg-8">
+                            <form id="form_login" action="" method="POST">
                                 <div class="row mt-4 mb-2">
                                     <div class="col-md-12 col-lg-4 my-auto">
                                         <label for="email">Email: </label>
@@ -45,15 +46,20 @@
                                 </div>
                                 <div class="row my-4">
                                     <div class="col-lg-12">
-                                        <button id="button" class="btn btn-outline-success" type="button">Accedi</button>
+                                        <input id="btnAccedi" type="button" class="btn btn-outline-success" value="Accedi"/>
                                     </div>
                                 </div>
+                                <div class="row my-4">
+                                    <div class="col-lg-12">
+                                        <input id="btnIscriviti" type="button" class="btn btn-outline-primary" value="Non ho un account">
+                                    </div>
+                                </div>
+                            </form>
                             </div>
                             <div class="col-lg-2"></div>
                         </div>
                     </div>
-                </form>
-            </div>
+                </section>
             <div class="col-1 col-md-3"></div>
         </div>
     </div>

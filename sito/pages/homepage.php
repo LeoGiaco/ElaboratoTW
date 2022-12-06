@@ -3,7 +3,10 @@
 
     require_once(SITE_ROOT.'bootstrap.php');
 
-    $templateParams["title"] = "Uv - Home";
+    $templateParams["title"] = "Uv-Home";
+    if(isUserLoggedIn()){
+        header("location: login.php");
+    }
 
     $templateParams["pieces"] = array(
         SITE_ROOT . 'templates/header/header.php',

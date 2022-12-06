@@ -3,7 +3,7 @@
 
     require_once(SITE_ROOT.'bootstrap.php');
 
-    $templateParams["title"] = "Uv - Login";
+    $templateParams["title"] = "Uv-Login";
     $templateParams["javascript"] = "../templates/main_login/login.js";
 
     $templateParams["pieces"] = array(

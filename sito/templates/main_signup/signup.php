@@ -20,12 +20,13 @@
         <div class="row my-5">
             <div class="col-1 col-md-3"></div>
             <div class="col-10 col-md-6 text-center">
-                <form id="form_sign">
-                    <div class="card">
-                        <div id="alert" ìrole="alert"></div>
-                        <div class="row">
-                            <div class="col-lg-2"></div>
-                            <div class="col-lg-8">
+                <div id="alert" role="alert"></div>
+                <section class="card">
+                    <h2 class="mt-2">Inserisci i dati</h2>
+                    <div class="row">
+                        <div class="col-lg-2"></div>
+                        <div class="col-lg-8">
+                            <form id="form_sign" action="" method="post">
                                 <div class="row mt-4 mb-2">
                                     <div class="col-md-12 col-lg-4 my-auto">
                                         <label for="nome">Nome: </label>
@@ -59,14 +60,14 @@
                                     </div>
                                 </div>
                                 <div class="row my-2">
-                                    <div class="col-md-12 col-lg-4 my-auto">
-                                        <label for="genere">Genere: </label>
-                                    </div>
-                                    <div class="col-md-12 col-lg-8">
-                                        <label><input class="mx-1" type="radio" value="M"  name="genere"/>Uomo</label>
-                                        <label class="mx-1"><input class="mx-1" type="radio" value="F" name="genere"/>Donna</label>
-                                        <label><input class="mx-1" type="radio" value="A" name="genere"/>Altro</label>
-                                    </div>
+                                    <fieldset>
+                                        <legend class="col-md-12 col-lg-4 my-auto">Genere:</legend>
+                                        <div id="fset" class="col-md-12 col-lg-8">
+                                            <label for="uomo"><input id="uomo" class="mx-1" type="radio" value="M"  name="genere"/>Uomo</label>
+                                            <label for="donna" class="mx-1"><input id="donna" class="mx-1" type="radio" value="F" name="genere"/>Donna</label>
+                                            <label for="altro"><input id="altro" class="mx-1" type="radio" value="A" name="genere"/>Altro</label>
+                                        </div>
+                                    </fieldset>
                                 </div>
                                 <div class="row mx-4 my-3 border-bottom"></div>
                                 <div class="row my-2">
@@ -74,7 +75,7 @@
                                         <label for="username">Username: </label>
                                     </div>
                                     <div class="col-md-12 col-lg-8">
-                                        <input type="username" id="username" name="username" required/>
+                                        <input type="text" id="username" name="username" required/>
                                     </div>
                                 </div>
                                 <div class="row my-2">
@@ -87,14 +88,14 @@
                                 </div>
                                 <div class="row my-4">
                                     <div class="col-lg-12">
-                                        <button id="button" class="btn btn-outline-success" type="button">Crea nuovo account</button>
+                                        <button id="button" class="btn btn-outline-success" type="submit">Crea nuovo account</button>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-lg-2"></div>
+                            </form>
                         </div>
+                        <div class="col-lg-2"></div>
                     </div>
-                </form>
+                </section>
             </div>
             <div class="col-1 col-md-3"></div>
         </div>

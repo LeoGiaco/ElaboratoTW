@@ -49,7 +49,8 @@ function getFormData(id_form)
 function addAlert(id_append,classe,message,time_remove)
 {
     
-    var alert = $('<div class="alert '+classe+'">' + message + '</div>');
+    var alert = $('<div class="alert '+classe+'">' + '<button type="button" class="close" data-dismiss="alert" onClick="$(this).parent().remove()">' +
+    '&times;</button>' + message + '</div>');
 
     if(time_remove=='x')
         setTimeout(function () { alert.remove(); }, 5000);
