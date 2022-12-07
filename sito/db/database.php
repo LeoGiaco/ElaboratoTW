@@ -48,5 +48,12 @@
             $stmt->execute();
             return $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
         }
+
+        public function getPostType(){
+            $query = "SELECT Nome AS cod_select, Nome AS descr_select FROM TipologiaPost ";
+            $stmt = $this->db->prepare($query);
+            $stmt->execute();
+            return $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
+        }
     }
 ?>

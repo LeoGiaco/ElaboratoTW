@@ -26,7 +26,7 @@
                     <div class="row">
                         <div class="col-lg-2"></div>
                         <div class="col-lg-8">
-                            <form id="form_sign" action="" method="post">
+                            <form id="form_sign" action="" method="POST">
                                 <div class="row mt-4 mb-2">
                                     <div class="col-md-12 col-lg-4 my-auto">
                                         <label for="nome">Nome: </label>
@@ -88,7 +88,7 @@
                                 </div>
                                 <div class="row my-4">
                                     <div class="col-lg-12">
-                                        <button id="button" class="btn btn-outline-success" type="submit">Crea nuovo account</button>
+                                        <input id="button" class="btn btn-outline-success" type="submit" value="Crea nuovo account"/>
                                     </div>
                                 </div>
                             </form>

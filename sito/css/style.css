@@ -37,3 +37,11 @@ legend{
 #fset{
     display: inline-block;
 }
+
+textarea{
+    background: #fff;
+}
+
+main{
+    background-color: azure;
+}

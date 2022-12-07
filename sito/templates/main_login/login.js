@@ -2,7 +2,8 @@ $(document).ready(function() {
     if($("#login").val()==1){
         addAlert("alert","alert-success","Iscrizione completata! Eseguire l'accesso.","");
     }
-    $("#btnAccedi").click(function() {
+
+    $("#btnAccedi").click(function(event) {
         const datas = getFormData("form_login");
         $.ajax({
             type: "POST",

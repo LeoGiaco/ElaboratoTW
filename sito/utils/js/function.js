@@ -1,3 +1,43 @@
+function select_file(file, request, filtri_data, id_select, valore, vuoto)
+{
+    if(filtri_data == "")
+        var filtri_data = {};
+    $.extend(filtri_data, {'request': request,'valore_selected': valore});
+    $.ajax({
+        type: "POST",
+        url: file,
+        data: filtri_data
+    })
+    .done(function(data, success, response) {
+        var rows = '',
+        dati = data;
+        $("#" + id_select).html('');
+
+        if(vuoto == 1)
+            $("#" + id_select).append('<option></option>');
+        if(dati != '' && dati != null)
+        {
+            for(var i = 0; i < dati.length; i++)
+            {
+                var dati_s = dati[i];
+
+                rows += '<option value="' + dati_s.cod_select + '"';
+                if(dati[i].attr_select != '' && dati[i].attr_select!= null && dati[i].attr_select!= undefined)
+                    rows += dati[i].attr_select;
+
+                if(dati_s.cod_select == valore)
+                    rows += ' selected';
+                rows += '>' + dati_s.descr_select +'</option>';
+            }
+            $("#" + id_select).append(rows);
+        }
+    })
+    .fail(function(response) {
+        return_fail(response);
+    });
+}
+
+
 function getFormData(id_form)
 {
     var indexed_array = {};
@@ -19,12 +59,6 @@ function getFormData(id_form)
             else
                 indexed_array[n['name']] = n['value'];
         });
-
-        if(id_form=='form_session_generale' && $("#form_session_generale_p").is( "form" )==true) //recupero anche i dati di sessione della somministrazione desktop se ci sono
-        {
-            var indexed_array_p = getFormData('form_session_generale_p');
-            $.extend(indexed_array, indexed_array_p);
-        }
     }
     else
     {
