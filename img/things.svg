@@ -29,7 +29,7 @@
      inkscape:document-units="mm"
      showgrid="false"
      inkscape:zoom="0.74564396"
-     inkscape:cx="657.82066"
+     inkscape:cx="606.858"
      inkscape:cy="1593.2537"
      inkscape:window-width="1920"
      inkscape:window-height="1017"
@@ -1045,7 +1045,10 @@
     </g>
     <g
        id="g41634-4-0"
-       transform="matrix(0.69834422,0,0,0.69834422,187.8047,119.84901)">
+       transform="matrix(0.69834422,0,0,0.69834422,187.8047,119.84901)"
+       inkscape:export-filename="icon1x.svg"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
       <g
          id="g13610-2-3-2-9-4"
          transform="translate(-145.13916,158.00492)">
