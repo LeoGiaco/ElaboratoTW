@@ -8,21 +8,26 @@ $(document).ready(function() {
     });
 
     $("#btnAggiungi").click(function(){
-        const datas = getFormData("formPost");
-        console.log(datas);
+        datas = getFormData("formPost");
+        file = $("#image")[0].files[0];
+        datas.append("file",file);
+        
         $.ajax({
             type: "POST",
             url: fileint,
-            data:  datas
+            data:  datas, 
+            processData: false,
+            contentType: false
         })
         .done(function(data,success,response) {
-            if(data["state"]===false){
-                alert("Errore");
-                // addAlert("alert","alert-danger",data["msg"],"");
-            } else {
-                alert("Avvenuto con successo");
-                svuota();
-            }
+            console.log(data);
+            // if(data["state"]===false){
+            //     alert("Errore");
+            //     // addAlert("alert","alert-danger",data["msg"],"");
+            // } else {
+            //     alert("Avvenuto con successo");
+            //     svuota();
+            // }
         })
         .fail(function(response) {
             console.log(response);
