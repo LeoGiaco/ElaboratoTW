@@ -14,6 +14,7 @@
                                         <h2>Crea post</h2>
                                     </header>    
                                     <div class="card">
+                                        <div id="alert" role="alert"></div>
                                         <div class="card-body">
                                             <div class="d-flex flex-start align-items-center">
                                                 <img class="rounded-circle shadow-1-strong mr-2 me-2" src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(19).webp" alt="avatar user" width="60" height="60" />

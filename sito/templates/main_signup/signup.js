@@ -8,7 +8,9 @@ $(document).ready(function() {
             $.ajax({
                 type: "POST",
                 url: "../templates/main_signup/signup_api.php",
-                data:  datas
+                data:  datas,
+                processData: false,
+                contentType: false
             })
             .done(function(data,success,response) {
                 if(data["state"]===false){

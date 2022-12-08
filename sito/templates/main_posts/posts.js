@@ -20,14 +20,12 @@ $(document).ready(function() {
             contentType: false
         })
         .done(function(data,success,response) {
-            console.log(data);
-            // if(data["state"]===false){
-            //     alert("Errore");
-            //     // addAlert("alert","alert-danger",data["msg"],"");
-            // } else {
-            //     alert("Avvenuto con successo");
-            //     svuota();
-            // }
+            if(data["state"]===false){
+                addAlert("alert","alert-danger",data["msg"],"");
+            } else {
+                addAlert("alert","alert-success","Post inserito!","");
+                svuota();
+            }
         })
         .fail(function(response) {
             console.log(response);
