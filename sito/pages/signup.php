@@ -3,7 +3,8 @@
 
     require_once(SITE_ROOT.'bootstrap.php');
 
-    $templateParams["title"] = "Uv - Crea account";
+    $templateParams["title"] = "Uv-Crea_account";
+    $templateParams["javascript"] = "../templates/main_signup/signup.js";
 
     $templateParams["pieces"] = array(
         // SITE_ROOT . 'templates/header/header.php',
