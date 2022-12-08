@@ -83,7 +83,7 @@
                                         <label for="password">Password: </label>
                                     </div>
                                     <div class="col-md-12 col-lg-8">
-                                        <input type="password" id="password" name="password" required/>
+                                        <input type="password" id="pwd" name="pwd" required/>
                                     </div>
                                 </div>
                                 <div class="row my-4">

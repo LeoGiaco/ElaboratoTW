@@ -4,7 +4,13 @@ $(document).ready(function() {
     }
 
     $("#btnAccedi").click(function(event) {
-        const datas = getFormData("form_login");
+        let password = document.createElement("input");
+        // Aggiungi un nuovo elemento al tuo form.
+        document.getElementById("form_login").appendChild(password);
+        password.name = "password";
+        password.type = "hidden"
+        password.value = CryptoJS.MD5( document.getElementById("pwd").value).toString();
+        let datas = getFormData("form_login");
         $.ajax({
             type: "POST",
             url: "../templates/main_login/login_api.php",

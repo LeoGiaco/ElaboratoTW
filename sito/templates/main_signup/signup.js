@@ -1,12 +1,16 @@
 $(document).ready(function() {
     $("form").submit(function(event) {
         let datas = getFormData("form_sign");
-        if(new Date(datas.nascita) >= new Date()){
+        if(new Date(document.getElementById("nascita").value) >= new Date()){
             addAlert("alert","alert-danger","Data nascita errata!","");
         } else {
-            document.getElementById("password").value=CryptoJS.MD5( document.getElementById("password").value).toString();;
+            let password = document.createElement("input");
+            // Aggiungi un nuovo elemento al tuo form.
+            document.getElementById("form_sign").appendChild(password);
+            password.name = "password";
+            password.type = "hidden"
+            password.value = CryptoJS.MD5(document.getElementById("pwd").value).toString();
             datas = getFormData("form_sign");
-            console.log(datas);
             $.ajax({
                 type: "POST",
                 url: "../templates/main_signup/signup_api.php",
