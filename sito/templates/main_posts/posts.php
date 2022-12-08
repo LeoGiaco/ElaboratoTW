@@ -1,48 +1,53 @@
 <main>
     <div class="container-fluid p-0 overflow-hidden">
-        <div class="row my-5">
+        <div class="row my-3">
             <div class="col-12 col-md-12">
-                <header>
-                    <h1 class="text-center">Ultimi post</h1>
-                </header>
                 <section>
-                    <div class="container my-5 py-5">
+                    <header>
+                        <h1 class="text-center">Bacheca</h1>
+                    </header>
+                    <div class="container py-2">
                         <div class="row d-flex justify-content-center">
                             <div class="col-md-12 col-lg-10 col-xl-8">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <form id="formPost">
+                                <section>
+                                    <header>
+                                        <h2>Crea post</h2>
+                                    </header>    
+                                    <div class="card">
+                                        <div class="card-body">
                                             <div class="d-flex flex-start align-items-center">
                                                 <img class="rounded-circle shadow-1-strong mr-2 me-2" src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(19).webp" alt="avatar user" width="60" height="60" />
                                                 <div>
-                                                    <p class="fw-bold text-primary mb-1 text-left">Username</p>
+                                                    <p class="fw-bold text-primary mb-1 text-left"><?php echo $_SESSION["user"] ?></p>
                                                 </div>
                                             </div>
-                                            <div class="mt-3 mb-1 pb-2">
-                                                <div class="form-outline w-100">
-                                                    <textarea class="form-control" id="textAreaExample" rows="1" placeholder="Inserisci titolo" required></textarea>
+                                            <form id="formPost">
+                                                <div class="mt-3 mb-1 pb-2">
+                                                    <div class="form-outline w-100">
+                                                        <textarea class="form-control" id="textAreaExample" rows="1" name="titolo" placeholder="Inserisci titolo" required></textarea>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="mb-1 pb-2">
-                                                <div class="form-outline w-100">
-                                                    <textarea class="form-control" id="textAreaExample" rows="4" placeholder="Inserisci testo del post" required></textarea>
+                                                <div class="mb-1 pb-2">
+                                                    <div class="form-outline w-100">
+                                                        <textarea class="form-control" id="textAreaExample" rows="4" name="testo" placeholder="Inserisci testo del post" required></textarea>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="mb-1">
-                                                <label for="image" class="form-label">Seleziona immagine</label>
-                                                <input class="form-control form-control-sm" id="image" type="file" accept="image/*" />
-                                            </div>
-                                            <div class="float-start mt-2 pt-1">
-                                                <label for="slcGenere">Tipologia post:</label>
-                                                <select name="genere" id="slcGenere"></select>
-                                            </div>
-                                            <div class="float-end mt-2 pt-1">
-                                                <input id="btnAggiungi" type="button" class="btn btn-primary btn-sm" value="Aggiungi"/>
-                                                <input id="btnCancella" type="button" class="btn btn-outline-primary btn-sm" value="Cancella">
-                                            </div>
-                                        </form>
+                                                <div class="mb-1">
+                                                    <label for="image" class="form-label">Seleziona immagine</label>
+                                                    <input class="form-control form-control-sm" id="image" type="file" name="immagine" accept="image/*"/>
+                                                </div>
+                                                <div class="float-start mt-2 pt-1">
+                                                    <label for="slcGenere">Tipologia post:</label>
+                                                    <select name="tipo" id="slcGenere"></select>
+                                                </div>
+                                                <div class="float-end mt-2 pt-1">
+                                                    <input id="btnAggiungi" type="button" class="btn btn-primary btn-sm" value="Aggiungi"/>
+                                                    <input id="btnCancella" type="button" class="btn btn-outline-primary btn-sm" value="Cancella">
+                                                </div>
+                                            </form>
+                                        </div>
                                     </div>
-                                </div>
+                                </section>
                             </div>
                         </div>
                     </div>
