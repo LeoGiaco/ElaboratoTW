@@ -21,6 +21,7 @@ $(document).ready(function() {
                 // addAlert("alert","alert-danger",data["msg"],"");
             } else {
                 alert("Avvenuto con successo");
+                svuota();
             }
         })
         .fail(function(response) {

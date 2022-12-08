@@ -64,7 +64,7 @@
             return $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
         }
 
-        public function addPost($utente, $testo, $tipo, $titolo, $media){
+        public function addPost($utente, $testo, $tipo, $titolo, $media=""){
             $query = "INSERT INTO Post (Utente, Tipologia, Media, Testo, Data, Titolo) VALUES (?,?,?,?,?,?)"; 
             $stmt = $this->db->prepare($query);
             $stmt->bind_param('ssssss', $utente, $tipo, $media, $testo, today(), $titolo);
