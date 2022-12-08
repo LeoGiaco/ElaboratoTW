@@ -1,4 +1,6 @@
+const fileint = "../templates/main_signup/signup_api.php";
 $(document).ready(function() {
+    select_file(fileint, "interessiPossibili", "", "slcInteressi", "", "");
     $("form").submit(function(event) {
         let datas = getFormData("form_sign");
         if(new Date(document.getElementById("nascita").value) >= new Date()){

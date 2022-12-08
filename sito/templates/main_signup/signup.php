@@ -69,6 +69,12 @@
                                         </div>
                                     </fieldset>
                                 </div>
+                                <div class="row my-2">
+                                    <div class="float-start mt-2 pt-1">
+                                        <label for="slcInteressi">Interessi:</label>
+                                        <select name="interessi" id="slcInteressi" multiple></select>
+                                    </div>
+                                </div>
                                 <div class="row mx-4 my-3 border-bottom"></div>
                                 <div class="row my-2">
                                     <div class="col-md-12 col-lg-4 my-auto">
