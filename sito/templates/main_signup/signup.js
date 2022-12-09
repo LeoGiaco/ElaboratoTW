@@ -3,7 +3,6 @@ $(document).ready(function() {
     setInterests();
     
     $("form").submit(function(event) {
-        event.preventDefault();
         const datas = getFormData("form_sign");
         datas.append("request", "aggiungiUtente");
         for (const value of datas.keys()) {
@@ -38,6 +37,7 @@ $(document).ready(function() {
                 console.log(response);
             });
         }
+        event.preventDefault();
     });
 });
 

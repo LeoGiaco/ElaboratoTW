@@ -17,7 +17,7 @@
                                         <div id="alert" role="alert"></div>
                                         <div class="card-body">
                                             <div class="d-flex flex-start align-items-center">
-                                                <img class="rounded-circle shadow-1-strong mr-2 me-2" src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(19).webp" alt="avatar user" width="60" height="60" />
+                                                <img class="rounded-circle shadow-1-strong mr-2 me-2" src="../../img/profilo.jpg" alt="avatar user" width="60" height="60" />
                                                 <div>
                                                     <p class="fw-bold text-primary mb-1 text-left"><?php echo $_SESSION["user"] ?></p>
                                                 </div>
