@@ -4,7 +4,7 @@ require("../../bootstrap.php");
 if($_POST["request"] == "datiTipologie") {
     $rec = $dbh->getPostType();
     $result = $rec;
-} else {
+} else if ($_POST["request"] == "nuovoPost") {
     $msg_img = "";
     try {
         if (

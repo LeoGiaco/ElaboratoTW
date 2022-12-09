@@ -1,12 +1,15 @@
-function select_file(file, request, filtri_data, id_select, valore, vuoto)
+function select_file(file, request, id_select, valore, vuoto)
 {
-    if(filtri_data == "")
-        var filtri_data = {};
-    $.extend(filtri_data, {'request': request,'valore_selected': valore});
+    const formdata = new FormData();
+    formdata.append("request",request);
+    formdata.append("valore_selected",valore);
+
     $.ajax({
         type: "POST",
         url: file,
-        data: filtri_data
+        data: formdata, 
+        processData: false,
+        contentType: false
     })
     .done(function(data, success, response) {
         var rows = '',

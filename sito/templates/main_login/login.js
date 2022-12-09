@@ -4,13 +4,9 @@ $(document).ready(function() {
     }
 
     $("#btnAccedi").click(function(event) {
-        let password = document.createElement("input");
-        // Aggiungi un nuovo elemento al tuo form.
-        document.getElementById("form_login").appendChild(password);
-        password.name = "password";
-        password.type = "hidden"
-        password.value = CryptoJS.MD5( document.getElementById("pwd").value).toString();
         let datas = getFormData("form_login");
+        datas.append("password", CryptoJS.MD5(datas.get("pwd")).toString());
+        datas.delete("pwd");
         $.ajax({
             type: "POST",
             url: "../templates/main_login/login_api.php",

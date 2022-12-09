@@ -38,6 +38,10 @@ legend{
     display: inline-block;
 }
 
+#intset{
+    display: inline-block;
+}
+
 textarea{
     background: #fff;
 }

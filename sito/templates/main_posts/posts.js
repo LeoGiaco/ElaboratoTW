@@ -1,7 +1,7 @@
 const fileint = "../templates/main_posts/posts_api.php";
 
 $(document).ready(function() {
-    select_file(fileint, "datiTipologie", "", "slcGenere", "", "");
+    select_file(fileint, "datiTipologie", "slcGenere", "", "");
     
     $("#btnCancella").click(function(){
         svuota();
@@ -11,6 +11,7 @@ $(document).ready(function() {
         datas = getFormData("formPost");
         file = $("#image")[0].files[0];
         datas.append("file",file);
+        datas.append("request","nuovoPost");
         
         $.ajax({
             type: "POST",

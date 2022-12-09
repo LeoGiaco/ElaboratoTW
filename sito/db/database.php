@@ -72,22 +72,17 @@
         }
 
         public function getInterests(){
-            $query = "SELECT Nome AS cod_select, Nome AS descr_select FROM Interesse";
+            $query = "SELECT Nome FROM Interesse";
             $stmt = $this->db->prepare($query);
             $stmt->execute();
             return $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
         }
 
-        public function addInterests($user, $interests){
-            foreach($interests as $singleInterest){
-                $query = "INSERT INTO Preferenza (InterNome, Username) VALUES (?,?)"; 
-                $stmt = $this->db->prepare($query);
-                $stmt->bind_param('ss', $singleInterest, $user);
-                if($stmt->execute() == false){
-                    return false;
-                }
-            }
-            return true;      
+        public function addInterests($user, $interest){
+            $query = "INSERT INTO Preferenza (InterNome, Username) VALUES (?,?) "; 
+            $stmt = $this->db->prepare($query);
+            $stmt->bind_param('ss', $interest, $user);
+            return $stmt->execute();      
         }
     }
 ?>

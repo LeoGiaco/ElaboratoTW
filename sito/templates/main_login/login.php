@@ -38,10 +38,10 @@
                                 </div>
                                 <div class="row my-2">
                                     <div class="col-md-12 col-lg-4 my-auto">
-                                        <label for="pwd">Password: </label>
+                                        <label for="password">Password: </label>
                                     </div>
                                     <div class="col-md-12 col-lg-8">
-                                        <input type="password" id="pwd" name="password" required/>
+                                        <input type="password" id="password" name="pwd" required/>
                                     </div>
                                 </div>
                                 <div class="row my-4">

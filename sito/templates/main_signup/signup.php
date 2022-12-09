@@ -27,7 +27,7 @@
                         <div class="col-lg-2"></div>
                         <div class="col-lg-8">
                             <form id="form_sign" action="" method="POST">
-                                <div class="row mt-4 mb-2">
+                                <div class="row mt-5 mb-2">
                                     <div class="col-md-12 col-lg-4 my-auto">
                                         <label for="nome">Nome: </label>
                                     </div>
@@ -70,10 +70,11 @@
                                     </fieldset>
                                 </div>
                                 <div class="row my-2">
-                                    <div class="float-start mt-2 pt-1">
-                                        <label for="slcInteressi">Interessi:</label>
-                                        <select name="interessi" id="slcInteressi" multiple></select>
-                                    </div>
+                                    <fieldset>
+                                        <legend class="col-md-12 col-lg-4 my-auto">Interessi:</legend>
+                                        <div id="intset" class="col-md-12 col-lg-8">
+                                        </div>
+                                    </fieldset>
                                 </div>
                                 <div class="row mx-4 my-3 border-bottom"></div>
                                 <div class="row my-2">
@@ -89,7 +90,7 @@
                                         <label for="password">Password: </label>
                                     </div>
                                     <div class="col-md-12 col-lg-8">
-                                        <input type="password" id="pwd" name="pwd" required/>
+                                        <input type="password" id="password" name="pwd" required/>
                                     </div>
                                 </div>
                                 <div class="row my-4">
