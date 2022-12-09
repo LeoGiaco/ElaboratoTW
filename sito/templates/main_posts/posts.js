@@ -1,10 +1,30 @@
 const fileint = "../templates/main_posts/posts_api.php";
 
 $(document).ready(function() {
+
+    $("#btnTop").css({
+        position: "fixed",
+        bottom: "20px",
+        right: "20px",
+        zIndex: 1
+    });
+
+    $("#btnTop").click(function() {
+        $("html, body").animate({ scrollTop: 0 }, "slow");
+        return false;
+    });
+
+      
+
+    $("#divCommento").hide();
     select_file(fileint, "datiTipologie", "slcGenere", "", "");
     
     $("#btnCancella").click(function(){
         svuota();
+    });
+
+    $("#btnCommento").click(function(){
+        $("#divCommento").toggle();
     });
 
     $("#btnAggiungi").click(function(){

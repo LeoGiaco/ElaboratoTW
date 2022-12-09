@@ -54,7 +54,7 @@ function setInterests(){
     .done(function(data,success,response) {
         const dati = data.dati;
         for(let i=0; i<dati.length; i++){
-            $("#intset").append('<label for="'+dati[i]["Nome"]+'" class="mb-1"><input id="'+dati[i]["Nome"]+'" class="mx-1" type="checkbox" value="'+dati[i]["Nome"]+'" name="'+dati[i]["Nome"]+'"/>'+dati[i]["Nome"]+'</label>')
+            $("#intset").append('<label for="'+dati[i]["Nome"]+'" class="mb-1 form-check-label"><input id="'+dati[i]["Nome"]+'" class="mx-1 form-check-input" type="checkbox" value="'+dati[i]["Nome"]+'" name="'+dati[i]["Nome"]+'"/>'+dati[i]["Nome"]+'</label>')
         }
     })
     .fail(function(response) {

@@ -6,6 +6,7 @@
                     <header>
                         <h1 class="text-center">Bacheca</h1>
                     </header>
+                    <button class="btn btn-primary rounded-circle" id="btnTop">^</button>
                     <div class="container py-2">
                         <div class="row d-flex justify-content-center">
                             <div class="col-md-12 col-lg-10 col-xl-8">
@@ -25,27 +26,80 @@
                                             <form id="formPost">
                                                 <div class="mt-3 mb-1 pb-2">
                                                     <div class="form-outline w-100">
-                                                        <textarea class="form-control" id="textAreaExample" rows="1" name="titolo" placeholder="Inserisci titolo" required></textarea>
+                                                        <label for="textAreaTitolo">Titolo: </label>
+                                                        <textarea class="form-control" id="textAreaTitolo" rows="1" name="titolo" placeholder="Inserisci titolo" required></textarea>
                                                     </div>
                                                 </div>
                                                 <div class="mb-1 pb-2">
                                                     <div class="form-outline w-100">
-                                                        <textarea class="form-control" id="textAreaExample" rows="4" name="testo" placeholder="Inserisci testo del post" required></textarea>
+                                                        <label for="textAreaTesto">Testo: </label>
+                                                        <textarea class="form-control" id="textAreaTesto" rows="4" name="testo" placeholder="Inserisci testo del post" required></textarea>
                                                     </div>
                                                 </div>
                                                 <div class="mb-1">
                                                     <label for="image" class="form-label">Seleziona immagine</label>
                                                     <input class="form-control form-control-sm" id="image" type="file" name="immagine" accept="image/*"/>
                                                 </div>
-                                                <div class="float-start mt-2 pt-1">
+                                                <div class="mt-2 pt-1">
                                                     <label for="slcGenere">Tipologia post:</label>
-                                                    <select name="tipo" id="slcGenere"></select>
+                                                    <select class="form-select form-select-sm" name="tipo" id="slcGenere"></select>
                                                 </div>
                                                 <div class="float-end mt-2 pt-1">
                                                     <input id="btnAggiungi" type="button" class="btn btn-primary btn-sm" value="Aggiungi"/>
                                                     <input id="btnCancella" type="button" class="btn btn-outline-primary btn-sm" value="Cancella">
                                                 </div>
                                             </form>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section>
+                                    <header>
+                                        <h2>ULTIMI POST</h2>
+                                    </header>
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="d-flex flex-start align-items-center">
+                                                <img class="rounded-circle shadow-1-strong mr-2 me-2" src="../../img/profilo.jpg" alt="avatar user" width="60" height="60" />
+                                                <div>
+                                                    <p class="fw-bold text-primary mb-1 text-left">Nome utente</p>
+                                                    <p class="text-muted small mb-0">Data</p>
+                                                </div>
+
+                                            </div>
+                                            <div>
+                                                <h3 class="mt-3 mb-2 pb-2">Titolo post</h3>
+                                                <p class="mt-3 mb-2 pb-2">Messaggio post</p>
+                                                <div class="small d-flex justify-content-start">
+                                                    <button class="d-flex align-items-center me-3 btn btn-outline-success btn-sm" id="btnLike">Like</button>
+                                                    <button class="d-flex align-items-center me-3 btn btn-outline-danger btn-sm" id="btnDislike">Dislike</button>
+                                                    <button class="d-flex align-items-center me-3 btn btn-outline-primary btn-sm" id="btnCommento">Commento</button>
+                                                </div>
+                                            </div>  
+                                        </div>
+                                        <div class="card-footer py-3 border-0" id="divCommento">
+                                            <div class="d-flex flex-start w-100 mb-2">
+                                                <img class="rounded-circle shadow-1-strong me-3"
+                                                    src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(19).webp" alt="Immagine profilo" width="40" height="40" />
+                                                <div class="form-outline w-100">
+                                                    <label class="form-label" for="textAreaCommento">Testo commento</label>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex flex-start w-100">       
+                                                <img class="rounded-circle shadow-1-strong me-3"
+                                                    src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(19).webp" alt="Immagine profilo" width="40" height="40" />
+                                                <div class="form-outline w-100">
+                                                    <label class="form-label" for="textAreaCommento">Commento: </label>
+                                                    <textarea class="form-control" id="textAreaCommento" rows="1" placeholder="Inserisci il testo del commento"></textarea>
+                                                </div>
+                                                </div>
+                                                <div class="float-end mt-2 pt-1">
+                                                <button type="button" class="btn btn-primary btn-sm">
+                                                    Commenta
+                                                </button>
+                                                <button type="button" class="btn btn-outline-primary btn-sm">
+                                                    Cancella
+                                                </button>
+                                            </div>
                                         </div>
                                     </div>
                                 </section>
