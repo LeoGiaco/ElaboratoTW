@@ -84,5 +84,19 @@
             $stmt->bind_param('ss', $interest, $user);
             return $stmt->execute();      
         }
+
+        public function getPosts(){
+            $query = "SELECT * FROM Post ORDER BY Data DESC";
+            $stmt = $this->db->prepare($query);
+            $stmt->execute();
+            return $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
+        }
+
+        public function addComment($utente, $post, $testo){
+            $query = "INSERT INTO Commento (Testo, Data, Post, Utente) VALUES (?, ?, ?, ?)"; 
+            $stmt = $this->db->prepare($query);
+            $stmt->bind_param('ssss', $testo, today(), $post, $utente);
+            return $stmt->execute();          
+        }
     }
 ?>

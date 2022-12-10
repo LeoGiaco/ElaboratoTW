@@ -4,7 +4,16 @@ require("../../bootstrap.php");
 if($_POST["request"] == "datiTipologie") {
     $rec = $dbh->getPostType();
     $result = $rec;
-} else if ($_POST["request"] == "nuovoPost") {
+} else if($_POST["request"] == "getPosts"){
+    $posts = $dbh->getPosts();
+    for($i=0; $i<count($posts); $i++){
+        $posts[$i]['Data']=dataoraIT($posts[$i]['Data']);
+    }
+    $result = $posts;
+} else if($_POST["request"] == "aggiungiCommento"){
+    $result = $dbh->addComment($_SESSION['user'], $_POST["nPost"], $_POST["testo"]);
+} 
+else if ($_POST["request"] == "nuovoPost") {
     $msg_img = "";
     try {
         $result["errore"]=$_POST["file"];

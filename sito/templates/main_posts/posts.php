@@ -52,55 +52,11 @@
                                         </div>
                                     </div>
                                 </section>
-                                <section>
+                                <section id="sctId">
                                     <header>
                                         <h2>ULTIMI POST</h2>
                                     </header>
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <div class="d-flex flex-start align-items-center">
-                                                <img class="rounded-circle shadow-1-strong mr-2 me-2" src="../../img/profilo.jpg" alt="avatar user" width="60" height="60" />
-                                                <div>
-                                                    <p class="fw-bold text-primary mb-1 text-left">Nome utente</p>
-                                                    <p class="text-muted small mb-0">Data</p>
-                                                </div>
-
-                                            </div>
-                                            <div>
-                                                <h3 class="mt-3 mb-2 pb-2">Titolo post</h3>
-                                                <p class="mt-3 mb-2 pb-2">Messaggio post</p>
-                                                <div class="small d-flex justify-content-start">
-                                                    <button class="d-flex align-items-center me-3 btn btn-outline-success btn-sm" id="btnLike">Like</button>
-                                                    <button class="d-flex align-items-center me-3 btn btn-outline-danger btn-sm" id="btnDislike">Dislike</button>
-                                                    <button class="d-flex align-items-center me-3 btn btn-outline-primary btn-sm" id="btnCommento">Commento</button>
-                                                </div>
-                                            </div>  
-                                        </div>
-                                        <div class="card-footer py-3 border-0" id="divCommento">
-                                            <div class="d-flex flex-start w-100 mb-2">
-                                                <img class="rounded-circle shadow-1-strong me-3"
-                                                    src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(19).webp" alt="Immagine profilo" width="40" height="40" />
-                                                <div class="form-outline w-100">
-                                                    <label class="form-label" for="textAreaCommento">Testo commento</label>
-                                                </div>
-                                            </div>
-                                            <div class="d-flex flex-start w-100">       
-                                                <img class="rounded-circle shadow-1-strong me-3"
-                                                    src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(19).webp" alt="Immagine profilo" width="40" height="40" />
-                                                <div class="form-outline w-100">
-                                                    <label class="form-label" for="textAreaCommento">Commento: </label>
-                                                    <textarea class="form-control" id="textAreaCommento" rows="1" placeholder="Inserisci il testo del commento"></textarea>
-                                                </div>
-                                                </div>
-                                                <div class="float-end mt-2 pt-1">
-                                                <button type="button" class="btn btn-primary btn-sm">
-                                                    Commenta
-                                                </button>
-                                                <button type="button" class="btn btn-outline-primary btn-sm">
-                                                    Cancella
-                                                </button>
-                                            </div>
-                                        </div>
+                                    <div id="contPosts">
                                     </div>
                                 </section>
                             </div>
