@@ -98,5 +98,52 @@
             $stmt->bind_param('ssss', $testo, today(), $post, $utente);
             return $stmt->execute();          
         }
+
+        public function getComments($idPost){
+            $query = "SELECT * FROM Commento WHERE Post=? ORDER BY Data";
+            $stmt = $this->db->prepare($query);
+            $stmt->bind_param("s", $idPost);
+            $stmt->execute();
+            return $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
+        }
+
+        public function getReactions($id){
+            $query = "SELECT PostID, SUM(CASE WHEN `Like` = 1 THEN 1 ELSE 0 END) AS NumLike, SUM(CASE WHEN Dislike = 1 THEN 1 ELSE 0 END) AS NumDislike FROM Reazione WHERE PostId = ? GROUP BY PostId";
+            $stmt = $this->db->prepare($query);
+            $stmt->bind_param("s", $id);
+            $stmt->execute();
+            return $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
+        }
+
+        public function checkReactions($user, $id){
+            $query = "SELECT * FROM `Reazione` WHERE `PostID`=? AND `Username`=?";
+            $stmt = $this->db->prepare($query);
+            $stmt->bind_param("ss", $id, $user);
+            $stmt->execute();
+            return $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
+        }
+
+        public function addLike($user, $id){
+            $like=1;
+            $dislike=0;
+            $query = "INSERT INTO `Reazione`(`PostID`, `Username`, `Dislike`, `Like`) VALUES (?, ?, ?, ?)"; 
+            $stmt = $this->db->prepare($query);
+            $stmt->bind_param('ssss', $id, $user, $dislike, $like);
+            return $stmt->execute();     
+        }
+
+        public function deleteReaction($user, $id){
+            $query = "DELETE FROM `Reazione` WHERE PostId=? AND Username=?"; 
+            $stmt = $this->db->prepare($query);
+            $stmt->bind_param('ss', $id, $user);
+            return $stmt->execute();     
+        }
+
+        public function switchReaction($user, $post, $like, $dislike){
+            $query = "UPDATE `Reazione` SET `Dislike`=?,`Like`=? WHERE PostId=? AND Username=?"; 
+            $stmt = $this->db->prepare($query);
+            $stmt->bind_param('ssss', $dislike, $like, $post, $user);
+            return $stmt->execute();    
+        }
     }
 ?>

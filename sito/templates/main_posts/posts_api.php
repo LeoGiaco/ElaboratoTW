@@ -8,10 +8,31 @@ if($_POST["request"] == "datiTipologie") {
     $posts = $dbh->getPosts();
     for($i=0; $i<count($posts); $i++){
         $posts[$i]['Data']=dataoraIT($posts[$i]['Data']);
+        $posts[$i]["reactions"]=$dbh->getReactions($posts[$i]["ID"]);
     }
-    $result = $posts;
+    $result["posts"] = $posts;
 } else if($_POST["request"] == "aggiungiCommento"){
     $result = $dbh->addComment($_SESSION['user'], $_POST["nPost"], $_POST["testo"]);
+} else if($_POST["request"] == "aggiungiLike"){
+    $risultato=$dbh->checkReactions($_SESSION['user'], $_POST["nPost"]);
+    if(empty($risultato)){
+        $dbh->addLike($_SESSION['user'], $_POST["nPost"]);
+    }
+    else {
+        if($risultato[0]["Like"]==1){
+            $dbh->deleteReaction($_SESSION['user'], $_POST["nPost"]);
+        }
+        else{
+            $dbh->switchReaction($_SESSION['user'], $_POST["nPost"], 1, 0);
+        }
+    }
+    $result["reactions"]=$dbh->getReactions($_POST["nPost"]);
+    
+} else if ($_POST["request"] == "commentiPost"){
+    $result = $dbh->getComments($_POST['idPost']);
+    for($i=0; $i<count($result); $i++){
+        $result[$i]['Data']=dataoraIT($result[$i]['Data']);
+    }
 } 
 else if ($_POST["request"] == "nuovoPost") {
     $msg_img = "";

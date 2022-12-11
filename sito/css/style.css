@@ -47,7 +47,7 @@ textarea{
 }
 
 main{
-    background-color: azure;
+    background-color: orange;
 }
 
 h3{
@@ -63,4 +63,13 @@ h3{
     bottom: 20px;
     right: 20px;
     z-index: 1;
+}
+
+.card-footer{
+    background-color: darkgray;
+}
+
+p{
+    word-wrap: break-word;
+    line-break: anywhere;
 }
