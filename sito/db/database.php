@@ -86,8 +86,16 @@
         }
 
         public function getPosts(){
-            $query = "SELECT * FROM Post ORDER BY Data DESC";
+            $query = 'SELECT p.*, u.Immagine FROM Post p JOIN Utente u ON p.Utente=u.Username ORDER BY Data DESC';
             $stmt = $this->db->prepare($query);
+            $stmt->execute();
+            return $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
+        }
+
+        public function getUserInfo($username){
+            $query = 'SELECT Immagine FROM Utente WHERE Username=?';
+            $stmt = $this->db->prepare($query);
+            $stmt->bind_param('s', $username);
             $stmt->execute();
             return $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
         }
@@ -100,7 +108,7 @@
         }
 
         public function getComments($idPost){
-            $query = "SELECT * FROM Commento WHERE Post=? ORDER BY Data";
+            $query = 'SELECT c.*, u.Immagine FROM Commento c JOIN Utente u ON c.Utente=u.Username  WHERE Post=? ORDER BY Data';
             $stmt = $this->db->prepare($query);
             $stmt->bind_param("s", $idPost);
             $stmt->execute();
@@ -123,9 +131,7 @@
             return $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
         }
 
-        public function addLike($user, $id){
-            $like=1;
-            $dislike=0;
+        public function addReaction($user, $id, $like, $dislike){
             $query = "INSERT INTO `Reazione`(`PostID`, `Username`, `Dislike`, `Like`) VALUES (?, ?, ?, ?)"; 
             $stmt = $this->db->prepare($query);
             $stmt->bind_param('ssss', $id, $user, $dislike, $like);

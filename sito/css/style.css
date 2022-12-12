@@ -73,3 +73,9 @@ p{
     word-wrap: break-word;
     line-break: anywhere;
 }
+
+.responsive {
+    max-width: 100%;
+    max-height: 400px;
+    object-fit: scale-down;
+}
