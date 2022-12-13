@@ -68,7 +68,7 @@ function visualizzaPost($numeroPost, aggiuntaPost=false){
             const temp=processaLike(dati[i]);
             const like=temp[0];
             const dislike=temp[1];
-            row += '<div id="post'+dati[i]["ID"]+'" class="card my-2">';
+            row += '<article id="post'+dati[i]["ID"]+'" class="card my-2">';
             row += '<div class="card-body"><div class="d-flex flex-start align-items-center">';
             row += '<img class="rounded-circle shadow-1-strong mr-2 me-2" src="../../img/profile_img/'+dati[i]["Immagine"]+'" alt="avatar user" width="60" height="60" />';
             row += '<div><p class="fw-bold text-primary mb-1 text-left">'+dati[i]["Utente"]+'</p>';
@@ -91,7 +91,7 @@ function visualizzaPost($numeroPost, aggiuntaPost=false){
             row += '<label class="form-label" for="inpCommento'+dati[i]["ID"]+'">Commento: </label>';
             row += '<input class="form-control" id="inpCommento'+dati[i]["ID"]+'" name="testo" placeholder="Inserisci il testo del commento"/></form></div>';
             row += '<div class="float-end mt-2 pt-1"><button type="button" class="btn btn-primary btn-sm" data-type="comS" data-numero="'+dati[i]["ID"]+'">Commenta</button>';
-            row += '</div></div></div>'; 
+            row += '</div></div></article>'; 
         }
         if(aggiuntaPost){
             $("#contPosts").html(row);
