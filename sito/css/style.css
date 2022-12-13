@@ -34,11 +34,7 @@ legend{
     font-size: inherit;
 }
 
-#fset{
-    display: inline-block;
-}
-
-#intset{
+#fset, #intset{
     display: inline-block;
 }
 
@@ -60,8 +56,8 @@ h3{
 
 #btnTop{
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: 5%;
+    right: 5%;
     z-index: 1;
 }
 

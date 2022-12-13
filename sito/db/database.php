@@ -85,9 +85,10 @@
             return $stmt->execute();      
         }
 
-        public function getPosts(){
-            $query = 'SELECT p.*, u.Immagine FROM Post p JOIN Utente u ON p.Utente=u.Username ORDER BY Data DESC';
+        public function getPosts($nPost, $limit){
+            $query = 'SELECT p.*, u.Immagine FROM Post p JOIN Utente u ON p.Utente=u.Username ORDER BY Data DESC LIMIT ?, ?';
             $stmt = $this->db->prepare($query);
+            $stmt->bind_param('ss', $nPost, $limit);
             $stmt->execute();
             return $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
         }

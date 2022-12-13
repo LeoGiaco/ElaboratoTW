@@ -1,8 +1,11 @@
 const fileint = "../templates/main_posts/posts_api.php";
+// Variabile globale per il conteggio dei post.
+postsLoaded = 0;
 
 $(document).ready(function() {
     select_file(fileint, "datiTipologie", "slcGenere", "", "");
 
+    
     const datas = new FormData(); 
     datas.append("request", "getUserInfo");
     $.ajax({
@@ -19,7 +22,14 @@ $(document).ready(function() {
         console.log(response);
     });
     
-    visualizzaPost();
+    visualizzaPost(postsLoaded);
+    
+    window.onscroll = function() {
+        if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+            visualizzaPost(postsLoaded);
+        }
+    };
+
     $("#btnTop").click(function() {
         $("html, body").animate({ scrollTop: 0 }, "slow");
     });
@@ -29,13 +39,20 @@ $(document).ready(function() {
     });
 
     $("#btnAggiungi").click(function(){
+        addAlert("alert","alert-warning","Caricamento post in corso!","");
         aggiungiPost();
+    });
+
+    $("#contPosts").on("click",'button',function(){
+        gestioneBottoni($(this));
     });
 });
 
-function visualizzaPost(){
+
+function visualizzaPost($numeroPost, aggiuntaPost=false){
     const datas = new FormData();
-    datas.append("request", "getPosts")
+    datas.append("request", "getPosts");
+    datas.append("numeroPost", $numeroPost);
     $.ajax({
         type: "POST",
         url: fileint,
@@ -45,6 +62,7 @@ function visualizzaPost(){
     })
     .done(function(data,success,response) {
         const dati=data["posts"];
+        postsLoaded+=dati.length;
         let row = '';
         for(let i=0; i<dati.length; i++){
             const temp=processaLike(dati[i]);
@@ -75,94 +93,14 @@ function visualizzaPost(){
             row += '<div class="float-end mt-2 pt-1"><button type="button" class="btn btn-primary btn-sm" data-type="comS" data-numero="'+dati[i]["ID"]+'">Commenta</button>';
             row += '</div></div></div>'; 
         }
-        $("#contPosts").html(row);
+        if(aggiuntaPost){
+            $("#contPosts").html(row);
+        } else {
+            $("#contPosts").append(row);
+        }
         $(".card-footer").hide();
 
         $("form").submit(function(event){
-            event.preventDefault();
-        });
-
-        $("#sctId button").click(function(event){
-            const btn = $(this),
-            type = btn.data('type'),
-            numero = btn.data('numero');
-            switch(type){
-                case "commento":
-                    $("#divCommento"+numero).toggle();
-                    commentiPost(numero);
-                    break;
-                case "comS":
-                    const datas = getFormData("comS"+numero);
-                    if(datas.get("testo")!=""){
-                        datas.append("request", "aggiungiCommento");
-                        datas.append("nPost", numero);
-                        $.ajax({
-                            type: "POST",
-                            url: fileint,
-                            data:  datas, 
-                            processData: false,
-                            contentType: false
-                        })
-                        .done(function(data,success,response) {
-                            $("#inpCommento"+numero).val("");
-                            commentiPost(numero);
-                        })
-                        .fail(function(response) {
-                            console.log(response);
-                        });
-                    }
-                    break;
-                case "like":
-                    const like = new FormData();
-                    like.append("request", "aggiuniReaction");
-                    like.append("nPost", numero);
-                    like.append("like", 1);
-                    like.append("dislike", 0);
-                    like.append("type", "Like");
-                    $.ajax({
-                        type: "POST",
-                        url: fileint,
-                        data:  like, 
-                        processData: false,
-                        contentType: false
-                    })
-                    .done(function(data,success,response) {
-                        const temp=processaLike(data);
-                        const like=temp[0];
-                        const dislike=temp[1];
-                        $("#btnLike"+numero).text("Like: "+like);
-                        $("#btnDislike"+numero).text("Dislike: "+dislike);
-                    })
-                    .fail(function(response) {
-                        console.log(response);
-                    });
-                    break;
-                case "dislike":
-                    const dislike = new FormData();
-                    dislike.append("request", "aggiuniReaction");
-                    dislike.append("nPost", numero);
-                    dislike.append("like", 0);
-                    dislike.append("dislike", 1);
-                    dislike.append("type", "Dislike");
-                    $.ajax({
-                        type: "POST",
-                        url: fileint,
-                        data:  dislike, 
-                        processData: false,
-                        contentType: false
-                    })
-                    .done(function(data,success,response) {
-                        const temp=processaLike(data);
-                        const like=temp[0];
-                        const dislike=temp[1];
-                        $("#btnLike"+numero).text("Like: "+like);
-                        $("#btnDislike"+numero).text("Dislike: "+dislike);
-                    })
-                    .fail(function(response) {
-                        console.log(response);
-                    });
-                    break;
-            }  
             event.preventDefault();
         });
     })
@@ -196,7 +134,6 @@ function aggiungiPost(){
         file = "";
     datas.append("file",file);
     datas.append("request","nuovoPost");
-    console.log(datas.get("titolo"));
     if(datas.get("titolo") === "" || datas.get("testo") === ""){
         addAlert("alert","alert-danger", "Completare i campi del post","");
     } else {
@@ -208,14 +145,14 @@ function aggiungiPost(){
             contentType: false
         })
         .done(function(data,success,response) {
-            console.log(data);
             if(data["state"]===false){
                 addAlert("alert","alert-danger",data["msg"],"");
             } else {
                 addAlert("alert","alert-success","Post inserito!","");
                 svuota();
             }
-            visualizzaPost();
+            postsLoaded=0;
+            visualizzaPost(postsLoaded, true);
         })
         .fail(function(response) {
             console.log(response);
@@ -235,7 +172,6 @@ function commentiPost(numero){
         contentType: false
     })
     .done(function(data,success,response) {
-        console.log(data);
         let row='';
         data.forEach(element => {
             // Manca la data del commento.
@@ -248,4 +184,87 @@ function commentiPost(numero){
     .fail(function(response) {
         console.log(response);
     });
+}
+
+function gestioneBottoni(button){
+    const btn = button,
+    type = btn.data('type'),
+    numero = btn.data('numero');
+    switch(type){
+        case "commento":
+            $("#divCommento"+numero).toggle();
+            commentiPost(numero);
+            break;
+        case "comS":
+            const datas = getFormData("comS"+numero);
+            if(datas.get("testo")!=""){
+                datas.append("request", "aggiungiCommento");
+                datas.append("nPost", numero);
+                $.ajax({
+                    type: "POST",
+                    url: fileint,
+                    data:  datas, 
+                    processData: false,
+                    contentType: false
+                })
+                .done(function(data,success,response) {
+                    $("#inpCommento"+numero).val("");
+                    commentiPost(numero);
+                })
+                .fail(function(response) {
+                    console.log(response);
+                });
+            }
+            break;
+        case "like":
+            const like = new FormData();
+            like.append("request", "aggiuniReaction");
+            like.append("nPost", numero);
+            like.append("like", 1);
+            like.append("dislike", 0);
+            like.append("type", "Like");
+            $.ajax({
+                type: "POST",
+                url: fileint,
+                data:  like, 
+                processData: false,
+                contentType: false
+            })
+            .done(function(data,success,response) {
+                const temp=processaLike(data);
+                const like=temp[0];
+                const dislike=temp[1];
+                $("#btnLike"+numero).text("Like: "+like);
+                $("#btnDislike"+numero).text("Dislike: "+dislike);
+            })
+            .fail(function(response) {
+                console.log(response);
+            });
+            break;
+        case "dislike":
+            const dislike = new FormData();
+            dislike.append("request", "aggiuniReaction");
+            dislike.append("nPost", numero);
+            dislike.append("like", 0);
+            dislike.append("dislike", 1);
+            dislike.append("type", "Dislike");
+            $.ajax({
+                type: "POST",
+                url: fileint,
+                data:  dislike, 
+                processData: false,
+                contentType: false
+            })
+            .done(function(data,success,response) {
+                const temp=processaLike(data);
+                const like=temp[0];
+                const dislike=temp[1];
+                $("#btnLike"+numero).text("Like: "+like);
+                $("#btnDislike"+numero).text("Dislike: "+dislike);
+            })
+            .fail(function(response) {
+                console.log(response);
+            });
+            break;
+    }
 }
