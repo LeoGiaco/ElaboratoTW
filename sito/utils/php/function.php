@@ -124,6 +124,7 @@ function addFile($file){
             $file_name = "";
         }
         $result["file"] = $file_name;
+        $result["errore"]="";
         return $result;
     } catch (RuntimeException $e) {
         $result["errore"]=$e->getMessage();

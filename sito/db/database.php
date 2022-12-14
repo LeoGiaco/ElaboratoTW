@@ -94,7 +94,7 @@
         }
 
         public function getUserInfo($username){
-            $query = 'SELECT Immagine FROM Utente WHERE Username=?';
+            $query = 'SELECT * FROM Utente u JOIN Preferenza p ON u.Username = p.Username WHERE u.Username=?';
             $stmt = $this->db->prepare($query);
             $stmt->bind_param('s', $username);
             $stmt->execute();

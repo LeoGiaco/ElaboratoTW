@@ -1,6 +1,6 @@
 const fileint = "../templates/main_posts/posts_api.php";
 // Variabile globale per il conteggio dei post.
-postsLoaded = 0;
+let postsLoaded = 0;
 
 $(document).ready(function() {
     select_file(fileint, "datiTipologie", "slcGenere", "", "");
@@ -177,7 +177,7 @@ function commentiPost(numero){
             // Manca la data del commento.
             row += '<div class="d-flex flex-start w-100 mb-2">';
             row += '<img class="rounded-circle shadow-1-strong me-3" src="../../img/profile_img/'+element["Immagine"]+'" alt="Immagine profilo" width="40" height="40" />';
-            row += '<div class="form-outline w-100"><p class="text-muted small mb-0">'+element.Data+'</p><p class="mb-3">'+element.Testo+'</p></div></div>';
+            row += '<div class="form-outline w-100"><p class="text-muted small mb-0">'+element.Data+'</p><p class="mb-3 comLunghi">'+element.Testo+'</p></div></div>';
         });
         $("#contComment"+numero).html(row);
     })

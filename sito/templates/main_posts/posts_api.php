@@ -61,7 +61,7 @@ switch ($_POST["request"]) {
     case 'nuovoPost':
         if(isset($_POST["testo"]) && isset($_POST["tipo"]) && isset($_POST["titolo"])  && isUserLoggedIn()){
             $rs_file = $rs_file = addFile($_FILES["file"]);
-            if($rs_file["file"]!="")
+            if($rs_file["errore"]=="")
                 $postResult = $dbh->addPost($_SESSION["user"], $_POST["testo"], $_POST["tipo"], $_POST["titolo"], $rs_file["file"]);
                 if($postResult){
                     $result["state"]=true;
