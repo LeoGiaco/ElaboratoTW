@@ -3,11 +3,12 @@
         <h1>Profilo Utente</h1>
     </header>
     <section>
+        <input id="user" type="hidden" value="<?php echo $_GET["id"]; ?>"/>
         <div class="row d-flex">
-            <div class="col-1 col-md-2"></div>
-            <div class="col-10 col-md-8">
+            <div class="col-md-1"></div>
+            <div class="col-12 col-md-10">
                 <div class="card">
-                    <div class="rounded-top text-white d-flex flex-row bg-dark">
+                    <div class="text-white bg-dark">
                         <div class="row">
                             <div class="col-3 col-md-2">
                                 <img id="imgUtente" src=""
@@ -41,24 +42,65 @@
                                 <div class="col-4">
                                     <div class="d-flex justify-content-end text-center py-1">
                                         <div class="px-3">
-                                            <p class="mb-1 h5">1026</p>
+                                            <p id="nSeguaci" class="mb-1 h5">---</p>
                                             <p class="small text-muted mb-0">Seguaci</p>
                                         </div>
                                         <div>
-                                            <p class="mb-1 h5">478</p>
+                                            <p id="nSeguiti" class="mb-1 h5">---</p>
                                             <p class="small text-muted mb-0">Seguiti</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </section>
-
                         <section class="mb-2">
                             <header>
                                 <h2>Amicizie</h2>
                             </header>
+                            <div class="container mw-100 mt-3 mr-1 p-1">
+                                <div id="accordion">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <a id="btnSeguaci" class="collapsed btn w-100" data-bs-toggle="collapse" aria-expanded="false" href="#collapseOne">
+                                                    <span class="list-item-title">Seguaci</span>
+                                                    <img class="icon icon-primary" alt="Espandi seguaci" src="../../img/expand.svg"/>
+                                            </a>
+                                        </div>
+                                        <div id="collapseOne" class="collapse" data-bs-parent="#accordion">
+                                            <div class="card-body">
+                                                <ul id="seguaci" class="list-group list-group-light">
+                                                    
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <a id="btnSeguiti" class="collapsed btn w-100" data-bs-toggle="collapse" aria-expanded="false" href="#collapseTwo">
+                                                <span class="list-item-title">Seguiti</span>
+                                                <img class="icon icon-primary" alt="Espandi seguaci" src="../../img/expand.svg"/>
+                                            </a>
+                                        </div>
+                                        <div id="collapseTwo" class="collapse" data-bs-parent="#accordion">
+                                            <div class="card-body">
+                                                <ul id="seguiti" class="list-group list-group-light">
+                                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                                        <div class="d-flex align-items-center">
+                                                        <img src="https://mdbootstrap.com/img/new/avatars/8.jpg" alt="" style="width: 45px; height: 45px"
+                                                            class="rounded-circle" />
+                                                        <div class="ms-1">
+                                                            <p class="fw-bold mb-1">Username</p>
+                                                        </div>
+                                                        </div>
+                                                        <a class="btn btn-outline-primary btn-rounded btn-sm" href="#" role="button">View</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </section>
-
                         <section>
                             <h2>Post recenti</h2>
                             <div class="row g-2">
@@ -68,7 +110,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-1 col-md-2"></div>
+            <div class="col-md-1"></div>
         </div>
     </section>
 </main>

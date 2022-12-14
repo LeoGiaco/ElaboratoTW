@@ -152,5 +152,21 @@
             $stmt->bind_param('ssss', $dislike, $like, $post, $user);
             return $stmt->execute();    
         }
+
+        public function getFollower($user){
+            $query = "SELECT Seguace AS Amico, Immagine FROM Follower f JOIN Utente u ON f.Seguace=u.Username WHERE Seguito=?";
+            $stmt = $this->db->prepare($query);
+            $stmt->bind_param("s", $user);
+            $stmt->execute();
+            return $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
+        }
+
+        public function getFollow($user){
+            $query = "SELECT Seguito AS Amico, Immagine FROM Follower f JOIN Utente u ON f.Seguito=u.Username WHERE Seguace=?";
+            $stmt = $this->db->prepare($query);
+            $stmt->bind_param("s", $user);
+            $stmt->execute();
+            return $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
+        }
     }
 ?>
