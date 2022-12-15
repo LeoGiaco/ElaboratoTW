@@ -3,6 +3,7 @@ let postsLoaded = 0;
 
 $(document).ready(function() {
     const user = $("#user").val();
+    checkFollow(user);
     listAccesibility("btnSeguaci");
     listAccesibility("btnSeguiti");
     getUserInfo(user);
@@ -15,6 +16,13 @@ $(document).ready(function() {
     $("#contPosts").on("click",'button',function(){
         gestioneBottoni($(this));
     });
+
+    $("#btnSegui").click(function(){
+        const btn = $(this),
+            type = btn.data('action');
+        modifyFollow(type, user);
+        
+    });
     
     window.onscroll = function() {
         if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
@@ -24,8 +32,54 @@ $(document).ready(function() {
     };
 });
 
+
+function modifyFollow(type, user){
+    const datas = new FormData(); 
+    datas.append("request", "modifyFollow");
+    datas.append("type", type);
+    datas.append("user", user);
+    $.ajax({
+        type: "POST",
+        url: fileint,
+        data:  datas, 
+        processData: false,
+        contentType: false
+    })
+    .done(function(data,success,response) {
+        if(data.dati){
+            checkFollow(user);
+            getFriendship(user);
+        }                
+    })
+    .fail(function(response) {
+        console.log(response);
+    });
+}
+
+function checkFollow(user){
+    const datas = new FormData(); 
+    datas.append("request", "checkFollow");
+    datas.append("user", user);
+    $.ajax({
+        type: "POST",
+        url: fileint,
+        data:  datas, 
+        processData: false,
+        contentType: false
+    })
+    .done(function(data,success,response) {
+        const dati = data.dati;
+        $("#btnSegui").prop("disabled",dati.disabled);
+        $("#btnSegui").text(dati.testo);
+        $('#btnSegui').data('action', dati.btndata);                             
+    })
+    .fail(function(response) {
+        console.log(response);
+    });
+}
+
 function addPostLoaded(){
-    postsLoaded+=10;
+    postsLoaded+=5;
 }
 
 function listAccesibility(name){

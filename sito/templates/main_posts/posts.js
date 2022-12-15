@@ -49,7 +49,7 @@ $(document).ready(function() {
 });
 
 function addPostLoaded(){
-    postsLoaded+=10;
+    postsLoaded+=5;
 }
 
 function svuota(){

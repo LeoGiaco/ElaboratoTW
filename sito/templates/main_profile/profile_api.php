@@ -22,6 +22,36 @@ switch ($_POST["request"]) {
             $result["dati"]["seguiti"] = $dbh->getFollow($_POST['user']);
         }
         break;
+    case 'checkFollow':
+        if(isset($_POST["user"]) && isUserLoggedIn()){
+            if($_POST["user"]==$_SESSION["user"]){
+                $result["dati"]["disabled"] = true;
+                $result["dati"]["testo"] = "Segui";
+            } else {
+                $check = $dbh->checkFollow($_POST['user'], $_SESSION["user"]);
+                if(count($check)==0){
+                    $result["dati"]["disabled"] = false;
+                    $result["dati"]["testo"] = "Segui";
+                    $result["dati"]["btndata"] = "f";
+                }
+                else{
+                    $result["dati"]["disabled"] = false;
+                    $result["dati"]["testo"] = "Non Seguire";
+                    $result["dati"]["btndata"] = "nf";
+                }
+            }
+        }
+        break;
+    case'modifyFollow':
+        if(isset($_POST["type"]) && isset($_POST["user"]) && isUserLoggedIn()){
+            if($_POST["type"] == "f"){
+                $result["dati"]=$dbh->addFollow($_SESSION["user"], $_POST["user"]);
+                sendEmail();
+            } else {
+                $result["dati"]=$dbh->removeFollow($_SESSION["user"], $_POST["user"]);
+            }
+        }
+        break;
 }
 
 

@@ -15,9 +15,9 @@ switch ($_POST["request"]) {
             $nPost = $_POST["numeroPost"];
             $utente = $_POST["utente"];
             if($utente==""){
-                $posts = $dbh->getPosts($nPost, 10);
+                $posts = $dbh->getPosts($nPost, 5);
             } else {
-                $posts = $dbh->getUserPosts($nPost, 10, $utente);
+                $posts = $dbh->getUserPosts($nPost, 5, $utente);
             }
             for($i=0; $i<count($posts); $i++){
                 $posts[$i]['Data']=dataoraIT($posts[$i]['Data']);

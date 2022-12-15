@@ -176,5 +176,27 @@
             $stmt->execute();
             return $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
         }
+
+        public function checkFollow($friend, $me){
+            $query = "SELECT * FROM Follower WHERE Seguace=? AND Seguito=?";
+            $stmt = $this->db->prepare($query);
+            $stmt->bind_param("ss", $me, $friend);
+            $stmt->execute();
+            return $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
+        }
+
+        public function removeFollow($me, $friend){
+            $query = "DELETE FROM Follower WHERE Seguito=? AND Seguace=?";
+            $stmt = $this->db->prepare($query);
+            $stmt->bind_param("ss", $friend, $me);
+            return $stmt->execute();
+        }
+
+        public function addFollow($me, $friend){
+            $query = "INSERT INTO Follower(Seguito, Seguace) VALUES (?,?)";
+            $stmt = $this->db->prepare($query);
+            $stmt->bind_param("ss", $friend, $me);
+            return $stmt->execute();
+        }
     }
 ?>
