@@ -1,4 +1,5 @@
 const fileint = "../templates/main_profile/profile_api.php";
+let postsLoaded = 0;
 
 $(document).ready(function() {
     const user = $("#user").val();
@@ -6,7 +7,26 @@ $(document).ready(function() {
     listAccesibility("btnSeguiti");
     getUserInfo(user);
     getFriendship(user);
+
+    // Aggiunta dei post.
+    visualizzaPost(postsLoaded);
+    addPostLoaded();
+
+    $("#contPosts").on("click",'button',function(){
+        gestioneBottoni($(this));
+    });
+    
+    window.onscroll = function() {
+        if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+            visualizzaPost(postsLoaded);
+            addPostLoaded();
+        }
+    };
 });
+
+function addPostLoaded(){
+    postsLoaded+=10;
+}
 
 function listAccesibility(name){
     $('#'+name+'[data-toggle="collapse"]').attr('aria-expanded', function() {

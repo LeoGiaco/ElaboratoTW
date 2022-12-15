@@ -11,9 +11,14 @@ switch ($_POST["request"]) {
         $result = $rec;
         break;
     case 'getPosts':
-        if(isset($_POST["numeroPost"])){
+        if(isset($_POST["numeroPost"]) && isset($_POST["utente"])){
             $nPost = $_POST["numeroPost"];
-            $posts = $dbh->getPosts($nPost, 10);
+            $utente = $_POST["utente"];
+            if($utente==""){
+                $posts = $dbh->getPosts($nPost, 10);
+            } else {
+                $posts = $dbh->getUserPosts($nPost, 10, $utente);
+            }
             for($i=0; $i<count($posts); $i++){
                 $posts[$i]['Data']=dataoraIT($posts[$i]['Data']);
                 $posts[$i]["reactions"]=$dbh->getReactions($posts[$i]["ID"]);

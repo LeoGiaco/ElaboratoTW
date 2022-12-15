@@ -7,7 +7,7 @@
         <div class="row d-flex">
             <div class="col-md-1"></div>
             <div class="col-12 col-md-10">
-                <div class="card">
+                <div class="card by-1">
                     <div class="text-white bg-dark">
                         <div class="row">
                             <div class="col-3 col-md-2">
@@ -103,8 +103,7 @@
                         </section>
                         <section>
                             <h2>Post recenti</h2>
-                            <div class="row g-2">
-                                Inserirre i post recenti.
+                            <div id="contPosts">
                             </div>
                         </section>
                     </div>
