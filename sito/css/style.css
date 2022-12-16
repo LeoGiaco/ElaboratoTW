@@ -75,3 +75,7 @@ h3{
     max-height: 400px;
     object-fit: scale-down;
 }
+
+footer img{
+    width: 4%;
+}

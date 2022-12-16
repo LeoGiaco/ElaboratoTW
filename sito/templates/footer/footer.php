@@ -3,7 +3,9 @@
     <div class="container p-4 pb-0">
         <!-- Github -->
         <div class="mb-4">
-            <button class="btn btn-outline-light btn-floating m-1"></button>
+            <a href="https://github.com/LeoGiaco/ElaboratoTW" target="_blank">
+                <img class="bg-light rounded border" src="../../img/github.svg" alt="GitHub">
+            </a>
         </div>
         <!-- Section: Social media -->
     </div>
