@@ -11,7 +11,6 @@ $(document).ready(function() {
 
     // Aggiunta dei post.
     visualizzaPost(postsLoaded);
-    addPostLoaded();
 
     $("#contPosts").on("click",'button',function(){
         gestioneBottoni($(this));
@@ -27,7 +26,6 @@ $(document).ready(function() {
     window.onscroll = function() {
         if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
             visualizzaPost(postsLoaded);
-            addPostLoaded();
         }
     };
 });
@@ -76,10 +74,6 @@ function checkFollow(user){
     .fail(function(response) {
         console.log(response);
     });
-}
-
-function addPostLoaded(){
-    postsLoaded+=5;
 }
 
 function listAccesibility(name){

@@ -1,39 +1,42 @@
 <?php
 require("../../bootstrap.php");
-if($_POST["request"] == "interessiPossibili") {
-    $rec = $dbh->getInterests();
-    $result["dati"] = $rec;
-} else if($_POST["request"] == "aggiungiUtente"){
-    if(isset($_POST["username"]) && isset($_POST["email"]) && isset($_POST["nome"]) && isset($_POST["cognome"]) && isset($_POST["genere"]) && isset($_POST["nascita"]) && isset($_POST["password"])){
-        $userResult = $dbh->checkUserAbsent($_POST["username"]);
-        if(count($userResult)==0){
-            $mailResult = $dbh->checkMailAbsent($_POST["email"]);
-            if(count($mailResult)==0){
-                $state = $dbh->addUser($_POST["username"], $_POST["nome"], $_POST["cognome"], $_POST["genere"], $_POST["nascita"], $_POST["email"], $_POST["password"]);
-                $state2 = $dbh->addCredentials($_POST["username"], $_POST["email"], $_POST["password"]);            
-                $val = $dbh->getInterests();
-                foreach ($val as $value) {
-                    if(!empty($_POST[$value["Nome"]])){
-                        $state3= $dbh->addInterests($_POST["username"], $_POST[$value["Nome"]]);
+
+if(isset($_POST["request"])){
+    if($_POST["request"] == "interessiPossibili") {
+        $rec = $dbh->getInterests();
+        $result["dati"] = $rec;
+    } else if($_POST["request"] == "aggiungiUtente"){
+        if(isset($_POST["username"]) && isset($_POST["email"]) && isset($_POST["nome"]) && isset($_POST["cognome"]) && isset($_POST["genere"]) && isset($_POST["nascita"]) && isset($_POST["password"])){
+            $userResult = $dbh->checkUserAbsent($_POST["username"]);
+            if(count($userResult)==0){
+                $mailResult = $dbh->checkMailAbsent($_POST["email"]);
+                if(count($mailResult)==0){
+                    $state = $dbh->addUser($_POST["username"], $_POST["nome"], $_POST["cognome"], $_POST["genere"], $_POST["nascita"], $_POST["email"], $_POST["password"]);
+                    $state2 = $dbh->addCredentials($_POST["username"], $_POST["email"], $_POST["password"]);            
+                    $val = $dbh->getInterests();
+                    foreach ($val as $value) {
+                        if(!empty($_POST[$value["Nome"]])){
+                            $state3= $dbh->addInterests($_POST["username"], $_POST[$value["Nome"]]);
+                        }
                     }
-                }
-                if($state && $state2 && $state3){
-                    $result["state"]=true;
+                    if($state && $state2 && $state3){
+                        $result["state"]=true;
+                    }
+                    else{
+                        $result["state"]=false;
+                        $result["msg"]="Errore di inserimento del nuovo utente!";
+                    }
                 }
                 else{
                     $result["state"]=false;
-                    $result["msg"]="Errore di inserimento del nuovo utente!";
+                    $result["msg"]="Errore! Mail duplicata!";
                 }
+                
             }
             else{
                 $result["state"]=false;
-                $result["msg"]="Errore! Mail duplicata!";
+                $result["msg"]="Errore! Username già presente!";
             }
-            
-        }
-        else{
-            $result["state"]=false;
-            $result["msg"]="Errore! Username già presente!";
         }
     }
 }

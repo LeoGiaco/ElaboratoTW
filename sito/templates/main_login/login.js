@@ -3,7 +3,7 @@ $(document).ready(function() {
         addAlert("alert","alert-success","Iscrizione completata! Eseguire l'accesso.","");
     }
 
-    $("#btnAccedi").click(function(event) {
+    $("#form_login").submit(function(event) {
         let datas = getFormData("form_login");
         datas.append("password", CryptoJS.MD5(datas.get("pwd")).toString());
         datas.delete("pwd");
@@ -24,6 +24,7 @@ $(document).ready(function() {
         .fail(function(response) {
             console.log(response);
         });
+        event.preventDefault();
     });
 
     $("#btnIscriviti").click(function() {

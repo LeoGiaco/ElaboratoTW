@@ -27,7 +27,7 @@
                     <div class="row">
                         <div class="col-lg-2"></div>
                         <div class="col-lg-8">
-                            <form id="form_login" action="" method="POST">
+                            <form id="form_login">
                                 <div class="row mt-4 mb-2">
                                     <div class="col-md-12 col-lg-4 my-auto">
                                         <label for="email">Email: </label>
@@ -46,15 +46,15 @@
                                 </div>
                                 <div class="row my-4">
                                     <div class="col-lg-12">
-                                        <input id="btnAccedi" type="button" class="btn btn-outline-success" value="Accedi"/>
+                                        <input type="submit" class="btn btn-outline-success" value="Accedi"/>
                                     </div>
                                 </div>
+                            </form>
                                 <div class="row my-4">
                                     <div class="col-lg-12">
                                         <input id="btnIscriviti" type="button" class="btn btn-outline-primary" value="Non ho un account">
                                     </div>
                                 </div>
-                            </form>
                             </div>
                             <div class="col-lg-2"></div>
                         </div>

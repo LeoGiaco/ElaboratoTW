@@ -22,11 +22,9 @@ $(document).ready(function() {
     });
     
     visualizzaPost(postsLoaded);
-    addPostLoaded();
     window.onscroll = function() {
         if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
             visualizzaPost(postsLoaded);
-            addPostLoaded();
         }
     };
 
@@ -47,10 +45,6 @@ $(document).ready(function() {
         gestioneBottoni($(this));
     });
 });
-
-function addPostLoaded(){
-    postsLoaded+=5;
-}
 
 function svuota(){
     $("#formPost")[0].reset();
@@ -82,7 +76,6 @@ function aggiungiPost(){
             }
             postsLoaded=0;
             visualizzaPost(postsLoaded, true);
-            addPostLoaded();
         })
         .fail(function(response) {
             console.log(response);
