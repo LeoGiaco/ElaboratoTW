@@ -39,6 +39,10 @@ $(document).ready(function() {
         }
         event.preventDefault();
     });
+
+    $("#btnLogin").click(function() {
+        window.location.href="login.php";
+    });
 });
 
 function setInterests(){

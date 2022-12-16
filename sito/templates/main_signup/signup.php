@@ -99,6 +99,11 @@
                                     </div>
                                 </div>
                             </form>
+                            <div class="row my-4">
+                                <div class="col-lg-12">
+                                    <input id="btnLogin" type="button" class="btn btn-outline-primary" value="Ho già un account">
+                                </div>
+                            </div>
                         </div>
                         <div class="col-lg-2"></div>
                     </div>
