@@ -22,9 +22,11 @@ $(document).ready(function() {
     });
     
     visualizzaPost(postsLoaded);
+    postsLoaded += 5;
     window.onscroll = function() {
-        if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+        if (window.innerHeight + window.scrollY >= document.body.offsetHeight-10) {
             visualizzaPost(postsLoaded);
+            postsLoaded += 5;
         }
     };
 
@@ -76,6 +78,7 @@ function aggiungiPost(){
             }
             postsLoaded=0;
             visualizzaPost(postsLoaded, true);
+            postsLoaded += 5;
         })
         .fail(function(response) {
             console.log(response);

@@ -128,7 +128,6 @@ function visualizzaPost(numeroPost, aggiuntaPost=false, utente=""){
     })
     .done(function(data,success,response) {
         const dati=data["posts"];
-        postsLoaded+=dati.length;
         let row = '';
         for(let i=0; i<dati.length; i++){
             const temp=processaLike(dati[i]);

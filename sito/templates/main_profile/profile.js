@@ -10,7 +10,8 @@ $(document).ready(function() {
     getFriendship(user);
 
     // Aggiunta dei post.
-    visualizzaPost(postsLoaded);
+    visualizzaPost(postsLoaded, false, user);
+    postsLoaded += 5;
 
     $("#contPosts").on("click",'button',function(){
         gestioneBottoni($(this));
@@ -24,8 +25,9 @@ $(document).ready(function() {
     });
     
     window.onscroll = function() {
-        if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
-            visualizzaPost(postsLoaded);
+        if (window.innerHeight + window.scrollY >= document.body.offsetHeight-10) {
+            visualizzaPost(postsLoaded, false, user);
+            postsLoaded += 5;
         }
     };
 });
