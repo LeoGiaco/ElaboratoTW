@@ -8,11 +8,6 @@ $(document).ready(function() {
         for (const value of datas.keys()) {
             console.log(value);
           }
-        // const arr = Array();
-        // $("input:checkbox[name=interessi]:checked").each(function(){
-        //     arr.push($(this).val());
-        // });
-        // datas.append("interessi", arr);
         if(new Date(datas.get("nascita")) >= new Date()){
             addAlert("alert","alert-danger","Data nascita errata!","");
         } else {

@@ -2,6 +2,11 @@ footer{
     clear: both;
 }
 
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
 header>img{
     width: 15%;
     height: 15%;
@@ -77,5 +82,8 @@ h3{
 }
 
 footer img{
-    width: 4%;
+    max-width: 15%;
+    min-width: 3%;
 }
+
+

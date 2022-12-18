@@ -20,7 +20,7 @@
                                             <div class="d-flex flex-start align-items-center">
                                                 <img id="userImage" class="rounded-circle shadow-1-strong mr-2 me-2" src="../../img/profile_img/profilo.jpg" alt="avatar user" width="60" height="60" />
                                                 <div>
-                                                    <p class="fw-bold text-primary mb-1 text-left"><?php echo $_SESSION["user"] ?></p>
+                                                    <p class="fw-bold mb-1 text-left"><?php echo $_SESSION["user"] ?></p>
                                                 </div>
                                             </div>
                                             <form id="formPost">
@@ -55,6 +55,10 @@
                                 <section id="sctId">
                                     <header>
                                         <h2>ULTIMI POST</h2>
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" id="allPost">
+                                            <label class="form-check-label" for="allPost">Visualizza solo i post dei seguiti</label>
+                                        </div>
                                     </header>
                                     <div id="contPosts">
                                     </div>

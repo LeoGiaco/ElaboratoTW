@@ -21,11 +21,11 @@ $(document).ready(function() {
         console.log(response);
     });
     
-    visualizzaPost(postsLoaded);
+    visualizzaPost(postsLoaded, false, "", false);
     postsLoaded += 5;
     window.onscroll = function() {
-        if (window.innerHeight + window.scrollY >= document.body.offsetHeight-10) {
-            visualizzaPost(postsLoaded);
+        if (window.innerHeight + window.scrollY >= document.body.offsetHeight-5) {
+            visualizzaPost(postsLoaded, false, "", $("#allPost").is(":checked"));
             postsLoaded += 5;
         }
     };
@@ -46,6 +46,19 @@ $(document).ready(function() {
     $("#contPosts").on("click",'button',function(){
         gestioneBottoni($(this));
     });
+
+    $("#allPost").change(function() {
+        if($(this).is(":checked")){
+            postsLoaded=0;
+            visualizzaPost(postsLoaded, true, "", true);
+            postsLoaded+=5;
+        } else {
+            postsLoaded=0;
+            visualizzaPost(postsLoaded, true, "", false);
+            postsLoaded+=5;
+        }
+    });
+
 });
 
 function svuota(){
@@ -77,7 +90,8 @@ function aggiungiPost(){
                 svuota();
             }
             postsLoaded=0;
-            visualizzaPost(postsLoaded, true);
+            visualizzaPost(postsLoaded, true, "", $("#allPost").is(":checked"));
+            console.log($("#allPost").is(":checked"));
             postsLoaded += 5;
         })
         .fail(function(response) {

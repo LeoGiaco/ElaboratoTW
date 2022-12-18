@@ -11,12 +11,16 @@ if(isset($_POST["request"])){
             $result = $rec;
             break;
         case 'getPosts':
-            if(isset($_POST["numeroPost"]) && isset($_POST["utente"])){
+            if(isset($_POST["numeroPost"]) && isset($_POST["utente"]) && isset($_POST["checked"])){
                 $nPost = $_POST["numeroPost"];
                 $utente = $_POST["utente"];
-                if($utente==""){
+                $checked = $_POST["checked"];
+                if($utente=="" && $checked=="false"){
                     $posts = $dbh->getPosts($nPost, 5);
-                } else {
+                } else if($checked=="true"){
+                    $posts = $dbh->getPostsFollow($nPost, 5, $_SESSION["user"]);
+                }
+                else{
                     $posts = $dbh->getUserPosts($nPost, 5, $utente);
                 }
                 for($i=0; $i<count($posts); $i++){

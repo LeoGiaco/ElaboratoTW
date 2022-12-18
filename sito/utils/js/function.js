@@ -1,4 +1,5 @@
 const fileintPost = "../templates/main_posts/posts_api.php";
+const fileProfile = "profile.php";
 function select_file(file, request, id_select, valore, vuoto)
 {
     const formdata = new FormData();
@@ -103,9 +104,17 @@ function commentiPost(numero){
         let row='';
         data.forEach(element => {
             // Manca la data del commento.
-            row += '<div class="d-flex flex-start w-100 mb-2">';
-            row += '<img class="rounded-circle shadow-1-strong me-3" src="../../img/profile_img/'+element["Immagine"]+'" alt="Immagine profilo" width="40" height="40" />';
-            row += '<div class="form-outline w-100"><p class="text-muted small mb-0">'+element.Data+'</p><p class="mb-3 comLunghi">'+element.Testo+'</p></div></div>';
+            row += `
+                <div class="d-flex flex-start w-100 mb-2">
+                    <a href="${fileProfile}?id=${element.Utente}">
+                        <img class="rounded-circle shadow-1-strong me-3" src="../../img/profile_img/${element["Immagine"]}" alt="Immagine profilo" width="40" height="40" />
+                    </a>
+                    <div class="form-outline w-100">
+                        <p class="text-muted small mb-0">${element.Data}</p>
+                        <p class="mb-3 comLunghi">${element.Testo}</p>
+                    </div>
+                </div>
+            `;
         });
         $("#contComment"+numero).html(row);
     })
@@ -114,11 +123,12 @@ function commentiPost(numero){
     });
 }
 
-function visualizzaPost(numeroPost, aggiuntaPost=false, utente=""){
+function visualizzaPost(numeroPost, aggiuntaPost=false, utente="", checked=false){
     const datas = new FormData();
     datas.append("request", "getPosts");
     datas.append("numeroPost", numeroPost);
     datas.append("utente", utente);
+    datas.append("checked", checked);
     $.ajax({
         type: "POST",
         url: fileintPost,
@@ -133,30 +143,44 @@ function visualizzaPost(numeroPost, aggiuntaPost=false, utente=""){
             const temp=processaLike(dati[i]);
             const like=temp[0];
             const dislike=temp[1];
-            row += '<article id="post'+dati[i]["ID"]+'" class="card my-2">';
-            row += '<div class="card-body"><div class="d-flex flex-start align-items-center">';
-            row += '<img class="rounded-circle shadow-1-strong mr-2 me-2" src="../../img/profile_img/'+dati[i]["Immagine"]+'" alt="avatar user" width="60" height="60" />';
-            row += '<div><p class="fw-bold text-primary mb-1 text-left">'+dati[i]["Utente"]+'</p>';
-            row += '<p class="text-muted small mb-0">'+dati[i]["Data"]+'</p></div></div>';
-            row += '<div><h3 class="mt-3 mb-2 pb-2">'+dati[i]["Titolo"]+'</h3>';
+            row += ` <article id="post${dati[i]["ID"]}" class="card my-2">
+                        <div class="card-body"><div class="d-flex flex-start align-items-center">
+                            <a href="${fileProfile}?id=${dati[i]["Utente"]}"><img class="rounded-circle shadow-1-strong mr-2 me-2" src="../../img/profile_img/${dati[i]["Immagine"]}" alt="avatar user" width="60" height="60" /></a>
+                            <div>
+                                <a href="${fileProfile}?id=${dati[i]["Utente"]}"><p class="fw-bold mb-1 text-left">${dati[i]["Utente"]}</p></a>
+                                <p class="text-muted small mb-0">${dati[i]["Data"]}</p>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="mt-3 mb-2 pb-2">${dati[i]["Titolo"]}</h3>
+            `;
             if(dati[i]["Media"]!==""){
-                row += '<div class="text-center"><img src="../../img/post_img/'+dati[i]["Media"]+'" alt="Immagine del post intitolato:'+dati[i]["Titolo"]+'" class="responsive"/></div>';
+                row += `<div class="text-center">
+                            <img src="../../img/post_img/${dati[i]["Media"]}" alt="Immagine del post intitolato:${dati[i]["Titolo"]}" class="responsive"/>
+                        </div>`;
             }
-            row += '<p class="mt-3 mb-2 pb-2">'+dati[i]["Testo"]+'</p>';
-            row += '<div class="small d-flex justify-content-start">';
-            row += '<button id="btnLike'+dati[i]["ID"]+'" class="d-flex align-items-center me-3 btn btn-outline-success btn-sm" data-type="like" data-numero="'+dati[i]["ID"]+'" >Like: '+like+'</button>';
-            row += '<button id="btnDislike'+dati[i]["ID"]+'" class="d-flex align-items-center me-3 btn btn-outline-danger btn-sm" data-type="dislike" data-numero="'+dati[i]["ID"]+'">Dislike: '+dislike+'</button>';
-            row += '<button class="d-flex align-items-center me-3 btn btn-outline-primary btn-sm" data-type="commento" data-numero="'+dati[i]["ID"]+'">Commento</button></div></div>';
-            row += '</div>';
-            // Sezione commenti
-            row += '<div class="card-footer py-3 border-0 collapse" id="divCommento'+dati[i]["ID"]+'">';
-            row += '<div id="contComment'+dati[i]["ID"]+'"></div>';
-            row += '<div class="d-flex flex-start w-100">';
-            row += '<form id="comS'+dati[i]["ID"]+'" class="form-outline w-100">';
-            row += '<label class="form-label" for="inpCommento'+dati[i]["ID"]+'">Commento: </label>';
-            row += '<input class="form-control" id="inpCommento'+dati[i]["ID"]+'" name="testo" placeholder="Inserisci il testo del commento"/></form></div>';
-            row += '<div class="float-end mt-2 pt-1"><button type="button" class="btn btn-primary btn-sm" data-type="comS" data-numero="'+dati[i]["ID"]+'">Commenta</button>';
-            row += '</div></div></article>'; 
+            row += `<p class="mt-3 mb-2 pb-2">${dati[i]["Testo"]}</p>
+                    <div class="small d-flex justify-content-start">
+                        <button id="btnLike${dati[i]["ID"]}" class="d-flex align-items-center me-3 btn btn-outline-success btn-sm" data-type="like" data-numero="${dati[i]["ID"]}" >Like: ${like}</button>
+                        <button id="btnDislike${dati[i]["ID"]}" class="d-flex align-items-center me-3 btn btn-outline-danger btn-sm" data-type="dislike" data-numero="${dati[i]["ID"]}">Dislike: ${dislike}</button>
+                        <button class="d-flex align-items-center me-3 btn btn-outline-primary btn-sm" data-type="commento" data-numero="${dati[i]["ID"]}">Commento</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer py-3 border-0 collapse" id="divCommento${dati[i]["ID"]}">
+                <div id="contComment${dati[i]["ID"]}"></div>
+                <div class="d-flex flex-start w-100">
+                    <form id="comS${dati[i]["ID"]}" class="form-outline w-100">
+                        <label class="form-label" for="inpCommento${dati[i]["ID"]}">Commento: </label>
+                        <input class="form-control" id="inpCommento${dati[i]["ID"]}" name="testo" placeholder="Inserisci il testo del commento"/>
+                    </form>
+                </div>
+                <div class="float-end mt-2 pt-1">
+                    <button type="button" class="btn btn-primary btn-sm" data-type="comS" data-numero="${dati[i]["ID"]}">Commenta</button>
+                </div>
+            </div>
+        </article>
+            `;                  
         }
         if(aggiuntaPost){
             $("#contPosts").html(row);
@@ -172,6 +196,7 @@ function visualizzaPost(numeroPost, aggiuntaPost=false, utente=""){
         console.log(response);
     });
 }
+
 
 function gestioneBottoni(button){
     const btn = button,

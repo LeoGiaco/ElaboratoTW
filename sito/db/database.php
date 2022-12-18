@@ -101,6 +101,14 @@
             return $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
         }
 
+        public function getPostsFollow($nPost, $limit, $id){
+            $query = 'SELECT p.*, u.Immagine FROM Post p JOIN Utente u ON p.Utente=u.Username WHERE p.Utente in (SELECT Seguito FROM Follower WHERE Seguace=?) ORDER BY Data DESC LIMIT ?, ?';
+            $stmt = $this->db->prepare($query);
+            $stmt->bind_param('sss', $id, $nPost, $limit);
+            $stmt->execute();
+            return $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
+        }
+
         public function getUserInfo($username){
             $query = 'SELECT * FROM Utente u JOIN Preferenza p ON u.Username = p.Username WHERE u.Username=?';
             $stmt = $this->db->prepare($query);

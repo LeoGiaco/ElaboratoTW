@@ -5,6 +5,7 @@
 
     $templateParams["title"] = "Uv-Home";
     $templateParams["javascript"] = "../templates/main_posts/posts.js";
+    $templateParams["jsHeader"] = "../templates/header/header.js";
     if(!isUserLoggedIn()){
         header("location: login.php");
     }

@@ -1,7 +1,7 @@
 <?php
-    use PHPMailer\PHPMailer\PHPMailer;
-    use PHPMailer\PHPMailer\SMTP;
-    use PHPMailer\PHPMailer\Exception;
+    // use PHPMailer\PHPMailer\PHPMailer;
+    // use PHPMailer\PHPMailer\SMTP;
+    // use PHPMailer\PHPMailer\Exception;
 
     function ora($ore)
     {
@@ -136,21 +136,21 @@
         }
     }
 
-    function sendEmail($email, $username, $tipeMessage, $seguace="", $titoloPost="", $testoCommento=""){
-        if($tipeMessage=="follow"){
-            $subject="Nuovo Seguace";
-            $body="Grande notizia ".$seguace." ha iniaizato a seguirti"; // Possibilità di abbellire con html
-        } else if($tipeMessage=="signup"){
-            $subject="Benvenuto";
-            $body=$username." siamo fieri di darti il benvenuto nel nostro social network"; // Possibilità di abbellire con html
-        } else if($tipeMessage=="reazione"){
-            $subject="Reazione";
-            $body="E' stata reaggiunta una reazione al tuo post intitilato: ".$titoloPost; // Possibilità di abbellire con html
-        }else if($tipeMessage=="commento"){
-            $subject="Nuovo commento!";
-            $body="E' stato aggiunto il seguente commento: ".$testoCommento." al post intitolato: ".$titoloPost."!"; // Possibilità di abbellire con html
-        }
+    // function sendEmail($email, $username, $tipeMessage, $seguace="", $titoloPost="", $testoCommento=""){
+    //     if($tipeMessage=="follow"){
+    //         $subject="Nuovo Seguace";
+    //         $body="Grande notizia ".$seguace." ha iniaizato a seguirti"; // Possibilità di abbellire con html
+    //     } else if($tipeMessage=="signup"){
+    //         $subject="Benvenuto";
+    //         $body=$username." siamo fieri di darti il benvenuto nel nostro social network"; // Possibilità di abbellire con html
+    //     } else if($tipeMessage=="reazione"){
+    //         $subject="Reazione";
+    //         $body="E' stata reaggiunta una reazione al tuo post intitilato: ".$titoloPost; // Possibilità di abbellire con html
+    //     }else if($tipeMessage=="commento"){
+    //         $subject="Nuovo commento!";
+    //         $body="E' stato aggiunto il seguente commento: ".$testoCommento." al post intitolato: ".$titoloPost."!"; // Possibilità di abbellire con html
+    //     }
 
-        // Codice per email.
-    }
+    //     // Codice per email.
+    // }
 ?>

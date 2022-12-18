@@ -17,9 +17,16 @@
                 </button>
             </div>
             <div class="navbar-collapse collapse order-4 order-md-0 dual-collapse2">
-                <form class="d-flex justify-content-end">
-                    <input type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
+                <form id="form_search" class="d-flex justify-content-end" >
+                    <input list="profiles" type="search" placeholder="Cerca nome utente" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Cerca</button>
+                    <datalist id="profiles">
+                        <option value="Edge">
+                        <option value="Firefox">
+                        <option value="Chrome">
+                        <option value="Opera">
+                        <option value="Safari">
+                    </datalist>
                 </form>
             </div>
             <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
@@ -31,10 +38,11 @@
                         <a class="nav-link" href="#">Notifiche</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Impostazioni</a>
+                        <a class="nav-link" href="settings.php">Impostazioni</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
+    <script src="../templates/header/header.js"></script>
 </header>

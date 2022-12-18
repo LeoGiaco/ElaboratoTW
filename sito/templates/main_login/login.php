@@ -27,7 +27,7 @@
                     <div class="row">
                         <div class="col-lg-2"></div>
                         <div class="col-lg-8">
-                            <form id="form_login">
+                            <form id="form_login" autocomplete="on">
                                 <div class="row mt-4 mb-2">
                                     <div class="col-md-12 col-lg-4 my-auto">
                                         <label for="email">Email: </label>
@@ -41,7 +41,7 @@
                                         <label for="password">Password: </label>
                                     </div>
                                     <div class="col-md-12 col-lg-8">
-                                        <input type="password" id="password" name="pwd" required/>
+                                        <input type="password" id="password" name="pwd" required autocomplete="off"/>
                                     </div>
                                 </div>
                                 <div class="row my-4">
