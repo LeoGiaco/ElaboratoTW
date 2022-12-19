@@ -18,7 +18,7 @@ $(document).ready(function() {
             if(data["state"]===false){
                 addAlert("alert","alert-danger",data["msg"],"");
             } else {
-                window.location.href="homepage.php";
+                window.location.href="pages/homepage.php";
             }
         })
         .fail(function(response) {

@@ -4,7 +4,7 @@
             <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="homepage.php">Home</a>
+                        <a class="nav-link" href="pages/homepage.php">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="profile.php?id=<?php echo $_SESSION["user"];?>">Profilo</a>
