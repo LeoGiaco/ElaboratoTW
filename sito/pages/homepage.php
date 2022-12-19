@@ -1,5 +1,5 @@
 <?php
-    define("SITE_ROOT", "sito/"); // FIXME: VERIFICA UTILITA'
+    define("SITE_ROOT", "/sito/"); // FIXME: VERIFICA UTILITA'
 
     require_once(SITE_ROOT.'bootstrap.php');
 

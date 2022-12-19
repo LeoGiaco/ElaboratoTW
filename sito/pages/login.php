@@ -1,5 +1,5 @@
 <?php
-    define("SITE_ROOT", "sito/");
+    define("SITE_ROOT", "/sito/");
 
     require_once(SITE_ROOT.'bootstrap.php');
 
@@ -11,5 +11,5 @@
         SITE_ROOT . 'templates/footer/footer.php'
     );
 
-    require_once SITE_ROOT . 'templates/base.php';
+    require_once 'templates/base.php';
 ?>

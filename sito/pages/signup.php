@@ -1,5 +1,5 @@
 <?php
-    define("SITE_ROOT", "sito/");
+    define("SITE_ROOT", "/sito/");
 
     require_once(SITE_ROOT.'bootstrap.php');
 
