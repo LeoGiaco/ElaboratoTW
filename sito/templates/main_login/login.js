@@ -28,7 +28,7 @@ $(document).ready(function() {
     });
 
     $("#btnIscriviti").click(function() {
-        window.location.href="signup.php";
+        window.location.href="pages/signup.php";
     });
 
 
