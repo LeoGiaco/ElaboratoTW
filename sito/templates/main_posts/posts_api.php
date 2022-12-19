@@ -2,7 +2,7 @@
 
 use LDAP\Result;
 
-require("sito/bootstrap.php");
+require("/sito/bootstrap.php");
 
 if(isset($_POST["request"])){
     switch ($_POST["request"]) {

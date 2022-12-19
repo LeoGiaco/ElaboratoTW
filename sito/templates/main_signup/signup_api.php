@@ -1,5 +1,5 @@
 <?php
-require("sito/bootstrap.php");
+require("/sito/bootstrap.php");
 
 if(isset($_POST["request"])){
     if($_POST["request"] == "interessiPossibili") {
