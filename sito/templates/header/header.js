@@ -5,7 +5,7 @@ $(document).ready(function() {
 
     //     $.ajax({
     //         type: "POST",
-    //         url: "../templates/header/header_api.php",
+    //         url: "templates/header/header_api.php",
     //         data:  datas,
     //         processData: false,
     //         contentType: false

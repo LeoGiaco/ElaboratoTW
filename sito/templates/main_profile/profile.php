@@ -64,7 +64,7 @@
                                             <div class="card-header">
                                                 <a id="btnSeguaci" class="collapsed btn w-100" data-bs-toggle="collapse" aria-expanded="false" href="#collapseOne">
                                                         <span class="list-item-title">Seguaci</span>
-                                                        <img class="icon icon-primary" alt="Espandi seguaci" src="../../img/expand.svg"/>
+                                                        <img class="icon icon-primary" alt="Espandi seguaci" src="images/expand.svg"/>
                                                 </a>
                                             </div>
                                             <div id="collapseOne" class="collapse" data-bs-parent="#accordion">
@@ -79,7 +79,7 @@
                                             <div class="card-header">
                                                 <a id="btnSeguiti" class="collapsed btn w-100" data-bs-toggle="collapse" aria-expanded="false" href="#collapseTwo">
                                                     <span class="list-item-title">Seguiti</span>
-                                                    <img class="icon icon-primary" alt="Espandi seguaci" src="../../img/expand.svg"/>
+                                                    <img class="icon icon-primary" alt="Espandi seguaci" src="images/expand.svg"/>
                                                 </a>
                                             </div>
                                             <div id="collapseTwo" class="collapse" data-bs-parent="#accordion">

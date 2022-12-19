@@ -1,4 +1,4 @@
-const fileint = "../templates/main_signup/signup_api.php";
+const fileint = "templates/main_signup/signup_api.php";
 $(document).ready(function() {
     setInterests();
     
@@ -15,7 +15,7 @@ $(document).ready(function() {
             datas.delete("pwd");
             $.ajax({
                 type: "POST",
-                url: "../templates/main_signup/signup_api.php",
+                url: "templates/main_signup/signup_api.php",
                 data:  datas,
                 processData: false,
                 contentType: false
@@ -45,7 +45,7 @@ function setInterests(){
     formdata.append("request", "interessiPossibili");
     $.ajax({
         type: "POST",
-        url: "../templates/main_signup/signup_api.php",
+        url: "templates/main_signup/signup_api.php",
         data:  formdata,
         processData: false,
         contentType: false

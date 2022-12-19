@@ -1,5 +1,5 @@
 <?php
-require("../../bootstrap.php");
+require("sito/bootstrap.php");
 
 if(isset($_POST["email"]) && isset($_POST["password"])){
     $mailResult = $dbh->checkMailAbsent($_POST["email"]);

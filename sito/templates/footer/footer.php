@@ -4,7 +4,7 @@
         <!-- Github -->
         <div class="mb-4">
             <a href="https://github.com/LeoGiaco/ElaboratoTW" target="_blank">
-                <img class="bg-light rounded border" src="../../img/github.svg" alt="GitHub">
+                <img class="bg-light rounded border" src="images/github.svg" alt="GitHub">
             </a>
         </div>
         <!-- Section: Social media -->

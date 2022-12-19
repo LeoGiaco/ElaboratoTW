@@ -1,10 +1,10 @@
 <?php
-    define("SITE_ROOT", "/var/www/html/ElaboratoTW/sito/");
+    define("SITE_ROOT", "sito/");
 
     require_once(SITE_ROOT.'bootstrap.php');
 
     $templateParams["title"] = "Uv-Login";
-    $templateParams["javascript"] = "../templates/main_login/login.js";
+    $templateParams["javascript"] = "templates/main_login/login.js";
 
     $templateParams["pieces"] = array(
         SITE_ROOT . 'templates/main_login/login.php',

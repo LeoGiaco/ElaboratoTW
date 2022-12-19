@@ -1,4 +1,4 @@
-const fileint = "../templates/main_profile/profile_api.php";
+const fileint = "templates/main_profile/profile_api.php";
 let postsLoaded = 0;
 
 $(document).ready(function() {
@@ -112,7 +112,7 @@ function createListItem(elemento){
     for(let i=0; i<elemento.length; i++){
         row += '<li class="list-group-item d-flex justify-content-between align-items-center">';
         row += '<div class="d-flex align-items-center">';
-        row += '<img src="../../img/profile_img/'+elemento[i].Immagine+'" alt="Immagine profilo di '+elemento[i].Amico+'" width="40" height="40" class="rounded-circle" />';
+        row += '<img src="images/profile_img/'+elemento[i].Immagine+'" alt="Immagine profilo di '+elemento[i].Amico+'" width="40" height="40" class="rounded-circle" />';
         row += '<div class="ms-1">';
         row += '<p class="fw-bold mb-1">'+elemento[i].Amico+'</p>';
         row += '</div></div>';
@@ -135,7 +135,7 @@ function getUserInfo(user){
     })
     .done(function(data,success,response) {
         const dati = data.dati[0];
-        $("#imgUtente").attr("src", "../../img/profile_img/"+dati["Immagine"]);
+        $("#imgUtente").attr("src", "images/profile_img/"+dati["Immagine"]);
         $("#nominativo").text(dati["Nome"]+' '+dati["Cognome"]);
         $("#username").text(dati["Username"]);
         $("#sesso").append(' '+dati["Sesso"]);

@@ -1,4 +1,4 @@
-const fileintPost = "../templates/main_posts/posts_api.php";
+const fileintPost = "templates/main_posts/posts_api.php";
 const fileProfile = "profile.php";
 function select_file(file, request, id_select, valore, vuoto)
 {
@@ -107,7 +107,7 @@ function commentiPost(numero){
             row += `
                 <div class="d-flex flex-start w-100 mb-2">
                     <a href="${fileProfile}?id=${element.Utente}">
-                        <img class="rounded-circle shadow-1-strong me-3" src="../../img/profile_img/${element["Immagine"]}" alt="Immagine profilo" width="40" height="40" />
+                        <img class="rounded-circle shadow-1-strong me-3" src="images/profile_img/${element["Immagine"]}" alt="Immagine profilo" width="40" height="40" />
                     </a>
                     <div class="form-outline w-100">
                         <p class="text-muted small mb-0">${element.Data}</p>
@@ -145,7 +145,7 @@ function visualizzaPost(numeroPost, aggiuntaPost=false, utente="", checked=false
             const dislike=temp[1];
             row += ` <article id="post${dati[i]["ID"]}" class="card my-2">
                         <div class="card-body"><div class="d-flex flex-start align-items-center">
-                            <a href="${fileProfile}?id=${dati[i]["Utente"]}"><img class="rounded-circle shadow-1-strong mr-2 me-2" src="../../img/profile_img/${dati[i]["Immagine"]}" alt="avatar user" width="60" height="60" /></a>
+                            <a href="${fileProfile}?id=${dati[i]["Utente"]}"><img class="rounded-circle shadow-1-strong mr-2 me-2" src="images/profile_img/${dati[i]["Immagine"]}" alt="avatar user" width="60" height="60" /></a>
                             <div>
                                 <a href="${fileProfile}?id=${dati[i]["Utente"]}"><p class="fw-bold mb-1 text-left">${dati[i]["Utente"]}</p></a>
                                 <p class="text-muted small mb-0">${dati[i]["Data"]}</p>
@@ -156,7 +156,7 @@ function visualizzaPost(numeroPost, aggiuntaPost=false, utente="", checked=false
             `;
             if(dati[i]["Media"]!==""){
                 row += `<div class="text-center">
-                            <img src="../../img/post_img/${dati[i]["Media"]}" alt="Immagine del post intitolato:${dati[i]["Titolo"]}" class="responsive"/>
+                            <img src="images/post_img/${dati[i]["Media"]}" alt="Immagine del post intitolato:${dati[i]["Titolo"]}" class="responsive"/>
                         </div>`;
             }
             row += `<p class="mt-3 mb-2 pb-2">${dati[i]["Testo"]}</p>

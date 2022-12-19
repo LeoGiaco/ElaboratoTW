@@ -1,4 +1,4 @@
-const fileint = "../templates/main_posts/posts_api.php";
+const fileint = "templates/main_posts/posts_api.php";
 // Variabile globale per il conteggio dei post.
 let postsLoaded = 0;
 
@@ -15,7 +15,7 @@ $(document).ready(function() {
         contentType: false
     })
     .done(function(data,success,response) {
-        $("#userImage").attr("src", "../../img/profile_img/"+data["dati"][0]["Immagine"]);
+        $("#userImage").attr("src", "images/profile_img/"+data["dati"][0]["Immagine"]);
     })
     .fail(function(response) {
         console.log(response);
