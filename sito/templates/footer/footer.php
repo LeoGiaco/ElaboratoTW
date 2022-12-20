@@ -15,7 +15,7 @@
     <div class="footer-info text-center p-3">
         © 2022 Copyright:
         <a class="text-white" href="http://u-niversity.ooguy.com/">U-niversity</a>
-        </br>
+        <br/>
         <a class="text-white" href="#">Informativa privacy</a>
     </div>
     <!-- Copyright -->
