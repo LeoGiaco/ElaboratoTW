@@ -25,7 +25,7 @@ $(document).ready(function() {
                     console.log(data);
                     addAlert("alert","alert-danger",data["msg"],"");
                 } else {
-                    window.location.href="pages/login.php?iscr=1";
+                    window.location.href="login.php?iscr=1";
                 }
             })
             .fail(function(response) {
@@ -36,7 +36,7 @@ $(document).ready(function() {
     });
 
     $("#btnLogin").click(function() {
-        window.location.href="pages/login.php";
+        window.location.href="login.php";
     });
 });
 

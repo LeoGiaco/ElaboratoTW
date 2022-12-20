@@ -1,5 +1,5 @@
 const fileintPost = "templates/main_posts/posts_api.php";
-const fileProfile = "pages/profile.php";
+const fileProfile = "profile.php";
 function select_file(file, request, id_select, valore, vuoto)
 {
     const formdata = new FormData();

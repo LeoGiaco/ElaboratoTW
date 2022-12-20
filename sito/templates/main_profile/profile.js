@@ -116,7 +116,7 @@ function createListItem(elemento){
         row += '<div class="ms-1">';
         row += '<p class="fw-bold mb-1">'+elemento[i].Amico+'</p>';
         row += '</div></div>';
-        row += '<a class="btn btn-outline-primary btn-rounded btn-sm" href="pages/profile.php?id='+elemento[i].Amico+'" role="button">Vedi</a>';
+        row += '<a class="btn btn-outline-primary btn-rounded btn-sm" href="profile.php?id='+elemento[i].Amico+'" role="button">Vedi</a>';
         row += '</li>';  
     }
     return row;

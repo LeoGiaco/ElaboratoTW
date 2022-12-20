@@ -4,10 +4,10 @@
             <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="pages/homepage.php">Home</a>
+                        <a class="nav-link" href="homepage.php">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="pages/profile.php?id=<?php echo $_SESSION["user"];?>">Profilo</a>
+                        <a class="nav-link" href="profile.php?id=<?php echo $_SESSION["user"];?>">Profilo</a>
                     </li>
                 </ul>
             </div>
@@ -38,7 +38,7 @@
                         <a class="nav-link" href="#">Notifiche</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="pages/settings.php">Impostazioni</a>
+                        <a class="nav-link" href="settings.php">Impostazioni</a>
                     </li>
                 </ul>
             </div>

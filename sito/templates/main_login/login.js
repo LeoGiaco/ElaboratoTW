@@ -18,7 +18,7 @@ $(document).ready(function() {
             if(data["state"]===false){
                 addAlert("alert","alert-danger",data["msg"],"");
             } else {
-                window.location.href="pages/homepage.php";
+                window.location.href="homepage.php";
             }
         })
         .fail(function(response) {
@@ -28,7 +28,7 @@ $(document).ready(function() {
     });
 
     $("#btnIscriviti").click(function() {
-        window.location.href="pages/signup.php";
+        window.location.href="signup.php";
     });
 
 
