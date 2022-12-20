@@ -23,7 +23,7 @@
             <div class="col-10 col-md-6 text-center">
                 <div id="alert" role="alert"></div>
                 <section class="card">
-                    <h2>Inserisci credenziali</h2>
+                    <h2 class="my-2">Inserisci credenziali</h2>
                     <div class="row">
                         <div class="col-lg-2"></div>
                         <div class="col-lg-8">
