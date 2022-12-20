@@ -28,13 +28,13 @@
 .btn.btn-2 {
   background-color: var(--btn-bg-2);
   color: var(--btn-fg-2);
-  border-color: var(btn-fg-2);
+  border-color: var(--btn-fg-2);
 }
 
 .btn.btn-2:hover {
   background-color: var(--btn-bg-2-h);
   color: var(--btn-fg-2-h);
-  border-color: var(btn-fg-2-h);
+  border-color: var(--btn-fg-2-h);
 }
 
 a {
