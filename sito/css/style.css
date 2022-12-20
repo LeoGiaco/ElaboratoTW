@@ -16,13 +16,13 @@
 .btn.btn-1 {
   background-color: var(--btn-bg-1);
   color: var(--btn-fg-1);
-  border-color: var(btn-fg-1);
+  border-color: var(--btn-fg-1);
 }
 
 .btn.btn-1:hover {
   background-color: var(--btn-bg-1-h);
   color: var(--btn-fg-1-h);
-  border-color: var(btn-fg-1-h);
+  border-color: var(--btn-fg-1-h);
 }
 
 .btn.btn-2 {
