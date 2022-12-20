@@ -1,7 +1,8 @@
 :root {
     --col-dark: rgb(39, 45, 53);
-    --col-mid: rgb(63, 92, 129);
-    --col-light: rgb(156, 180, 211);
+    --col-mid: rgb(81, 111, 150);
+    --col-light: rgb(192, 207, 228);
+    --col-lighter: aliceblue;
     --transp: rgba(0,0,0,0);
 
     --btn-fg-1: rgb(47, 0, 255);
@@ -128,7 +129,7 @@ footer {
         min-width: 3%;
     }
 
-    &.footer-info {
+    .footer-info {
         background-color: rgba(0, 0, 0, 0.2);
     }    
 }
