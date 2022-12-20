@@ -18,9 +18,19 @@
 
 }
 
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
 main {
     &#main-login {
         background-color: var(--col-lighter);
+        flex-grow: 1;
     }
 }
 
