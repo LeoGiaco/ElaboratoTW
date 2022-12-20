@@ -14,11 +14,11 @@
   --btn-bg-2-h: var(--btn-fg-2);
 }
 
-html, body {
+html#page-login, html#page-login body {
   height: 100%;
 }
 
-body {
+html#page-login body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

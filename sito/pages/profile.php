@@ -3,6 +3,7 @@
 
     require_once(SITE_ROOT.'bootstrap.php');
 
+    $templateParams["pageid"] = "profile";
     $templateParams["title"] = "Uv-Profile";
     $templateParams["javascript"] = "../templates/main_profile/profile.js";
     $templateParams["jsHeader"] = "../templates/main_posts/posts.js";

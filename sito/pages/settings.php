@@ -3,6 +3,7 @@
 
     require_once(SITE_ROOT.'bootstrap.php');
 
+    $templateParams["pageid"] = "settings";
     $templateParams["title"] = "Uv-Profile";
     $templateParams["javascript"] = "../templates/main_settings/settings.js";
     if(!isUserLoggedIn()){

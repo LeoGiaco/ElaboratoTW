@@ -3,6 +3,7 @@
 
     require_once(SITE_ROOT.'bootstrap.php');
 
+    $templateParams["pageid"] = "homepage";
     $templateParams["title"] = "Uv-Home";
     $templateParams["javascript"] = "../templates/main_posts/posts.js";
     $templateParams["jsHeader"] = "../templates/header/header.js";

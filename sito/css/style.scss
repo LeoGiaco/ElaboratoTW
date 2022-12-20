@@ -18,13 +18,17 @@
 
 }
 
-html, body {
-    height: 100%;
-}
+html {
+    &#page-login {
+        &, body {
+            height: 100%;
+        }
 
-body {
-    display: flex;
-    flex-direction: column;
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+    }
 }
 
 main {

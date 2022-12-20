@@ -3,6 +3,7 @@
 
     require_once(SITE_ROOT.'bootstrap.php');
 
+    $templateParams["pageid"] = "login";
     $templateParams["title"] = "Uv-Login";
     $templateParams["javascript"] = "../templates/main_login/login.js";
 
