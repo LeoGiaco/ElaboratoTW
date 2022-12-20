@@ -46,13 +46,13 @@
                                 </div>
                                 <div class="row my-4">
                                     <div class="col-lg-12">
-                                        <input type="submit" class="btn btn-outline-success" value="Accedi"/>
+                                        <input type="submit" class="btn btn-1" value="Accedi"/>
                                     </div>
                                 </div>
                             </form>
                                 <div class="row my-4">
                                     <div class="col-lg-12">
-                                        <input id="btnIscriviti" type="button" class="btn btn-outline-primary" value="Non ho un account">
+                                        <input id="btnIscriviti" type="button" class="btn btn-2" value="Non ho un account">
                                     </div>
                                 </div>
                             </div>

@@ -1,0 +1,134 @@
+:root {
+    --col-dark: rgb(39, 45, 53);
+    --col-mid: rgb(63, 92, 129);
+    --col-light: rgb(156, 180, 211);
+    --transp: rgba(0,0,0,0);
+
+    --btn-fg-1: rgb(47, 0, 255);
+    --btn-fg-1-h: white;
+    --btn-bg-1: var(--transp);
+    --btn-bg-1-h: var(--btn-fg-1);
+    
+    --btn-fg-2: rgb(133, 133, 133);
+    --btn-fg-2-h: white;
+    --btn-bg-2: var(--transp);
+    --btn-bg-2-h: var(--btn-fg-2);
+    
+
+}
+
+.btn {
+    &.btn-1 {
+        background-color: var(--btn-bg-1);
+        color: var(--btn-fg-1);
+        border-color: var(btn-fg-1);
+        
+        &:hover {
+            background-color: var(--btn-bg-1-h);
+            color: var(--btn-fg-1-h);
+            border-color: var(btn-fg-1-h);
+        }
+    }
+
+    &.btn-2 {
+        background-color: var(--btn-bg-2);
+        color: var(--btn-fg-2);
+        border-color: var(btn-fg-2);
+        
+        &:hover {
+            background-color: var(--btn-bg-2-h);
+            color: var(--btn-fg-2-h);
+            border-color: var(btn-fg-2-h);
+        }
+    }
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header {
+    >img {
+        width: 15%;
+        height: 15%;
+    }
+}
+
+#iscrivitiP {
+    align-self: center;
+    font-size: 1.5em;
+}
+
+#iscrivitiImg {
+    text-align: right;
+}
+
+#alert {
+    button {
+        margin-right: 3%;
+        border: none;
+        background-color: inherit;
+        
+        &:hover {
+            background-color: white;
+        }
+    }
+}
+
+img {
+    &.img-responsive {
+        max-width: 100%;
+        max-height: 400px;
+        object-fit: scale-down;
+    }
+}
+
+legend {
+    font-size: inherit;
+}
+
+#fset, #intset {
+    display: inline-block;
+}
+
+textarea {
+    background: #fff;
+}
+
+h3 {
+    font-size: initial;
+}
+
+#divCommento {
+    background-color: #f8f9fa;
+}
+
+#btnTop {
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+    z-index: 1;
+}
+
+.card-footer {
+    background-color: darkgray;
+}
+
+.comLunghi {
+    word-wrap: break-word;
+    line-break: anywhere;
+}
+
+footer {
+    clear: both;
+
+    img {
+        max-width: 15%;
+        min-width: 3%;
+    }
+
+    &.footer-info {
+        background-color: rgba(0, 0, 0, 0.2);
+    }    
+}

@@ -1,89 +1,126 @@
-footer{
-    clear: both;
+:root {
+  --col-dark: rgb(39, 45, 53);
+  --col-mid: rgb(63, 92, 129);
+  --col-light: rgb(156, 180, 211);
+  --transp: rgba(0,0,0,0);
+  --btn-fg-1: rgb(47, 0, 255);
+  --btn-fg-1-h: white;
+  --btn-bg-1: var(--transp);
+  --btn-bg-1-h: var(--btn-fg-1);
+  --btn-fg-2: rgb(133, 133, 133);
+  --btn-fg-2-h: white;
+  --btn-bg-2: var(--transp);
+  --btn-bg-2-h: var(--btn-fg-2);
 }
 
-a{
-    text-decoration: none;
-    color: inherit;
+.btn.btn-1 {
+  background-color: var(--btn-bg-1);
+  color: var(--btn-fg-1);
+  border-color: var(btn-fg-1);
 }
 
-header>img{
-    width: 15%;
-    height: 15%;
+.btn.btn-1:hover {
+  background-color: var(--btn-bg-1-h);
+  color: var(--btn-fg-1-h);
+  border-color: var(btn-fg-1-h);
 }
 
-#iscrivitiP{
-    align-self: center;
-    font-size: 1.5em;
+.btn.btn-2 {
+  background-color: var(--btn-bg-2);
+  color: var(--btn-fg-2);
+  border-color: var(btn-fg-2);
 }
 
-#iscrivitiImg{
-    text-align: right;
+.btn.btn-2:hover {
+  background-color: var(--btn-bg-2-h);
+  color: var(--btn-fg-2-h);
+  border-color: var(btn-fg-2-h);
 }
 
-#alert button{
-    margin-right: 3%;
-    border: none;
-    background-color: inherit;
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
-#alert button:hover{
-    background-color: white;
+header > img {
+  width: 15%;
+  height: 15%;
 }
 
-#last_elem {
-    background-color: rgba(0,0,0,0.2);
+#iscrivitiP {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  font-size: 1.5em;
 }
 
-legend{
-    font-size: inherit;
+#iscrivitiImg {
+  text-align: right;
 }
 
-#fset, #intset{
-    display: inline-block;
+#alert button {
+  margin-right: 3%;
+  border: none;
+  background-color: inherit;
 }
 
-textarea{
-    background: #fff;
+#alert button:hover {
+  background-color: white;
 }
 
-main{
-    background-color: orange;
+img.img-responsive {
+  max-width: 100%;
+  max-height: 400px;
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
 }
 
-h3{
-    font-size: initial;
+legend {
+  font-size: inherit;
 }
 
-#divCommento{
-    background-color: #f8f9fa;
+#fset, #intset {
+  display: inline-block;
 }
 
-#btnTop{
-    position: fixed;
-    bottom: 5%;
-    right: 5%;
-    z-index: 1;
+textarea {
+  background: #fff;
 }
 
-.card-footer{
-    background-color: darkgray;
+h3 {
+  font-size: initial;
 }
 
-.comLunghi{
-    word-wrap: break-word;
-    line-break: anywhere;
+#divCommento {
+  background-color: #f8f9fa;
 }
 
-.responsive {
-    max-width: 100%;
-    max-height: 400px;
-    object-fit: scale-down;
+#btnTop {
+  position: fixed;
+  bottom: 5%;
+  right: 5%;
+  z-index: 1;
 }
 
-footer img{
-    max-width: 15%;
-    min-width: 3%;
+.card-footer {
+  background-color: darkgray;
 }
 
+.comLunghi {
+  word-wrap: break-word;
+  line-break: anywhere;
+}
 
+footer {
+  clear: both;
+}
+
+footer img {
+  max-width: 15%;
+  min-width: 3%;
+}
+
+footer.footer-info {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+/*# sourceMappingURL=style.css.map */

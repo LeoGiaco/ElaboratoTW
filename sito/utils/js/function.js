@@ -156,7 +156,7 @@ function visualizzaPost(numeroPost, aggiuntaPost=false, utente="", checked=false
             `;
             if(dati[i]["Media"]!==""){
                 row += `<div class="text-center">
-                            <img src="images/post_img/${dati[i]["Media"]}" alt="Immagine del post intitolato:${dati[i]["Titolo"]}" class="responsive"/>
+                            <img src="images/post_img/${dati[i]["Media"]}" alt="Immagine del post intitolato:${dati[i]["Titolo"]}" class="img-responsive"/>
                         </div>`;
             }
             row += `<p class="mt-3 mb-2 pb-2">${dati[i]["Testo"]}</p>
