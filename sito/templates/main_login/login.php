@@ -1,14 +1,14 @@
 <main id="main-login">
-    <input id="login" type="hidden" name="login" value="<?php echo $_GET["iscr"]; ?>"/>
+    <input id="login" type="hidden" name="login" value="<?php echo $_GET["iscr"]; ?>" />
     <div class="container-fluid p-0 overflow-hidden">
         <header>
             <div class="row">
                 <div class="mt-2 col-12 col-lg-6 d-flex justify-content-center d-lg-block justify-content-lg-start" id="iscrivitiImg">
-                    <img src="images/icon2x.svg" alt="Logo sito"/>
-                </div>   
+                    <img src="images/icon2x.svg" alt="Logo sito" />
+                </div>
                 <div class="col-12 col-lg-6 d-flex justify-content-center d-lg-block justify-content-lg-start" id="iscrivitiP">
                     <p class="pt-10 w-75 text-center text-lg-start">
-                    <span class="text-uppercase fs-3 fw-bold">Accedi ora</span><span> al 1° social network italiano a tema universitario!</span>
+                        <span class="text-uppercase fs-3 fw-bold">Accedi ora</span><span> al 1° social network italiano a tema universitario!</span>
                     </p>
                 </div>
             </div>
@@ -17,7 +17,7 @@
                     <h1 class="pt-3 text-center">ACCEDI</h1>
                 </div>
             </div>
-        </header>   
+        </header>
         <div class="row mt-3 mb-5">
             <div class="col-1 col-md-3"></div>
             <div class="col-10 col-md-6 text-center">
@@ -33,7 +33,7 @@
                                         <label for="email">Email: </label>
                                     </div>
                                     <div class="col-md-12 col-lg-8">
-                                        <input type="email" id="email" name="email" required autofocus/>
+                                        <input type="email" id="email" name="email" required autofocus />
                                     </div>
                                 </div>
                                 <div class="row my-2">
@@ -41,25 +41,26 @@
                                         <label for="password">Password: </label>
                                     </div>
                                     <div class="col-md-12 col-lg-8">
-                                        <input type="password" id="password" name="pwd" required autocomplete="off"/>
+                                        <input type="password" id="password" name="pwd" required autocomplete="off" />
                                     </div>
                                 </div>
                                 <div class="row my-4">
                                     <div class="col-lg-12">
-                                        <input type="submit" class="btn btn-1" value="Accedi"/>
+                                        <input type="submit" class="btn btn-1" value="Accedi" />
                                     </div>
                                 </div>
                             </form>
                             <div class="row my-4">
                                 <div class="col-lg-12">
-                                    <input id="btnIscriviti" type="button" class="btn btn-2 btn-small" value="Non ho un account"/>
+                                    <input id="btnIscriviti" type="button" class="btn btn-2 btn-small" value="Non ho un account" />
                                 </div>
                             </div>
                             <div class="col-lg-2"></div>
                         </div>
                     </div>
                 </section>
-            <div class="col-1 col-md-3"></div>
+                <div class="col-1 col-md-3"></div>
+            </div>
         </div>
     </div>
 </main>
