@@ -18,7 +18,17 @@
 
 }
 
+main {
+    &#main-login {
+        background-color: var(--col-lighter);
+    }
+}
+
 .btn {
+    &.btn-small {
+        padding: 0.25rem;
+    }
+
     &.btn-1 {
         background-color: var(--btn-bg-1);
         color: var(--btn-fg-1);
