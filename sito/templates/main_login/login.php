@@ -50,10 +50,9 @@
                                     </div>
                                 </div>
                             </form>
-                                <div class="row my-4">
-                                    <div class="col-lg-12">
-                                        <input id="btnIscriviti" type="button" class="btn btn-2 btn-small" value="Non ho un account"/>
-                                    </div>
+                            <div class="row my-4">
+                                <div class="col-lg-12">
+                                    <input id="btnIscriviti" type="button" class="btn btn-2 btn-small" value="Non ho un account"/>
                                 </div>
                             </div>
                             <div class="col-lg-2"></div>
