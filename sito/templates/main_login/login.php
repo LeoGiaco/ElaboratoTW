@@ -52,7 +52,7 @@
                             </form>
                                 <div class="row my-4">
                                     <div class="col-lg-12">
-                                        <input id="btnIscriviti" type="button" class="btn btn-2" value="Non ho un account">
+                                        <input id="btnIscriviti" type="button" class="btn btn-2 btn-small" value="Non ho un account">
                                     </div>
                                 </div>
                             </div>
