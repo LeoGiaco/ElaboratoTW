@@ -74,13 +74,13 @@ main#main-login {
 }
 
 .btn.btn-1.btn-transition-up {
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, var(--btn-bg-1)), color-stop(50%, var(--btn-bg-1-h)));
-  background: linear-gradient(to top, var(--btn-bg-1) 50%, var(--btn-bg-1-h) 50%);
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(50%, var(--btn-bg-1)), color-stop(50%, var(--btn-bg-1-h)));
+  background-image: linear-gradient(to top, var(--btn-bg-1) 50%, var(--btn-bg-1-h) 50%);
 }
 
 .btn.btn-1.btn-transition-down {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, var(--btn-bg-1)), color-stop(50%, var(--btn-bg-1-h)));
-  background: linear-gradient(to bottom, var(--btn-bg-1) 50%, var(--btn-bg-1-h) 50%);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, var(--btn-bg-1)), color-stop(50%, var(--btn-bg-1-h)));
+  background-image: linear-gradient(to bottom, var(--btn-bg-1) 50%, var(--btn-bg-1-h) 50%);
 }
 
 .btn.btn-2 {
@@ -96,11 +96,13 @@ main#main-login {
 }
 
 .btn.btn-2.btn-transition-up {
-  background-color: linear-gradient(to top, var(--btn-bg-2) 50%, var(--btn-bg-2-h) 50%);
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(50%, var(--btn-bg-2)), color-stop(50%, var(--btn-bg-2-h)));
+  background-image: linear-gradient(to top, var(--btn-bg-2) 50%, var(--btn-bg-2-h) 50%);
 }
 
 .btn.btn-2.btn-transition-down {
-  background-color: linear-gradient(to bottom, var(--btn-bg-2) 50%, var(--btn-bg-2-h) 50%);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, var(--btn-bg-2)), color-stop(50%, var(--btn-bg-2-h)));
+  background-image: linear-gradient(to bottom, var(--btn-bg-2) 50%, var(--btn-bg-2-h) 50%);
 }
 
 a {

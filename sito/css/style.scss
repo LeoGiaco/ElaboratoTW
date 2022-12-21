@@ -75,11 +75,11 @@ main {
         }
         
         &.btn-transition-up {
-            background: linear-gradient(to top, var(--btn-bg-1) 50%, var(--btn-bg-1-h) 50%);
+            background-image: linear-gradient(to top, var(--btn-bg-1) 50%, var(--btn-bg-1-h) 50%);
         }
 
         &.btn-transition-down {
-            background: linear-gradient(to bottom, var(--btn-bg-1) 50%, var(--btn-bg-1-h) 50%);
+            background-image: linear-gradient(to bottom, var(--btn-bg-1) 50%, var(--btn-bg-1-h) 50%);
         }
     }
 
@@ -95,11 +95,11 @@ main {
         }
 
         &.btn-transition-up {
-            background-color: linear-gradient(to top, var(--btn-bg-2) 50%, var(--btn-bg-2-h) 50%);
+            background-image: linear-gradient(to top, var(--btn-bg-2) 50%, var(--btn-bg-2-h) 50%);
         }
 
         &.btn-transition-down {
-            background-color: linear-gradient(to bottom, var(--btn-bg-2) 50%, var(--btn-bg-2-h) 50%);
+            background-image: linear-gradient(to bottom, var(--btn-bg-2) 50%, var(--btn-bg-2-h) 50%);
         }
     }
 
