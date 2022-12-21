@@ -80,7 +80,7 @@ html {
         &:hover {
             background-color: var(--btn-bg-1-h);
             color: var(--btn-fg-1-h);
-            border-color: var(--btn-fg-1-h);
+            border-color: var(--transp);
         }
 
         &.btn-transition-up {
@@ -100,7 +100,7 @@ html {
         &:hover {
             background-color: var(--btn-bg-2-h);
             color: var(--btn-fg-2-h);
-            border-color: var(--btn-fg-2-h);
+            border-color: var(--transp);
         }
 
         &.btn-transition-up {
@@ -120,7 +120,7 @@ html {
         &:hover {
             background-color: var(--btn-bg-3-h);
             color: var(--btn-fg-3-h);
-            border-color: var(--btn-fg-3-h);
+            border-color: var(--transp);
         }
 
         &.btn-transition-up {
@@ -140,7 +140,7 @@ html {
         &:hover {
             background-color: var(--btn-bg-4-h);
             color: var(--btn-fg-4-h);
-            border-color: var(--btn-fg-4-h);
+            border-color: var(--transp);
         }
 
         &.btn-transition-up {
