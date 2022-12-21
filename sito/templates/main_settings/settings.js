@@ -11,6 +11,7 @@ $(document).ready(function() {
         $("#"+typBtn).show();
         $(".btnmenu button").attr("class", "nav-item nav-link")
         $('[data-type="'+typBtn+'"]').attr('class', 'nav-item nav-link ' + "active");
+        $("#alert").html("");
     });
 
     $("#security").on("click",'button',function(){
@@ -85,23 +86,18 @@ $(document).ready(function() {
                 addAlert("alert","alert-danger", data.msg,"");
             } else {
                 addAlert("alert","alert-success", data.msg,"x");
+                $("#imgUtente").attr("src", "images/profile_img/"+data.file);
             }
         })
         .fail(function(response) {
             console.log(response);
         });
-
     });
-
-   
-
-
 });
 
 function insertProfileImage(){
     const datas = new FormData();
     datas.append("request", "getUserInfo");
-
     $.ajax({
         type: "POST",
         url: fileint,

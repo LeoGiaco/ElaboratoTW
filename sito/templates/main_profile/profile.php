@@ -107,6 +107,7 @@
                                 <div id="contPosts">
                                 </div>
                             </section>
+                            <div id="alertC" class="my-2" role="alert"></div>
                         </div>
                     </div>
                 </div>

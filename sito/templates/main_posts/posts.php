@@ -62,6 +62,7 @@
                                     </header>
                                     <div id="contPosts">
                                     </div>
+                                    <div id="alertC" class="my-2" role="alert"></div>
                                 </section>
                             </div>
                         </div>

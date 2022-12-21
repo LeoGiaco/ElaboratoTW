@@ -124,6 +124,7 @@ function commentiPost(numero){
 }
 
 function visualizzaPost(numeroPost, aggiuntaPost=false, utente="", checked=false){
+    setAlertLoad();
     const datas = new FormData();
     datas.append("request", "getPosts");
     datas.append("numeroPost", numeroPost);
@@ -138,6 +139,7 @@ function visualizzaPost(numeroPost, aggiuntaPost=false, utente="", checked=false
     })
     .done(function(data,success,response) {
         const dati=data["posts"];
+        postsLoaded+=data["posts"].length;
         let row = '';
         for(let i=0; i<dati.length; i++){
             const temp=processaLike(dati[i]);
@@ -191,6 +193,8 @@ function visualizzaPost(numeroPost, aggiuntaPost=false, utente="", checked=false
         $("form").submit(function(event){
             event.preventDefault();
         });
+        $("alertC").html("");
+        caricamento=false;
     })
     .fail(function(response) {
         console.log(response);
@@ -279,6 +283,10 @@ function gestioneBottoni(button){
             });
             break;
     }
+}
+
+function setAlertLoad(){
+    addAlert("alertC", "alert-warning", "Caricamento...", "");
 }
 // Fine gestione post.
 

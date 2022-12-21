@@ -76,7 +76,7 @@
         $_SESSION["user"] = $user;
     }
 
-    function addFile($file){
+    function addFile($file, $folder){
         try {
             if(!empty($file)){
                 if (!isset($file['error']) || is_array($file['error'])
@@ -116,7 +116,7 @@
                 $file_name=uniqid();
                 if (!move_uploaded_file(
                     $file['tmp_name'],
-                    sprintf('../../../img/post_img/%s.%s',
+                    sprintf('../../../img/'.$folder.'/%s.%s',
                         $file_name,
                         $ext
                     )

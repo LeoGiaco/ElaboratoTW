@@ -61,7 +61,7 @@ if(isset($_POST["request"])){
             break;
         case 'changeImg':
             if(isUserLoggedIn()){
-                $rs_file = addFile($_FILES["file"]);
+                $rs_file = addFile($_FILES["file"], "profile_img");
                 if($rs_file["errore"]==""){
                     if($rs_file["file"]==""){
                         $rs_file["file"] = "profilo.jpg";
@@ -70,13 +70,15 @@ if(isset($_POST["request"])){
                     if($dbh->changeProfile($rs_file["file"], $_SESSION["user"])){
                         $result["msg"] = "Modifica avvenuta con successo";
                         $result["stato"] = true;
+                        $result["file"] = $rs_file["file"];
+
                     } else { 
                         $result["msg"] = "Errore cambio foto.";
                         $result["stato"] = false;
                     }
                 } else {
-                    $result["state"]=false;
                     $result["msg"]="Errore caricamento foto, ".$rs_file["errore"];
+                    $result["stato"]=false;
                 }
             }
             break;

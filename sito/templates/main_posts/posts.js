@@ -1,6 +1,7 @@
 const fileint = "templates/main_posts/posts_api.php";
 // Variabile globale per il conteggio dei post.
 let postsLoaded = 0;
+let caricamento = true;
 
 $(document).ready(function() {
     select_file(fileint, "datiTipologie", "slcGenere", "", "");
@@ -22,11 +23,14 @@ $(document).ready(function() {
     });
     
     visualizzaPost(postsLoaded, false, "", false);
-    postsLoaded += 5;
+    
+
     window.onscroll = function() {
         if (window.innerHeight + window.scrollY >= document.body.offsetHeight-5) {
-            visualizzaPost(postsLoaded, false, "", $("#allPost").is(":checked"));
-            postsLoaded += 5;
+            if(!caricamento){
+                caricamento=true;
+                visualizzaPost(postsLoaded, false, "", $("#allPost").is(":checked"));
+            }
         }
     };
 
@@ -48,14 +52,13 @@ $(document).ready(function() {
     });
 
     $("#allPost").change(function() {
+        caricamento=true;
         if($(this).is(":checked")){
             postsLoaded=0;
             visualizzaPost(postsLoaded, true, "", true);
-            postsLoaded+=5;
         } else {
             postsLoaded=0;
             visualizzaPost(postsLoaded, true, "", false);
-            postsLoaded+=5;
         }
     });
 
@@ -89,10 +92,9 @@ function aggiungiPost(){
                 addAlert("alert","alert-success","Post inserito!","x");
                 svuota();
             }
+            caricamento=true;
             postsLoaded=0;
             visualizzaPost(postsLoaded, true, "", $("#allPost").is(":checked"));
-            console.log($("#allPost").is(":checked"));
-            postsLoaded += 5;
         })
         .fail(function(response) {
             console.log(response);

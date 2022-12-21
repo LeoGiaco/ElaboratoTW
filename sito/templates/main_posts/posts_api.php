@@ -69,7 +69,7 @@ if(isset($_POST["request"])){
             break;
         case 'nuovoPost':
             if(isset($_POST["testo"]) && isset($_POST["tipo"]) && isset($_POST["titolo"])  && isUserLoggedIn()){
-                $rs_file = $rs_file = addFile($_FILES["file"]);
+                $rs_file = $rs_file = addFile($_FILES["file"], "post_img");
                 if($rs_file["errore"]=="")
                     $postResult = $dbh->addPost($_SESSION["user"], $_POST["testo"], $_POST["tipo"], $_POST["titolo"], $rs_file["file"]);
                     if($postResult){

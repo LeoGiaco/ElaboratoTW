@@ -1,5 +1,6 @@
 const fileint = "templates/main_profile/profile_api.php";
 let postsLoaded = 0;
+let caricamento = true;
 
 $(document).ready(function() {
     const user = $("#user").val();
@@ -11,7 +12,6 @@ $(document).ready(function() {
 
     // Aggiunta dei post.
     visualizzaPost(postsLoaded, false, user);
-    postsLoaded += 5;
 
     $("#contPosts").on("click",'button',function(){
         gestioneBottoni($(this));
@@ -26,8 +26,10 @@ $(document).ready(function() {
     
     window.onscroll = function() {
         if (window.innerHeight + window.scrollY >= document.body.offsetHeight-10) {
-            visualizzaPost(postsLoaded, false, user);
-            postsLoaded += 5;
+            if(!caricamento){
+                caricamento=true;
+                visualizzaPost(postsLoaded, false, user);
+            }
         }
     };
 });
@@ -134,14 +136,18 @@ function getUserInfo(user){
         contentType: false
     })
     .done(function(data,success,response) {
-        const dati = data.dati[0];
-        $("#imgUtente").attr("src", "images/profile_img/"+dati["Immagine"]);
-        $("#nominativo").text(dati["Nome"]+' '+dati["Cognome"]);
-        $("#username").text(dati["Username"]);
-        $("#sesso").append(' '+dati["Sesso"]);
-        $("#nascita").append(' '+dati["DataNascita"]);
-        for(let i=0; i<data.dati.length; i++){
-            $("#interessi").append(" "+data["dati"][i]["InterNome"]);
+        if(data.errore){
+            window.location="homepage.php";
+        } else {
+            const dati = data.dati[0];
+            $("#imgUtente").attr("src", "images/profile_img/"+dati["Immagine"]);
+            $("#nominativo").text(dati["Nome"]+' '+dati["Cognome"]);
+            $("#username").text(dati["Username"]);
+            $("#sesso").append(' '+dati["Sesso"]);
+            $("#nascita").append(' '+dati["DataNascita"]);
+            for(let i=0; i<data.dati.length; i++){
+                $("#interessi").append(" "+data["dati"][i]["InterNome"]);
+            }
         }
     })
     .fail(function(response) {
