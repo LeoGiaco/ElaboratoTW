@@ -163,9 +163,9 @@ function visualizzaPost(numeroPost, aggiuntaPost=false, utente="", checked=false
             }
             row += `<p class="mt-3 mb-2 pb-2">${dati[i]["Testo"]}</p>
                     <div class="small d-flex justify-content-start">
-                        <button id="btnLike${dati[i]["ID"]}" class="d-flex align-items-center me-3 btn btn-outline-success btn-sm" data-type="like" data-numero="${dati[i]["ID"]}" >Like: ${like}</button>
-                        <button id="btnDislike${dati[i]["ID"]}" class="d-flex align-items-center me-3 btn btn-outline-danger btn-sm" data-type="dislike" data-numero="${dati[i]["ID"]}">Dislike: ${dislike}</button>
-                        <button class="d-flex align-items-center me-3 btn btn-outline-primary btn-sm" data-type="commento" data-numero="${dati[i]["ID"]}">Commento</button>
+                        <button id="btnLike${dati[i]["ID"]}" class="d-flex align-items-center me-3 btn-3 btn-transition-up btn-sm" data-type="like" data-numero="${dati[i]["ID"]}" >Like: ${like}</button>
+                        <button id="btnDislike${dati[i]["ID"]}" class="d-flex align-items-center me-3 btn btn-4 btn-transition-down btn-sm" data-type="dislike" data-numero="${dati[i]["ID"]}">Dislike: ${dislike}</button>
+                        <button class="d-flex align-items-center me-3 btn btn-1 btn-sm" data-type="commento" data-numero="${dati[i]["ID"]}">Commento</button>
                     </div>
                 </div>
             </div>
@@ -178,7 +178,7 @@ function visualizzaPost(numeroPost, aggiuntaPost=false, utente="", checked=false
                     </form>
                 </div>
                 <div class="float-end mt-2 pt-1">
-                    <button type="button" class="btn btn-primary btn-sm" data-type="comS" data-numero="${dati[i]["ID"]}">Commenta</button>
+                    <button type="button" class="btn btn-1 btn-sm" data-type="comS" data-numero="${dati[i]["ID"]}">Commenta</button>
                 </div>
             </div>
         </article>
