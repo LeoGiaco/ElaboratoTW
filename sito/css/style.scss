@@ -32,8 +32,11 @@ html {
 }
 
 main {
-    &#main-login {
+    &#main-login, &#main-signup, &#main-home {
         background-color: var(--col-lighter);
+    }
+    
+    &#main-login {
         flex-grow: 1;
     }
 }
