@@ -252,6 +252,7 @@ function gestioneBottoni(button){
                 const dislike=temp[1];
                 $("#btnLike"+numero).text("Like: "+like);
                 $("#btnDislike"+numero).text("Dislike: "+dislike);
+                // $("#btnLike"+numero).parents("article")[0].addClass("post-liked"); // FIXME: Non va bene, non c'è modo di sapere se il post aveva like, dislike o nulla.
             })
             .fail(function(response) {
                 console.log(response);
