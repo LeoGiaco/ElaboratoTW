@@ -124,13 +124,13 @@ a {
   text-align: right;
 }
 
-#alert button {
+#alert button, #alertC button {
   margin-right: 3%;
   border: none;
   background-color: inherit;
 }
 
-#alert button:hover {
+#alert button:hover, #alertC button:hover {
   background-color: white;
 }
 
