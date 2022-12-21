@@ -39,6 +39,20 @@ main#main-login {
   padding: 0.25rem;
 }
 
+.btn.btn-transition-up {
+  background-size: 100% 200%;
+  background-position: bottom;
+  -webkit-transition: background-color 0.3s linear;
+  transition: background-color 0.3s linear;
+}
+
+.btn.btn-transition-down {
+  background-size: 100% 200%;
+  background-position: top;
+  -webkit-transition: background-color 0.3s linear;
+  transition: background-color 0.3s linear;
+}
+
 .btn.btn-1 {
   background-color: var(--btn-bg-1);
   color: var(--btn-fg-1);
@@ -49,6 +63,14 @@ main#main-login {
   background-color: var(--btn-bg-1-h);
   color: var(--btn-fg-1-h);
   border-color: var(--btn-fg-1-h);
+}
+
+.btn.btn-1.btn-transition-up {
+  background-color: linear-gradient(to top, var(--btn-bg-1) 50%, var(--btn-bg-1-h) 50%);
+}
+
+.btn.btn-1.btn-transition-down {
+  background-color: linear-gradient(to bottom, var(--btn-bg-1) 50%, var(--btn-bg-1-h) 50%);
 }
 
 .btn.btn-2 {
@@ -63,14 +85,17 @@ main#main-login {
   border-color: var(--btn-fg-2-h);
 }
 
+.btn.btn-2.btn-transition-up {
+  background-color: linear-gradient(to top, var(--btn-bg-2) 50%, var(--btn-bg-2-h) 50%);
+}
+
+.btn.btn-2.btn-transition-down {
+  background-color: linear-gradient(to bottom, var(--btn-bg-2) 50%, var(--btn-bg-2-h) 50%);
+}
+
 a {
   text-decoration: none;
   color: inherit;
-}
-
-header > img {
-  width: 15%;
-  height: 15%;
 }
 
 #iscrivitiP {

@@ -43,6 +43,18 @@ main {
         padding: 0.25rem;
     }
 
+    &.btn-transition-up {
+        background-size: 100% 200%;
+        background-position: bottom;
+        transition: background-color 0.3s linear;
+    }
+    
+    &.btn-transition-down {
+        background-size: 100% 200%;
+        background-position: top;
+        transition: background-color 0.3s linear;
+    }
+    
     &.btn-1 {
         background-color: var(--btn-bg-1);
         color: var(--btn-fg-1);
@@ -52,6 +64,14 @@ main {
             background-color: var(--btn-bg-1-h);
             color: var(--btn-fg-1-h);
             border-color: var(--btn-fg-1-h);
+        }
+        
+        &.btn-transition-up {
+            background-color: linear-gradient(to top, var(--btn-bg-1) 50%, var(--btn-bg-1-h) 50%);
+        }
+
+        &.btn-transition-down {
+            background-color: linear-gradient(to bottom, var(--btn-bg-1) 50%, var(--btn-bg-1-h) 50%);
         }
     }
 
@@ -64,6 +84,14 @@ main {
             background-color: var(--btn-bg-2-h);
             color: var(--btn-fg-2-h);
             border-color: var(--btn-fg-2-h);
+        }
+
+        &.btn-transition-up {
+            background-color: linear-gradient(to top, var(--btn-bg-2) 50%, var(--btn-bg-2-h) 50%);
+        }
+
+        &.btn-transition-down {
+            background-color: linear-gradient(to bottom, var(--btn-bg-2) 50%, var(--btn-bg-2-h) 50%);
         }
     }
 
