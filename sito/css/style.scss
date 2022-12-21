@@ -19,13 +19,13 @@
 }
 
 html {
-    &#page-login, &#page-signup, &#page-homepage {
+    &#page-login, &#page-signup, &#page-homepage, &#page-settings {
         main {
             background-color: var(--col-lighter);
         }
     }
 
-    &#page-login {
+    &#page-login, &#page-settings {
         &, body {
             height: 100%;
         }
