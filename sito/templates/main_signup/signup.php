@@ -17,7 +17,7 @@
                 </div>
             </div>
         </header>   
-        <div class="row my-5">
+        <div class="row mt-3 mb-5">
             <div class="col-1 col-md-3"></div>
             <div class="col-10 col-md-6 text-center">
                 <div id="alert" role="alert"></div>
@@ -27,7 +27,7 @@
                         <div class="col-lg-2"></div>
                         <div class="col-lg-8">
                             <form id="form_sign" action="" method="POST">
-                                <div class="row mt-5 mb-2">
+                                <div class="row my-2">
                                     <div class="col-md-12 col-lg-4 my-auto">
                                         <label for="nome">Nome: </label>
                                     </div>
@@ -95,13 +95,13 @@
                                 </div>
                                 <div class="row my-4">
                                     <div class="col-lg-12">
-                                        <input id="button" class="btn btn-outline-success" type="submit" value="Crea nuovo account"/>
+                                        <input id="button" class="btn btn-1" type="submit" value="Crea nuovo account"/>
                                     </div>
                                 </div>
                             </form>
                             <div class="row my-4">
                                 <div class="col-lg-12">
-                                    <input id="btnLogin" type="button" class="btn btn-outline-primary" value="Ho già un account">
+                                    <input id="btnLogin" type="button" class="btn btn-2 btn-sm" value="Ho già un account">
                                 </div>
                             </div>
                         </div>

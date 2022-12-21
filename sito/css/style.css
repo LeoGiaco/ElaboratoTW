@@ -38,10 +38,6 @@ html#page-login main {
           flex-grow: 1;
 }
 
-.btn.btn-small {
-  padding: 0.25rem;
-}
-
 .btn.btn-transition-up {
   background-size: 100% 200%;
   background-position: bottom;
