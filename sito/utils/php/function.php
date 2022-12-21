@@ -116,7 +116,7 @@
                 $file_name=uniqid();
                 if (!move_uploaded_file(
                     $file['tmp_name'],
-                    sprintf('images/post_img/%s.%s',
+                    sprintf('../../../img/post_img/%s.%s',
                         $file_name,
                         $ext
                     )
