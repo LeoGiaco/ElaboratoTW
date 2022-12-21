@@ -58,12 +58,7 @@
                                 <hr>
                             </header>
                             <form>
-                                <div class="form-group">
-                                <label for="username">Username</label>
-                                <input type="text" class="form-control" id="username" aria-describedby="usernameHelp" placeholder="Enter your username" value="kennethvaldez">
-                                <small id="usernameHelp" class="form-text text-muted">After changing your username, your old username becomes available for anyone else to claim.</small>
-                                </div>
-                                <button class="btn btn-danger" type="button">Delete Account</button>
+                                
                             </form>
                         </div>
                         <div id="security" class="section d-none">
