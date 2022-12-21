@@ -20,7 +20,9 @@
 
 html {
     &#page-login, &#page-signup, &#page-homepage {
-        background-color: var(--col-lighter);
+        main {
+            background-color: var(--col-lighter);
+        }
     }
 
     &#page-login {

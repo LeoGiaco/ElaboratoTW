@@ -14,7 +14,7 @@
   --btn-bg-2-h: var(--btn-fg-2);
 }
 
-html#page-login, html#page-signup, html#page-homepage {
+html#page-login main, html#page-signup main, html#page-homepage main {
   background-color: var(--col-lighter);
 }
 
