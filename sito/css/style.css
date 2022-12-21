@@ -46,11 +46,14 @@ html#page-login main, html#page-settings main {
           flex-grow: 1;
 }
 
-.btn.btn-transition-up {
+.btn.btn-transition-up, .btn.btn-transition-down {
   background-size: 100% 200%;
+  -webkit-transition: background-image 0.15s ease-in-out, background-position 0.15s ease-in-out, color 0.15s ease-in-out, border 0.15s ease-in-out;
+  transition: background-image 0.15s ease-in-out, background-position 0.15s ease-in-out, color 0.15s ease-in-out, border 0.15s ease-in-out;
+}
+
+.btn.btn-transition-up {
   background-position: bottom;
-  -webkit-transition: background-image 0.3s linear, background-position 0.3s linear, color 0.3s linear, border 0.3s linear;
-  transition: background-image 0.3s linear, background-position 0.3s linear, color 0.3s linear, border 0.3s linear;
 }
 
 .btn.btn-transition-up:hover {
@@ -58,10 +61,7 @@ html#page-login main, html#page-settings main {
 }
 
 .btn.btn-transition-down {
-  background-size: 100% 200%;
   background-position: top;
-  -webkit-transition: background-image 0.3s linear, background-position 0.3s linear, color 0.3s linear, border 0.3s linear;
-  transition: background-image 0.3s linear, background-position 0.3s linear, color 0.3s linear, border 0.3s linear;
 }
 
 .btn.btn-transition-down:hover {

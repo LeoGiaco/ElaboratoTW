@@ -52,10 +52,13 @@ html {
 }
 
 .btn {
-    &.btn-transition-up {
+    &.btn-transition-up, &.btn-transition-down {
         background-size: 100% 200%;
+        transition: background-image 0.15s ease-in-out, background-position 0.15s ease-in-out, color 0.15s ease-in-out, border 0.15s ease-in-out;
+    }
+
+    &.btn-transition-up {
         background-position: bottom;
-        transition: background-image 0.3s linear, background-position 0.3s linear, color 0.3s linear, border 0.3s linear;
         
         &:hover {
             background-position: top;
@@ -63,9 +66,7 @@ html {
     }
     
     &.btn-transition-down {
-        background-size: 100% 200%;
         background-position: top;
-        transition: background-image 0.3s linear, background-position 0.3s linear, color 0.3s linear, border 0.3s linear;
         
         &:hover {
             background-position: bottom;
