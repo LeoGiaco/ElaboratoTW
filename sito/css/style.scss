@@ -103,6 +103,11 @@ main {
         }
     }
 
+    &.btn-1, &.btn-2 {
+        &.btn-transition-up, &.btn-transition-down {
+            background-color: var(--transp);
+        }
+    }
     // TODO: 3 bottoni per like, dislike, commento
     // TODO: sezione crea post con bottoni btn-1 e btn-2
     // Bottone commenta in sezione commento con btn-1

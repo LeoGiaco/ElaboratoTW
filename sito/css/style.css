@@ -105,6 +105,10 @@ main#main-login {
   background-image: linear-gradient(to bottom, var(--btn-bg-2) 50%, var(--btn-bg-2-h) 50%);
 }
 
+.btn.btn-1.btn-transition-up, .btn.btn-1.btn-transition-down, .btn.btn-2.btn-transition-up, .btn.btn-2.btn-transition-down {
+  background-color: var(--transp);
+}
+
 a {
   text-decoration: none;
   color: inherit;
