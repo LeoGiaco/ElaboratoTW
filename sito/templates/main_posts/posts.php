@@ -13,7 +13,7 @@
                                 <section>
                                     <header>
                                         <h2>Crea post</h2>
-                                    </header>    
+                                    </header>
                                     <div class="card">
                                         <div id="alert" class="my-2" role="alert"></div>
                                         <div class="card-body">
@@ -38,14 +38,14 @@
                                                 </div>
                                                 <div class="mb-1">
                                                     <label for="image" class="form-label">Seleziona immagine</label>
-                                                    <input class="form-control form-control-sm" id="image" type="file" name="immagine" accept="image/*"/>
+                                                    <input class="form-control form-control-sm" id="image" type="file" name="immagine" accept="image/*" />
                                                 </div>
                                                 <div class="mt-2 pt-1">
                                                     <label for="slcGenere">Tipologia post:</label>
                                                     <select class="form-select form-select-sm" name="tipo" id="slcGenere"></select>
                                                 </div>
                                                 <div class="float-end mt-2 pt-1">
-                                                    <input id="btnAggiungi" type="button" class="btn btn-primary btn-sm" value="Aggiungi"/>
+                                                    <input id="btnAggiungi" type="button" class="btn btn-primary btn-sm" value="Aggiungi" />
                                                     <input id="btnCancella" type="button" class="btn btn-outline-primary btn-sm" value="Cancella">
                                                 </div>
                                             </form>
@@ -68,7 +68,8 @@
                         </div>
                     </div>
                 </section>
-            <div class="col-1 col-md-3"></div>
+                <div class="col-1 col-md-3"></div>
+            </div>
         </div>
     </div>
 </main>
