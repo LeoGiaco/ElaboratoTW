@@ -14,9 +14,13 @@ if(isset($_POST["request"])){
                     $state = $dbh->addUser($_POST["username"], $_POST["nome"], $_POST["cognome"], $_POST["genere"], $_POST["nascita"], $_POST["email"], $_POST["password"]);
                     $state2 = $dbh->addCredentials($_POST["username"], $_POST["email"], $_POST["password"]);            
                     $val = $dbh->getInterests();
+                    $state3=true;
                     foreach ($val as $value) {
                         if(!empty($_POST[$value["Nome"]])){
                             $state3= $dbh->addInterests($_POST["username"], $_POST[$value["Nome"]]);
+                            if($state3==false){
+                                break;
+                            }
                         }
                     }
                     if($state && $state2 && $state3){

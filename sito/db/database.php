@@ -100,6 +100,21 @@
             return $stmt->execute();      
         }
 
+        public function getInterestsUser($user){
+            $query = "SELECT InterNome FROM Preferenza WHERE Username=?";
+            $stmt = $this->db->prepare($query);
+            $stmt->bind_param('s', $user);
+            $stmt->execute();
+            return $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
+        }
+
+        public function deleteInterests($user){
+            $query = "DELETE FROM Preferenza WHERE Username=?";
+            $stmt = $this->db->prepare($query);
+            $stmt->bind_param('s', $user);
+            return $stmt->execute();
+        }
+
         public function getPosts($nPost, $limit){
             $query = 'SELECT p.*, u.Immagine FROM Post p JOIN Utente u ON p.Utente=u.Username ORDER BY Data DESC LIMIT ?, ?';
             $stmt = $this->db->prepare($query);

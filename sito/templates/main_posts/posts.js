@@ -86,7 +86,7 @@ function aggiungiPost(){
             if(data["state"]===false){
                 addAlert("alert","alert-danger",data["msg"],"");
             } else {
-                addAlert("alert","alert-success","Post inserito!","");
+                addAlert("alert","alert-success","Post inserito!","x");
                 svuota();
             }
             postsLoaded=0;

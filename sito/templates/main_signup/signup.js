@@ -39,24 +39,3 @@ $(document).ready(function() {
         window.location.href="login.php";
     });
 });
-
-function setInterests(){
-    const formdata = new FormData();
-    formdata.append("request", "interessiPossibili");
-    $.ajax({
-        type: "POST",
-        url: "templates/main_signup/signup_api.php",
-        data:  formdata,
-        processData: false,
-        contentType: false
-    })
-    .done(function(data,success,response) {
-        const dati = data.dati;
-        for(let i=0; i<dati.length; i++){
-            $("#intset").append('<label for="'+dati[i]["Nome"]+'" class="mb-1 form-check-label"><input id="'+dati[i]["Nome"]+'" class="mx-1 form-check-input" type="checkbox" value="'+dati[i]["Nome"]+'" name="'+dati[i]["Nome"]+'"/>'+dati[i]["Nome"]+'</label>')
-        }
-    })
-    .fail(function(response) {
-        console.log(response);
-    });    
-}

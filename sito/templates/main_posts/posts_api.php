@@ -11,7 +11,7 @@ if(isset($_POST["request"])){
             $result = $rec;
             break;
         case 'getPosts':
-            if(isset($_POST["numeroPost"]) && isset($_POST["utente"]) && isset($_POST["checked"])){
+            if(isset($_POST["numeroPost"]) && isset($_POST["utente"]) && isset($_POST["checked"]) && isUserLoggedIn()){
                 $nPost = $_POST["numeroPost"];
                 $utente = $_POST["utente"];
                 $checked = $_POST["checked"];

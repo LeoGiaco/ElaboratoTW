@@ -53,12 +53,19 @@
                             </form>
                         </div>
                         <div id="interests" class="section d-none">
-                            <header>
+                            <header class="my-2">
                                 <h2>Interessi</h2>
                                 <hr>
                             </header>
-                            <form>
-                                
+                            <form id="frmInterests" class="mb-3">
+                                <div class="form-group">
+                                    <fieldset>
+                                        <legend>Modifica interessi:</legend>
+                                        <div id="intset" class="form-check w-100 text-center">
+                                        </div>
+                                    </fieldset>
+                                </div>
+                                <button class="btn btn-success" type="button">Conferma</button>
                             </form>
                         </div>
                         <div id="security" class="section d-none">
@@ -68,10 +75,11 @@
                             </header>
                             <form id="frmSecurity" class="mb-3">
                                 <div class="form-group">
-                                    <label class="d-block my-2">Modifica delle credenziali</label>
-                                    <input type="password" class="form-control my-1" name="old" placeholder="Inserisci la vecchia password" autocomplete="on" require >
-                                    <input type="password" class="form-control my-2" name="new" placeholder="Nuova password" autocomplete="on" require>
-                                    <input type="password" class="form-control my-1" name="newk" placeholder="Conferma la nuova password" autocomplete="on" require>
+                                    <label class="d-block my-2">Modifica delle credenziali
+                                        <input type="password" class="form-control my-1" name="old" placeholder="Inserisci la vecchia password" autocomplete="on" require >
+                                        <input type="password" class="form-control my-2" name="new" placeholder="Nuova password" autocomplete="on" require>
+                                        <input type="password" class="form-control my-1" name="newk" placeholder="Conferma la nuova password" autocomplete="on" require>
+                                    </label>
                                 </div>
                                 <button class="btn btn-success" type="button">Conferma</button>
                             </form>
