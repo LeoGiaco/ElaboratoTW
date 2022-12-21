@@ -46,6 +46,22 @@ html#page-login main, html#page-settings main {
           flex-grow: 1;
 }
 
+.post-liked .like-button {
+  font-weight: bold;
+}
+
+.post-liked .dislike.button {
+  opacity: 50%;
+}
+
+.post-disliked .like-button {
+  opacity: 50%;
+}
+
+.post-disliked .dislike.button {
+  font-weight: bold;
+}
+
 .btn.btn-transition-up, .btn.btn-transition-down {
   background-size: 100% 200%;
   -webkit-transition: background-image 0.15s ease-in-out, background-position 0.15s ease-in-out, color 0.15s ease-in-out, border 0.15s ease-in-out;

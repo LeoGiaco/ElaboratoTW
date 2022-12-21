@@ -51,6 +51,26 @@ html {
     }
 }
 
+.post-liked {
+    .like-button {
+        font-weight: bold;
+    }
+    
+    .dislike.button {
+        opacity: 50%;
+    }
+}
+
+.post-disliked {
+    .like-button {
+        opacity: 50%;
+    }
+    
+    .dislike.button {
+        font-weight: bold;
+    }
+}
+
 .btn {
     &.btn-transition-up, &.btn-transition-down {
         background-size: 100% 200%;
