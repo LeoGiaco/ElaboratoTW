@@ -42,8 +42,8 @@ main#main-login {
 .btn.btn-transition-up {
   background-size: 100% 200%;
   background-position: bottom;
-  -webkit-transition: background-color 0.3s linear;
-  transition: background-color 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
 }
 
 .btn.btn-transition-up:hover {
@@ -53,8 +53,8 @@ main#main-login {
 .btn.btn-transition-down {
   background-size: 100% 200%;
   background-position: top;
-  -webkit-transition: background-color 0.3s linear;
-  transition: background-color 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
 }
 
 .btn.btn-transition-down:hover {
@@ -74,11 +74,13 @@ main#main-login {
 }
 
 .btn.btn-1.btn-transition-up {
-  background-color: linear-gradient(to top, var(--btn-bg-1) 50%, var(--btn-bg-1-h) 50%);
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, var(--btn-bg-1)), color-stop(50%, var(--btn-bg-1-h)));
+  background: linear-gradient(to top, var(--btn-bg-1) 50%, var(--btn-bg-1-h) 50%);
 }
 
 .btn.btn-1.btn-transition-down {
-  background-color: linear-gradient(to bottom, var(--btn-bg-1) 50%, var(--btn-bg-1-h) 50%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, var(--btn-bg-1)), color-stop(50%, var(--btn-bg-1-h)));
+  background: linear-gradient(to bottom, var(--btn-bg-1) 50%, var(--btn-bg-1-h) 50%);
 }
 
 .btn.btn-2 {
