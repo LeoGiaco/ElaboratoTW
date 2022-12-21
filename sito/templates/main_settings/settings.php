@@ -39,17 +39,21 @@
                     <section class="card-body">
                         <div id="alert" class="my-2" role="alert"></div>
                         <div id="profile" class="section">
-                            <header>
+                            <header class="my-2">
                                 <h2>Informazioni profilo</h2>
                                 <hr>
                             </header>
-                            <form>
+                            <form id="frmProfile" class="mb-3">
                                 <div class="form-group">
-                                    <label for="fullName">Full Name</label>
-                                    <input type="text" class="form-control" id="fullName" aria-describedby="fullNameHelp" placeholder="Enter your fullname" value="Kenneth Valdez">
-                                    <small id="fullNameHelp" class="form-text text-muted">Your name may appear around here where you are mentioned. You can change or remove it at any time.</small>
+                                    <figure class="text-center">
+                                        <figcaption>Immagine attuale di profilo</figcaption>
+                                        <img id="imgUtente" src="" alt="Immagine profilo utente" width="30%" height="30%" class="img-fluid img-thumbnail mx-2 my-2">
+                                    </figure>
+                                    <label class="form-label">Seleziona nuova immagine:
+                                        <input id="image" class="form-control form-control-sm" type="file" name="immagine" accept="image/*"/>
+                                    </label>
                                 </div>
-                                <button type="button" class="btn btn-primary">Update Profile</button>
+                                <button type="button" class="btn btn-primary">Cambia immagine</button>
                             </form>
                         </div>
                         <div id="interests" class="section d-none">

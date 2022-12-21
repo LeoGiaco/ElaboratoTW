@@ -13,7 +13,7 @@
                             <div class="row">
                                 <div class="col-3 col-md-2">
                                     <img id="imgUtente" src=""
-                                        alt="Immagine profilo utente" class="img-fluid img-thumbnail mx-2 my-2 w-100 h-90">
+                                        alt="Immagine profilo utente" width="100%" height="100%" class="img-fluid img-thumbnail mx-2 my-2">
                                 </div>
                                 <div class="col-6 col-md-7 d-flex align-items-start flex-column">
                                     <p id="nominativo" class="mt-auto mb-2">Nome e cognome</p>

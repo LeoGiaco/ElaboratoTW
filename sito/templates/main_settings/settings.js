@@ -3,6 +3,7 @@ const fileint = "templates/main_settings/settings_api.php";
 $(document).ready(function() {
     setInterests();
     checkInterests();
+    insertProfileImage();
 
     $("nav").on("click",'button',function(){
         const typBtn = $(this).data("type");
@@ -65,8 +66,56 @@ $(document).ready(function() {
 
     });
 
+    $("#profile").on("click",'button',function(){
+        const datas = new FormData();
+        let file = $("#image")[0].files[0];
+        if(file===undefined)
+            file = "";
+        datas.append("file",file);
+        datas.append("request", "changeImg");
+        $.ajax({
+            type: "POST",
+            url: fileint,
+            data:  datas, 
+            processData: false,
+            contentType: false
+        })
+        .done(function(data,success,response) {
+            if(data.stato === false){
+                addAlert("alert","alert-danger", data.msg,"");
+            } else {
+                addAlert("alert","alert-success", data.msg,"x");
+            }
+        })
+        .fail(function(response) {
+            console.log(response);
+        });
+
+    });
+
+   
+
 
 });
+
+function insertProfileImage(){
+    const datas = new FormData();
+    datas.append("request", "getUserInfo");
+
+    $.ajax({
+        type: "POST",
+        url: fileint,
+        data:  datas, 
+        processData: false,
+        contentType: false
+    })
+    .done(function(data,success,response) {
+        $("#imgUtente").attr("src", "images/profile_img/"+data);
+    })
+    .fail(function(response) {
+        console.log(response);
+    });
+}
 
 function checkInterests(){
     const datas = new FormData();

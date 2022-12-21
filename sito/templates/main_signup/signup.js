@@ -5,9 +5,6 @@ $(document).ready(function() {
     $("form").submit(function(event) {
         const datas = getFormData("form_sign");
         datas.append("request", "aggiungiUtente");
-        for (const value of datas.keys()) {
-            console.log(value);
-          }
         if(new Date(datas.get("nascita")) >= new Date()){
             addAlert("alert","alert-danger","Data nascita errata!","");
         } else {

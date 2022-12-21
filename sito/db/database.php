@@ -147,6 +147,14 @@
             return $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
         }
 
+        public function changeProfile($img, $user)
+        {
+            $query = "UPDATE Utente SET Immagine=? WHERE Username=?"; 
+            $stmt = $this->db->prepare($query);
+            $stmt->bind_param('ss', $img, $user);
+            return $stmt->execute();
+        }
+
         public function addComment($utente, $post, $testo){
             $query = "INSERT INTO Commento (Testo, Data, Post, Utente) VALUES (?, ?, ?, ?)"; 
             $stmt = $this->db->prepare($query);

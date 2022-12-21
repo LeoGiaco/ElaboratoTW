@@ -4,7 +4,7 @@
         <header>
             <div class="row">
                 <div class="mt-2 col-12 col-lg-6 d-flex justify-content-center d-lg-block justify-content-lg-start" id="iscrivitiImg">
-                    <img src="images/icon2x.svg" alt="Logo sito" />
+                    <img src="images/icon2x.svg" alt="Logo sito"/>
                 </div>
                 <div class="col-12 col-lg-6 d-flex justify-content-center d-lg-block justify-content-lg-start" id="iscrivitiP">
                     <p class="pt-10 w-75 text-center text-lg-start">

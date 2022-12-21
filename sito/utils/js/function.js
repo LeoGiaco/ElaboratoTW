@@ -306,11 +306,11 @@ function setInterests(){
 
 // fine interessi.
 
-// Funzioni per criptaggio e decriptaggio
-function encryptPwd(password, salt){
-    return CryptoJS.TripleDES.encrypt(password, salt);
-}
-​
-function decryptPwd(password, salt){
-    return CryptoJS.TripleDES.decrypt(password, salt);
-}
+// // Funzioni per criptaggio e decriptaggio
+// function encryptPwd(password, salt){
+//     return CryptoJS.TripleDES.encrypt(password, salt);
+// }
+// ​
+// function decryptPwd(password, salt){
+//     return CryptoJS.TripleDES.decrypt(password, salt);
+// }
