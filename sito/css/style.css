@@ -46,11 +46,19 @@ main#main-login {
   transition: background-color 0.3s linear;
 }
 
+.btn.btn-transition-up:hover {
+  background-position: top;
+}
+
 .btn.btn-transition-down {
   background-size: 100% 200%;
   background-position: top;
   -webkit-transition: background-color 0.3s linear;
   transition: background-color 0.3s linear;
+}
+
+.btn.btn-transition-down:hover {
+  background-position: bottom;
 }
 
 .btn.btn-1 {

@@ -47,12 +47,20 @@ main {
         background-size: 100% 200%;
         background-position: bottom;
         transition: background-color 0.3s linear;
+        
+        &:hover {
+            background-position: top;
+        }
     }
     
     &.btn-transition-down {
         background-size: 100% 200%;
         background-position: top;
         transition: background-color 0.3s linear;
+        
+        &:hover {
+            background-position: bottom;
+        }
     }
     
     &.btn-1 {
