@@ -14,6 +14,10 @@
   --btn-bg-2-h: var(--btn-fg-2);
 }
 
+html#page-login, html#page-signup, html#page-homepage {
+  background-color: var(--col-lighter);
+}
+
 html#page-login, html#page-login body {
   height: 100%;
 }
@@ -28,11 +32,7 @@ html#page-login body {
           flex-direction: column;
 }
 
-main#main-login, main#main-signup, main#main-home {
-  background-color: var(--col-lighter);
-}
-
-main#main-login {
+html#page-login main {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;

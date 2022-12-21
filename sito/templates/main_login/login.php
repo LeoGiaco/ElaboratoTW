@@ -1,4 +1,4 @@
-<main id="main-login">
+<main>
     <input id="login" type="hidden" name="login" value="<?php echo $_GET["iscr"]; ?>" />
     <div class="container-fluid p-0 overflow-hidden">
         <header>

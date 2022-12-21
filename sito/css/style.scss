@@ -19,6 +19,10 @@
 }
 
 html {
+    &#page-login, &#page-signup, &#page-homepage {
+        background-color: var(--col-lighter);
+    }
+
     &#page-login {
         &, body {
             height: 100%;
@@ -28,16 +32,10 @@ html {
             display: flex;
             flex-direction: column;
         }
-    }
-}
 
-main {
-    &#main-login, &#main-signup, &#main-home {
-        background-color: var(--col-lighter);
-    }
-    
-    &#main-login {
-        flex-grow: 1;
+        main {
+            flex-grow: 1;
+        }
     }
 }
 
