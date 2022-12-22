@@ -84,6 +84,22 @@ html#page-login main, html#page-settings main {
   background-position: bottom;
 }
 
+.btn.btn-inverted.btn-transition-up {
+  background-position: top;
+}
+
+.btn.btn-inverted.btn-transition-up:hover {
+  background-position: bottom;
+}
+
+.btn.btn-inverted.btn-transition-down {
+  background-position: bottom;
+}
+
+.btn.btn-inverted.btn-transition-down:hover {
+  background-position: top;
+}
+
 .btn.btn-1 {
   background-color: var(--btn-bg-1);
   color: var(--btn-fg-1);
@@ -106,26 +122,16 @@ html#page-login main, html#page-settings main {
   background-image: linear-gradient(to bottom, var(--btn-bg-1) 50%, var(--btn-bg-1-h) 50%);
 }
 
-.btn.btn-1.inverted {
+.btn.btn-1.btn-inverted {
   background-color: var(--btn-bg-1-h);
   color: var(--btn-fg-1-h);
   border-color: var(--transp);
 }
 
-.btn.btn-1.inverted:hover {
+.btn.btn-1.btn-inverted:hover {
   background-color: var(--btn-bg-1);
   color: var(--btn-fg-1);
   border-color: var(--btn-fg-1);
-}
-
-.btn.btn-1.inverted.btn-transition-up {
-  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(50%, var(--btn-bg-1-h)), color-stop(50%, var(--btn-bg-1)));
-  background-image: linear-gradient(to top, var(--btn-bg-1-h) 50%, var(--btn-bg-1) 50%);
-}
-
-.btn.btn-1.inverted.btn-transition-down {
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, var(--btn-bg-1-h)), color-stop(50%, var(--btn-bg-1)));
-  background-image: linear-gradient(to bottom, var(--btn-bg-1-h) 50%, var(--btn-bg-1) 50%);
 }
 
 .btn.btn-1.btn-transition-up, .btn.btn-1.btn-transition-down {
@@ -154,26 +160,16 @@ html#page-login main, html#page-settings main {
   background-image: linear-gradient(to bottom, var(--btn-bg-2) 50%, var(--btn-bg-2-h) 50%);
 }
 
-.btn.btn-2.inverted {
+.btn.btn-2.btn-inverted {
   background-color: var(--btn-bg-2-h);
   color: var(--btn-fg-2-h);
   border-color: var(--transp);
 }
 
-.btn.btn-2.inverted:hover {
+.btn.btn-2.btn-inverted:hover {
   background-color: var(--btn-bg-2);
   color: var(--btn-fg-2);
   border-color: var(--btn-fg-2);
-}
-
-.btn.btn-2.inverted.btn-transition-up {
-  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(50%, var(--btn-bg-2-h)), color-stop(50%, var(--btn-bg-2)));
-  background-image: linear-gradient(to top, var(--btn-bg-2-h) 50%, var(--btn-bg-2) 50%);
-}
-
-.btn.btn-2.inverted.btn-transition-down {
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, var(--btn-bg-2-h)), color-stop(50%, var(--btn-bg-2)));
-  background-image: linear-gradient(to bottom, var(--btn-bg-2-h) 50%, var(--btn-bg-2) 50%);
 }
 
 .btn.btn-2.btn-transition-up, .btn.btn-2.btn-transition-down {
@@ -202,26 +198,16 @@ html#page-login main, html#page-settings main {
   background-image: linear-gradient(to bottom, var(--btn-bg-3) 50%, var(--btn-bg-3-h) 50%);
 }
 
-.btn.btn-3.inverted {
+.btn.btn-3.btn-inverted {
   background-color: var(--btn-bg-3-h);
   color: var(--btn-fg-3-h);
   border-color: var(--transp);
 }
 
-.btn.btn-3.inverted:hover {
+.btn.btn-3.btn-inverted:hover {
   background-color: var(--btn-bg-3);
   color: var(--btn-fg-3);
   border-color: var(--btn-fg-3);
-}
-
-.btn.btn-3.inverted.btn-transition-up {
-  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(50%, var(--btn-bg-3-h)), color-stop(50%, var(--btn-bg-3)));
-  background-image: linear-gradient(to top, var(--btn-bg-3-h) 50%, var(--btn-bg-3) 50%);
-}
-
-.btn.btn-3.inverted.btn-transition-down {
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, var(--btn-bg-3-h)), color-stop(50%, var(--btn-bg-3)));
-  background-image: linear-gradient(to bottom, var(--btn-bg-3-h) 50%, var(--btn-bg-3) 50%);
 }
 
 .btn.btn-3.btn-transition-up, .btn.btn-3.btn-transition-down {
@@ -250,26 +236,16 @@ html#page-login main, html#page-settings main {
   background-image: linear-gradient(to bottom, var(--btn-bg-4) 50%, var(--btn-bg-4-h) 50%);
 }
 
-.btn.btn-4.inverted {
+.btn.btn-4.btn-inverted {
   background-color: var(--btn-bg-4-h);
   color: var(--btn-fg-4-h);
   border-color: var(--transp);
 }
 
-.btn.btn-4.inverted:hover {
+.btn.btn-4.btn-inverted:hover {
   background-color: var(--btn-bg-4);
   color: var(--btn-fg-4);
   border-color: var(--btn-fg-4);
-}
-
-.btn.btn-4.inverted.btn-transition-up {
-  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(50%, var(--btn-bg-4-h)), color-stop(50%, var(--btn-bg-4)));
-  background-image: linear-gradient(to top, var(--btn-bg-4-h) 50%, var(--btn-bg-4) 50%);
-}
-
-.btn.btn-4.inverted.btn-transition-down {
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, var(--btn-bg-4-h)), color-stop(50%, var(--btn-bg-4)));
-  background-image: linear-gradient(to bottom, var(--btn-bg-4-h) 50%, var(--btn-bg-4) 50%);
 }
 
 .btn.btn-4.btn-transition-up, .btn.btn-4.btn-transition-down {

@@ -95,6 +95,24 @@ html {
         }
     }
 
+    &.btn-inverted {
+        &.btn-transition-up {
+            background-position: top;
+            
+            &:hover {
+                background-position: bottom;
+            }
+        }
+        
+        &.btn-transition-down {
+            background-position: bottom;
+            
+            &:hover {
+                background-position: top;
+            }
+        }
+    }
+
     @for $i from 1 through 4 {
         &.btn-#{$i} {
             background-color: var(--btn-bg-#{$i});
@@ -115,7 +133,7 @@ html {
                 background-image: linear-gradient(to bottom, var(--btn-bg-#{$i}) 50%, var(--btn-bg-#{$i}-h) 50%);
             }
         
-            &.inverted {
+            &.btn-inverted {
                 background-color: var(--btn-bg-#{$i}-h);
                 color: var(--btn-fg-#{$i}-h);
                 border-color: var(--transp);
@@ -124,14 +142,6 @@ html {
                     background-color: var(--btn-bg-#{$i});
                     color: var(--btn-fg-#{$i});
                     border-color: var(--btn-fg-#{$i});
-                }
-        
-                &.btn-transition-up {
-                    background-image: linear-gradient(to top, var(--btn-bg-#{$i}-h) 50%, var(--btn-bg-#{$i}) 50%);
-                }
-        
-                &.btn-transition-down {
-                    background-image: linear-gradient(to bottom, var(--btn-bg-#{$i}-h) 50%, var(--btn-bg-#{$i}) 50%);
                 }
             }
 
