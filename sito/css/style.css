@@ -84,22 +84,6 @@ html#page-login main, html#page-settings main {
   background-position: bottom;
 }
 
-.btn.btn-inverted.btn-transition-up {
-  background-position: top;
-}
-
-.btn.btn-inverted.btn-transition-up:hover {
-  background-position: bottom;
-}
-
-.btn.btn-inverted.btn-transition-down {
-  background-position: bottom;
-}
-
-.btn.btn-inverted.btn-transition-down:hover {
-  background-position: top;
-}
-
 .btn.btn-1 {
   background-color: var(--btn-bg-1);
   color: var(--btn-fg-1);

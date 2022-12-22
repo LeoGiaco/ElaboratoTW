@@ -93,24 +93,6 @@ html {
         }
     }
 
-    &.btn-inverted {
-        &.btn-transition-up {
-            background-position: top;
-            
-            &:hover {
-                background-position: bottom;
-            }
-        }
-        
-        &.btn-transition-down {
-            background-position: bottom;
-            
-            &:hover {
-                background-position: top;
-            }
-        }
-    }
-
     @for $i from 1 through $nButtons {
         &.btn-#{$i} {
             background-color: var(--btn-bg-#{$i});
