@@ -1,3 +1,5 @@
+$nButtons: 4;
+
 :root {
     --col-dark: rgb(39, 45, 53);
     --col-mid: rgb(81, 111, 150);
@@ -24,10 +26,6 @@
     --btn-fg-4-h: white;
     --btn-bg-4: var(--transp);
     --btn-bg-4-h: var(--btn-fg-4);
-
-    $btn-bg: ();
-    
-
 }
 
 html {
@@ -113,7 +111,7 @@ html {
         }
     }
 
-    @for $i from 1 through 4 {
+    @for $i from 1 through $nButtons {
         &.btn-#{$i} {
             background-color: var(--btn-bg-#{$i});
             color: var(--btn-fg-#{$i});

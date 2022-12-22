@@ -255,9 +255,12 @@ function gestioneBottoni(button){
                 const like=temp[0];
                 const dislike=temp[1];
                 const postReaction = temp[2];
+
+                const btnLike = $("#btnLike"+numero);
+                const btnDislike = $("#btnDislike"+numero);
                 
-                $("#btnLike"+numero).text("Like: "+like);
-                $("#btnDislike"+numero).text("Dislike: "+dislike);
+                btnLike.text("Like: "+like);
+                btnDislike.text("Dislike: "+dislike);
                 
                 let article = $("#post"+numero);
                 let prevReaction = article.hasClass("post-liked") ? 1 : (article.hasClass("post-disliked") ? -1 : 0);
@@ -266,14 +269,15 @@ function gestioneBottoni(button){
                     if (prevReaction != 0) {
                         let prevReactionClass = prevReaction == 1 ? "post-liked" : "post-disliked";
                         article.removeClass(prevReactionClass);
+                        btnLike.removeClass("btn-inverted");
+                        btnDislike.removeClass("btn-inverted"); // Easier to try and remove from both buttons than checking which one has it.
                     }
                     
                     if (postReaction != 0) {
                         article.addClass("post-liked");
+                        btnLike.addClass("btn-inverted");
                     }
                 }
-
-                // $("#btnLike"+numero).parents("article")[0].addClass("post-liked"); // FIXME: Non va bene, non c'è modo di sapere se il post aveva like, dislike o nulla.
             })
             .fail(function(response) {
                 console.log(response);
@@ -299,8 +303,11 @@ function gestioneBottoni(button){
                 const dislike=temp[1];
                 const postReaction = temp[2];
 
-                $("#btnLike"+numero).text("Like: "+like);
-                $("#btnDislike"+numero).text("Dislike: "+dislike);
+                const btnLike = $("#btnLike"+numero);
+                const btnDislike = $("#btnDislike"+numero);
+
+                btnLike.text("Like: "+like);
+                btnDislike.text("Dislike: "+dislike);
 
                 let article = $("#post"+numero);
                 let prevReaction = article.hasClass("post-liked") ? 1 : (article.hasClass("post-disliked") ? -1 : 0);
@@ -309,10 +316,13 @@ function gestioneBottoni(button){
                     if (prevReaction != 0) {
                         let prevReactionClass = prevReaction == 1 ? "post-liked" : "post-disliked";
                         article.removeClass(prevReactionClass);
+                        btnLike.removeClass("btn-inverted");
+                        btnDislike.removeClass("btn-inverted");
                     }
                     
                     if (postReaction != 0) {
                         article.addClass("post-disliked");
+                        btnDislike.addClass("btn-inverted");
                     }
                 }
             })
