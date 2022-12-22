@@ -24,6 +24,8 @@
     --btn-fg-4-h: white;
     --btn-bg-4: var(--transp);
     --btn-bg-4-h: var(--btn-fg-4);
+
+    $btn-bg: ();
     
 
 }
@@ -93,94 +95,51 @@ html {
         }
     }
 
-    &.btn-1 {
-        background-color: var(--btn-bg-1);
-        color: var(--btn-fg-1);
-        border-color: var(--btn-fg-1);
+    @for $i from 1 through 4 {
+        &.btn-#{$i} {
+            background-color: var(--btn-bg-#{$i});
+            color: var(--btn-fg-#{$i});
+            border-color: var(--btn-fg-#{$i});
         
-        &:hover {
-            background-color: var(--btn-bg-1-h);
-            color: var(--btn-fg-1-h);
-            border-color: var(--transp);
-        }
+            &:hover {
+                background-color: var(--btn-bg-#{$i}-h);
+                color: var(--btn-fg-#{$i}-h);
+                border-color: var(--transp);
+            }
 
-        &.btn-transition-up {
-            background-image: linear-gradient(to top, var(--btn-bg-1) 50%, var(--btn-bg-1-h) 50%);
-        }
+            &.btn-transition-up {
+                background-image: linear-gradient(to top, var(--btn-bg-#{$i}) 50%, var(--btn-bg-#{$i}-h) 50%);
+            }
+    
+            &.btn-transition-down {
+                background-image: linear-gradient(to bottom, var(--btn-bg-#{$i}) 50%, var(--btn-bg-#{$i}-h) 50%);
+            }
+            
+            &.btn-transition-up, &.btn-transition-down {
+                background-color: var(--transp);
+            }
 
-        &.btn-transition-down {
-            background-image: linear-gradient(to bottom, var(--btn-bg-1) 50%, var(--btn-bg-1-h) 50%);
-        }
-    }
-
-    &.btn-2 {
-        background-color: var(--btn-bg-2);
-        color: var(--btn-fg-2);
-        border-color: var(--btn-fg-2);
+            &.inverted {
+                background-color: var(--btn-bg-#{$i}-h);
+                color: var(--btn-fg-#{$i}-h);
+                border-color: var(--transp);
+            
+                &:hover {
+                    background-color: var(--btn-bg-#{$i});
+                    color: var(--btn-fg-#{$i});
+                    border-color: var(--btn-fg-#{$i});
+                }
         
-        &:hover {
-            background-color: var(--btn-bg-2-h);
-            color: var(--btn-fg-2-h);
-            border-color: var(--transp);
-        }
-
-        &.btn-transition-up {
-            background-image: linear-gradient(to top, var(--btn-bg-2) 50%, var(--btn-bg-2-h) 50%);
-        }
-
-        &.btn-transition-down {
-            background-image: linear-gradient(to bottom, var(--btn-bg-2) 50%, var(--btn-bg-2-h) 50%);
-        }
-    }
-
-    &.btn-3 {
-        background-color: var(--btn-bg-3);
-        color: var(--btn-fg-3);
-        border-color: var(--btn-fg-3);
+                &.btn-transition-up {
+                    background-image: linear-gradient(to top, var(--btn-bg-#{$i}-h) 50%, var(--btn-bg-#{$i}) 50%);
+                }
         
-        &:hover {
-            background-color: var(--btn-bg-3-h);
-            color: var(--btn-fg-3-h);
-            border-color: var(--transp);
-        }
-
-        &.btn-transition-up {
-            background-image: linear-gradient(to top, var(--btn-bg-3) 50%, var(--btn-bg-3-h) 50%);
-        }
-
-        &.btn-transition-down {
-            background-image: linear-gradient(to bottom, var(--btn-bg-3) 50%, var(--btn-bg-3-h) 50%);
+                &.btn-transition-down {
+                    background-image: linear-gradient(to bottom, var(--btn-bg-#{$i}-h) 50%, var(--btn-bg-#{$i}) 50%);
+                }
+            }
         }
     }
-
-    &.btn-4 {
-        background-color: var(--btn-bg-4);
-        color: var(--btn-fg-4);
-        border-color: var(--btn-fg-4);
-        
-        &:hover {
-            background-color: var(--btn-bg-4-h);
-            color: var(--btn-fg-4-h);
-            border-color: var(--transp);
-        }
-
-        &.btn-transition-up {
-            background-image: linear-gradient(to top, var(--btn-bg-4) 50%, var(--btn-bg-4-h) 50%);
-        }
-
-        &.btn-transition-down {
-            background-image: linear-gradient(to bottom, var(--btn-bg-4) 50%, var(--btn-bg-4-h) 50%);
-        }
-    }
-
-    &.btn-1, &.btn-2, &.btn-3, &.btn-4 {
-        &.btn-transition-up, &.btn-transition-down {
-            background-color: var(--transp);
-        }
-    }
-    // TODO: 3 bottoni per like, dislike, commento
-    // TODO: sezione crea post con bottoni btn-1 e btn-2
-    // Bottone commenta in sezione commento con btn-1
 }
 
 a {
