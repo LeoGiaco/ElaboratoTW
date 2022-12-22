@@ -263,11 +263,14 @@ function gestioneBottoni(button){
                 let prevReaction = article.hasClass("post-liked") ? 1 : (article.hasClass("post-disliked") ? -1 : 0);
                 
                 if (postReaction != prevReaction) {
-                    let prevReactionClass = prevReaction == 1 ? " post-liked " : (prevReaction == -1 ? " post-disliked " : ""); 
-                    article.removeClass(prevReactionClass);
+                    if (prevReaction != 0) {
+                        let prevReactionClass = prevReaction == 1 ? "post-liked" : "post-disliked";
+                        article.removeClass(prevReactionClass);
+                    }
                     
-                    let postReactionClass = postReaction == 1 ? " post-liked " : (postReaction == -1 ? " post-disliked " : ""); 
-                    article.addClass(postReactionClass);
+                    if (postReaction != 0) {
+                        article.addClass("post-liked");
+                    }
                 }
 
                 // $("#btnLike"+numero).parents("article")[0].addClass("post-liked"); // FIXME: Non va bene, non c'è modo di sapere se il post aveva like, dislike o nulla.
@@ -294,8 +297,24 @@ function gestioneBottoni(button){
                 const temp=processaLike(data);
                 const like=temp[0];
                 const dislike=temp[1];
+                const postReaction = temp[2];
+
                 $("#btnLike"+numero).text("Like: "+like);
                 $("#btnDislike"+numero).text("Dislike: "+dislike);
+
+                let article = $("#post"+numero);
+                let prevReaction = article.hasClass("post-liked") ? 1 : (article.hasClass("post-disliked") ? -1 : 0);
+                
+                if (postReaction != prevReaction) {
+                    if (prevReaction != 0) {
+                        let prevReactionClass = prevReaction == 1 ? "post-liked" : "post-disliked";
+                        article.removeClass(prevReactionClass);
+                    }
+                    
+                    if (postReaction != 0) {
+                        article.addClass("post-disliked");
+                    }
+                }
             })
             .fail(function(response) {
                 console.log(response);
