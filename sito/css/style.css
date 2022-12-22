@@ -50,7 +50,7 @@ html#page-login main, html#page-settings main {
   font-weight: bold;
 }
 
-.post-liked .dislike.button {
+.post-liked .dislike-button {
   opacity: 50%;
 }
 
@@ -58,7 +58,7 @@ html#page-login main, html#page-settings main {
   opacity: 50%;
 }
 
-.post-disliked .dislike.button {
+.post-disliked .dislike-button {
   font-weight: bold;
 }
 
