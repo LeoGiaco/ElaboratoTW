@@ -122,7 +122,6 @@ html {
             &:hover {
                 background-color: var(--btn-bg-#{$i}-h);
                 color: var(--btn-fg-#{$i}-h);
-                border-color: var(--transp);
             }
 
             &.btn-transition-up {
@@ -136,12 +135,10 @@ html {
             &.btn-inverted {
                 background-color: var(--btn-bg-#{$i}-h);
                 color: var(--btn-fg-#{$i}-h);
-                border-color: var(--transp);
             
                 &:hover {
                     background-color: var(--btn-bg-#{$i});
                     color: var(--btn-fg-#{$i});
-                    border-color: var(--btn-fg-#{$i});
                 }
             }
 
