@@ -52,12 +52,12 @@ if(isset($_POST["request"])){
                 if(empty($risultato)){
                     $dbh->addReaction($_SESSION['user'], $_POST["nPost"], $_POST["like"], $_POST["dislike"]);
 
-                    if($_POST["Like"] == 1) {
+                    if($_POST["like"] == 1) {
                         $result["post_reaction"] = 1;   // like
-                    } else if ($_POST["Dislike"] == 1) {
+                    } else if ($_POST["dislike"] == 1) {
                         $result["post_reaction"] = -1;  // dislike
                     } else {
-                        $result["post_reaction"] = 0;  // dislike
+                        $result["post_reaction"] = 0;
                     }
                 }
                 else {
@@ -68,12 +68,12 @@ if(isset($_POST["request"])){
                     else{
                         $dbh->switchReaction($_SESSION['user'], $_POST["nPost"], $_POST["like"], $_POST["dislike"]);
                         
-                        if($_POST["Like"] == 1) {
+                        if($_POST["like"] == 1) {
                             $result["post_reaction"] = 1;   // like
-                        } else if ($_POST["Dislike"] == 1) {
+                        } else if ($_POST["dislike"] == 1) {
                             $result["post_reaction"] = -1;  // dislike
                         } else {
-                            $result["post_reaction"] = 0;  // dislike
+                            $result["post_reaction"] = 0;
                         }
                     }
                 }
