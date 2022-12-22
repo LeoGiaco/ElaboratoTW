@@ -18,7 +18,7 @@ if(isset($_POST["request"])){
                 if($utente=="" && $checked=="false"){
                     $posts = $dbh->getPosts($_SESSION["user"], $nPost, 5);
 
-                    if($_POST["like"] == 1) {
+                    if($_POST["Like"] == 1) {
                         $result["post_reaction"] = 1;   // like
                     } else {
                         $result["post_reaction"] = -1;  // dislike
@@ -48,7 +48,7 @@ if(isset($_POST["request"])){
                 if(empty($risultato)){
                     $dbh->addReaction($_SESSION['user'], $_POST["nPost"], $_POST["like"], $_POST["dislike"]);
 
-                    if($_POST["like"] == 1) {
+                    if($_POST["Like"] == 1) {
                         $result["post_reaction"] = 1;   // like
                     } else {
                         $result["post_reaction"] = -1;  // dislike
@@ -62,7 +62,7 @@ if(isset($_POST["request"])){
                     else{
                         $dbh->switchReaction($_SESSION['user'], $_POST["nPost"], $_POST["like"], $_POST["dislike"]);
                         
-                        if($_POST["like"] == 1) {
+                        if($_POST["Like"] == 1) {
                             $result["post_reaction"] = 1;   // like
                         } else {
                             $result["post_reaction"] = -1;  // dislike
