@@ -114,11 +114,7 @@ html {
             &.btn-transition-down {
                 background-image: linear-gradient(to bottom, var(--btn-bg-#{$i}) 50%, var(--btn-bg-#{$i}-h) 50%);
             }
-            
-            &.btn-transition-up, &.btn-transition-down {
-                background-color: var(--transp);
-            }
-
+        
             &.inverted {
                 background-color: var(--btn-bg-#{$i}-h);
                 color: var(--btn-fg-#{$i}-h);
@@ -137,6 +133,10 @@ html {
                 &.btn-transition-down {
                     background-image: linear-gradient(to bottom, var(--btn-bg-#{$i}-h) 50%, var(--btn-bg-#{$i}) 50%);
                 }
+            }
+
+            &.btn-transition-up, &.btn-transition-down {
+                background-color: var(--transp);
             }
         }
     }
