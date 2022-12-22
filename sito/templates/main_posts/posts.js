@@ -59,7 +59,7 @@ $(document).ready(function() {
 });
 
 function svuota(){
-    $("#formPost").first().reset();
+    $("#formPost")[0].reset();
 }
 
 function aggiungiPost(){

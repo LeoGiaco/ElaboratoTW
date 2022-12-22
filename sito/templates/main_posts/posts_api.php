@@ -16,7 +16,7 @@ if(isset($_POST["request"])){
                 $utente = $_POST["utente"];
                 $checked = $_POST["checked"];
                 if($utente=="" && $checked=="false"){
-                    $posts = $dbh->getPosts($nPost, 5);
+                    $posts = $dbh->getPosts($_SESSION["user"], $nPost, 5);
                 } else if($checked=="true"){
                     $posts = $dbh->getPostsFollow($nPost, 5, $_SESSION["user"]);
                 }

@@ -46,7 +46,7 @@
                                                 </div>
                                                 <div class="float-end mt-2 pt-1">
                                                     <input id="btnAggiungi" type="button" class="btn btn-1 btn-sm" value="Aggiungi" />
-                                                    <input id="btnCancella" type="reset" class="btn btn-2 btn-sm" value="Cancella" />
+                                                    <input type="reset" class="btn btn-2 btn-sm" value="Cancella" />
                                                 </div>
                                             </form>
                                         </div>
