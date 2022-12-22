@@ -18,10 +18,14 @@ if(isset($_POST["request"])){
                 if($utente=="" && $checked=="false"){
                     $posts = $dbh->getPosts($_SESSION["user"], $nPost, 5);
 
-                    if($_POST["Like"] == 1) {
-                        $result["post_reaction"] = 1;   // like
-                    } else {
-                        $result["post_reaction"] = -1;  // dislike
+                    for ($i = 0; $i < count($posts); $i++) {
+                        if($posts[$i]["Like"] == 1) {
+                            $posts[$i]["post_reaction"] = 1;   // like
+                        } else if ($posts[$i]["Dislike"] == 1) {
+                            $posts[$i]["post_reaction"] = -1;  // dislike
+                        } else {
+                            $posts[$i]["post_reaction"] = 0;  // dislike
+                        }
                     }
                 } else if($checked=="true"){
                     $posts = $dbh->getPostsFollow($nPost, 5, $_SESSION["user"]);
@@ -50,8 +54,10 @@ if(isset($_POST["request"])){
 
                     if($_POST["Like"] == 1) {
                         $result["post_reaction"] = 1;   // like
-                    } else {
+                    } else if ($_POST["Dislike"] == 1) {
                         $result["post_reaction"] = -1;  // dislike
+                    } else {
+                        $result["post_reaction"] = 0;  // dislike
                     }
                 }
                 else {
@@ -64,8 +70,10 @@ if(isset($_POST["request"])){
                         
                         if($_POST["Like"] == 1) {
                             $result["post_reaction"] = 1;   // like
-                        } else {
+                        } else if ($_POST["Dislike"] == 1) {
                             $result["post_reaction"] = -1;  // dislike
+                        } else {
+                            $result["post_reaction"] = 0;  // dislike
                         }
                     }
                 }
