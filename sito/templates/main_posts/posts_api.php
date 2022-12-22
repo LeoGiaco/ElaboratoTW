@@ -17,6 +17,12 @@ if(isset($_POST["request"])){
                 $checked = $_POST["checked"];
                 if($utente=="" && $checked=="false"){
                     $posts = $dbh->getPosts($_SESSION["user"], $nPost, 5);
+
+                    if($_POST["like"] == 1) {
+                        $result["post_reaction"] = 1;   // like
+                    } else {
+                        $result["post_reaction"] = -1;  // dislike
+                    }
                 } else if($checked=="true"){
                     $posts = $dbh->getPostsFollow($nPost, 5, $_SESSION["user"]);
                 }
