@@ -234,7 +234,7 @@ function gestioneBottoni(button){
             break;
         case "like":
             const like = new FormData();
-            like.append("request", "aggiuniReaction");
+            like.append("request", "aggiungiReaction");
             like.append("nPost", numero);
             like.append("like", 1);
             like.append("dislike", 0);
@@ -260,7 +260,7 @@ function gestioneBottoni(button){
             break;
         case "dislike":
             const dislike = new FormData();
-            dislike.append("request", "aggiuniReaction");
+            dislike.append("request", "aggiungiReaction");
             dislike.append("nPost", numero);
             dislike.append("like", 0);
             dislike.append("dislike", 1);

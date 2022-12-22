@@ -36,7 +36,7 @@ if(isset($_POST["request"])){
                 $result = $rec;
             }
             break;
-        case 'aggiuniReaction':
+        case 'aggiungiReaction':
             if(isset($_POST["nPost"]) && isset($_POST["like"]) && isset($_POST["dislike"]) && isset($_POST["type"])  && isUserLoggedIn()){
                 $risultato=$dbh->checkReactions($_SESSION['user'], $_POST["nPost"]);
                 if(empty($risultato)){
