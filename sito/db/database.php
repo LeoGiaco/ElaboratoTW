@@ -116,6 +116,8 @@
         }
 
         public function getPosts($nPost, $limit){
+            // SELECT p.*, u.Immagine, r.* FROM Post p JOIN Utente u ON p.Utente=u.Username LEFT JOIN Reazione r ON (p.ID=r.PostID AND (r.Username=? OR r.Username IS NULL)) ORDER BY Data DESC LIMIT ?, ?
+            // Aggiungere l'username di chi sta guardando i post
             $query = 'SELECT p.*, u.Immagine FROM Post p JOIN Utente u ON p.Utente=u.Username ORDER BY Data DESC LIMIT ?, ?';
             $stmt = $this->db->prepare($query);
             $stmt->bind_param('ss', $nPost, $limit);

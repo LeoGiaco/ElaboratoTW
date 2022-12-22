@@ -80,9 +80,9 @@
                             <form id="frmSecurity" class="mb-3">
                                 <div class="form-group">
                                     <label class="d-block my-2">Modifica delle credenziali
-                                        <input type="password" class="form-control my-1" name="old" placeholder="Inserisci la vecchia password" autocomplete="on" require >
-                                        <input type="password" class="form-control my-2" name="new" placeholder="Nuova password" autocomplete="on" require>
-                                        <input type="password" class="form-control my-1" name="newk" placeholder="Conferma la nuova password" autocomplete="on" require>
+                                        <input type="password" class="form-control my-1" name="old" placeholder="Inserisci la vecchia password" autocomplete="off" require >
+                                        <input type="password" class="form-control my-2" name="new" placeholder="Nuova password" autocomplete="off" require>
+                                        <input type="password" class="form-control my-1" name="newk" placeholder="Conferma la nuova password" autocomplete="off" require>
                                     </label>
                                 </div>
                                 <button class="btn btn-success" type="button">Conferma</button>

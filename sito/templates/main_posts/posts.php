@@ -27,13 +27,13 @@
                                                 <div class="mt-3 mb-1 pb-2">
                                                     <div class="form-outline w-100">
                                                         <label for="textAreaTitolo">Titolo: </label>
-                                                        <textarea class="form-control" id="textAreaTitolo" rows="1" name="titolo" placeholder="Inserisci titolo" required></textarea>
+                                                        <textarea class="form-control" id="textAreaTitolo" rows="1" name="titolo" placeholder="Inserisci titolo" maxlength="100" required></textarea>
                                                     </div>
                                                 </div>
                                                 <div class="mb-1 pb-2">
                                                     <div class="form-outline w-100">
                                                         <label for="textAreaTesto">Testo: </label>
-                                                        <textarea class="form-control" id="textAreaTesto" rows="4" name="testo" placeholder="Inserisci testo del post" required></textarea>
+                                                        <textarea class="form-control" id="textAreaTesto" rows="4" name="testo" placeholder="Inserisci testo del post" maxlength="1000" required></textarea>
                                                     </div>
                                                 </div>
                                                 <div class="mb-1">
@@ -46,7 +46,7 @@
                                                 </div>
                                                 <div class="float-end mt-2 pt-1">
                                                     <input id="btnAggiungi" type="button" class="btn btn-1 btn-sm" value="Aggiungi" />
-                                                    <input id="btnCancella" type="button" class="btn btn-2 btn-sm" value="Cancella" />
+                                                    <input id="btnCancella" type="reset" class="btn btn-2 btn-sm" value="Cancella" />
                                                 </div>
                                             </form>
                                         </div>

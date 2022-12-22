@@ -26,7 +26,7 @@
                     <div class="row">
                         <div class="col-lg-2"></div>
                         <div class="col-lg-8">
-                            <form id="form_sign" action="" method="POST">
+                            <form id="form_sign" autocomplete="on">
                                 <div class="row my-2">
                                     <div class="col-md-12 col-lg-4 my-auto">
                                         <label for="nome">Nome: </label>
@@ -90,7 +90,7 @@
                                         <label for="password">Password: </label>
                                     </div>
                                     <div class="col-md-12 col-lg-8">
-                                        <input type="password" id="password" name="pwd" required/>
+                                        <input type="password" id="password" name="pwd" autocomplete="off" required/>
                                     </div>
                                 </div>
                                 <div class="row my-4">

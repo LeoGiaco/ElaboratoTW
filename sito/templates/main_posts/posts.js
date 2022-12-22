@@ -23,8 +23,6 @@ $(document).ready(function() {
     });
     
     visualizzaPost(postsLoaded, false, "", false);
-    
-
     window.onscroll = function() {
         if (window.innerHeight + window.scrollY >= document.body.offsetHeight-5) {
             if(!caricamento){
@@ -36,10 +34,6 @@ $(document).ready(function() {
 
     $("#btnTop").click(function() {
         $("html, body").animate({ scrollTop: 0 }, "slow");
-    });
-
-    $("#btnCancella").click(function(){
-        svuota();
     });
 
     $("#btnAggiungi").click(function(){
@@ -65,7 +59,7 @@ $(document).ready(function() {
 });
 
 function svuota(){
-    $("#formPost")[0].reset();
+    $("#formPost").first().reset();
 }
 
 function aggiungiPost(){
