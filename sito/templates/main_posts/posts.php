@@ -61,6 +61,7 @@
                                         </div>
                                     </header>
                                     <div id="contPosts">
+                                        <p>Nessun post da visualizzare.</p> 
                                     </div>
                                     <div id="alertC" class="my-2" role="alert"></div>
                                 </section>

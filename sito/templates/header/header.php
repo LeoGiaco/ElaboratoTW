@@ -7,6 +7,9 @@
                         <a class="nav-link" href="homepage.php">Home</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="#">Notifiche</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="profile.php?id=<?php echo $_SESSION["user"];?>">Profilo</a>
                     </li>
                 </ul>
@@ -35,10 +38,10 @@
                         <a class="nav-link" href="#">Messaggi</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Notifiche</a>
+                        <a class="nav-link" href="settings.php">Impostazioni</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="settings.php">Impostazioni</a>
+                        <a class="nav-link" type="button">Esci</a>
                     </li>
                 </ul>
             </div>

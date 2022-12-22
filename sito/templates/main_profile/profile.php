@@ -105,6 +105,7 @@
                             <section>
                                 <h2>Post recenti</h2>
                                 <div id="contPosts">
+                                    <p>Nessun post da visualizzare.</p>
                                 </div>
                             </section>
                             <div id="alertC" class="my-2" role="alert"></div>

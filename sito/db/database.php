@@ -124,17 +124,17 @@
         }
 
         public function getUserPosts($nPost, $limit, $id){
-            $query = 'SELECT p.*, u.Immagine FROM Post p JOIN Utente u ON p.Utente=u.Username WHERE Utente=? ORDER BY Data DESC LIMIT ?, ?';
+            $query = 'SELECT p.*, u.Immagine, r.* FROM Post p JOIN Utente u ON p.Utente=u.Username LEFT JOIN Reazione r ON (p.ID=r.PostID AND (r.Username=? OR r.Username IS NULL)) WHERE Utente=? ORDER BY Data DESC LIMIT ?, ?';
             $stmt = $this->db->prepare($query);
-            $stmt->bind_param('sss', $id, $nPost, $limit);
+            $stmt->bind_param('ssss', $id, $id, $nPost, $limit);
             $stmt->execute();
             return $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
         }
 
         public function getPostsFollow($nPost, $limit, $id){
-            $query = 'SELECT p.*, u.Immagine FROM Post p JOIN Utente u ON p.Utente=u.Username WHERE p.Utente in (SELECT Seguito FROM Follower WHERE Seguace=?) ORDER BY Data DESC LIMIT ?, ?';
+            $query = 'SELECT p.*, u.Immagine, r.* FROM Post p JOIN Utente u ON p.Utente=u.Username LEFT JOIN Reazione r ON (p.ID=r.PostID AND (r.Username=? OR r.Username IS NULL)) WHERE p.Utente in (SELECT Seguito FROM Follower WHERE Seguace=?) ORDER BY Data DESC LIMIT ?, ?';
             $stmt = $this->db->prepare($query);
-            $stmt->bind_param('sss', $id, $nPost, $limit);
+            $stmt->bind_param('ssss', $id, $id, $nPost, $limit);
             $stmt->execute();
             return $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
         }

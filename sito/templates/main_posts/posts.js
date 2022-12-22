@@ -22,7 +22,7 @@ $(document).ready(function() {
         console.log(response);
     });
     
-    visualizzaPost(postsLoaded, false, "", false);
+    visualizzaPost(postsLoaded, true, "", false);
     window.onscroll = function() {
         if (window.innerHeight + window.scrollY >= document.body.offsetHeight-5) {
             if(!caricamento){
