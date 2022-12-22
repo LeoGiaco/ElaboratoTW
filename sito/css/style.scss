@@ -57,13 +57,21 @@ html {
     }
     
     .dislike-button {
-        opacity: 50%;
+        opacity: 0.5;
+
+        &:hover {
+            opacity : 1;
+        }
     }
 }
 
 .post-disliked {
     .like-button {
-        opacity: 50%;
+        opacity: 0.5;
+
+        &:hover {
+            opacity: 1;
+        }
     }
     
     .dislike-button {

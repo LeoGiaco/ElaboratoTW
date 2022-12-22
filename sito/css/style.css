@@ -51,11 +51,19 @@ html#page-login main, html#page-settings main {
 }
 
 .post-liked .dislike-button {
-  opacity: 50%;
+  opacity: 0.5;
+}
+
+.post-liked .dislike-button:hover {
+  opacity: 1;
 }
 
 .post-disliked .like-button {
-  opacity: 50%;
+  opacity: 0.5;
+}
+
+.post-disliked .like-button:hover {
+  opacity: 1;
 }
 
 .post-disliked .dislike-button {
