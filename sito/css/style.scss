@@ -120,6 +120,14 @@ html {
                     background-color: var(--btn-bg-#{$i});
                     color: var(--btn-fg-#{$i});
                 }
+
+                &.btn-transition-up {
+                    background-image: linear-gradient(to top, var(--btn-bg-#{$i}-h) 50%, var(--btn-bg-#{$i}) 50%);
+                }
+        
+                &.btn-transition-down {
+                    background-image: linear-gradient(to bottom, var(--btn-bg-#{$i}-h) 50%, var(--btn-bg-#{$i}) 50%);
+                }
             }
 
             &.btn-transition-up, &.btn-transition-down {
