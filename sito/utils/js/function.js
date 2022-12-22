@@ -78,15 +78,18 @@ function addAlert(id_append,classe,message,time_remove)
 function processaLike(dati){
     let like;
     let dislike;
+    let userPostReaction;
     if(dati["reactions"].length===0){
         like=0;
         dislike=0;
+        userPostReaction=0;
     } 
     else{
         like=dati["reactions"][0]["NumLike"];
         dislike=dati["reactions"][0]["NumDislike"];
+        userPostReaction=dati["post_reaction"];
     }
-    return Array(like, dislike);
+    return Array(like, dislike, userPostReaction);
 }
 
 function commentiPost(numero){
@@ -145,7 +148,8 @@ function visualizzaPost(numeroPost, aggiuntaPost=false, utente="", checked=false
             const temp=processaLike(dati[i]);
             const like=temp[0];
             const dislike=temp[1];
-            row += ` <article id="post${dati[i]["ID"]}" class="card my-2">
+            const postReaction = temp[2] == 1 ? " post-liked " : (temp[2] == -1 ? " post-disliked " : ""); 
+            row += ` <article id="post${dati[i]["ID"]}" class="card my-2${postReaction}">
                         <div class="card-body"><div class="d-flex flex-start align-items-center">
                             <a href="${fileProfile}?id=${dati[i]["Utente"]}"><img class="rounded-circle shadow-1-strong mr-2 me-2" src="images/profile_img/${dati[i]["Immagine"]}" alt="avatar user" width="60" height="60" /></a>
                             <div>
@@ -250,8 +254,22 @@ function gestioneBottoni(button){
                 const temp=processaLike(data);
                 const like=temp[0];
                 const dislike=temp[1];
+                const postReaction = temp[2];
+                
                 $("#btnLike"+numero).text("Like: "+like);
                 $("#btnDislike"+numero).text("Dislike: "+dislike);
+                
+                let article = $("#post"+numero);
+                let prevReaction = article.hasClass("post-liked") ? 1 : (article.hasClass("post-disliked") ? -1 : 0);
+                
+                if (postReaction != prevReaction) {
+                    let prevReactionClass = prevReaction == 1 ? " post-liked " : (prevReaction == -1 ? " post-disliked " : ""); 
+                    article.removeClass(prevReactionClass);
+                    
+                    let postReactionClass = postReaction == 1 ? " post-liked " : (postReaction == -1 ? " post-disliked " : ""); 
+                    article.addClass(postReactionClass);
+                }
+
                 // $("#btnLike"+numero).parents("article")[0].addClass("post-liked"); // FIXME: Non va bene, non c'è modo di sapere se il post aveva like, dislike o nulla.
             })
             .fail(function(response) {

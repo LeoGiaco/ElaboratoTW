@@ -41,13 +41,26 @@ if(isset($_POST["request"])){
                 $risultato=$dbh->checkReactions($_SESSION['user'], $_POST["nPost"]);
                 if(empty($risultato)){
                     $dbh->addReaction($_SESSION['user'], $_POST["nPost"], $_POST["like"], $_POST["dislike"]);
+
+                    if($_POST["like"] == 1) {
+                        $result["post_reaction"] = 1;   // like
+                    } else {
+                        $result["post_reaction"] = -1;  // dislike
+                    }
                 }
                 else {
                     if($risultato[0][$_POST["type"]]==1){
                         $dbh->deleteReaction($_SESSION['user'], $_POST["nPost"]);
+                        $result["post_reaction"] = 0;
                     }
                     else{
                         $dbh->switchReaction($_SESSION['user'], $_POST["nPost"], $_POST["like"], $_POST["dislike"]);
+                        
+                        if($_POST["like"] == 1) {
+                            $result["post_reaction"] = 1;   // like
+                        } else {
+                            $result["post_reaction"] = -1;  // dislike
+                        }
                     }
                 }
                 $result["reactions"]=$dbh->getReactions($_POST["nPost"]);
