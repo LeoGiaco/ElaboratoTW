@@ -46,10 +46,6 @@ html#page-login main, html#page-settings main {
           flex-grow: 1;
 }
 
-.post-liked .like-button {
-  font-weight: bold;
-}
-
 .post-liked .dislike-button {
   opacity: 0.5;
 }
@@ -64,10 +60,6 @@ html#page-login main, html#page-settings main {
 
 .post-disliked .like-button:hover {
   opacity: 1;
-}
-
-.post-disliked .dislike-button {
-  font-weight: bold;
 }
 
 .btn.btn-transition-up, .btn.btn-transition-down {
@@ -101,6 +93,7 @@ html#page-login main, html#page-settings main {
 .btn.btn-1:hover {
   background-color: var(--btn-bg-1-h);
   color: var(--btn-fg-1-h);
+  font-weight: bold;
 }
 
 .btn.btn-1.btn-transition-up {
@@ -141,6 +134,7 @@ html#page-login main, html#page-settings main {
 .btn.btn-2:hover {
   background-color: var(--btn-bg-2-h);
   color: var(--btn-fg-2-h);
+  font-weight: bold;
 }
 
 .btn.btn-2.btn-transition-up {
@@ -181,6 +175,7 @@ html#page-login main, html#page-settings main {
 .btn.btn-3:hover {
   background-color: var(--btn-bg-3-h);
   color: var(--btn-fg-3-h);
+  font-weight: bold;
 }
 
 .btn.btn-3.btn-transition-up {
@@ -221,6 +216,7 @@ html#page-login main, html#page-settings main {
 .btn.btn-4:hover {
   background-color: var(--btn-bg-4-h);
   color: var(--btn-fg-4-h);
+  font-weight: bold;
 }
 
 .btn.btn-4.btn-transition-up {

@@ -51,11 +51,7 @@ html {
     }
 }
 
-.post-liked {
-    .like-button {
-        font-weight: bold;
-    }
-    
+.post-liked { 
     .dislike-button {
         opacity: 0.5;
 
@@ -72,10 +68,6 @@ html {
         &:hover {
             opacity: 1;
         }
-    }
-    
-    .dislike-button {
-        font-weight: bold;
     }
 }
 
@@ -110,6 +102,7 @@ html {
             &:hover {
                 background-color: var(--btn-bg-#{$i}-h);
                 color: var(--btn-fg-#{$i}-h);
+                font-weight: bold;
             }
 
             &.btn-transition-up {
