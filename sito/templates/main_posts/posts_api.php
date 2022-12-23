@@ -17,16 +17,6 @@ if(isset($_POST["request"])){
                 $checked = $_POST["checked"];
                 if($utente=="" && $checked=="false"){
                     $posts = $dbh->getPosts($_SESSION["user"], $nPost, 5);
-
-                    for ($i = 0; $i < count($posts); $i++) {
-                        if($posts[$i]["Like"] == 1) {
-                            $posts[$i]["post_reaction"] = 1;   // like
-                        } else if ($posts[$i]["Dislike"] == 1) {
-                            $posts[$i]["post_reaction"] = -1;  // dislike
-                        } else {
-                            $posts[$i]["post_reaction"] = 0;  // dislike
-                        }
-                    }
                 } else if($checked=="true"){
                     $posts = $dbh->getPostsFollow($nPost, 5, $_SESSION["user"]);
                 }
@@ -34,6 +24,13 @@ if(isset($_POST["request"])){
                     $posts = $dbh->getUserPosts($nPost, 5, $utente);
                 }
                 for($i=0; $i<count($posts); $i++){
+                    if($posts[$i]["Like"] == 1) {
+                        $posts[$i]["post_reaction"] = 1;   // like
+                    } else if ($posts[$i]["Dislike"] == 1) {
+                        $posts[$i]["post_reaction"] = -1;  // dislike
+                    } else {
+                        $posts[$i]["post_reaction"] = 0;  // dislike
+                    }
                     $posts[$i]['Data']=dataoraIT($posts[$i]['Data']);
                     $posts[$i]["reactions"]=$dbh->getReactions($posts[$i]["ID"]);
                 }
@@ -51,7 +48,6 @@ if(isset($_POST["request"])){
                 $risultato=$dbh->checkReactions($_SESSION['user'], $_POST["nPost"]);
                 if(empty($risultato)){
                     $dbh->addReaction($_SESSION['user'], $_POST["nPost"], $_POST["like"], $_POST["dislike"]);
-
                     if($_POST["like"] == 1) {
                         $result["post_reaction"] = 1;   // like
                     } else if ($_POST["dislike"] == 1) {

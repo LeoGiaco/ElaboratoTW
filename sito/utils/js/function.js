@@ -188,17 +188,23 @@ function visualizzaPost(numeroPost, aggiuntaPost=false, utente="", checked=false
         </article>
             `;                  
         }
-        if(aggiuntaPost){
-            $("#contPosts").html(row);
-        } else {
-            $("#contPosts").append(row);
-        }
 
+        
         $("form").submit(function(event){
             event.preventDefault();
         });
-        $("alertC").html("");
-        caricamento=false;
+        
+        $("#alertC").html("");
+        
+        if(dati.length!=0){
+            caricamento=false;
+            if(aggiuntaPost){
+                $("#contPosts").html(row);
+            } else {
+                $("#contPosts").append(row);
+            }
+
+        }
     })
     .fail(function(response) {
         console.log(response);
