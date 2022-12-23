@@ -82,38 +82,22 @@ html {
 .btn {
     &.btn-transition-up, &.btn-transition-down {
         background-size: 100% 200%;
-        transition: background-image 0.15s ease-in-out, background-position 0.15s ease-in-out 0.25s, color 0.15s ease-in-out 0.25s, border 0.15s ease-in-out 0.25s;
+        transition: background-position 0.15s ease-in-out, color 0.15s ease-in-out, border 0.15s ease-in-out;
     }
 
     &.btn-transition-up {
         background-position: bottom;
         
-        &:hover {
-            background-position: top;
-        }
-        
         &.btn-inverted {
             background-position: top;
-            
-            &:hover {
-                background-position: bottom;
-            }
         }
     }
     
     &.btn-transition-down {
         background-position: top;
         
-        &:hover {
-            background-position: bottom;
-        }
-        
         &.btn-inverted {
             background-position: bottom;
-            
-            &:hover {
-                background-position: top;
-            }
         }
     }
 

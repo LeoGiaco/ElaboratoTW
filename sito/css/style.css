@@ -72,40 +72,24 @@ html#page-login main, html#page-settings main {
 
 .btn.btn-transition-up, .btn.btn-transition-down {
   background-size: 100% 200%;
-  -webkit-transition: background-image 0.15s ease-in-out, background-position 0.15s ease-in-out 0.25s, color 0.15s ease-in-out 0.25s, border 0.15s ease-in-out 0.25s;
-  transition: background-image 0.15s ease-in-out, background-position 0.15s ease-in-out 0.25s, color 0.15s ease-in-out 0.25s, border 0.15s ease-in-out 0.25s;
+  -webkit-transition: background-position 0.15s ease-in-out, color 0.15s ease-in-out, border 0.15s ease-in-out;
+  transition: background-position 0.15s ease-in-out, color 0.15s ease-in-out, border 0.15s ease-in-out;
 }
 
 .btn.btn-transition-up {
   background-position: bottom;
 }
 
-.btn.btn-transition-up:hover {
-  background-position: top;
-}
-
 .btn.btn-transition-up.btn-inverted {
   background-position: top;
-}
-
-.btn.btn-transition-up.btn-inverted:hover {
-  background-position: bottom;
 }
 
 .btn.btn-transition-down {
   background-position: top;
 }
 
-.btn.btn-transition-down:hover {
-  background-position: bottom;
-}
-
 .btn.btn-transition-down.btn-inverted {
   background-position: bottom;
-}
-
-.btn.btn-transition-down.btn-inverted:hover {
-  background-position: top;
 }
 
 .btn.btn-1 {
