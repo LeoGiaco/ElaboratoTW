@@ -80,16 +80,40 @@ html {
     &.btn-transition-up {
         background-position: bottom;
         
+        @media (pointer: fine) {
+            &:hover {
+                background-position: top;
+            }
+        }
+
         &.btn-inverted {
             background-position: top;
+
+            @media (pointer: fine) {
+                &:hover {
+                    background-position: bottom;
+                }
+            }
         }
     }
     
     &.btn-transition-down {
         background-position: top;
         
+        @media (pointer: fine) {
+            &:hover {
+                background-position: bottom;
+            }
+        }
+
         &.btn-inverted {
             background-position: bottom;
+            
+            @media (pointer: fine) {
+                &:hover {
+                    background-position: top;
+                }
+            }
         }
     }
 
@@ -107,7 +131,7 @@ html {
             &.btn-transition-up {
                 background-image: linear-gradient(to top, var(--btn-bg-#{$i}) 50%, var(--btn-bg-#{$i}-h) 50%);
             }
-    
+            
             &.btn-transition-down {
                 background-image: linear-gradient(to bottom, var(--btn-bg-#{$i}) 50%, var(--btn-bg-#{$i}-h) 50%);
             }

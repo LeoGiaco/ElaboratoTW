@@ -72,16 +72,40 @@ html#page-login main, html#page-settings main {
   background-position: bottom;
 }
 
+@media (pointer: fine) {
+  .btn.btn-transition-up:hover {
+    background-position: top;
+  }
+}
+
 .btn.btn-transition-up.btn-inverted {
   background-position: top;
+}
+
+@media (pointer: fine) {
+  .btn.btn-transition-up.btn-inverted:hover {
+    background-position: bottom;
+  }
 }
 
 .btn.btn-transition-down {
   background-position: top;
 }
 
+@media (pointer: fine) {
+  .btn.btn-transition-down:hover {
+    background-position: bottom;
+  }
+}
+
 .btn.btn-transition-down.btn-inverted {
   background-position: bottom;
+}
+
+@media (pointer: fine) {
+  .btn.btn-transition-down.btn-inverted:hover {
+    background-position: top;
+  }
 }
 
 .btn.btn-1 {
