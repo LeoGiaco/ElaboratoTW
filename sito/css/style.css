@@ -125,6 +125,7 @@ html#page-login main, html#page-settings main {
 
 .btn.btn-1.btn-transition-up, .btn.btn-1.btn-transition-down {
   background-color: var(--transp);
+  color: var(--btn-fg-1);
 }
 
 .btn.btn-2 {
@@ -160,6 +161,7 @@ html#page-login main, html#page-settings main {
 
 .btn.btn-2.btn-transition-up, .btn.btn-2.btn-transition-down {
   background-color: var(--transp);
+  color: var(--btn-fg-2);
 }
 
 .btn.btn-3 {
@@ -195,6 +197,7 @@ html#page-login main, html#page-settings main {
 
 .btn.btn-3.btn-transition-up, .btn.btn-3.btn-transition-down {
   background-color: var(--transp);
+  color: var(--btn-fg-3);
 }
 
 .btn.btn-4 {
@@ -230,6 +233,7 @@ html#page-login main, html#page-settings main {
 
 .btn.btn-4.btn-transition-up, .btn.btn-4.btn-transition-down {
   background-color: var(--transp);
+  color: var(--btn-fg-4);
 }
 
 a {
