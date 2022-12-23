@@ -72,8 +72,8 @@ html#page-login main, html#page-settings main {
 
 .btn.btn-transition-up, .btn.btn-transition-down {
   background-size: 100% 200%;
-  -webkit-transition: background-image 0.15s ease-in-out, background-position 0.15s ease-in-out, color 0.15s ease-in-out, border 0.15s ease-in-out;
-  transition: background-image 0.15s ease-in-out, background-position 0.15s ease-in-out, color 0.15s ease-in-out, border 0.15s ease-in-out;
+  -webkit-transition: background-image 0.15s ease-in-out 0.15s, background-position 0.15s ease-in-out, color 0.15s ease-in-out, border 0.15s ease-in-out;
+  transition: background-image 0.15s ease-in-out 0.15s, background-position 0.15s ease-in-out, color 0.15s ease-in-out, border 0.15s ease-in-out;
 }
 
 .btn.btn-transition-up {
