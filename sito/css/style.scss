@@ -1,3 +1,4 @@
+@use "sass:color";
 $nButtons: 4;
 
 :root {
@@ -7,25 +8,33 @@ $nButtons: 4;
     --col-lighter: aliceblue;
     --transp: rgba(0,0,0,0);
 
-    --btn-fg-1: rgb(47, 0, 255);
+    --btn-fg-1: hsl(251, 100%, 50%);
     --btn-fg-1-h: white;
     --btn-bg-1: var(--transp);
     --btn-bg-1-h: var(--btn-fg-1);
-    
-    --btn-fg-2: rgb(133, 133, 133);
+    --btn-tr-1-1: hsl(251, 100%, 30%);
+    --btn-tr-1-2: hsl(251, 100%, 85%);
+
+    --btn-fg-2: hsl(0, 0%, 52%);
     --btn-fg-2-h: white;
     --btn-bg-2: var(--transp);
     --btn-bg-2-h: var(--btn-fg-2);
+    --btn-tr-2-1: hsl(0, 0%, 32%);
+    --btn-tr-2-2: hsl(0, 0%, 87%);
     
-    --btn-fg-3: rgb(0, 172, 0);
+    --btn-fg-3: hsl(120, 100%, 34%);
     --btn-fg-3-h: white;
     --btn-bg-3: var(--transp);
     --btn-bg-3-h: var(--btn-fg-3);
+    --btn-tr-3-1: hsl(120, 100%, 14%);
+    --btn-tr-3-2: hsl(120, 100%, 69%);
     
-    --btn-fg-4: rgb(255, 0, 0);
+    --btn-fg-4: hsl(0, 100%, 50%);
     --btn-fg-4-h: white;
     --btn-bg-4: var(--transp);
     --btn-bg-4-h: var(--btn-fg-4);
+    --btn-tr-4-1: hsl(0, 100%, 30%);
+    --btn-tr-4-2: hsl(0, 100%, 85%);
 }
 
 html {
@@ -82,7 +91,7 @@ html {
 .btn {
     &.btn-transition-up, &.btn-transition-down {
         background-size: 100% 200%;
-        transition: background-position 0.15s ease-in-out, color 0.15s ease-in-out, border 0.15s ease-in-out;
+        transition: background-image 0.15s ease-in-out, background-position 0.15s ease-in-out, color 0.15s ease-in-out, border 0.15s ease-in-out;
     }
 
     &.btn-transition-up {
@@ -107,17 +116,25 @@ html {
             color: var(--btn-fg-#{$i});
             border-color: var(--btn-fg-#{$i});
         
-            &:hover {
-                background-color: var(--btn-bg-#{$i}-h);
-                color: var(--btn-fg-#{$i}-h);
-            }
-
             &.btn-transition-up {
                 background-image: linear-gradient(to top, var(--btn-bg-#{$i}) 50%, var(--btn-bg-#{$i}-h) 50%);
             }
-    
+            
             &.btn-transition-down {
                 background-image: linear-gradient(to bottom, var(--btn-bg-#{$i}) 50%, var(--btn-bg-#{$i}-h) 50%);
+            }
+            
+            &:hover {
+                background-color: var(--btn-bg-#{$i}-h);
+                color: var(--btn-fg-#{$i}-h);
+           
+                &.btn-transition-up {
+                    background-image: linear-gradient(to top, var(--btn-tr-#{$i}-1) 50%, var(--btn-tr-#{$i}-2) 50%);
+                }
+        
+                &.btn-transition-down {
+                    background-image: linear-gradient(to bottom, var(--btn-tr-#{$i}-1) 50%, var(--btn-tr-#{$i}-2) 50%);
+                }
             }
         
             &.btn-inverted {
