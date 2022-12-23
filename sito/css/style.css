@@ -84,11 +84,11 @@ html#page-login main, html#page-settings main {
   background-position: top;
 }
 
-.btn.btn-transition-up.inverted {
+.btn.btn-transition-up.btn-inverted {
   background-position: top;
 }
 
-.btn.btn-transition-up.inverted:hover {
+.btn.btn-transition-up.btn-inverted:hover {
   background-position: bottom;
 }
 
@@ -100,11 +100,11 @@ html#page-login main, html#page-settings main {
   background-position: bottom;
 }
 
-.btn.btn-transition-down.inverted {
+.btn.btn-transition-down.btn-inverted {
   background-position: bottom;
 }
 
-.btn.btn-transition-down.inverted:hover {
+.btn.btn-transition-down.btn-inverted:hover {
   background-position: top;
 }
 
