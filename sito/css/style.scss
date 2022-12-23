@@ -129,10 +129,14 @@ html {
                     color: var(--btn-fg-#{$i});
                 }
             }
-
+            
             &.btn-transition-up, &.btn-transition-down {
                 background-color: var(--transp);
                 color: var(--btn-fg-#{$i});
+                
+                &.btn-inverted {
+                    color: var(--btn-fg-#{$i}-h);
+                }
             }
         }
     }
