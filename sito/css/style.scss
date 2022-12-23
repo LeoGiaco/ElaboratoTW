@@ -102,7 +102,6 @@ html {
             &:hover {
                 background-color: var(--btn-bg-#{$i}-h);
                 color: var(--btn-fg-#{$i}-h);
-                font-weight: bold;
             }
 
             &.btn-transition-up {
