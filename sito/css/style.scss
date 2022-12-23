@@ -148,10 +148,13 @@ html {
             
             &.btn-transition-up, &.btn-transition-down {
                 background-color: var(--transp);
-                color: var(--btn-fg-#{$i});
-                
-                &.btn-inverted {
-                    color: var(--btn-fg-#{$i}-h);
+
+                @media (pointer: coarse) {
+                    color: var(--btn-fg-#{$i});
+                    
+                    &.btn-inverted {
+                        color: var(--btn-fg-#{$i}-h);
+                    }
                 }
             }
         }

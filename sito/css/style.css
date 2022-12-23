@@ -141,11 +141,15 @@ html#page-login main, html#page-settings main {
 
 .btn.btn-1.btn-transition-up, .btn.btn-1.btn-transition-down {
   background-color: var(--transp);
-  color: var(--btn-fg-1);
 }
 
-.btn.btn-1.btn-transition-up.btn-inverted, .btn.btn-1.btn-transition-down.btn-inverted {
-  color: var(--btn-fg-1-h);
+@media (pointer: coarse) {
+  .btn.btn-1.btn-transition-up, .btn.btn-1.btn-transition-down {
+    color: var(--btn-fg-1);
+  }
+  .btn.btn-1.btn-transition-up.btn-inverted, .btn.btn-1.btn-transition-down.btn-inverted {
+    color: var(--btn-fg-1-h);
+  }
 }
 
 .btn.btn-2 {
@@ -181,11 +185,15 @@ html#page-login main, html#page-settings main {
 
 .btn.btn-2.btn-transition-up, .btn.btn-2.btn-transition-down {
   background-color: var(--transp);
-  color: var(--btn-fg-2);
 }
 
-.btn.btn-2.btn-transition-up.btn-inverted, .btn.btn-2.btn-transition-down.btn-inverted {
-  color: var(--btn-fg-2-h);
+@media (pointer: coarse) {
+  .btn.btn-2.btn-transition-up, .btn.btn-2.btn-transition-down {
+    color: var(--btn-fg-2);
+  }
+  .btn.btn-2.btn-transition-up.btn-inverted, .btn.btn-2.btn-transition-down.btn-inverted {
+    color: var(--btn-fg-2-h);
+  }
 }
 
 .btn.btn-3 {
@@ -221,11 +229,15 @@ html#page-login main, html#page-settings main {
 
 .btn.btn-3.btn-transition-up, .btn.btn-3.btn-transition-down {
   background-color: var(--transp);
-  color: var(--btn-fg-3);
 }
 
-.btn.btn-3.btn-transition-up.btn-inverted, .btn.btn-3.btn-transition-down.btn-inverted {
-  color: var(--btn-fg-3-h);
+@media (pointer: coarse) {
+  .btn.btn-3.btn-transition-up, .btn.btn-3.btn-transition-down {
+    color: var(--btn-fg-3);
+  }
+  .btn.btn-3.btn-transition-up.btn-inverted, .btn.btn-3.btn-transition-down.btn-inverted {
+    color: var(--btn-fg-3-h);
+  }
 }
 
 .btn.btn-4 {
@@ -261,11 +273,15 @@ html#page-login main, html#page-settings main {
 
 .btn.btn-4.btn-transition-up, .btn.btn-4.btn-transition-down {
   background-color: var(--transp);
-  color: var(--btn-fg-4);
 }
 
-.btn.btn-4.btn-transition-up.btn-inverted, .btn.btn-4.btn-transition-down.btn-inverted {
-  color: var(--btn-fg-4-h);
+@media (pointer: coarse) {
+  .btn.btn-4.btn-transition-up, .btn.btn-4.btn-transition-down {
+    color: var(--btn-fg-4);
+  }
+  .btn.btn-4.btn-transition-up.btn-inverted, .btn.btn-4.btn-transition-down.btn-inverted {
+    color: var(--btn-fg-4-h);
+  }
 }
 
 a {
