@@ -82,7 +82,7 @@ html {
 .btn {
     &.btn-transition-up, &.btn-transition-down {
         background-size: 100% 200%;
-        transition: background-image 0.15s ease-in-out 0.15s, background-position 0.15s ease-in-out, color 0.15s ease-in-out, border 0.15s ease-in-out;
+        transition: background-image 0.15s ease-in-out, background-position 0.15s ease-in-out, color 0.15s ease-in-out, border 0.15s ease-in-out;
     }
 
     &.btn-transition-up {
@@ -91,6 +91,14 @@ html {
         &:hover {
             background-position: top;
         }
+        
+        &.inverted {
+            background-position: top;
+            
+            &:hover {
+                background-position: bottom;
+            }
+        }
     }
     
     &.btn-transition-down {
@@ -98,6 +106,14 @@ html {
         
         &:hover {
             background-position: bottom;
+        }
+        
+        &.inverted {
+            background-position: bottom;
+            
+            &:hover {
+                background-position: top;
+            }
         }
     }
 
@@ -127,14 +143,6 @@ html {
                 &:hover {
                     background-color: var(--btn-bg-#{$i});
                     color: var(--btn-fg-#{$i});
-                }
-
-                &.btn-transition-up {
-                    background-image: linear-gradient(to top, var(--btn-bg-#{$i}-h) 50%, var(--btn-bg-#{$i}) 50%);
-                }
-        
-                &.btn-transition-down {
-                    background-image: linear-gradient(to bottom, var(--btn-bg-#{$i}-h) 50%, var(--btn-bg-#{$i}) 50%);
                 }
             }
 
