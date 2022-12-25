@@ -234,8 +234,10 @@ function gestioneBottoni(button){
                     contentType: false
                 })
                 .done(function(data,success,response) {
+                    const post = data.dati[0];
                     $("#inpCommento"+numero).val("");
                     commentiPost(numero);
+                    addNotification("commento", post.Utente, post.Titolo, datas.get("testo"));
                 })
                 .fail(function(response) {
                     console.log(response);
@@ -282,6 +284,8 @@ function gestioneBottoni(button){
                     if (postReaction != 0) {
                         article.addClass("post-liked");
                         btnLike.addClass("btn-inverted");
+                        const post = data.reactions[0];
+                        addNotification("like", post.Utente, post.Titolo);
                     }
                 }
             })
@@ -329,6 +333,8 @@ function gestioneBottoni(button){
                     if (postReaction != 0) {
                         article.addClass("post-disliked");
                         btnDislike.addClass("btn-inverted");
+                        const post = data.reactions[0];
+                        addNotification("dislike", post.Utente, post.Titolo);
                     }
                 }
             })
@@ -367,6 +373,64 @@ function setInterests(){
 }
 
 // fine interessi.
+
+// FUnzione per aggiungere una notifica.
+function addNotification(tipo, utente, titolo, commento=""){
+    const formdata = new FormData();
+    formdata.append("request", "getUser");
+    $.ajax({
+        type: "POST",
+        url: "templates/header/header_api.php",
+        data:  formdata,
+        processData: false,
+        contentType: false
+    })
+    .done(function(data,success,response) {
+        const seguace = data;
+        formdata.set("request", "addNotification");
+        formdata.append("utente", utente);
+        formdata.append("visualizzata", "0");
+        let testo="";
+        switch (tipo){
+            case 'seguace':
+                if(titolo == "Segui")
+                    testo = "L'utente " + seguace + " ha iniziato a seguirti!";
+                else
+                    testo = "L'utente " + seguace + " ha smesso di seguirti!";
+                formdata.append("tipologia", tipo);
+                break;
+            case 'like':
+                testo = "L'utente " + seguace + " ha messo like al post intitolato: '"+titolo+"'!";
+                formdata.append("tipologia", tipo);
+                break;
+            case 'dislike':
+                testo = "L'utente " + seguace + " ha messo dislike al post intitolato: "+titolo+"!";
+                formdata.append("tipologia", tipo);
+                break;
+            case 'commento':
+                testo = "L'utente " + seguace + " ha commentato il post intitolato: "+titolo+"!\nIl testo del commento è: '"+commento+"'";
+                formdata.append("tipologia", tipo);
+                break;
+        }
+        formdata.append("testo", testo);
+        $.ajax({
+            type: "POST",
+            url: "templates/header/header_api.php",
+            data:  formdata,
+            processData: false,
+            contentType: false
+        })
+        .done(function(data,success,response) {
+            console.log("arrivato");
+        })
+        .fail(function(response) {
+            console.log(response);
+        });    
+    })
+    .fail(function(response) {
+        console.log(response);
+    });    
+}
 
 // // Funzioni per criptaggio e decriptaggio
 // function encryptPwd(password, salt){

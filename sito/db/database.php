@@ -79,10 +79,10 @@
             return $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
         }
 
-        public function addPost($utente, $testo, $tipo, $titolo, $media=""){
+        public function addPost($utente, $testo, $tipo, $titolo, $date, $media=""){
             $query = "INSERT INTO Post (Utente, Tipologia, Media, Testo, Data, Titolo) VALUES (?,?,?,?,?,?)"; 
             $stmt = $this->db->prepare($query);
-            $stmt->bind_param('ssssss', $utente, $tipo, $media, $testo, today(), $titolo);
+            $stmt->bind_param('ssssss', $utente, $tipo, $media, $testo, $date, $titolo);
             return $stmt->execute();          
         }
 
@@ -139,6 +139,14 @@
             return $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
         }
 
+        public function getSelectedPost($id){
+            $query = 'SELECT Utente, Titolo FROM Post WHERE ID=?';
+            $stmt = $this->db->prepare($query);
+            $stmt->bind_param('s', $id);
+            $stmt->execute();
+            return $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
+        }
+
         public function getUserInfo($username){
             $query = 'SELECT * FROM Utente u JOIN Preferenza p ON u.Username = p.Username WHERE u.Username=?';
             $stmt = $this->db->prepare($query);
@@ -155,10 +163,10 @@
             return $stmt->execute();
         }
 
-        public function addComment($utente, $post, $testo){
+        public function addComment($utente, $post, $testo, $data){
             $query = "INSERT INTO Commento (Testo, Data, Post, Utente) VALUES (?, ?, ?, ?)"; 
             $stmt = $this->db->prepare($query);
-            $stmt->bind_param('ssss', $testo, today(), $post, $utente);
+            $stmt->bind_param('ssss', $testo, $data, $post, $utente);
             return $stmt->execute();          
         }
 
@@ -171,7 +179,7 @@
         }
 
         public function getReactions($id){
-            $query = "SELECT PostID, SUM(CASE WHEN `Like` = 1 THEN 1 ELSE 0 END) AS NumLike, SUM(CASE WHEN Dislike = 1 THEN 1 ELSE 0 END) AS NumDislike FROM Reazione WHERE PostId = ? GROUP BY PostId";
+            $query = "SELECT p.Titolo, p.Utente, PostID, SUM(CASE WHEN `Like` = 1 THEN 1 ELSE 0 END) AS NumLike, SUM(CASE WHEN Dislike = 1 THEN 1 ELSE 0 END) AS NumDislike FROM Reazione r JOIN Post p ON r.PostID=p.ID  WHERE PostId = ? GROUP BY PostId";
             $stmt = $this->db->prepare($query);
             $stmt->bind_param("s", $id);
             $stmt->execute();
@@ -242,6 +250,13 @@
             $query = "INSERT INTO Follower(Seguito, Seguace) VALUES (?,?)";
             $stmt = $this->db->prepare($query);
             $stmt->bind_param("ss", $friend, $me);
+            return $stmt->execute();
+        }
+
+        public function addNotification($utente, $tipologia, $testo, $visualizzata, $data){
+            $query = "INSERT INTO Notifica(Testo, Data, Visualizzata, Utente, Tipologia) VALUES (?,?,?,?,?)";
+            $stmt = $this->db->prepare($query);
+            $stmt->bind_param("sssss", $testo, $data, $visualizzata, $utente, $tipologia);
             return $stmt->execute();
         }
     }

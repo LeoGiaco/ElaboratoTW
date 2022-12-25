@@ -39,8 +39,8 @@ if(isset($_POST["request"])){
             break;
         case 'aggiungiCommento':
             if(isset($_POST["nPost"]) && isset($_POST["testo"]) && isUserLoggedIn()){
-                $result = $dbh->addComment($_SESSION['user'], $_POST["nPost"], $_POST["testo"]);
-                $result = $rec;
+                $dbh->addComment($_SESSION['user'], $_POST["nPost"], $_POST["testo"], today());
+                $result["dati"] = $dbh->getSelectedPost($_POST["nPost"]);
             }
             break;
         case 'aggiungiReaction':
@@ -94,7 +94,7 @@ if(isset($_POST["request"])){
             if(isset($_POST["testo"]) && isset($_POST["tipo"]) && isset($_POST["titolo"])  && isUserLoggedIn()){
                 $rs_file = $rs_file = addFile($_FILES["file"], "post_img");
                 if($rs_file["errore"]=="")
-                    $postResult = $dbh->addPost($_SESSION["user"], $_POST["testo"], $_POST["tipo"], $_POST["titolo"], $rs_file["file"]);
+                    $postResult = $dbh->addPost($_SESSION["user"], $_POST["testo"], $_POST["tipo"], $_POST["titolo"], today(), $rs_file["file"]);
                     if($postResult){
                         $result["state"]=true;
                     }

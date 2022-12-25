@@ -20,7 +20,7 @@
                                     <p id="username" class="mb-2">Username</p>
                                 </div>
                                 <div class="col-3 col-md-3 d-flex flex-row-reverse">
-                                    <button id="btnSegui" type="button" class="btn btn-outline-light mt-auto mb-auto mx-2">Segui</button>
+                                    <button id="btnSegui" type="button" class="btn btn-outline-light mt-auto mb-auto mx-2" data-state="Segui">Segui</button>
                                 </div>
                             </div>
                         </div>

@@ -19,9 +19,10 @@ $(document).ready(function() {
 
     $("#btnSegui").click(function(){
         const btn = $(this),
-            type = btn.data('action');
+            type = btn.data('action'),
+            state = btn.data("state");
         modifyFollow(type, user);
-        
+        addNotification('seguace', user, state);
     });
     
     window.onscroll = function() {
@@ -73,7 +74,8 @@ function checkFollow(user){
         const dati = data.dati;
         $("#btnSegui").prop("disabled",dati.disabled);
         $("#btnSegui").text(dati.testo);
-        $('#btnSegui').data('action', dati.btndata);                             
+        $('#btnSegui').data('action', dati.btndata);
+        $('#btnSegui').data('state', dati.testo);                     
     })
     .fail(function(response) {
         console.log(response);
