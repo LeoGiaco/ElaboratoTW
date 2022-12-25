@@ -259,5 +259,20 @@
             $stmt->bind_param("sssss", $testo, $data, $visualizzata, $utente, $tipologia);
             return $stmt->execute();
         }
+
+        public function getNotifications($user){
+            $query = "SELECT * FROM Notifica WHERE Utente=? ORDER BY Data DESC";
+            $stmt = $this->db->prepare($query);
+            $stmt->bind_param("s", $user);
+            $stmt->execute();
+            return $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
+        }
+
+        public function setOld($user){
+            $query = 'UPDATE Notifica SET Visualizzata="1" WHERE Utente=?'; 
+            $stmt = $this->db->prepare($query);
+            $stmt->bind_param('s', $user);
+            return $stmt->execute(); 
+        }
     }
 ?>
