@@ -162,7 +162,7 @@ html {
 }
 
 .nav-link {
-    .blink {
+    &.blink {
         animation: notifications 2.5s ease-in-out infinite;
     }
 }

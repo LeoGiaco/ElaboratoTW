@@ -284,7 +284,7 @@ html#page-login main, html#page-settings main {
   }
 }
 
-.nav-link .blink {
+.nav-link.blink {
   -webkit-animation: notifications 2.5s ease-in-out infinite;
           animation: notifications 2.5s ease-in-out infinite;
 }
