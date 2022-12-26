@@ -161,6 +161,16 @@ html {
     }
 }
 
+.nav-link {
+    .blink {
+        animation: notifications 2.5s ease-in-out infinite;
+    }
+}
+
+@keyframes notifications {
+    50% { color: gold; }
+}
+
 a {
     text-decoration: none;
     color: inherit;

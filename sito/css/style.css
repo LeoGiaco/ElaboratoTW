@@ -284,6 +284,23 @@ html#page-login main, html#page-settings main {
   }
 }
 
+.nav-link .blink {
+  -webkit-animation: notifications 2.5s ease-in-out infinite;
+          animation: notifications 2.5s ease-in-out infinite;
+}
+
+@-webkit-keyframes notifications {
+  50% {
+    color: gold;
+  }
+}
+
+@keyframes notifications {
+  50% {
+    color: gold;
+  }
+}
+
 a {
   text-decoration: none;
   color: inherit;
