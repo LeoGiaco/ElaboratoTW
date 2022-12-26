@@ -7,7 +7,7 @@
                         <a class="nav-link" href="homepage.php">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="notifications.php">Notifiche</a>
+                        <a id="navNotifiche" class="nav-link" href="notifications.php">Notifiche</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="profile.php?id=<?php echo $_SESSION["user"];?>">Profilo</a>

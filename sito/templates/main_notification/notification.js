@@ -2,6 +2,25 @@ const fileint = "templates/main_notification/notification_api.php";
 
 $(document).ready(function() {
     getNotifications();
+    $('#btnElimina').click(function() {
+        const datas = new FormData(); 
+        datas.append("request", "delate");
+        $.ajax({
+            type: "POST",
+            url: fileint,
+            data:  datas, 
+            processData: false,
+            contentType: false
+        })
+        .done(function(data,success,response) {
+            $("#notifNew").html('<p class="p-3">Nessuna nuova notifica da visualizzare.</p>');
+            $("#notifOld").html('<p class="p-3">Nessuna vecchia notifica da visualizzare.</p>');
+        })
+        .fail(function(response) {
+            console.log(response);
+        });
+    });
+    
 });
 
 function setOld(){
@@ -48,7 +67,7 @@ function singleNotify(arr, idDiv){
             let row = `
                 <div class="py-3 px-1 d-flex align-items-center bg-light border-bottom">
                     <div class="dropdown-list-image mx-2">
-                        <img class="rounded-circle" src="https://bootdey.com/img/Content/avatar/avatar3.png" alt="" width="50" height="50" />
+                        <img class="rounded-circle" src="images/profile_img/${elem.Immagine}" alt="Immagine profilo ${elem.Creatore}" width="50" height="50" />
                     </div>
                     <div class="font-weight-bold w-100">
                         <h3 class="m-0 text-break">${(elem.Tipologia).toUpperCase()}</h3>

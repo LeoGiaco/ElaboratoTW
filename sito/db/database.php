@@ -253,15 +253,15 @@
             return $stmt->execute();
         }
 
-        public function addNotification($utente, $tipologia, $testo, $visualizzata, $data){
-            $query = "INSERT INTO Notifica(Testo, Data, Visualizzata, Utente, Tipologia) VALUES (?,?,?,?,?)";
+        public function addNotification($utente, $tipologia, $testo, $visualizzata, $data, $creatore){
+            $query = "INSERT INTO Notifica(Testo, Data, Visualizzata, Utente, Tipologia, Creatore) VALUES (?,?,?,?,?,?)";
             $stmt = $this->db->prepare($query);
-            $stmt->bind_param("sssss", $testo, $data, $visualizzata, $utente, $tipologia);
+            $stmt->bind_param("ssssss", $testo, $data, $visualizzata, $utente, $tipologia, $creatore);
             return $stmt->execute();
         }
 
         public function getNotifications($user){
-            $query = "SELECT * FROM Notifica WHERE Utente=? ORDER BY Data DESC";
+            $query = "SELECT * FROM Notifica JOIN Utente ON Creatore=Username  WHERE Utente=? ORDER BY Data DESC";
             $stmt = $this->db->prepare($query);
             $stmt->bind_param("s", $user);
             $stmt->execute();
@@ -273,6 +273,21 @@
             $stmt = $this->db->prepare($query);
             $stmt->bind_param('s', $user);
             return $stmt->execute(); 
+        }
+
+        public function delateNotifications($user){
+            $query = "DELETE FROM Notifica WHERE Utente=?"; 
+            $stmt = $this->db->prepare($query);
+            $stmt->bind_param('s', $user);
+            return $stmt->execute();     
+        }
+
+        public function checkNotificPresent($user){
+            $query = "SELECT count(*) AS Numero FROM Notifica WHERE Utente=? AND Visualizzata=0"; 
+            $stmt = $this->db->prepare($query);
+            $stmt->bind_param('s', $user);
+            $stmt->execute(); 
+            return $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
         }
     }
 ?>

@@ -18,6 +18,7 @@
                     <section class="box shadow-sm rounded bg-white my-2">
                         <header class="box-title border-bottom p-3">
                             <h2 class="m-0">Vecchie</h2>
+                            <button id="btnElimina" class="btn btn-primary">Elimina Notifiche</button>
                         </header>
                         <div id="notifOld" class="box-body p-0">
                             <p class="p-3">Nessuna vecchia notifica da visualizzare.</p>

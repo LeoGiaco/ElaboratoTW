@@ -27,6 +27,11 @@ if(isset($_POST["request"])){
                 $dbh->setOld($_SESSION["user"]);
             }
             break;
+        case "delate":
+            if(isUserLoggedIn()){
+                $dbh->delateNotifications($_SESSION["user"]);
+            }
+            break;
     }
 }
 header('Content-Type: application/json');

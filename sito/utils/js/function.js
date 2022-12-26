@@ -390,6 +390,7 @@ function addNotification(tipo, utente, titolo, commento=""){
         formdata.set("request", "addNotification");
         formdata.append("utente", utente);
         formdata.append("visualizzata", "0");
+        formdata.append("seguace", seguace);
         let testo="";
         switch (tipo){
             case 'seguace':
