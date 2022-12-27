@@ -15,33 +15,21 @@ $(document).ready(function() {
     });
 
     $("#security").on("click",'button',function(){
-        const datas = getFormData("frmSecurity");
-        if(datas.get("new") === datas.get("newk")){
-            datas.delete("newk");
-            datas.set("old", CryptoJS.MD5(datas.get("old")).toString());
-            datas.set("new", CryptoJS.MD5(datas.get("new")).toString());
-            datas.append("request", "changePwd");
-            $.ajax({
-                type: "POST",
-                url: fileint,
-                data:  datas, 
-                processData: false,
-                contentType: false
-            })
-            .done(function(data,success,response) {
-                if(data.stato === false){
-                    addAlert("alert","alert-danger", data.msg,"");
-                } else {
-                    addAlert("alert","alert-success", data.msg,"x");
-                    $("#frmSecurity").trigger("reset");
-                }
-            })
-            .fail(function(response) {
-                console.log(response);
-            });
-        } else {
-            addAlert("alert","alert-danger", "Le password non corrispondono!","");
-        }
+        const datas = new FormData();
+        datas.append("request", "getKey");
+        $.ajax({
+            type: "POST",
+            url: fileint,
+            data:  datas, 
+            processData: false,
+            contentType: false
+        })
+        .done(function(data,success,response) {
+            changePWD(data.key)
+        })
+        .fail(function(response) {
+            console.log(response);
+        });
     });
 
     $("#interests").on("click",'button',function(){
@@ -94,6 +82,36 @@ $(document).ready(function() {
         });
     });
 });
+
+function changePWD(key){
+    const datas = getFormData("frmSecurity");
+    if(datas.get("new") === datas.get("newk")){
+        datas.delete("newk");
+        datas.set("old", encrypt(datas.get("old"), key));
+        datas.set("new", encrypt(datas.get("new"), key));
+        datas.append("request", "changePwd");
+        $.ajax({
+            type: "POST",
+            url: fileint,
+            data:  datas, 
+            processData: false,
+            contentType: false
+        })
+        .done(function(data,success,response) {
+            if(data.stato === false){
+                addAlert("alert","alert-danger", data.msg,"");
+            } else {
+                addAlert("alert","alert-success", data.msg,"x");
+                $("#frmSecurity").trigger("reset");
+            }
+        })
+        .fail(function(response) {
+            console.log(response);
+        });
+    } else {
+        addAlert("alert","alert-danger", "Le password non corrispondono!","");
+    }
+}
 
 function insertProfileImage(){
     const datas = new FormData();

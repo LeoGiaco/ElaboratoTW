@@ -41,7 +41,14 @@
             return $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
         }
 
-        #Aggiungere funzone che cripta la password
+        public function getKey($user){
+            $query = "SELECT Chiave FROM Credenziali WHERE Utente=?"; 
+            $stmt = $this->db->prepare($query);
+            $stmt->bind_param('s', $user);
+            $stmt->execute();
+            return $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
+        }
+
         public function addCredentials($username, $mail, $password, $key){
             $query = "INSERT INTO Credenziali (Mail, Utente, Password, Chiave) VALUES (?,?,?,?)"; 
             $stmt = $this->db->prepare($query);
