@@ -10,7 +10,7 @@ $(document).ready(function() {
         } else {
             const id = getUniqueId();
             datas.append("password", encrypt(datas.get("pwd"), id));
-            datas.append("salt", id);
+            datas.append("key", id);
             datas.delete("pwd");
             $.ajax({
                 type: "POST",

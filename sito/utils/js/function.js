@@ -433,16 +433,10 @@ function addNotification(tipo, utente, titolo, commento=""){
 }
 
 // Funzioni per criptaggio e decriptaggio
-function encrypt(password, salt) {
-    var encrypted = CryptoJS.AES.encrypt(password, salt);
-    return encrypted;
+function encrypt(password, key) {
+    return CryptoJS.HmacSHA512(password, key).toString();
  }
 
-//  function decrypt(password, salt) {
-//     var decrypted = CryptoJS.AES.decrypt(password, salt).toString(CryptoJS.enc.Utf8);
-//     return decrypted;
-//  }
-
 function getUniqueId(){
-    return Date.now().toString();
+    return CryptoJS.SHA1(Date.now().toString()).toString();
 }

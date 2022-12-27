@@ -5,27 +5,46 @@ $(document).ready(function() {
 
     $("#form_login").submit(function(event) {
         event.preventDefault();
-        let datas = getFormData("form_login");
-        // datas.append("password", CryptoJS.MD5(datas.get("pwd")).toString());
-        console.log(encrypt("password", "1672097714975"));
-        // datas.delete("pwd");
-        // $.ajax({
-        //     type: "POST",
-        //     url: "templates/main_login/login_api.php",
-        //     data:  datas,
-        //     processData: false,
-        //     contentType: false
-        // })
-        // .done(function(data,success,response) {
-        //     if(data["state"]===false){
-        //         addAlert("alert","alert-danger",data["msg"],"");
-        //     } else {
-        //         window.location.href="homepage.php";
-        //     }
-        // })
-        // .fail(function(response) {
-        //     console.log(response);
-        // });
+        const datas = getFormData("form_login");
+        datas.append("request", "email")
+        const pwd = datas.get("pwd");
+        datas.delete("pwd");
+        $.ajax({
+            type: "POST",
+            url: "templates/main_login/login_api.php",
+            data:  datas,
+            processData: false,
+            contentType: false
+        })
+        .done(function(data,success,response) {
+            console.log(data);
+            if(data["state"]===false){
+                addAlert("alert","alert-danger",data["msg"],"");
+            } else {
+                datas.set("request", "pwd");
+                datas.append("password", encrypt(pwd, data.key));
+                $.ajax({
+                    type: "POST",
+                    url: "templates/main_login/login_api.php",
+                    data:  datas,
+                    processData: false,
+                    contentType: false
+                })
+                .done(function(data,success,response) {
+                    if(data["state"]===false){
+                        addAlert("alert","alert-danger",data["msg"],"");
+                    } else {
+                        window.location.href="homepage.php";
+                    }
+                })
+                .fail(function(response) {
+                    console.log(response);
+                });
+            }
+        })
+        .fail(function(response) {
+            console.log(response);
+        });
     });
 
     $("#btnIscriviti").click(function() {

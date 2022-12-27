@@ -34,7 +34,7 @@
         }
 
         public function checkMailAbsent($mail){
-            $query = "SELECT Mail, Sale FROM Credenziali WHERE Mail=?"; 
+            $query = "SELECT Mail, Chiave FROM Credenziali WHERE Mail=?"; 
             $stmt = $this->db->prepare($query);
             $stmt->bind_param('s', $mail);
             $stmt->execute();
@@ -42,10 +42,10 @@
         }
 
         #Aggiungere funzone che cripta la password
-        public function addCredentials($username, $mail, $password, $salt){
-            $query = "INSERT INTO Credenziali (Mail, Utente, Password, Sale) VALUES (?,?,?,?)"; 
+        public function addCredentials($username, $mail, $password, $key){
+            $query = "INSERT INTO Credenziali (Mail, Utente, Password, Chiave) VALUES (?,?,?,?)"; 
             $stmt = $this->db->prepare($query);
-            $stmt->bind_param('ssss', $mail, $username, $password, $salt);
+            $stmt->bind_param('ssss', $mail, $username, $password, $key);
             return $stmt->execute();          
         }
 
