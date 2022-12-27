@@ -4,7 +4,7 @@
     require_once(SITE_ROOT.'bootstrap.php');
 
     $templateParams["pageid"] = "profile";
-    $templateParams["title"] = "Uv-Notification";
+    $templateParams["title"] = "Uv-Notifiche";
     $templateParams["javascript"] = array("../templates/main_notification/notification.js", "../templates/header/header.js");
     if(!isUserLoggedIn()){
         header("location: login.php");

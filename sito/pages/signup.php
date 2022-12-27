@@ -4,7 +4,7 @@
     require_once(SITE_ROOT.'bootstrap.php');
 
     $templateParams["pageid"] = "signup";
-    $templateParams["title"] = "Uv-Crea_account";
+    $templateParams["title"] = "Uv-Iscrizione";
     $templateParams["javascript"] = array("../templates/main_signup/signup.js");
 
     $templateParams["pieces"] = array(

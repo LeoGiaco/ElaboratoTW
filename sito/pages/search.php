@@ -4,7 +4,7 @@
     require_once(SITE_ROOT.'bootstrap.php');
 
     $templateParams["pageid"] = "profile";
-    $templateParams["title"] = "Uv-Search";
+    $templateParams["title"] = "Uv-Ricerca";
     $templateParams["javascript"] = array("../templates/main_search/search.js", "../templates/header/header.js");
     if(!isUserLoggedIn()){
         header("location: login.php");

@@ -17,7 +17,6 @@ $(document).ready(function() {
             contentType: false
         })
         .done(function(data,success,response) {
-            console.log(data);
             if(data["state"]===false){
                 addAlert("alert","alert-danger",data["msg"],"");
             } else {
@@ -50,6 +49,4 @@ $(document).ready(function() {
     $("#btnIscriviti").click(function() {
         window.location.href="signup.php";
     });
-
-
 });

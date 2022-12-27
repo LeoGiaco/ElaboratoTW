@@ -56,7 +56,7 @@
                                     <header>
                                         <h2>ULTIMI POST</h2>
                                         <div class="form-check form-switch">
-                                            <input class="form-check-input" type="checkbox" id="allPost">
+                                            <input class="form-check-input" type="checkbox" id="allPost" />
                                             <label class="form-check-label" for="allPost">Visualizza solo i post dei seguiti</label>
                                         </div>
                                     </header>

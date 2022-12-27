@@ -63,9 +63,15 @@
                                     <fieldset>
                                         <legend class="col-md-12 col-lg-4 my-auto">Genere:</legend>
                                         <div id="fset" class="col-md-12 col-lg-8">
-                                            <label class="form-check-label" for="uomo"><input id="uomo" class="form-check-input mx-1" type="radio" value="M"  name="genere"/>Uomo</label>
-                                            <label class="form-check-label" for="donna" class="mx-1"><input id="donna" class="form-check-input mx-1" type="radio" value="F" name="genere"/>Donna</label>
-                                            <label class="form-check-label" for="altro"><input id="altro" class="form-check-input mx-1" type="radio" value="A" name="genere"/>Altro</label>
+                                            <label class="form-check-label" for="uomo">
+                                                <input id="uomo" class="form-check-input mx-1" type="radio" value="M"  name="genere"/>Uomo
+                                            </label>
+                                            <label class="form-check-label" for="donna" class="mx-1">
+                                                <input id="donna" class="form-check-input mx-1" type="radio" value="F" name="genere"/>Donna
+                                            </label>
+                                            <label class="form-check-label" for="altro">
+                                                <input id="altro" class="form-check-input mx-1" type="radio" value="A" name="genere"/>Altro
+                                            </label>
                                         </div>
                                     </fieldset>
                                 </div>
@@ -101,7 +107,7 @@
                             </form>
                             <div class="row my-4">
                                 <div class="col-lg-12">
-                                    <input id="btnLogin" type="button" class="btn btn-2 btn-sm" value="Ho già un account">
+                                    <input id="btnLogin" type="button" class="btn btn-2 btn-sm" value="Ho già un account"/>
                                 </div>
                             </div>
                         </div>

@@ -18,9 +18,7 @@ $(document).ready(function() {
     });
 
     $("#btnSegui").click(function(){
-        const btn = $(this),
-            type = btn.data('action'),
-            state = btn.data("state");
+        const btn = $(this), type = btn.data('action'), state = btn.data("state");
         modifyFollow(type, user);
         addNotification('seguace', user, state);
     });

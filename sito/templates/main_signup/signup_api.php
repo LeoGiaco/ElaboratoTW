@@ -26,7 +26,7 @@ if(isset($_POST["request"])){
                     }
                     if($state && $state2 && $state3){
                         $result["state"]=true;
-                        sendEmail($_POST["email"], $_POST["username"], "Ciao ".$_POST["username"].", la tua iscrizione è stata completata! \nBenvenuto in U-niversity!!!");
+                        sendEmail($_POST["email"], $_POST["username"], "Ciao ".$_POST["username"].", la tua iscrizione e' stata completata! \nBenvenuto in U-niversity!!!");
                     }
                     else{
                         $result["state"]=false;

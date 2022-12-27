@@ -21,7 +21,6 @@ $(document).ready(function() {
             })
             .done(function(data,success,response) {
                 if(data["state"]===false){
-                    console.log(data);
                     addAlert("alert","alert-danger",data["msg"],"");
                 } else {
                     window.location.href="login.php?iscr=1";

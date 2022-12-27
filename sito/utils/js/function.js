@@ -14,17 +14,16 @@ function select_file(file, request, id_select, valore, vuoto)
         contentType: false
     })
     .done(function(data, success, response) {
-        var rows = '',
-        dati = data;
+        let rows = '', dati = data;
         $("#" + id_select).html('');
 
         if(vuoto == 1)
             $("#" + id_select).append('<option></option>');
         if(dati != '' && dati != null)
         {
-            for(var i = 0; i < dati.length; i++)
+            for(let i = 0; i < dati.length; i++)
             {
-                var dati_s = dati[i];
+                const dati_s = dati[i];
 
                 rows += '<option value="' + dati_s.cod_select + '"';
                 if(dati[i].attr_select != '' && dati[i].attr_select!= null && dati[i].attr_select!= undefined)
@@ -45,13 +44,12 @@ function select_file(file, request, id_select, valore, vuoto)
 
 function getFormData(id_form)
 {
-    let indexed_array = {};
     const formData = new FormData();
     
     if($("#" + id_form).is( "form" )==true)
     {
-        let $form = $("#" + id_form);
-        let unindexed_array = $form.serializeArray();
+        let form = $("#" + id_form);
+        let unindexed_array = form.serializeArray();
         unindexed_array.forEach(element => {
             formData.append(element.name, element.value);
         });
@@ -62,7 +60,7 @@ function getFormData(id_form)
 function addAlert(id_append,classe,message,time_remove)
 {
     
-    var alert = $('<div class="alert '+classe+'">' + '<button type="button" class="close" data-dismiss="alert" onClick="$(this).parent().remove()">' +
+    let alert = $('<div class="alert '+classe+'">' + '<button type="button" class="close" data-dismiss="alert" onClick="$(this).parent().remove()">' +
     '&times;</button>' + message + '</div>');
 
     if(time_remove=='x')
@@ -74,7 +72,6 @@ function addAlert(id_append,classe,message,time_remove)
 }
 
 // Sezione dei post
-
 function processaLike(dati){
     let like;
     let dislike;
@@ -106,7 +103,6 @@ function commentiPost(numero){
     .done(function(data,success,response) {
         let row='';
         data.forEach(element => {
-            // Manca la data del commento.
             row += `
                 <div class="d-flex flex-start w-100 mb-2">
                     <a href="${fileProfile}?id=${element.Utente}">
@@ -213,9 +209,7 @@ function visualizzaPost(numeroPost, aggiuntaPost=false, utente="", checked=false
 
 
 function gestioneBottoni(button){
-    const btn = button,
-    type = btn.data('type'),
-    numero = btn.data('numero');
+    const btn = button, type = btn.data('type'), numero = btn.data('numero');
     switch(type){
         case "commento":
             $("#divCommento"+numero).toggle();
@@ -263,7 +257,7 @@ function gestioneBottoni(button){
                 const like=temp[0];
                 const dislike=temp[1];
                 const postReaction = temp[2];
-
+                
                 const btnLike = $("#btnLike"+numero);
                 const btnDislike = $("#btnDislike"+numero);
                 
