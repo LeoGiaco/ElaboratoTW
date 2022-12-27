@@ -5,8 +5,7 @@
 
     $templateParams["pageid"] = "profile";
     $templateParams["title"] = "Uv-Profile";
-    $templateParams["javascript"] = "../templates/main_profile/profile.js";
-    $templateParams["jsHeader"] = "../templates/main_posts/posts.js";
+    $templateParams["javascript"] = array("../templates/main_profile/profile.js", "../templates/header/header.js");
     if(!isUserLoggedIn()){
         header("location: login.php");
     }

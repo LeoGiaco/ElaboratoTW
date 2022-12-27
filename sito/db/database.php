@@ -10,10 +10,10 @@
         }
 
         #Aggiungere funzone che cripta la password
-        public function addUser($username, $nome, $cognome, $sesso, $dataNascita, $mail, $password, $online="0"){
-            $query = "INSERT INTO Utente (Username, Nome, Cognome, Sesso, DataNascita, Online) VALUES (?,?,?,?,?,?)"; 
+        public function addUser($username, $nome, $cognome, $sesso, $dataNascita){
+            $query = "INSERT INTO Utente (Username, Nome, Cognome, Sesso, DataNascita) VALUES (?,?,?,?,?)"; 
             $stmt = $this->db->prepare($query);
-            $stmt->bind_param('ssssss', $username, $nome, $cognome, $sesso, $dataNascita, $online);
+            $stmt->bind_param('sssss', $username, $nome, $cognome, $sesso, $dataNascita);
             return $stmt->execute();          
         }
 
@@ -34,7 +34,7 @@
         }
 
         public function checkMailAbsent($mail){
-            $query = "SELECT * FROM Credenziali WHERE Mail=?"; 
+            $query = "SELECT Mail, Sale FROM Credenziali WHERE Mail=?"; 
             $stmt = $this->db->prepare($query);
             $stmt->bind_param('s', $mail);
             $stmt->execute();
@@ -42,10 +42,10 @@
         }
 
         #Aggiungere funzone che cripta la password
-        public function addCredentials($username, $mail, $password){
-            $query = "INSERT INTO Credenziali (Mail, Utente, Password) VALUES (?,?,?)"; 
+        public function addCredentials($username, $mail, $password, $salt){
+            $query = "INSERT INTO Credenziali (Mail, Utente, Password, Sale) VALUES (?,?,?,?)"; 
             $stmt = $this->db->prepare($query);
-            $stmt->bind_param('sss', $mail, $username, $password);
+            $stmt->bind_param('ssss', $mail, $username, $password, $salt);
             return $stmt->execute();          
         }
 
@@ -84,6 +84,14 @@
             $stmt = $this->db->prepare($query);
             $stmt->bind_param('ssssss', $utente, $tipo, $media, $testo, $date, $titolo);
             return $stmt->execute();          
+        }
+
+        public function getEmail($user){
+            $query = "SELECT Mail FROM Credenziali WHERE Utente=?";
+            $stmt = $this->db->prepare($query);
+            $stmt->bind_param('s', $user);
+            $stmt->execute();
+            return $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
         }
 
         public function getInterests(){
@@ -286,6 +294,15 @@
             $query = "SELECT count(*) AS Numero FROM Notifica WHERE Utente=? AND Visualizzata=0"; 
             $stmt = $this->db->prepare($query);
             $stmt->bind_param('s', $user);
+            $stmt->execute(); 
+            return $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
+        }
+
+        public function getResultSearch($date){
+            $stt = "%$date%";
+            $query = "SELECT Username, Immagine FROM Utente WHERE Username LIKE ? "; 
+            $stmt = $this->db->prepare($query);
+            $stmt->bind_param('s', $stt);
             $stmt->execute(); 
             return $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
         }

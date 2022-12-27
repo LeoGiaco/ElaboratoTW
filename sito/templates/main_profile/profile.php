@@ -85,16 +85,7 @@
                                             <div id="collapseTwo" class="collapse" data-bs-parent="#accordion">
                                                 <div class="card-body">
                                                     <ul id="seguiti" class="list-group list-group-light">
-                                                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                                                            <div class="d-flex align-items-center">
-                                                            <img src="https://mdbootstrap.com/img/new/avatars/8.jpg" alt="" style="width: 45px; height: 45px"
-                                                                class="rounded-circle" />
-                                                            <div class="ms-1">
-                                                                <p class="fw-bold mb-1">Username</p>
-                                                            </div>
-                                                            </div>
-                                                            <a class="btn btn-outline-primary btn-rounded btn-sm" href="#" role="button">View</a>
-                                                        </li>
+                                                        
                                                     </ul>
                                                 </div>
                                             </div>

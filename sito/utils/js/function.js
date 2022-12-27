@@ -422,7 +422,6 @@ function addNotification(tipo, utente, titolo, commento=""){
             contentType: false
         })
         .done(function(data,success,response) {
-            console.log("arrivato");
         })
         .fail(function(response) {
             console.log(response);
@@ -433,11 +432,17 @@ function addNotification(tipo, utente, titolo, commento=""){
     });    
 }
 
-// // Funzioni per criptaggio e decriptaggio
-// function encryptPwd(password, salt){
-//     return CryptoJS.TripleDES.encrypt(password, salt);
-// }
-// ​
-// function decryptPwd(password, salt){
-//     return CryptoJS.TripleDES.decrypt(password, salt);
-// }
+// Funzioni per criptaggio e decriptaggio
+function encrypt(password, salt) {
+    var encrypted = CryptoJS.AES.encrypt(password, salt);
+    return encrypted;
+ }
+
+//  function decrypt(password, salt) {
+//     var decrypted = CryptoJS.AES.decrypt(password, salt).toString(CryptoJS.enc.Utf8);
+//     return decrypted;
+//  }
+
+function getUniqueId(){
+    return Date.now().toString();
+}

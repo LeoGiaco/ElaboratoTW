@@ -20,7 +20,7 @@
                                             <div class="d-flex flex-start align-items-center">
                                                 <img id="userImage" class="rounded-circle shadow-1-strong mr-2 me-2" src="images/profile_img/profilo.jpg" alt="avatar user" width="60" height="60" />
                                                 <div>
-                                                    <p class="fw-bold mb-1 text-left"><?php echo $_SESSION["user"] ?></p>
+                                                    <p class="fw-bold mb-1 text-left"><?php if(isset($_SESSION["user"])){echo $_SESSION["user"];} ?></p>
                                                 </div>
                                             </div>
                                             <form id="formPost">

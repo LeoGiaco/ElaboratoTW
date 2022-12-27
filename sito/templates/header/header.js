@@ -11,12 +11,19 @@ $(document).ready(function() {
             contentType: false
         })
         .done(function(data,success,response) {
-            console.log(data);
             window.location.href="login.php";
         })
         .fail(function(response) {
             console.log(response);
         });
+    });
+
+    $('#form_search').submit(function(event) {
+        const data = getFormData("form_search");
+        if(data.get("search")!==""){
+            window.location.href="search.php?search="+data.get("search");
+        }
+        event.preventDefault();
     });
 });
 
@@ -31,11 +38,8 @@ function checkNewNotifications(){
         contentType: false
     })
     .done(function(data,success,response) {
-        console.log(data);
-        if(data===true){
-
+        if(data===true)
             $("#navNotifiche").addClass("blink");
-        }
     })
     .fail(function(response) {
         console.log(response);

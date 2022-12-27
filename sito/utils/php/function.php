@@ -1,7 +1,8 @@
 <?php
-    // use PHPMailer\PHPMailer\PHPMailer;
-    // use PHPMailer\PHPMailer\SMTP;
-    // use PHPMailer\PHPMailer\Exception;
+    use PHPMailer\PHPMailer\PHPMailer;
+    use PHPMailer\PHPMailer\SMTP;
+    use PHPMailer\PHPMailer\Exception;
+    require '/var/www/html/vendor/autoload.php';
 
     function ora($ore)
     {
@@ -136,21 +137,34 @@
         }
     }
 
-    // function sendEmail($email, $username, $tipeMessage, $seguace="", $titoloPost="", $testoCommento=""){
-    //     if($tipeMessage=="follow"){
-    //         $subject="Nuovo Seguace";
-    //         $body="Grande notizia ".$seguace." ha iniaizato a seguirti"; // Possibilità di abbellire con html
-    //     } else if($tipeMessage=="signup"){
-    //         $subject="Benvenuto";
-    //         $body=$username." siamo fieri di darti il benvenuto nel nostro social network"; // Possibilità di abbellire con html
-    //     } else if($tipeMessage=="reazione"){
-    //         $subject="Reazione";
-    //         $body="E' stata reaggiunta una reazione al tuo post intitilato: ".$titoloPost; // Possibilità di abbellire con html
-    //     }else if($tipeMessage=="commento"){
-    //         $subject="Nuovo commento!";
-    //         $body="E' stato aggiunto il seguente commento: ".$testoCommento." al post intitolato: ".$titoloPost."!"; // Possibilità di abbellire con html
-    //     }
+    function sendEmail($email, $nome, $testo){
+        $mail = new PHPMailer(true);
 
-    //     // Codice per email.
-    // }
+        $handle = fopen("../../../database/credenziali.txt", "r");
+        if ($handle) {
+            $username = rtrim(fgets($handle));
+            $password = rtrim(fgets($handle));
+            fclose($handle);
+        }
+        try {
+            //Server settings
+            $mail->isSMTP();
+            $mail->Host       = 'smtp.libero.it';
+            $mail->SMTPAuth   = true;
+            $mail->Username   = $username;
+            $mail->Password   = $password;
+            $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+            $mail->Port       = 465;
+
+            $mail->setFrom('u-niversity@libero.it', 'U-niversity');
+            $mail->addAddress($email, $nome);
+
+            //Content
+            $mail->isHTML(true);
+            $mail->Subject = 'Comunicazione da U-niversity!';
+            $mail->Body    = $testo;
+            $mail->send();
+        } catch (Exception $ignored) {
+        }
+    }
 ?>

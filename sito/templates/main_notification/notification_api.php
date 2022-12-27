@@ -2,6 +2,7 @@
 
 require("../../bootstrap.php");
 
+$result = array();
 if(isset($_POST["request"])){
     switch ($_POST["request"]) {
         case "getNotifications":

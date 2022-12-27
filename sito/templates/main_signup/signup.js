@@ -1,14 +1,16 @@
 const fileint = "templates/main_signup/signup_api.php";
 $(document).ready(function() {
     setInterests();
-    
     $("form").submit(function(event) {
+        event.preventDefault();
         const datas = getFormData("form_sign");
         datas.append("request", "aggiungiUtente");
         if(new Date(datas.get("nascita")) >= new Date()){
             addAlert("alert","alert-danger","Data nascita errata!","");
         } else {
-            datas.append("password", CryptoJS.MD5(datas.get("pwd")).toString());
+            const id = getUniqueId();
+            datas.append("password", encrypt(datas.get("pwd"), id));
+            datas.append("salt", id);
             datas.delete("pwd");
             $.ajax({
                 type: "POST",
@@ -29,7 +31,6 @@ $(document).ready(function() {
                 console.log(response);
             });
         }
-        event.preventDefault();
     });
 
     $("#btnLogin").click(function() {

@@ -1,5 +1,5 @@
 <main>
-    <input id="login" type="hidden" name="login" value="<?php echo $_GET["iscr"]; ?>" />
+    <input id="login" type="hidden" name="login" value="<?php if(isset($_GET["iscr"])){echo $_GET["iscr"];} ?>" />
     <div class="container-fluid p-0 overflow-hidden">
         <header>
             <div class="row">

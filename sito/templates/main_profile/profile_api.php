@@ -2,6 +2,7 @@
 
 require("../../bootstrap.php");
 
+$result = array();
 if(isset($_POST["request"])){
     switch ($_POST["request"]) {
         case 'getUserInfo':
@@ -51,7 +52,8 @@ if(isset($_POST["request"])){
             if(isset($_POST["type"]) && isset($_POST["user"]) && isUserLoggedIn()){
                 if($_POST["type"] == "f"){
                     $result["dati"]=$dbh->addFollow($_SESSION["user"], $_POST["user"]);
-                    // sendEmail();
+                    $mail = $dbh->getEmail($_POST["user"]);
+                    sendEmail($mail[0]["Mail"], $_POST["user"], "L'utente ".$_SESSION["user"]." ha iniziato a seguirti!");
                 } else {
                     $result["dati"]=$dbh->removeFollow($_SESSION["user"], $_POST["user"]);
                 }

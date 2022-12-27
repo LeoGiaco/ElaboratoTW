@@ -5,7 +5,7 @@
 
     $templateParams["pageid"] = "login";
     $templateParams["title"] = "Uv-Login";
-    $templateParams["javascript"] = "../templates/main_login/login.js";
+    $templateParams["javascript"] = array("../templates/main_login/login.js");
 
     $templateParams["pieces"] = array(
         SITE_ROOT . 'templates/main_login/login.php',

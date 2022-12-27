@@ -5,8 +5,7 @@
 
     $templateParams["pageid"] = "profile";
     $templateParams["title"] = "Uv-Notification";
-    $templateParams["javascript"] = "../templates/main_notification/notification.js";
-    $templateParams["jsHeader"] = "../templates/main_posnotificationts/posts.js";
+    $templateParams["javascript"] = array("../templates/main_notification/notification.js", "../templates/header/header.js");
     if(!isUserLoggedIn()){
         header("location: login.php");
     }

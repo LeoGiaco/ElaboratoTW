@@ -5,7 +5,7 @@
 
     $templateParams["pageid"] = "signup";
     $templateParams["title"] = "Uv-Crea_account";
-    $templateParams["javascript"] = "../templates/main_signup/signup.js";
+    $templateParams["javascript"] = array("../templates/main_signup/signup.js");
 
     $templateParams["pieces"] = array(
         // SITE_ROOT . 'templates/header/header.php',

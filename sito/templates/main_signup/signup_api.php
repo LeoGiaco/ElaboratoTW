@@ -1,6 +1,7 @@
 <?php
 require("../../bootstrap.php");
 
+$result = array();
 if(isset($_POST["request"])){
     if($_POST["request"] == "interessiPossibili") {
         $rec = $dbh->getInterests();
@@ -11,8 +12,8 @@ if(isset($_POST["request"])){
             if(count($userResult)==0){
                 $mailResult = $dbh->checkMailAbsent($_POST["email"]);
                 if(count($mailResult)==0){
-                    $state = $dbh->addUser($_POST["username"], $_POST["nome"], $_POST["cognome"], $_POST["genere"], $_POST["nascita"], $_POST["email"], $_POST["password"]);
-                    $state2 = $dbh->addCredentials($_POST["username"], $_POST["email"], $_POST["password"]);            
+                    $state = $dbh->addUser($_POST["username"], $_POST["nome"], $_POST["cognome"], $_POST["genere"], $_POST["nascita"]);
+                    $state2 = $dbh->addCredentials($_POST["username"], $_POST["email"], $_POST["password"], $_POST["salt"]);            
                     $val = $dbh->getInterests();
                     $state3=true;
                     foreach ($val as $value) {
@@ -25,6 +26,7 @@ if(isset($_POST["request"])){
                     }
                     if($state && $state2 && $state3){
                         $result["state"]=true;
+                        sendEmail($_POST["email"], $_POST["username"], "Ciao ".$_POST["username"].", la tua iscrizione è stata completata! \nBenvenuto in U-niversity!!!");
                     }
                     else{
                         $result["state"]=false;
