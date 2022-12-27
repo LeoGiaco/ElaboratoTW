@@ -7,7 +7,7 @@ $(document).ready(function() {
         event.preventDefault();
         let datas = getFormData("form_login");
         // datas.append("password", CryptoJS.MD5(datas.get("pwd")).toString());
-        console.log(encrypt("password", "1672097714975").toString());
+        console.log(encrypt("password", "1672097714975"));
         // datas.delete("pwd");
         // $.ajax({
         //     type: "POST",

@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js" integrity="sha256-/H4YS+7aYb9kJ5OKhFYPUjSJdrtV6AeyJOtTkw6X72o=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/tripledes.min.js" integrity="sha512-wmbsASIfkWYU3hcUOVevdepQTGGjbvjI0/cQ2xbHKwNdX+UKCrLUO4vA89Tlj4+RUu0putxrWOazYVwJcl2nUw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <?php foreach($templateParams["javascript"] as $path):?>
         <script src="<?=$path?>"></script>
     <?php endforeach; ?>
