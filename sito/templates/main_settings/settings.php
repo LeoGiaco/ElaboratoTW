@@ -2,7 +2,7 @@
     <header>
     <h1 class="text-center">Impostazioni</h1>
     </header>
-    <div class="container my-2 py-4 h-100">
+    <div class="container my-4 h-100">
         <div id="settings" class="row gutters-sm">
             <aside class="col-md-4 d-none d-md-block">
                 <div class="card">

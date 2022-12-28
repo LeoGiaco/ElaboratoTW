@@ -3,7 +3,7 @@
         <header>
             <h1 class="text-center">Notifiche</h1>
         </header>
-        <div class="container">
+        <div class="container my-4">
             <div class="row">
                 <div class="col-lg-2"></div>
                 <div class="col-lg-8">

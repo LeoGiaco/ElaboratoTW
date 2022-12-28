@@ -1,13 +1,13 @@
 <main>
     <div class="container-fluid p-0 overflow-hidden">
-        <div class="row my-3">
+        <div class="row my-4">
             <div class="col-12 col-md-12">
                 <section>
                     <header>
                         <h1 class="text-center">Bacheca</h1>
                     </header>
                     <button class="btn btn-primary rounded-circle" id="btnTop">^</button>
-                    <div class="container py-2">
+                    <div class="container">
                         <div class="row d-flex justify-content-center">
                             <div class="col-md-12 col-lg-10 col-xl-8">
                                 <section>
