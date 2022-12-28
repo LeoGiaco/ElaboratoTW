@@ -100,7 +100,7 @@ html {
                     background-color: var(--btn-bg-#{$i});
                     color: var(--btn-fg-#{$i});
 
-                    border-image-source: linear-gradient(to top,  var(--transp) 25%, var(--btn-fg-#{$i}) 25%, var(--btn-fg-#{$i}) 66.66% var(--transp) 25%);
+                    border-image-source: linear-gradient(to top,  var(--transp) 25%, var(--btn-fg-#{$i}) 25%, var(--btn-fg-#{$i}) 75%, var(--transp) 75%);
 
                     &:first-child {
                         border-image-source: linear-gradient(to bottom, var(--btn-fg-#{$i}) 50%, var(--transp) 50%);

@@ -82,7 +82,7 @@ html#page-notifications h2 {
   border-style: solid;
   background-color: var(--btn-bg-1);
   color: var(--btn-fg-1);
-  border-image-source: linear-gradient(to top, var(--transp) 25%, var(--btn-fg-1) 25%, var(--btn-fg-1) 66.66% var(--transp) 25%);
+  border-image-source: linear-gradient(to top, var(--transp) 25%, var(--btn-fg-1) 25%, var(--btn-fg-1) 75%, var(--transp) 75%);
 }
 
 .nav.nav-pills .nav-link.nav-1:first-child {
@@ -106,7 +106,7 @@ html#page-notifications h2 {
   border-style: solid;
   background-color: var(--btn-bg-2);
   color: var(--btn-fg-2);
-  border-image-source: linear-gradient(to top, var(--transp) 25%, var(--btn-fg-2) 25%, var(--btn-fg-2) 66.66% var(--transp) 25%);
+  border-image-source: linear-gradient(to top, var(--transp) 25%, var(--btn-fg-2) 25%, var(--btn-fg-2) 75%, var(--transp) 75%);
 }
 
 .nav.nav-pills .nav-link.nav-2:first-child {
@@ -130,7 +130,7 @@ html#page-notifications h2 {
   border-style: solid;
   background-color: var(--btn-bg-3);
   color: var(--btn-fg-3);
-  border-image-source: linear-gradient(to top, var(--transp) 25%, var(--btn-fg-3) 25%, var(--btn-fg-3) 66.66% var(--transp) 25%);
+  border-image-source: linear-gradient(to top, var(--transp) 25%, var(--btn-fg-3) 25%, var(--btn-fg-3) 75%, var(--transp) 75%);
 }
 
 .nav.nav-pills .nav-link.nav-3:first-child {
@@ -154,7 +154,7 @@ html#page-notifications h2 {
   border-style: solid;
   background-color: var(--btn-bg-4);
   color: var(--btn-fg-4);
-  border-image-source: linear-gradient(to top, var(--transp) 25%, var(--btn-fg-4) 25%, var(--btn-fg-4) 66.66% var(--transp) 25%);
+  border-image-source: linear-gradient(to top, var(--transp) 25%, var(--btn-fg-4) 25%, var(--btn-fg-4) 75%, var(--transp) 75%);
 }
 
 .nav.nav-pills .nav-link.nav-4:first-child {
