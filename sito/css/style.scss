@@ -100,7 +100,7 @@ html {
                     background-color: var(--btn-bg-#{$i});
                     color: var(--btn-fg-#{$i});
                     
-                    border-image-source: linear-gradient(to top, var(--btn-fg-#{$i}) 50%, var(--transp) 50%);
+                    border-image-source: linear-gradient(to bottom, var(--btn-fg-#{$i}) 50%, var(--transp) 50%);
 
                     &.active {
                         background-color: var(--btn-bg-#{$i}-h);
@@ -109,7 +109,7 @@ html {
                 }
 
                 &.active ~ .nav-link.nav-#{$i} {
-                    border-image-source: linear-gradient(to bottom, var(--btn-fg-#{$i}) 50%, var(--transp) 50%);
+                    border-image-source: linear-gradient(to top, var(--btn-fg-#{$i}) 50%, var(--transp) 50%);
                     border-image-slice: 1;
                 }
             }
