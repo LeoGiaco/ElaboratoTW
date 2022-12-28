@@ -45,8 +45,4 @@ $(document).ready(function() {
             console.log(response);
         });
     });
-
-    $("#btnIscriviti").click(function() {
-        window.location.href="signup.php";
-    });
 });

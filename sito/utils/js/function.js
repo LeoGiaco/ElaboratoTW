@@ -403,7 +403,10 @@ function addNotification(tipo, utente, titolo, commento=""){
                 formdata.append("tipologia", tipo);
                 break;
             case 'commento':
-                testo = "L'utente " + seguace + " ha commentato il post intitolato: "+titolo+"!\nIl testo del commento è: '"+commento+"'";
+                if(commento.length>40){
+                    commento = commento.slice(0,41);
+                }
+                testo = "L'utente " + seguace + " ha commentato il post intitolato: "+titolo+"!\n"+'"'+commento+'"';
                 formdata.append("tipologia", tipo);
                 break;
         }

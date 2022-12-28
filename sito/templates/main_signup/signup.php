@@ -101,13 +101,13 @@
                                 </div>
                                 <div class="row my-4">
                                     <div class="col-lg-12">
-                                        <input id="button" class="btn btn-1" type="submit" value="Crea nuovo account"/>
+                                        <button class="btn btn-1" type="submit">Crea nuovo account</button>
                                     </div>
                                 </div>
                             </form>
                             <div class="row my-4">
                                 <div class="col-lg-12">
-                                    <input id="btnLogin" type="button" class="btn btn-2 btn-sm" value="Ho già un account"/>
+                                    <a class="btn btn-2 btn-sm" href="login.php">Ho già un account</a>
                                 </div>
                             </div>
                         </div>
