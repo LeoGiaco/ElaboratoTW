@@ -301,6 +301,12 @@ html#page-login main, html#page-settings main {
   }
 }
 
+header h1 {
+  font-style: italic;
+  font-weight: bold;
+  font-variant: all-petite-caps;
+}
+
 a {
   text-decoration: none;
   color: inherit;
