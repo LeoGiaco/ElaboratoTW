@@ -49,6 +49,12 @@ html {
             flex-grow: 1;
         }
     }
+
+    &#page-signup, &#page-login {
+        header {
+            background: linear-gradient(to bottom, var(--col-mid) 0%, var(--transp) 100%);
+        }
+    }
 }
 
 .post-liked { 

@@ -46,6 +46,11 @@ html#page-login main, html#page-settings main {
           flex-grow: 1;
 }
 
+html#page-signup header, html#page-login header {
+  background: -webkit-gradient(linear, left top, left bottom, from(var(--col-mid)), to(var(--transp)));
+  background: linear-gradient(to bottom, var(--col-mid) 0%, var(--transp) 100%);
+}
+
 .post-liked .dislike-button {
   opacity: 0.5;
 }
