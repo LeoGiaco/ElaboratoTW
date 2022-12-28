@@ -3,7 +3,7 @@
 
     require_once(SITE_ROOT.'bootstrap.php');
 
-    $templateParams["pageid"] = "profile";
+    $templateParams["pageid"] = "search";
     $templateParams["title"] = "Uv-Ricerca";
     $templateParams["javascript"] = array("../templates/main_search/search.js", "../templates/header/header.js");
     if(!isUserLoggedIn()){
