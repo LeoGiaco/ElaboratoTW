@@ -9,8 +9,8 @@ $(document).ready(function() {
         const typBtn = $(this).data("type");
         $(".section").hide().removeClass('d-none');
         $("#"+typBtn).show();
-        $(".btnmenu button").attr("class", "nav-item nav-link")
-        $('[data-type="'+typBtn+'"]').attr('class', 'nav-item nav-link ' + "active");
+        $(".btnmenu button").removeClass("active")
+        $('[data-type="'+typBtn+'"]').addClass("active");
         $("#alert").html("");
     });
 
