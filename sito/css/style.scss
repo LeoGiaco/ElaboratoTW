@@ -87,7 +87,7 @@ html {
 }
 
 .nav {
-    .nav-pills {
+    &.nav-pills {
         .nav-link {
             @for $i from 1 through $nButtons {
                 &.nav-#{$i} {
