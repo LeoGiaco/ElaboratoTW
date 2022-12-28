@@ -1,7 +1,7 @@
 <main>
     <section class="container-fluid p-0 overflow-hidden">
         <header>
-            <h1>Notifiche</h1>
+            <h1 class="text-center">Notifiche</h1>
         </header>
         <div class="container">
             <div class="row">

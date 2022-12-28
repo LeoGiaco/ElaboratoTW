@@ -2,7 +2,7 @@
     <input id="textSearch" type="hidden" name="search" value="<?php if(isset($_GET["search"])){echo $_GET["search"];}?>" />
     <section class="container-fluid p-0 overflow-hidden">
         <header>
-            <h1>Ricerca</h1>
+            <h1 class="text-center">Ricerca</h1>
         </header>
         <div class="container">
             <div class="row">
