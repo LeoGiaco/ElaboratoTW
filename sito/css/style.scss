@@ -90,17 +90,19 @@ html {
     &.nav-pills {
         .nav-link {            
             @for $i from 1 through $nButtons {
-                &.nav-#{$i} {           
+                &.nav-#{$i} {
+                    border: unset;
                     border-radius: 0;
                     border-width: 3px;
                     border-image-slice: 1;
+                    border-style: solid;
 
                     background-color: var(--btn-bg-#{$i});
                     color: var(--btn-fg-#{$i});
                     
                     border-image-source: linear-gradient(to bottom, var(--btn-fg-#{$i}) 50%, var(--transp) 50%);
                     
-                    & ~ .nav-link.active {
+                    .nav-link.active ~ & {
                         border-image-source: linear-gradient(to top, var(--btn-fg-#{$i}) 50%, var(--transp) 50%);
                         border-image-slice: 1;
                     }

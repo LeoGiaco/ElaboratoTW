@@ -75,15 +75,17 @@ html#page-notifications h2 {
 }
 
 .nav.nav-pills .nav-link.nav-1 {
+  border: unset;
   border-radius: 0;
   border-width: 3px;
   border-image-slice: 1;
+  border-style: solid;
   background-color: var(--btn-bg-1);
   color: var(--btn-fg-1);
   border-image-source: linear-gradient(to bottom, var(--btn-fg-1) 50%, var(--transp) 50%);
 }
 
-.nav.nav-pills .nav-link.nav-1 ~ .nav-link.active {
+.nav-link.active ~ .nav.nav-pills .nav-link.nav-1 {
   border-image-source: linear-gradient(to top, var(--btn-fg-1) 50%, var(--transp) 50%);
   border-image-slice: 1;
 }
@@ -94,15 +96,17 @@ html#page-notifications h2 {
 }
 
 .nav.nav-pills .nav-link.nav-2 {
+  border: unset;
   border-radius: 0;
   border-width: 3px;
   border-image-slice: 1;
+  border-style: solid;
   background-color: var(--btn-bg-2);
   color: var(--btn-fg-2);
   border-image-source: linear-gradient(to bottom, var(--btn-fg-2) 50%, var(--transp) 50%);
 }
 
-.nav.nav-pills .nav-link.nav-2 ~ .nav-link.active {
+.nav-link.active ~ .nav.nav-pills .nav-link.nav-2 {
   border-image-source: linear-gradient(to top, var(--btn-fg-2) 50%, var(--transp) 50%);
   border-image-slice: 1;
 }
@@ -113,15 +117,17 @@ html#page-notifications h2 {
 }
 
 .nav.nav-pills .nav-link.nav-3 {
+  border: unset;
   border-radius: 0;
   border-width: 3px;
   border-image-slice: 1;
+  border-style: solid;
   background-color: var(--btn-bg-3);
   color: var(--btn-fg-3);
   border-image-source: linear-gradient(to bottom, var(--btn-fg-3) 50%, var(--transp) 50%);
 }
 
-.nav.nav-pills .nav-link.nav-3 ~ .nav-link.active {
+.nav-link.active ~ .nav.nav-pills .nav-link.nav-3 {
   border-image-source: linear-gradient(to top, var(--btn-fg-3) 50%, var(--transp) 50%);
   border-image-slice: 1;
 }
@@ -132,15 +138,17 @@ html#page-notifications h2 {
 }
 
 .nav.nav-pills .nav-link.nav-4 {
+  border: unset;
   border-radius: 0;
   border-width: 3px;
   border-image-slice: 1;
+  border-style: solid;
   background-color: var(--btn-bg-4);
   color: var(--btn-fg-4);
   border-image-source: linear-gradient(to bottom, var(--btn-fg-4) 50%, var(--transp) 50%);
 }
 
-.nav.nav-pills .nav-link.nav-4 ~ .nav-link.active {
+.nav-link.active ~ .nav.nav-pills .nav-link.nav-4 {
   border-image-source: linear-gradient(to top, var(--btn-fg-4) 50%, var(--transp) 50%);
   border-image-slice: 1;
 }
