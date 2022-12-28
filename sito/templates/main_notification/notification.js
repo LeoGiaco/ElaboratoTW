@@ -67,7 +67,9 @@ function singleNotify(arr, idDiv){
             let row = `
                 <div class="py-3 px-1 d-flex align-items-center bg-light border-bottom">
                     <div class="dropdown-list-image mx-2">
-                        <img class="rounded-circle" src="images/profile_img/${elem.Immagine}" alt="Immagine profilo ${elem.Creatore}" width="50" height="50" />
+                        <a href="profile.php?id=${elem.Creatore}">
+                            <img class="rounded-circle" src="images/profile_img/${elem.Immagine}" alt="Immagine profilo ${elem.Creatore}" width="50" height="50" />
+                        </a>
                     </div>
                     <div class="font-weight-bold w-100">
                         <h3 class="m-0 text-break">${(elem.Tipologia).toUpperCase()}</h3>
