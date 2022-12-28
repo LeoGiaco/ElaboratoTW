@@ -51,6 +51,13 @@ html#page-signup header, html#page-login header {
   background: linear-gradient(to bottom, var(--col-mid) 0%, var(--transp) 100%);
 }
 
+html#page-notifications h2 {
+  font-variant: all-petite-caps;
+  text-transform: uppercase;
+  font-weight: lighter;
+  line-height: 1;
+}
+
 .post-liked .dislike-button {
   opacity: 0.5;
 }

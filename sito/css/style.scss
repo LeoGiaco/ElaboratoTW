@@ -55,6 +55,15 @@ html {
             background: linear-gradient(to bottom, var(--col-mid) 0%, var(--transp) 100%);
         }
     }
+
+    &#page-notifications {
+        h2 {
+            font-variant: all-petite-caps;
+            text-transform: uppercase;
+            font-weight: lighter;
+            line-height: 1;
+        }
+    }
 }
 
 .post-liked { 
