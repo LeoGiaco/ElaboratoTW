@@ -108,7 +108,7 @@ html {
                     }
                 }
 
-                .nav-link.active ~ .nav-#{$i} {
+                &.active ~ .nav-link.nav-#{$i} {
                     border-image-source: linear-gradient(to bottom, var(--btn-fg-#{$i}) 50%, var(--transp) 50%);
                     border-image-slice: 1;
                 }
