@@ -88,12 +88,23 @@ html {
 
 .nav {
     &.nav-pills {
-        .nav-link {
+        .nav-link {            
             @for $i from 1 through $nButtons {
-                &.nav-#{$i} {
+                &.nav-#{$i} {           
+                    border-radius: 0;
+                    border-width: 3px;
+                    border-image-slice: 1;
+
                     background-color: var(--btn-bg-#{$i});
                     color: var(--btn-fg-#{$i});
-                
+                    
+                    border-image-source: linear-gradient(to bottom, var(--btn-fg-#{$i}) 50%, var(--transp) 50%);
+                    
+                    & ~ &.active {
+                        border-image-source: linear-gradient(to top, var(--btn-fg-#{$i}) 50%, var(--transp) 50%);
+                        border-image-slice: 1;
+                    }
+
                     &.active {
                         background-color: var(--btn-bg-#{$i}-h);
                         color: var(--btn-fg-#{$i}-h);
