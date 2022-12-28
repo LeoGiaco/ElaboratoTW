@@ -1,7 +1,7 @@
 <main>
     <div class="container-fluid p-0 overflow-hidden">
         <header>
-            <h1>Profilo Utente</h1>
+            <h1 class="text-center">Profilo Utente</h1>
         </header>
         <section>
             <input id="user" type="hidden" value="<?php echo $_GET["id"]; ?>"/>
