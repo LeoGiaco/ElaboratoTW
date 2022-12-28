@@ -86,6 +86,24 @@ html {
     }
 }
 
+.nav {
+    .nav-pills {
+        .nav-link {
+            @for $i from 1 through $nButtons {
+                &.nav-#{$i} {
+                    background-color: var(--btn-bg-#{$i});
+                    color: var(--btn-fg-#{$i});
+                
+                    &.active {
+                        background-color: var(--btn-bg-#{$i}-h);
+                        color: var(--btn-fg-#{$i}-h);
+                    }
+                }
+            }
+        }
+    }
+}
+
 .btn {
     &.btn-transition-up, &.btn-transition-down {
         background-size: 100% 200%;

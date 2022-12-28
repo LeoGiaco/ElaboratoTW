@@ -74,6 +74,46 @@ html#page-notifications h2 {
   opacity: 1;
 }
 
+.nav .nav-pills .nav-link.nav-1 {
+  background-color: var(--btn-bg-1);
+  color: var(--btn-fg-1);
+}
+
+.nav .nav-pills .nav-link.nav-1.active {
+  background-color: var(--btn-bg-1-h);
+  color: var(--btn-fg-1-h);
+}
+
+.nav .nav-pills .nav-link.nav-2 {
+  background-color: var(--btn-bg-2);
+  color: var(--btn-fg-2);
+}
+
+.nav .nav-pills .nav-link.nav-2.active {
+  background-color: var(--btn-bg-2-h);
+  color: var(--btn-fg-2-h);
+}
+
+.nav .nav-pills .nav-link.nav-3 {
+  background-color: var(--btn-bg-3);
+  color: var(--btn-fg-3);
+}
+
+.nav .nav-pills .nav-link.nav-3.active {
+  background-color: var(--btn-bg-3-h);
+  color: var(--btn-fg-3-h);
+}
+
+.nav .nav-pills .nav-link.nav-4 {
+  background-color: var(--btn-bg-4);
+  color: var(--btn-fg-4);
+}
+
+.nav .nav-pills .nav-link.nav-4.active {
+  background-color: var(--btn-bg-4-h);
+  color: var(--btn-fg-4-h);
+}
+
 .btn.btn-transition-up, .btn.btn-transition-down {
   background-size: 100% 200%;
   -webkit-transition: background-position 0.15s ease-in-out, color 0.15s ease-in-out, border 0.15s ease-in-out;
