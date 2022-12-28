@@ -337,6 +337,7 @@ function gestioneBottoni(button){
             });
             break;
     }
+    checkNewNotifications();
 }
 
 function setAlertLoad(){
@@ -406,7 +407,7 @@ function addNotification(tipo, utente, titolo, commento=""){
                 if(commento.length>40){
                     commento = commento.slice(0,41);
                 }
-                testo = "L'utente " + seguace + " ha commentato il post intitolato: "+titolo+"!\n"+'"'+commento+'"';
+                testo = "L'utente " + seguace + " ha commentato il post intitolato: "+titolo+"!<br/>"+'"'+commento+'"';
                 formdata.append("tipologia", tipo);
                 break;
         }
