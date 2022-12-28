@@ -57,7 +57,7 @@
                                 <header>
                                     <h2>Amicizie</h2>
                                 </header>
-                                <div class="container mw-100 mt-3 mr-1 p-1">
+                                <div class="container mw-100 mt-3 me-1 p-1">
                                     <div id="accordion">
                                         <div class="card">
                                             <div class="card-header">
