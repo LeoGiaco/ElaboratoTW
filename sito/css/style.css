@@ -22,7 +22,7 @@
   --btn-bg-4-h: var(--btn-fg-4);
 }
 
-html#page-login main, html#page-signup main, html#page-homepage main, html#page-settings main {
+html#page-login main, html#page-signup main, html#page-homepage main, html#page-settings main, html#page-notifications main, html#page-profile main, html#page-search main {
   background-color: var(--col-lighter);
 }
 
