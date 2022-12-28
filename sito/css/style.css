@@ -83,7 +83,7 @@ html#page-notifications h2 {
   border-image-source: linear-gradient(to bottom, var(--btn-fg-1) 50%, var(--transp) 50%);
 }
 
-.nav.nav-pills .nav-link.nav-1 ~ .nav.nav-pills .nav-link.nav-1.active {
+.nav.nav-pills .nav-link.nav-1 ~ .nav-link.active {
   border-image-source: linear-gradient(to top, var(--btn-fg-1) 50%, var(--transp) 50%);
   border-image-slice: 1;
 }
@@ -102,7 +102,7 @@ html#page-notifications h2 {
   border-image-source: linear-gradient(to bottom, var(--btn-fg-2) 50%, var(--transp) 50%);
 }
 
-.nav.nav-pills .nav-link.nav-2 ~ .nav.nav-pills .nav-link.nav-2.active {
+.nav.nav-pills .nav-link.nav-2 ~ .nav-link.active {
   border-image-source: linear-gradient(to top, var(--btn-fg-2) 50%, var(--transp) 50%);
   border-image-slice: 1;
 }
@@ -121,7 +121,7 @@ html#page-notifications h2 {
   border-image-source: linear-gradient(to bottom, var(--btn-fg-3) 50%, var(--transp) 50%);
 }
 
-.nav.nav-pills .nav-link.nav-3 ~ .nav.nav-pills .nav-link.nav-3.active {
+.nav.nav-pills .nav-link.nav-3 ~ .nav-link.active {
   border-image-source: linear-gradient(to top, var(--btn-fg-3) 50%, var(--transp) 50%);
   border-image-slice: 1;
 }
@@ -140,7 +140,7 @@ html#page-notifications h2 {
   border-image-source: linear-gradient(to bottom, var(--btn-fg-4) 50%, var(--transp) 50%);
 }
 
-.nav.nav-pills .nav-link.nav-4 ~ .nav.nav-pills .nav-link.nav-4.active {
+.nav.nav-pills .nav-link.nav-4 ~ .nav-link.active {
   border-image-source: linear-gradient(to top, var(--btn-fg-4) 50%, var(--transp) 50%);
   border-image-slice: 1;
 }

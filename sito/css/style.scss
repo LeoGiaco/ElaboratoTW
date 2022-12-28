@@ -100,7 +100,7 @@ html {
                     
                     border-image-source: linear-gradient(to bottom, var(--btn-fg-#{$i}) 50%, var(--transp) 50%);
                     
-                    & ~ &.active {
+                    & ~ .nav-link.active {
                         border-image-source: linear-gradient(to top, var(--btn-fg-#{$i}) 50%, var(--transp) 50%);
                         border-image-slice: 1;
                     }
