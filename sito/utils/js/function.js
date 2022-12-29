@@ -104,7 +104,7 @@ function commentiPost(numero){
         let row='';
         data.forEach(element => {
             row += `
-                <div class="d-flex flex-start w-100 mb-2">
+                <div class="d-flex flex-start w-100 mb-2 border-bottom">
                     <a href="${fileProfile}?id=${element.Utente}">
                         <img class="rounded-circle shadow-1-strong me-3" src="images/profile_img/${element["Immagine"]}" alt="Immagine profilo" width="40" height="40" />
                     </a>
