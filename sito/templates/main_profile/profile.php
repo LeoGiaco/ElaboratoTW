@@ -75,8 +75,8 @@
                                             </div>
                                         </div>
                                         <div class="card">
-                                            <div class="card-header">
-                                                <a id="btnSeguiti" class="collapsed btn w-100" data-bs-toggle="collapse" aria-expanded="false" href="#collapseTwo">
+                                            <div class="card-header p-0">
+                                                <a id="btnSeguiti" class="collapsed btn w-100 p-3" data-bs-toggle="collapse" aria-expanded="false" href="#collapseTwo">
                                                     <span class="list-item-title">Seguiti</span>
                                                     <img class="icon icon-primary" alt="Espandi seguaci" src="images/expand.svg"/>
                                                 </a>
