@@ -570,10 +570,6 @@ h3 {
   z-index: 1;
 }
 
-.card-footer {
-  background-color: var(--col-light);
-}
-
 .comLunghi {
   word-wrap: break-word;
   line-break: anywhere;
