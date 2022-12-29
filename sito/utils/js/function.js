@@ -154,7 +154,7 @@ function visualizzaPost(numeroPost, aggiuntaPost=false, utente="", checked=false
                             </div>
                         </div>
                         <div>
-                            <h3 class="mt-3 mb-2 pb-2">${dati[i]["Titolo"]}</h3>
+                            <h3 class="font-weight-bold mt-3 mb-2 pb-2">${dati[i]["Titolo"]}</h3>
             `;
             if(dati[i]["Media"]!==""){
                 row += `<div class="text-center">
