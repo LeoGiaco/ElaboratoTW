@@ -178,7 +178,7 @@ function visualizzaPost(numeroPost, aggiuntaPost=false, utente="", checked=false
                     </form>
                 </div>
                 <div class="float-end mt-2 pt-1">
-                    <button type="button" class="btn btn-1 btn-sm" data-type="comS" data-numero="${dati[i]["ID"]}">Commenta</button>
+                    <button type="button" class="btn btn-1 btn-inverted btn-background btn-sm" data-type="comS" data-numero="${dati[i]["ID"]}">Commenta</button>
                 </div>
             </div>
         </article>
