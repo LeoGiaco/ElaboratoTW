@@ -21,7 +21,7 @@ $(document).ready(function() {
             row += '<div class="ms-3">';
             row += '<p class="fw-bold mb-1">'+elemento[i].Username+'</p>';
             row += '</div></div>';
-            row += '<a class="btn btn-outline-primary btn-rounded btn-sm" href="profile.php?id='+elemento[i].Username+'" role="button">Vedi</a>';
+            row += '<a class="btn btn-1 btn-sm" href="profile.php?id='+elemento[i].Username+'" role="button">Vedi</a>';
             row += '</li>';  
         }
         if(elemento.length!=0)
