@@ -22,7 +22,7 @@
             <div class="navbar-collapse collapse order-4 order-md-0 dual-collapse2">
                 <form id="form_search" class="d-flex justify-content-end" >
                     <input type="search" name="search" placeholder="Cerca nome utente" aria-label="Search"/>
-                    <button class="btn btn-outline-success" type="submit">Cerca</button>
+                    <button class="btn btn-3" type="submit">Cerca</button>
                 </form>
             </div>
             <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">

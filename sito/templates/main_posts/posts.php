@@ -6,7 +6,7 @@
                     <header>
                         <h1 class="text-center">Bacheca</h1>
                     </header>
-                    <button class="btn btn-primary rounded-circle" id="btnTop">^</button>
+                    <button class="btn btn-1 btn-inverted rounded-circle" id="btnTop">^</button>
                     <div class="container">
                         <div class="row d-flex justify-content-center">
                             <div class="col-md-12 col-lg-10 col-xl-8">
