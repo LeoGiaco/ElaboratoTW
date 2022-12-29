@@ -17,7 +17,7 @@ $(document).ready(function() {
         for(let i=0; i<elemento.length; i++){
             row += '<li class="list-group-item d-flex justify-content-between align-items-center">';
             row += '<div class="d-flex align-items-center">';
-            row += '<img src="images/profile_img/'+elemento[i].Immagine+'" alt="Immagine profilo di '+elemento[i].Username+'" width="50" height="50" class="rounded-circle" />';
+            row += '<div class="image-wrapper-small"><img src="images/profile_img/'+elemento[i].Immagine+'" alt="Immagine profilo di '+elemento[i].Username+'" class="rounded-circle" /></div>';
             row += '<div class="ms-3">';
             row += '<p class="fw-bold mb-1">'+elemento[i].Username+'</p>';
             row += '</div></div>';
