@@ -61,8 +61,8 @@ html#page-notifications h2 {
 .image-container {
   width: 10vw;
   height: 10vw;
-  max-width: 60px;
-  max-height: 60px;
+  min-width: 60px;
+  min-height: 60px;
   max-width: 90px;
   max-height: 90px;
 }
@@ -78,7 +78,7 @@ html#page-notifications h2 {
 
 .image-container img, .image-container-small img {
   width: 100%;
-  aspect-ratio: 1;
+  height: 100%;
 }
 
 .post-liked .dislike-button {
