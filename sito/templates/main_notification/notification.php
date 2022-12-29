@@ -16,8 +16,8 @@
                         </div>
                     </section>
                     <section class="box shadow-sm rounded bg-white my-2">
-                        <header class="box-title border-bottom p-3 d-flex">
-                            <h2 class="my-0 me-auto">Vecchie</h2>
+                        <header class="box-title border-bottom p-3 d-flex justify-content-between">
+                            <h2 class="my-0">Vecchie</h2>
                             <button id="btnElimina" class="btn btn-4 btn-inverted">Elimina Notifiche</button>
                         </header>
                         <div id="notifOld" class="box-body p-0">
