@@ -114,7 +114,7 @@ function createListItem(elemento){
     for(let i=0; i<elemento.length; i++){
         row += '<li class="list-group-item d-flex justify-content-between align-items-center">';
         row += '<div class="d-flex align-items-center">';
-        row += '<div class="image-wrapper-small"><img src="images/profile_img/'+elemento[i].Immagine+'" alt="Immagine profilo di '+elemento[i].Amico+'" class="rounded-circle" /></div>';
+        row += '<div class="image-wrapper-small me-1"><img src="images/profile_img/'+elemento[i].Immagine+'" alt="Immagine profilo di '+elemento[i].Amico+'" class="rounded-circle" /></div>';
         row += '<div class="ms-1">';
         row += '<p class="fw-bold mb-1">'+elemento[i].Amico+'</p>';
         row += '</div></div>';
