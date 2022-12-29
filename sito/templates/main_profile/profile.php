@@ -60,8 +60,8 @@
                                 <div class="container mw-100 mt-3 me-1 p-1">
                                     <div id="accordion">
                                         <div class="card">
-                                            <div class="card-header">
-                                                <a id="btnSeguaci" class="collapsed btn w-100" data-bs-toggle="collapse" aria-expanded="false" href="#collapseOne">
+                                            <div class="card-header p-0">
+                                                <a id="btnSeguaci" class="collapsed btn w-100 p-3" data-bs-toggle="collapse" aria-expanded="false" href="#collapseOne">
                                                         <span class="list-item-title">Seguaci</span>
                                                         <img class="icon icon-primary" alt="Espandi seguaci" src="images/expand.svg"/>
                                                 </a>

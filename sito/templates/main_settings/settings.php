@@ -69,7 +69,7 @@
                                         <input id="image" class="form-control form-control-sm" type="file" name="immagine" accept="image/*"/>
                                     </label>
                                 </div>
-                                <button type="button" class="btn btn-primary">Cambia immagine</button>
+                                <button type="button" class="btn btn-1 btn-inverted">Cambia immagine</button>
                             </form>
                         </div>
                         <div id="interests" class="section d-none">
