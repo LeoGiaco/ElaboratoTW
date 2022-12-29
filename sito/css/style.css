@@ -58,7 +58,7 @@ html#page-notifications h2 {
   line-height: 1;
 }
 
-.image-container {
+.image-wrapper {
   width: 10vw;
   height: 10vw;
   min-width: 60px;
@@ -67,7 +67,7 @@ html#page-notifications h2 {
   max-height: 90px;
 }
 
-.image-container-small {
+.image-wrapper-small {
   width: 5vw;
   height: 5vw;
   min-width: 30px;
@@ -76,7 +76,7 @@ html#page-notifications h2 {
   max-height: 45px;
 }
 
-.image-container img, .image-container-small img {
+.image-wrapper img, .image-wrapper-small img {
   width: 100%;
   height: 100%;
 }
