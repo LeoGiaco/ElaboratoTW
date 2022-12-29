@@ -147,7 +147,7 @@ function visualizzaPost(numeroPost, aggiuntaPost=false, utente="", checked=false
             const postReaction = temp[2] == 1 ? " post-liked " : (temp[2] == -1 ? " post-disliked " : ""); 
             row += ` <article id="post${dati[i]["ID"]}" class="card my-2${postReaction}">
                         <div class="card-body"><div class="d-flex flex-start align-items-center">
-                            <a href="${fileProfile}?id=${dati[i]["Utente"]}"><img class="rounded-circle shadow-1-strong me-2" src="images/profile_img/${dati[i]["Immagine"]}" alt="avatar user" width="60" height="60" /></a>
+                            <a class="image-wrapper me-2" href="${fileProfile}?id=${dati[i]["Utente"]}"><img class="rounded-circle shadow-1-strong" src="images/profile_img/${dati[i]["Immagine"]}" alt="avatar user" width="60" height="60" /></a>
                             <div>
                                 <a href="${fileProfile}?id=${dati[i]["Utente"]}"><p class="fw-bold mb-1 text-left">${dati[i]["Utente"]}</p></a>
                                 <p class="text-muted small mb-0">${dati[i]["Data"]}</p>
