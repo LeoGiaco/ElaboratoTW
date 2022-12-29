@@ -105,8 +105,8 @@ function commentiPost(numero){
         data.forEach(element => {
             row += `
                 <div class="d-flex flex-start w-100 mb-2 border-bottom">
-                    <a href="${fileProfile}?id=${element.Utente}">
-                        <img class="rounded-circle shadow-1-strong me-3" src="images/profile_img/${element["Immagine"]}" alt="Immagine profilo" width="40" height="40" />
+                    <a class="image-wrapper-small me-2" href="${fileProfile}?id=${element.Utente}">
+                        <img class="rounded-circle shadow-1-strong" src="images/profile_img/${element["Immagine"]}" alt="Immagine profilo"/>
                     </a>
                     <div class="form-outline w-100">
                         <p class="text-muted small mb-0">${element.Data}</p>
