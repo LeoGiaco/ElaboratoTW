@@ -222,6 +222,10 @@ html#page-notifications h2 {
   border-color: var(--btn-fg-1);
 }
 
+.btn.btn-1.btn-background {
+  background-color: white;
+}
+
 .btn.btn-1:hover {
   background-color: var(--btn-bg-1-h);
   color: var(--btn-fg-1-h);
@@ -232,9 +236,19 @@ html#page-notifications h2 {
   background-image: linear-gradient(to top, var(--btn-bg-1) 50%, var(--btn-bg-1-h) 50%);
 }
 
+.btn.btn-1.btn-transition-up.btn-background {
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(50%, white), color-stop(50%, var(--btn-bg-1-h)));
+  background-image: linear-gradient(to top, white 50%, var(--btn-bg-1-h) 50%);
+}
+
 .btn.btn-1.btn-transition-down {
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, var(--btn-bg-1)), color-stop(50%, var(--btn-bg-1-h)));
   background-image: linear-gradient(to bottom, var(--btn-bg-1) 50%, var(--btn-bg-1-h) 50%);
+}
+
+.btn.btn-1.btn-transition-down.btn-background {
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, white), color-stop(50%, var(--btn-bg-1-h)));
+  background-image: linear-gradient(to bottom, white 50%, var(--btn-bg-1-h) 50%);
 }
 
 .btn.btn-1.btn-inverted {
@@ -245,6 +259,10 @@ html#page-notifications h2 {
 .btn.btn-1.btn-inverted:hover {
   background-color: var(--btn-bg-1);
   color: var(--btn-fg-1);
+}
+
+.btn.btn-1.btn-inverted:hover.btn-background {
+  background-color: white;
 }
 
 .btn.btn-1.btn-transition-up, .btn.btn-1.btn-transition-down {
@@ -266,6 +284,10 @@ html#page-notifications h2 {
   border-color: var(--btn-fg-2);
 }
 
+.btn.btn-2.btn-background {
+  background-color: white;
+}
+
 .btn.btn-2:hover {
   background-color: var(--btn-bg-2-h);
   color: var(--btn-fg-2-h);
@@ -276,9 +298,19 @@ html#page-notifications h2 {
   background-image: linear-gradient(to top, var(--btn-bg-2) 50%, var(--btn-bg-2-h) 50%);
 }
 
+.btn.btn-2.btn-transition-up.btn-background {
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(50%, white), color-stop(50%, var(--btn-bg-2-h)));
+  background-image: linear-gradient(to top, white 50%, var(--btn-bg-2-h) 50%);
+}
+
 .btn.btn-2.btn-transition-down {
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, var(--btn-bg-2)), color-stop(50%, var(--btn-bg-2-h)));
   background-image: linear-gradient(to bottom, var(--btn-bg-2) 50%, var(--btn-bg-2-h) 50%);
+}
+
+.btn.btn-2.btn-transition-down.btn-background {
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, white), color-stop(50%, var(--btn-bg-2-h)));
+  background-image: linear-gradient(to bottom, white 50%, var(--btn-bg-2-h) 50%);
 }
 
 .btn.btn-2.btn-inverted {
@@ -289,6 +321,10 @@ html#page-notifications h2 {
 .btn.btn-2.btn-inverted:hover {
   background-color: var(--btn-bg-2);
   color: var(--btn-fg-2);
+}
+
+.btn.btn-2.btn-inverted:hover.btn-background {
+  background-color: white;
 }
 
 .btn.btn-2.btn-transition-up, .btn.btn-2.btn-transition-down {
@@ -310,6 +346,10 @@ html#page-notifications h2 {
   border-color: var(--btn-fg-3);
 }
 
+.btn.btn-3.btn-background {
+  background-color: white;
+}
+
 .btn.btn-3:hover {
   background-color: var(--btn-bg-3-h);
   color: var(--btn-fg-3-h);
@@ -320,9 +360,19 @@ html#page-notifications h2 {
   background-image: linear-gradient(to top, var(--btn-bg-3) 50%, var(--btn-bg-3-h) 50%);
 }
 
+.btn.btn-3.btn-transition-up.btn-background {
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(50%, white), color-stop(50%, var(--btn-bg-3-h)));
+  background-image: linear-gradient(to top, white 50%, var(--btn-bg-3-h) 50%);
+}
+
 .btn.btn-3.btn-transition-down {
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, var(--btn-bg-3)), color-stop(50%, var(--btn-bg-3-h)));
   background-image: linear-gradient(to bottom, var(--btn-bg-3) 50%, var(--btn-bg-3-h) 50%);
+}
+
+.btn.btn-3.btn-transition-down.btn-background {
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, white), color-stop(50%, var(--btn-bg-3-h)));
+  background-image: linear-gradient(to bottom, white 50%, var(--btn-bg-3-h) 50%);
 }
 
 .btn.btn-3.btn-inverted {
@@ -333,6 +383,10 @@ html#page-notifications h2 {
 .btn.btn-3.btn-inverted:hover {
   background-color: var(--btn-bg-3);
   color: var(--btn-fg-3);
+}
+
+.btn.btn-3.btn-inverted:hover.btn-background {
+  background-color: white;
 }
 
 .btn.btn-3.btn-transition-up, .btn.btn-3.btn-transition-down {
@@ -354,6 +408,10 @@ html#page-notifications h2 {
   border-color: var(--btn-fg-4);
 }
 
+.btn.btn-4.btn-background {
+  background-color: white;
+}
+
 .btn.btn-4:hover {
   background-color: var(--btn-bg-4-h);
   color: var(--btn-fg-4-h);
@@ -364,9 +422,19 @@ html#page-notifications h2 {
   background-image: linear-gradient(to top, var(--btn-bg-4) 50%, var(--btn-bg-4-h) 50%);
 }
 
+.btn.btn-4.btn-transition-up.btn-background {
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(50%, white), color-stop(50%, var(--btn-bg-4-h)));
+  background-image: linear-gradient(to top, white 50%, var(--btn-bg-4-h) 50%);
+}
+
 .btn.btn-4.btn-transition-down {
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, var(--btn-bg-4)), color-stop(50%, var(--btn-bg-4-h)));
   background-image: linear-gradient(to bottom, var(--btn-bg-4) 50%, var(--btn-bg-4-h) 50%);
+}
+
+.btn.btn-4.btn-transition-down.btn-background {
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, white), color-stop(50%, var(--btn-bg-4-h)));
+  background-image: linear-gradient(to bottom, white 50%, var(--btn-bg-4-h) 50%);
 }
 
 .btn.btn-4.btn-inverted {
@@ -377,6 +445,10 @@ html#page-notifications h2 {
 .btn.btn-4.btn-inverted:hover {
   background-color: var(--btn-bg-4);
   color: var(--btn-fg-4);
+}
+
+.btn.btn-4.btn-inverted:hover.btn-background {
+  background-color: white;
 }
 
 .btn.btn-4.btn-transition-up, .btn.btn-4.btn-transition-down {
