@@ -18,7 +18,9 @@
                                         <div id="alert" class="my-2" role="alert"></div>
                                         <div class="card-body">
                                             <div class="d-flex flex-start align-items-center">
-                                                <img id="userImage" class="rounded-circle shadow-1-strong me-2" src="images/profile_img/profilo.jpg" alt="avatar user" width="60" height="60" />
+                                                <div class="image-wrapper me-2">
+                                                    <img id="userImage" class="rounded-circle shadow-1-strong" src="images/profile_img/profilo.jpg" alt="avatar user" width="60" height="60" />
+                                                </div>
                                                 <div>
                                                     <p class="fw-bold mb-1 text-left"><?php if(isset($_SESSION["user"])){echo $_SESSION["user"];} ?></p>
                                                 </div>

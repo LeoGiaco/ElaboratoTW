@@ -66,7 +66,7 @@ function singleNotify(arr, idDiv){
         arr.forEach(elem => {
             let row = `
                 <div class="py-3 px-1 d-flex align-items-center bg-light border-bottom">
-                    <div class="dropdown-list-image mx-2">
+                    <div class="dropdown-list-image mx-2 image-wrapper-small">
                         <a href="profile.php?id=${elem.Creatore}">
                             <img class="rounded-circle" src="images/profile_img/${elem.Immagine}" alt="Immagine profilo ${elem.Creatore}" width="50" height="50" />
                         </a>
