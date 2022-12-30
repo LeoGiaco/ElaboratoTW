@@ -201,9 +201,17 @@ html {
                 background-color: white;
             }
 
+            img.btn-image {
+                filter: brightness(0);
+            }
+            
             &:hover {
                 background-color: var(--btn-bg-#{$i}-h);
                 color: var(--btn-fg-#{$i}-h);
+
+                img.btn-image {
+                    filter: brightness(0) invert(1);
+                }
             }
 
             &.btn-transition-up {
@@ -226,12 +234,20 @@ html {
                 background-color: var(--btn-bg-#{$i}-h);
                 color: var(--btn-fg-#{$i}-h);
             
+                img.btn-image {
+                    filter: brightness(0) invert(1);
+                }
+                
                 &:hover {
                     background-color: var(--btn-bg-#{$i});
                     color: var(--btn-fg-#{$i});
                     
                     &.btn-background {
                         background-color: white;
+                    }
+                    
+                    img.btn-image {
+                        filter: brightness(0);
                     }
                 }
             }
