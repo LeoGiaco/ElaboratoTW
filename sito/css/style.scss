@@ -202,6 +202,7 @@ html {
             }
 
             img.btn-image {
+                transition: filter 0.15s linear;
                 filter: brightness(0);
             }
             

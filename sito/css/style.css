@@ -250,6 +250,10 @@ html#page-notifications h2 {
 }
 
 .btn.btn-1 img.btn-image {
+  -webkit-transition: -webkit-filter 0.15s linear;
+  transition: -webkit-filter 0.15s linear;
+  transition: filter 0.15s linear;
+  transition: filter 0.15s linear, -webkit-filter 0.15s linear;
   -webkit-filter: brightness(0);
           filter: brightness(0);
 }
@@ -332,6 +336,10 @@ html#page-notifications h2 {
 }
 
 .btn.btn-2 img.btn-image {
+  -webkit-transition: -webkit-filter 0.15s linear;
+  transition: -webkit-filter 0.15s linear;
+  transition: filter 0.15s linear;
+  transition: filter 0.15s linear, -webkit-filter 0.15s linear;
   -webkit-filter: brightness(0);
           filter: brightness(0);
 }
@@ -414,6 +422,10 @@ html#page-notifications h2 {
 }
 
 .btn.btn-3 img.btn-image {
+  -webkit-transition: -webkit-filter 0.15s linear;
+  transition: -webkit-filter 0.15s linear;
+  transition: filter 0.15s linear;
+  transition: filter 0.15s linear, -webkit-filter 0.15s linear;
   -webkit-filter: brightness(0);
           filter: brightness(0);
 }
@@ -496,6 +508,10 @@ html#page-notifications h2 {
 }
 
 .btn.btn-4 img.btn-image {
+  -webkit-transition: -webkit-filter 0.15s linear;
+  transition: -webkit-filter 0.15s linear;
+  transition: filter 0.15s linear;
+  transition: filter 0.15s linear, -webkit-filter 0.15s linear;
   -webkit-filter: brightness(0);
           filter: brightness(0);
 }
