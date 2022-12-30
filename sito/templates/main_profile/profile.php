@@ -15,8 +15,8 @@
                                     <img id="imgUtente" src="" alt="Immagine profilo utente" width="100%" height="100%" class="img-fluid img-thumbnail mx-2 my-2"/>
                                 </div>
                                 <div class="col-6 col-md-7 d-flex align-items-start flex-column">
-                                    <p id="nominativo" class="mt-auto mb-2">Nome e cognome</p>
-                                    <p id="username" class="mb-2">Username</p>
+                                    <p id="nominativo" class="my-2 h2">Nome e cognome</p>
+                                    <p id="username" class="h5">Username</p>
                                 </div>
                                 <div class="col-3 col-md-3 d-flex flex-row-reverse">
                                     <button id="btnSegui" type="button" class="btn btn-outline-light mt-auto mb-auto mx-2" data-state="Segui">Segui</button>

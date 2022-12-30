@@ -64,6 +64,12 @@ html {
             line-height: 1;
         }
     }
+
+    &#page-profile {
+        #username::before {
+            content: "- ";
+        }
+    }
 }
 
 .image-wrapper {

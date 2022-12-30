@@ -58,6 +58,10 @@ html#page-notifications h2 {
   line-height: 1;
 }
 
+html#page-profile #username::before {
+  content: "- ";
+}
+
 .image-wrapper {
   width: 10vw;
   height: 10vw;
