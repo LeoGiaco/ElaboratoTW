@@ -85,6 +85,16 @@ html#page-profile #username::before {
   height: 100%;
 }
 
+.user-stats .stats-left {
+  border-bottom-left-radius: 1rem;
+  border-top-left-radius: 1rem;
+}
+
+.user-stats .stats-right {
+  border-bottom-right-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
 .post-liked .dislike-button {
   opacity: 0.5;
 }

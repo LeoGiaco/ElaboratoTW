@@ -40,12 +40,12 @@
                                         </div>
                                     </div>
                                     <div class="col-4">
-                                        <div class="d-flex justify-content-end text-center py-1">
-                                            <div class="px-3">
+                                        <div class="d-flex justify-content-end text-center py-1 user-stats">
+                                            <div class="p-3 me-3 border stats-left">
                                                 <p id="nSeguaci" class="mb-1 h5">---</p>
                                                 <p class="small text-muted mb-0">Seguaci</p>
                                             </div>
-                                            <div>
+                                            <div class="p-3 border stats-right">
                                                 <p id="nSeguiti" class="mb-1 h5">---</p>
                                                 <p class="small text-muted mb-0">Seguiti</p>
                                             </div>
