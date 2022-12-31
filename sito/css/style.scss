@@ -154,7 +154,19 @@ html {
                     &:last-child {
                         border-image-source: linear-gradient(to top, var(--btn-fg-#{$i}) 50%, var(--transp) 50%);
                     }
-                    
+
+                    &.nav-horizontal {
+                        border-image-source: linear-gradient(to left,  var(--transp) 25%, var(--btn-fg-#{$i}) 25%, var(--btn-fg-#{$i}) 75%, var(--transp) 75%);
+    
+                        &:first-child {
+                            border-image-source: linear-gradient(to right, var(--btn-fg-#{$i}) 50%, var(--transp) 50%);
+                        }
+    
+                        &:last-child {
+                            border-image-source: linear-gradient(to left, var(--btn-fg-#{$i}) 50%, var(--transp) 50%);
+                        }
+                    }
+
                     &.active {
                         background-color: var(--btn-bg-#{$i}-h);
                         color: var(--btn-fg-#{$i}-h);

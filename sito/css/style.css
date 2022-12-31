@@ -134,6 +134,18 @@ html#page-profile #username::before {
   border-image-source: linear-gradient(to top, var(--btn-fg-1) 50%, var(--transp) 50%);
 }
 
+.nav.nav-pills .nav-link.nav-1.nav-horizontal {
+  border-image-source: linear-gradient(to left, var(--transp) 25%, var(--btn-fg-1) 25%, var(--btn-fg-1) 75%, var(--transp) 75%);
+}
+
+.nav.nav-pills .nav-link.nav-1.nav-horizontal:first-child {
+  border-image-source: linear-gradient(to right, var(--btn-fg-1) 50%, var(--transp) 50%);
+}
+
+.nav.nav-pills .nav-link.nav-1.nav-horizontal:last-child {
+  border-image-source: linear-gradient(to left, var(--btn-fg-1) 50%, var(--transp) 50%);
+}
+
 .nav.nav-pills .nav-link.nav-1.active {
   background-color: var(--btn-bg-1-h);
   color: var(--btn-fg-1-h);
@@ -156,6 +168,18 @@ html#page-profile #username::before {
 
 .nav.nav-pills .nav-link.nav-2:last-child {
   border-image-source: linear-gradient(to top, var(--btn-fg-2) 50%, var(--transp) 50%);
+}
+
+.nav.nav-pills .nav-link.nav-2.nav-horizontal {
+  border-image-source: linear-gradient(to left, var(--transp) 25%, var(--btn-fg-2) 25%, var(--btn-fg-2) 75%, var(--transp) 75%);
+}
+
+.nav.nav-pills .nav-link.nav-2.nav-horizontal:first-child {
+  border-image-source: linear-gradient(to right, var(--btn-fg-2) 50%, var(--transp) 50%);
+}
+
+.nav.nav-pills .nav-link.nav-2.nav-horizontal:last-child {
+  border-image-source: linear-gradient(to left, var(--btn-fg-2) 50%, var(--transp) 50%);
 }
 
 .nav.nav-pills .nav-link.nav-2.active {
@@ -182,6 +206,18 @@ html#page-profile #username::before {
   border-image-source: linear-gradient(to top, var(--btn-fg-3) 50%, var(--transp) 50%);
 }
 
+.nav.nav-pills .nav-link.nav-3.nav-horizontal {
+  border-image-source: linear-gradient(to left, var(--transp) 25%, var(--btn-fg-3) 25%, var(--btn-fg-3) 75%, var(--transp) 75%);
+}
+
+.nav.nav-pills .nav-link.nav-3.nav-horizontal:first-child {
+  border-image-source: linear-gradient(to right, var(--btn-fg-3) 50%, var(--transp) 50%);
+}
+
+.nav.nav-pills .nav-link.nav-3.nav-horizontal:last-child {
+  border-image-source: linear-gradient(to left, var(--btn-fg-3) 50%, var(--transp) 50%);
+}
+
 .nav.nav-pills .nav-link.nav-3.active {
   background-color: var(--btn-bg-3-h);
   color: var(--btn-fg-3-h);
@@ -204,6 +240,18 @@ html#page-profile #username::before {
 
 .nav.nav-pills .nav-link.nav-4:last-child {
   border-image-source: linear-gradient(to top, var(--btn-fg-4) 50%, var(--transp) 50%);
+}
+
+.nav.nav-pills .nav-link.nav-4.nav-horizontal {
+  border-image-source: linear-gradient(to left, var(--transp) 25%, var(--btn-fg-4) 25%, var(--btn-fg-4) 75%, var(--transp) 75%);
+}
+
+.nav.nav-pills .nav-link.nav-4.nav-horizontal:first-child {
+  border-image-source: linear-gradient(to right, var(--btn-fg-4) 50%, var(--transp) 50%);
+}
+
+.nav.nav-pills .nav-link.nav-4.nav-horizontal:last-child {
+  border-image-source: linear-gradient(to left, var(--btn-fg-4) 50%, var(--transp) 50%);
 }
 
 .nav.nav-pills .nav-link.nav-4.active {
