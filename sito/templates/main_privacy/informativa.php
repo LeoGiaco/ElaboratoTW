@@ -1,7 +1,7 @@
 <main>
     <div class="container">
-        <div class="row d-flex justify-content-center my-4">
-            <div class="col-md-12 col-lg-10 col-xl-8">
+        <div class="row d-flex justify-content-center py-4">
+            <div class="col-11 col-lg-10">
                 <section>
                     <header>
                         <h1 class="text-center">Informativa sulla Privacy</h1>
