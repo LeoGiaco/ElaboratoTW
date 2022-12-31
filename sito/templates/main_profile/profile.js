@@ -11,7 +11,7 @@ $(document).ready(function() {
     getFriendship(user);
 
     // Aggiunta dei post.
-    visualizzaPost(postsLoaded, false, user);
+    visualizzaPost(postsLoaded, true, user);
 
     $("#contPosts").on("click",'button',function(){
         gestioneBottoni($(this));
