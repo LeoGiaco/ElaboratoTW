@@ -85,6 +85,10 @@ html#page-profile #username::before {
   height: 100%;
 }
 
+.user-stats {
+  font-family: 'Lucida Console', 'Courier New', Courier, monospace;
+}
+
 .user-stats .stats-left {
   border-bottom-left-radius: 1rem;
   border-top-left-radius: 1rem;
