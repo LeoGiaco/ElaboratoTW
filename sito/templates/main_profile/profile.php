@@ -30,17 +30,15 @@
                                     <h2>Informazioni</h2>
                                 </header>
                                 <div class="row">
-                                    <div class="col-8">
-                                        <div class="mb-2">
-                                            <div class="p-1">
-                                                <p id="sesso" class="font-italic mb-1"><strong>Sesso:</strong></p>
-                                                <p id="nascita" class="font-italic mb-1"><strong>Nascita:</strong></p>
-                                                <p id="interessi" class="font-italic mb-0"><strong>Interessi:</strong></p>
-                                            </div>
+                                    <div class="col-12 col-md-8">
+                                        <div class="mb-2 p-1">
+                                            <p id="sesso" class="font-italic mb-1"><strong>Sesso:</strong></p>
+                                            <p id="nascita" class="font-italic mb-1"><strong>Nascita:</strong></p>
+                                            <p id="interessi" class="font-italic mb-0"><strong>Interessi:</strong></p>
                                         </div>
                                     </div>
-                                    <div class="col-4">
-                                        <div class="d-flex justify-content-end text-center py-1 pe-5 user-stats">
+                                    <div class="col-12 col-md-4">
+                                        <div class="d-flex justify-content-center justify-content-md-end text-center py-1 pe-md-5 user-stats">
                                             <div class="p-3 me-3 border stats-left">
                                                 <p id="nSeguaci" class="mb-1 h5">---</p>
                                                 <p class="small text-muted mb-0">Seguaci</p>
