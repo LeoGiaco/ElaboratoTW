@@ -7,6 +7,7 @@
     $templateParams["title"] = "Uv-Privacy";
 
     $templateParams["pieces"] = array(
+        SITE_ROOT . 'templates/header/header.php',
         SITE_ROOT . 'templates/main_privacy/informativa.php',
         SITE_ROOT . 'templates/footer/footer.php'
     );
