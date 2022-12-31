@@ -5,7 +5,7 @@ $(document).ready(function() {
     checkInterests();
     insertProfileImage();
 
-    $("nav").on("click",'button',function(){
+    $("main nav").on("click",'button',function(){
         const typBtn = $(this).data("type");
         $(".section").hide().removeClass('d-none');
         $("#"+typBtn).show();
