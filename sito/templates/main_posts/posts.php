@@ -6,8 +6,8 @@
                     <header>
                         <h1 class="text-center">Bacheca</h1>
                     </header>
-                    <button class="btn btn-1 btn-inverted rounded-circle" id="btnTop">
-                        <div class="d-flex p-1 image-wrapper-small">
+                    <button class="btn btn-1 btn-inverted rounded-circle p-2" id="btnTop">
+                        <div class="d-flex image-wrapper-small">
                             <img class="btn-image" src="images/chevron-up.svg" alt="Torna in cima alla pagina" class="" />
                         </div>
                     </button>
