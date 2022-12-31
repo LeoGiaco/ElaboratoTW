@@ -146,7 +146,7 @@ function getUserInfo(user){
             $("#sesso").append(' '+dati["Sesso"]);
             $("#nascita").append(' '+dati["DataNascita"]);
             for(let i=0; i<data.dati.length; i++){
-                $("#interessi").append(" "+data["dati"][i]["InterNome"]);
+                $("#interessi").append(`<span class="border border-dark ms-2 p-1">${data["dati"][i]["InterNome"]}</span>`);
             }
         }
     })
