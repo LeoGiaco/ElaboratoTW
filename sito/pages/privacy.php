@@ -6,6 +6,8 @@
     $templateParams["pageid"] = "privacy";
     $templateParams["title"] = "Uv-Privacy";
 
+    $templateParams["javascript"] = array("../templates/header/header.js");
+
     $templateParams["pieces"] = array(
         SITE_ROOT . 'templates/header/header.php',
         SITE_ROOT . 'templates/main_privacy/informativa.php',
