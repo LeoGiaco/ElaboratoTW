@@ -1,9 +1,7 @@
 <main>
     <div class="container">
-        <div class="row my-4">
-            <div class="col-2">
-            </div>
-            <div class="col-8">
+        <div class="row d-flex justify-content-center my-4">
+            <div class="col-md-12 col-lg-10 col-xl-8">
                 <section>
                     <header>
                         <h1 class="text-center">Informativa sulla Privacy</h1>
@@ -261,8 +259,6 @@
                         </section>
                     </div>
                 </section>
-            </div>
-            <div class="col-2">
             </div>
         </div>
     </div>
