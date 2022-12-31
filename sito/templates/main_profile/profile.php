@@ -33,7 +33,7 @@
                                     <div class="col-12 col-md-8">
                                         <div class="mb-2 p-1">
                                             <p id="sesso" class="font-italic mb-1"><strong>Sesso:</strong></p>
-                                            <p id="nascita" class="font-italic mb-1"><strong>Nascita:</strong></p>
+                                            <p id="nascita" class="font-italic mb-2"><strong>Nascita:</strong></p>
                                             <p id="interessi" class="font-italic mb-0"><strong>Interessi:</strong></p>
                                         </div>
                                     </div>
