@@ -76,6 +76,8 @@ html#page-profile #username::before {
 .image-wrapper.wrapper-fixed-max {
   width: 90px;
   height: 90px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 
 .image-wrapper.wrapper-fixed-min {
@@ -102,6 +104,8 @@ html#page-profile #username::before {
 .image-wrapper-small.wrapper-fixed-max {
   width: 45px;
   height: 45px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 
 .image-wrapper-small.wrapper-fixed-min {
