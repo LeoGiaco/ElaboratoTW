@@ -6,7 +6,7 @@
 <header>
     <nav class="navbar navbar-expand-md navbar-dark bg-dark">
         <div class="container-fluid justify-content-end text-end">
-            <div class="bg-light border border-light image-wrapper-small mx-2">
+            <div class="bg-light w-100 border border-light image-wrapper-small me-auto">
                 <img src="images/icon-negative.svg" alt="Icona U-niversity"?>
             </div>    
             <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
