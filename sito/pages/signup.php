@@ -7,6 +7,10 @@
     $templateParams["title"] = "Uv-Iscrizione";
     $templateParams["javascript"] = array("../templates/main_signup/signup.js");
 
+    if(isUserLoggedIn()){
+        header("location: homepage.php");
+    }
+
     $templateParams["pieces"] = array(
         // SITE_ROOT . 'templates/header/header.php',
         SITE_ROOT . 'templates/main_signup/signup.php',
