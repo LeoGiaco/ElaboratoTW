@@ -7,7 +7,7 @@
     <nav class="navbar navbar-expand-md navbar-dark bg-dark">
         <div class="container-fluid justify-content-end text-end">
             <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
-                <div class="bg-light border rounded image-wrapper me-5">
+                <div class="bg-light border rounded image-wrapper-small mx-2">
                     <img src="images/icon-negative.svg" alt="Icona U-niversity"?>
                 </div>    
                 <ul class="navbar-nav <?=$margin?>">
