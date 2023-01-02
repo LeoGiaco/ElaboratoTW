@@ -266,11 +266,11 @@ html {
         }
     }
 
-    @for $i from 1 through $nButtons {
-        &.btn-#{$i} {
-            background-color: var(--btn-bg-#{$i});
-            color: var(--btn-fg-#{$i});
-            border-color: var(--btn-fg-#{$i});
+    @mixin button($name, $bg_col, $bg_hover, $fg_col, $fg_hover) {
+        &.#{$name} {
+            background-color: $bg_col;
+            color: $fg_col;
+            border-color: $fg_col;
             
             &.btn-background {
                 background-color: white;
@@ -282,8 +282,8 @@ html {
             }
             
             &:hover {
-                background-color: var(--btn-bg-#{$i}-h);
-                color: var(--btn-fg-#{$i}-h);
+                background-color: $bg_hover;
+                color: $fg_hover;
 
                 img.btn-image {
                     filter: brightness(0) invert(1);
@@ -291,32 +291,32 @@ html {
             }
 
             &.btn-transition-up {
-                background-image: linear-gradient(to top, var(--btn-bg-#{$i}) 50%, var(--btn-bg-#{$i}-h) 50%);
+                background-image: linear-gradient(to top, $bg_col 50%, $bg_hover 50%);
                 
                 &.btn-background {
-                    background-image: linear-gradient(to top, white 50%, var(--btn-bg-#{$i}-h) 50%);
+                    background-image: linear-gradient(to top, white 50%, $bg_hover 50%);
                 }
             }
             
             &.btn-transition-down {
-                background-image: linear-gradient(to bottom, var(--btn-bg-#{$i}) 50%, var(--btn-bg-#{$i}-h) 50%);
+                background-image: linear-gradient(to bottom, $bg_col 50%, $bg_hover 50%);
                 
                 &.btn-background {
-                    background-image: linear-gradient(to bottom, white 50%, var(--btn-bg-#{$i}-h) 50%);
+                    background-image: linear-gradient(to bottom, white 50%, $bg_hover 50%);
                 }
             }
         
             &.btn-inverted {
-                background-color: var(--btn-bg-#{$i}-h);
-                color: var(--btn-fg-#{$i}-h);
+                background-color: $bg_hover;
+                color: $fg_hover;
             
                 img.btn-image {
                     filter: brightness(0) invert(1);
                 }
                 
                 &:hover {
-                    background-color: var(--btn-bg-#{$i});
-                    color: var(--btn-fg-#{$i});
+                    background-color: $bg_col;
+                    color: $fg_col;
                     
                     &.btn-background {
                         background-color: white;
@@ -332,14 +332,91 @@ html {
                 background-color: var(--transp);
 
                 @media (pointer: coarse) {
-                    color: var(--btn-fg-#{$i});
+                    color: $fg_col;
                     
                     &.btn-inverted {
-                        color: var(--btn-fg-#{$i}-h);
+                        color: $fg_hover;
                     }
                 }
             }
         }
+    }
+
+    @for $i from 1 through $nButtons {
+        @include button("btn-#{$i}", var(--btn-bg-#{$i}), var(--btn-bg-#{$i}-h), var(--btn-fg-#{$i}), var(--btn-fg-#{$i}-h))
+        // &.btn-#{$i} {
+        //     background-color: var(--btn-bg-#{$i});
+        //     color: var(--btn-fg-#{$i});
+        //     border-color: var(--btn-fg-#{$i});
+            
+        //     &.btn-background {
+        //         background-color: white;
+        //     }
+
+        //     img.btn-image {
+        //         transition: filter 0.15s linear;
+        //         filter: brightness(0);
+        //     }
+            
+        //     &:hover {
+        //         background-color: var(--btn-bg-#{$i}-h);
+        //         color: var(--btn-fg-#{$i}-h);
+
+        //         img.btn-image {
+        //             filter: brightness(0) invert(1);
+        //         }
+        //     }
+
+        //     &.btn-transition-up {
+        //         background-image: linear-gradient(to top, var(--btn-bg-#{$i}) 50%, var(--btn-bg-#{$i}-h) 50%);
+                
+        //         &.btn-background {
+        //             background-image: linear-gradient(to top, white 50%, var(--btn-bg-#{$i}-h) 50%);
+        //         }
+        //     }
+            
+        //     &.btn-transition-down {
+        //         background-image: linear-gradient(to bottom, var(--btn-bg-#{$i}) 50%, var(--btn-bg-#{$i}-h) 50%);
+                
+        //         &.btn-background {
+        //             background-image: linear-gradient(to bottom, white 50%, var(--btn-bg-#{$i}-h) 50%);
+        //         }
+        //     }
+        
+        //     &.btn-inverted {
+        //         background-color: var(--btn-bg-#{$i}-h);
+        //         color: var(--btn-fg-#{$i}-h);
+            
+        //         img.btn-image {
+        //             filter: brightness(0) invert(1);
+        //         }
+                
+        //         &:hover {
+        //             background-color: var(--btn-bg-#{$i});
+        //             color: var(--btn-fg-#{$i});
+                    
+        //             &.btn-background {
+        //                 background-color: white;
+        //             }
+                    
+        //             img.btn-image {
+        //                 filter: brightness(0);
+        //             }
+        //         }
+        //     }
+            
+        //     &.btn-transition-up, &.btn-transition-down {
+        //         background-color: var(--transp);
+
+        //         @media (pointer: coarse) {
+        //             color: var(--btn-fg-#{$i});
+                    
+        //             &.btn-inverted {
+        //                 color: var(--btn-fg-#{$i}-h);
+        //             }
+        //         }
+        //     }
+        // }
     }
 }
 
