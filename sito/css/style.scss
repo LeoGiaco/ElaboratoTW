@@ -79,6 +79,7 @@ html {
     min-height: 60px;
     max-width: 90px;
     max-height: 90px;
+    box-sizing: content-box;
 }
 
 .image-wrapper-small {
@@ -88,6 +89,7 @@ html {
     min-height: 30px;
     max-width: 45px;
     max-height: 45px;
+    box-sizing: content-box;
 }
 
 .image-wrapper, .image-wrapper-small {

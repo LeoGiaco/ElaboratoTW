@@ -69,6 +69,8 @@ html#page-profile #username::before {
   min-height: 60px;
   max-width: 90px;
   max-height: 90px;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
 }
 
 .image-wrapper-small {
@@ -78,6 +80,8 @@ html#page-profile #username::before {
   min-height: 30px;
   max-width: 45px;
   max-height: 45px;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
 }
 
 .image-wrapper img, .image-wrapper-small img {
