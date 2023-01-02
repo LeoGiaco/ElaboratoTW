@@ -26,11 +26,11 @@ html#page-login main, html#page-signup main, html#page-homepage main, html#page-
   background-color: var(--col-lighter);
 }
 
-html#page-login, html#page-login body, html#page-settings, html#page-settings body, html#page-search, html#page-search body {
+html#page-login, html#page-login body, html#page-settings, html#page-settings body, html#page-search, html#page-search body, html#page-notifications, html#page-notifications body {
   height: 100%;
 }
 
-html#page-login body, html#page-settings body, html#page-search body {
+html#page-login body, html#page-settings body, html#page-search body, html#page-notifications body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -40,7 +40,7 @@ html#page-login body, html#page-settings body, html#page-search body {
           flex-direction: column;
 }
 
-html#page-login main, html#page-settings main, html#page-search main {
+html#page-login main, html#page-settings main, html#page-search main, html#page-notifications main {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
