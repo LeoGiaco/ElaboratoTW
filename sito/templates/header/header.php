@@ -1,12 +1,13 @@
 <?php
     $logged = isset($_SESSION["user"]);
+    $margin = $logged ? "me-auto" : "ms-auto";
 ?>
 
 <header>
     <nav class="navbar navbar-expand-md navbar-dark bg-dark">
         <div class="container-fluid justify-content-end text-end">
             <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
-                <ul class="navbar-nav me-auto">
+                <ul class="navbar-nav <?=$margin?>">
                     <?php if ($logged): ?>
                         <li class="nav-item">
                             <a class="nav-link" href="homepage.php">Home</a>
