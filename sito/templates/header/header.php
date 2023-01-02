@@ -7,7 +7,7 @@
     <nav class="navbar navbar-expand-md navbar-dark bg-dark">
         <div class="container-fluid justify-content-end text-end">
             <?php if (!$logged): ?>
-                <div class="bg-light border border-light image-wrapper-small ms-2 me-auto">
+                <div class="bg-light border border-light image-wrapper-small wrapper-fixed-max ms-2 me-auto">
                     <img src="images/icon-negative.svg" alt="Icona U-niversity"?>
                 </div>
             <?php endif; ?>
