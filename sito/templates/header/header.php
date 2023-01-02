@@ -5,10 +5,12 @@
 
 <header>
     <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-        <div class="bg-light border border-light image-wrapper-small ms-2 me-auto">
-            <img src="images/icon-negative.svg" alt="Icona U-niversity"?>
-        </div>    
         <div class="container-fluid justify-content-end text-end">
+            <?php if (!$logged): ?>
+                <div class="bg-light border border-light image-wrapper-small ms-2 me-auto">
+                    <img src="images/icon-negative.svg" alt="Icona U-niversity"?>
+                </div>
+            <?php endif; ?>
             <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
                 <ul class="navbar-nav <?=$margin?>">
                     <?php if ($logged): ?>
