@@ -7,17 +7,24 @@
         <div class="container-fluid justify-content-end text-end">
             <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
                 <ul class="navbar-nav me-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="homepage.php">Home</a>
-                    </li>
                     <?php if ($logged): ?>
+                        <li class="nav-item">
+                            <a class="nav-link" href="homepage.php">Home</a>
+                        </li>
                         <li class="nav-item">
                             <a id="navNotifiche" class="nav-link" href="notifications.php">Notifiche</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="profile.php?id=<?= $_SESSION["user"]; ?>">Profilo</a>
                         </li>
-                        <?php endif; ?>
+                    <?php else: ?>
+                        <li class="nav-item">
+                            <a class="nav-link" href="login.php">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="signup.php">Signup</a>
+                        </li>
+                    <?php endif; ?>
                     </ul>
                 </div>
                 <div class="md-auto order-0">
