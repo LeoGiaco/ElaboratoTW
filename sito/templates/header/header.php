@@ -9,7 +9,7 @@
             <div class="bg-light border border-light image-wrapper-small wrapper-fixed-max ms-2 me-auto">
                 <img src="images/icon-negative.svg" alt="Icona U-niversity"?>
             </div>
-            <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+            <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2 ms-md-2">
                 <ul class="navbar-nav <?=$margin?>">
                     <?php if ($logged): ?>
                         <li class="nav-item">
