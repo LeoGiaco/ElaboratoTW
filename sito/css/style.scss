@@ -101,7 +101,9 @@ html {
 }
 
 @include image-wrapper("image-wrapper", 10vw, 10vw, 60px, 60px, 90px, 90px);
+@include image-wrapper("image-wrapper-medium", 7.5vw, 7.5vw, 45px, 45px, 75px, 75px);
 @include image-wrapper("image-wrapper-small", 5vw, 5vw, 30px, 30px, 45px, 45px);
+@include image-wrapper("image-wrapper-tiny", 3.5vw, 3.5vw, 20px, 20px, 35px, 35px);
 
 // .image-wrapper {
 //     width: 10vw;

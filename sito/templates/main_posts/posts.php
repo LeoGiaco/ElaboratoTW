@@ -7,7 +7,7 @@
                         <h1 class="text-center">Bacheca</h1>
                     </header>
                     <button class="btn btn-1 btn-inverted rounded-circle p-1" id="btnTop">
-                        <div class="d-flex p-1 image-wrapper-small">
+                        <div class="d-flex p-1 image-wrapper-tiny">
                             <img class="btn-image" src="images/chevron-up.svg" alt="Torna in cima alla pagina" class="" />
                         </div>
                     </button>
@@ -22,7 +22,7 @@
                                         <div id="alert" class="my-2" role="alert"></div>
                                         <div class="card-body">
                                             <div class="d-flex flex-start align-items-center">
-                                                <div class="image-wrapper me-2">
+                                                <div class="image-wrapper-medium me-2">
                                                     <img id="userImage" class="rounded-circle shadow-1-strong" src="images/profile_img/profilo.jpg" alt="avatar user" width="60" height="60" />
                                                 </div>
                                                 <div>
