@@ -1,8 +1,8 @@
-<main class="mt-5">
+<main>
     <div class="container-fluid p-0 overflow-hidden">
         <div class="row my-4">
             <div class="col-12 col-md-12">
-                <section>
+                <section class="mt-5">
                     <header>
                         <h1 class="text-center">Bacheca</h1>
                     </header>

@@ -1,6 +1,6 @@
-<main class="mt-5">
+<main>
     <input id="textSearch" type="hidden" name="search" value="<?php if(isset($_GET["search"])){echo $_GET["search"];}?>" />
-    <section class="container-fluid p-0 overflow-hidden">
+    <section class="container-fluid p-0 overflow-hidden mt-5">
         <header>
             <h1 class="text-center">Ricerca</h1>
         </header>

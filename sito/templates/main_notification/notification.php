@@ -1,5 +1,5 @@
-<main class="mt-5">
-    <section class="container-fluid p-0 overflow-hidden">
+<main>
+    <section class="container-fluid p-0 overflow-hidden mt-5">
         <header>
             <h1 class="text-center">Notifiche</h1>
         </header>

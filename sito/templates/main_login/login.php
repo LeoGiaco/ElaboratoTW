@@ -1,6 +1,6 @@
-<main class="mt-5">
+<main>
     <input id="login" type="hidden" name="login" value="<?php if(isset($_GET["iscr"])){echo $_GET["iscr"];} ?>" />
-    <div class="container-fluid p-0 overflow-hidden">
+    <div class="container-fluid p-0 overflow-hidden mt-5">
         <header>
             <div class="row">
                 <div class="mt-2 col-12 col-lg-6 d-flex justify-content-center d-lg-block justify-content-lg-start" id="iscrivitiImg">
