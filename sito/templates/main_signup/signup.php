@@ -1,6 +1,6 @@
 <main>
     <div class="container-fluid p-0 overflow-hidden">
-        <header class="mt-5">
+        <header>
             <div class="row">
                 <div class="mt-2 col-12 col-lg-6 d-flex justify-content-center d-lg-block justify-content-lg-start" id="iscrivitiImg">
                     <img src="images/icon2x.svg" alt="Logo sito"/>
