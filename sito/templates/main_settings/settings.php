@@ -1,4 +1,4 @@
-<main class="mt-5">
+<main class="big-margin">
     <header>
     <h1 class="text-center">Impostazioni</h1>
     </header>

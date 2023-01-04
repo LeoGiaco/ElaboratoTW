@@ -1,4 +1,4 @@
-<main class="mt-5">
+<main class="big-margin">
     <div class="container">
         <div class="row d-flex justify-content-center py-4">
             <div class="col-11 col-lg-10">

@@ -22,7 +22,7 @@
   --btn-bg-4-h: var(--btn-fg-4);
 }
 
-html#page-login main, html#page-signup main, html#page-homepage main, html#page-settings main, html#page-notifications main, html#page-profile main, html#page-search main, html#page-privacy main {
+html#page-login body, html#page-signup body, html#page-homepage body, html#page-settings body, html#page-notifications body, html#page-profile body, html#page-search body, html#page-privacy body {
   background-color: var(--col-lighter);
 }
 
@@ -179,6 +179,10 @@ body > header {
 .image-wrapper-tiny img {
   width: 100%;
   height: 100%;
+}
+
+.big-margin {
+  margin-top: 6rem !important;
 }
 
 .user-stats {

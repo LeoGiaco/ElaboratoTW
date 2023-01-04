@@ -30,7 +30,7 @@ $nButtons: 4;
 
 html {
     &#page-login, &#page-signup, &#page-homepage, &#page-settings, &#page-notifications, &#page-profile, &#page-search, &#page-privacy {
-        main {
+        body {
             background-color: var(--col-lighter);
         }
     }
@@ -150,6 +150,10 @@ body {
 //         height: 100%;
 //     }
 // }
+
+.big-margin {
+    margin-top: 6rem !important;
+}
 
 .user-stats {
     font-family: 'Lucida Console', 'Courier New', Courier, monospace;

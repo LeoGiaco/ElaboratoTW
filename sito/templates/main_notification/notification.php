@@ -1,4 +1,4 @@
-<main class="mt-5">
+<main class="big-margin">
     <section class="container-fluid p-0 overflow-hidden">
         <header>
             <h1 class="text-center">Notifiche</h1>
