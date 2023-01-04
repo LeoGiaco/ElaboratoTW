@@ -17,7 +17,7 @@
                 </div>
             </div>
         </header>   
-        <div class="row mt-4 mb-5">
+        <div class="row my-4">
             <div class="col-1 col-md-3"></div>
             <div class="col-10 col-md-6 text-center">
                 <div id="alert" role="alert"></div>

@@ -1,8 +1,8 @@
-<main>
+<main class="mt-5">
     <div class="container">
         <div class="row d-flex justify-content-center py-4">
             <div class="col-11 col-lg-10">
-                <section class="mt-5">
+                <section>
                     <header>
                         <h1 class="text-center">Informativa sulla Privacy</h1>
                     </header>

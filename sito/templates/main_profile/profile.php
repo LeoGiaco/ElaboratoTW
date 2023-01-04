@@ -1,9 +1,9 @@
-<main>
+<main class="mt-5">
     <div class="container-fluid p-0 overflow-hidden">
         <header>
             <h1 class="text-center">Profilo Utente</h1>
         </header>
-        <section class="mt-5 mb-4">
+        <section class="my-4">
             <input id="user" type="hidden" value="<?php echo $_GET["id"]; ?>"/>
             <div class="row">
                 <div class="col-md-1"></div>

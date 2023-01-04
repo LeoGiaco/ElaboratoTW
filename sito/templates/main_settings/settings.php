@@ -1,4 +1,4 @@
-<main>
+<main class="mt-5">
     <header>
     <h1 class="text-center">Impostazioni</h1>
     </header>
@@ -29,7 +29,7 @@
                     </div>
                 </div>
             </aside>
-            <section class="col-md-8 mt-5">
+            <section class="col-md-8">
                 <div class="card">
                     <header class="card-header border-bottom mb-3 d-flex d-md-none btnmenu">
                         <nav class="nav flex-row nav-pills nav-gap-y-1">
