@@ -7,7 +7,7 @@
     <nav class="navbar navbar-expand-md navbar-dark bg-dark">
         <div class="container-fluid justify-content-end text-end">
             <div class="bg-light border border-light image-wrapper-small wrapper-fixed-max ms-2 me-auto">
-                <img src="images/icon-negative.svg" alt="Icona U-niversity"?>
+                <img src="images/icon-negative.svg" alt="Icona U-niversity">
             </div>
             <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2 ms-md-2">
                 <ul class="navbar-nav <?=$margin?>">
@@ -39,7 +39,9 @@
             <?php if ($logged): ?>
                 <div class="navbar-collapse collapse order-4 order-md-0 dual-collapse2">
                     <form id="form_search" class="d-flex justify-content-end" >
-                        <input type="search" name="search" placeholder="Cerca nome utente" aria-label="Search"/>
+                        <label for="cerca" class="d-flex align-middle text-white"><span class="align-self-center mx-1">Cerca:</span></label>
+                            <input id="cerca" size="16" type="search" name="search" placeholder="Cerca nome utente" aria-label="Search"/>
+                        
                         <button class="btn btn-3" type="submit">Cerca</button>
                     </form>
                 </div>
@@ -49,7 +51,7 @@
                             <a class="nav-link" href="settings.php">Impostazioni</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" type="button">Esci</a>
+                            <a id="esci" class="nav-link" href="#">Esci</a>
                         </li>
                     </ul>
                 </div>

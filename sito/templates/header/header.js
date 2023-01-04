@@ -1,6 +1,7 @@
 $(document).ready(function() {
     checkNewNotifications();
-    $('a[type="button"]').click(function() {
+    $('#esci').click(function(event) {
+        event.preventDefault();
         const datas = new FormData(); 
         datas.append("request", "exit");
         $.ajax({

@@ -29,7 +29,7 @@
                     </div>
                 </div>
             </aside>
-            <section class="col-md-8">
+            <div class="col-md-8">
                 <div class="card">
                     <header class="card-header border-bottom mb-3 d-flex d-md-none btnmenu">
                         <nav class="nav flex-row nav-pills nav-gap-y-1">
@@ -63,11 +63,9 @@
                                 <div class="form-group">
                                     <figure class="text-center">
                                         <figcaption>Immagine attuale di profilo</figcaption>
-                                        <img id="imgUtente" src="" alt="Immagine profilo utente" width="30%" height="30%" class="img-fluid img-thumbnail mx-2 my-2" />
+                                        <img id="imgUtente" class="w-50 h-50" src="images/profile_img/profilo.jpg" alt="Immagine profilo utente" class="img-fluid img-thumbnail mx-2 my-2" />
                                     </figure>
-                                    <label class="form-label">Seleziona nuova immagine:
-                                        <input id="image" class="form-control form-control-sm" type="file" name="immagine" accept="image/*"/>
-                                    </label>
+                                    <label class="form-label">Seleziona nuova immagine:<input id="image" class="form-control form-control-sm" type="file" name="immagine" accept="image/*"/></label>
                                 </div>
                                 <button type="button" class="btn btn-1 btn-inverted">Cambia immagine</button>
                             </form>
@@ -95,18 +93,19 @@
                             </header>
                             <form id="frmSecurity" class="mb-3">
                                 <div class="form-group">
-                                    <label class="d-block my-2">Modifica delle credenziali
-                                        <input type="password" class="form-control my-1" name="old" placeholder="Inserisci la vecchia password" autocomplete="off" require />
-                                        <input type="password" class="form-control my-2" name="new" placeholder="Nuova password" autocomplete="off" require />
-                                        <input type="password" class="form-control my-1" name="newk" placeholder="Conferma la nuova password" autocomplete="off" require />
-                                    </label>
+                                        <label for="nuova"><span>Vecchia password:</span></label>
+                                        <input id="nuova" type="password" class="form-control my-1" name="old" placeholder="Inserisci la vecchia password" autocomplete="off" required />
+                                        <label for="vecchia"><span>Nuova password:</span></label>
+                                        <input id="vecchia" type="password" class="form-control my-2" name="new" placeholder="Nuova password" autocomplete="off" required />
+                                        <label for="reinserisci"><span>Conferma nuova password:</span></label>
+                                        <input id="reinserisci" type="password" class="form-control my-1" name="newk" placeholder="Conferma la nuova password" autocomplete="off" required />
                                 </div>
                                 <button class="btn btn-success" type="button">Conferma</button>
                             </form>
                         </div>
                     </section>
                 </div>
-            </section>
+            </div>
         </div>
     </div>
 </main>

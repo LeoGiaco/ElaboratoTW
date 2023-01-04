@@ -66,7 +66,7 @@
                                             <label class="form-check-label" for="uomo">
                                                 <input id="uomo" class="form-check-input mx-1" type="radio" value="M"  name="genere"/>Uomo
                                             </label>
-                                            <label class="form-check-label" for="donna" class="mx-1">
+                                            <label class="mx-1 form-check-label" for="donna">
                                                 <input id="donna" class="form-check-input mx-1" type="radio" value="F" name="genere"/>Donna
                                             </label>
                                             <label class="form-check-label" for="altro">

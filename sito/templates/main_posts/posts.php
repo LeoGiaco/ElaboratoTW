@@ -6,11 +6,9 @@
                     <header>
                         <h1 class="text-center">Bacheca</h1>
                     </header>
-                    <button class="btn btn-1 btn-inverted rounded-circle p-1" id="btnTop">
-                        <div class="d-flex p-1 image-wrapper-tiny">
-                            <img class="btn-image" src="images/chevron-up.svg" alt="Torna in cima alla pagina" class="" />
-                        </div>
-                    </button>
+                    <a href="#" class="d-flex btn btn-1 btn-inverted rounded-circle p-2 image-wrapper-tiny" id="btnTop">
+                        <img class="btn-image" src="images/chevron-up.svg" alt="Torna in cima alla pagina"/>
+                    </a>
                     <div class="container">
                         <div class="row d-flex justify-content-center">
                             <div class="col-md-12 col-lg-10 col-xl-8">

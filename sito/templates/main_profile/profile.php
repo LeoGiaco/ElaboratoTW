@@ -1,9 +1,9 @@
 <main class="big-margin">
     <div class="container-fluid p-0 overflow-hidden">
-        <header>
-            <h1 class="text-center">Profilo Utente</h1>
-        </header>
         <section>
+            <header>
+                <h1 class="text-center">Profilo Utente</h1>
+            </header>
             <input id="user" type="hidden" value="<?php echo $_GET["id"]; ?>"/>
             <div class="row">
                 <div class="col-md-1"></div>
@@ -12,7 +12,7 @@
                         <div class="text-white bg-dark">
                             <div class="row">
                                 <div class="col-3 col-md-2">
-                                    <img id="imgUtente" src="" alt="Immagine profilo utente" width="100%" height="100%" class="img-fluid img-thumbnail mx-2 my-2"/>
+                                    <img id="imgUtente" src="" alt="Immagine profilo utente" class="img-fluid img-thumbnail mx-2 my-2"/>
                                 </div>
                                 <div class="col-6 col-md-7 d-flex align-items-start flex-column">
                                     <p id="nominativo" class="my-2 h2">Nome e cognome</p>
