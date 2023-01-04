@@ -3,7 +3,7 @@
         <header>
             <h1 class="text-center">Profilo Utente</h1>
         </header>
-        <section class="my-4">
+        <section>
             <input id="user" type="hidden" value="<?php echo $_GET["id"]; ?>"/>
             <div class="row">
                 <div class="col-md-1"></div>
