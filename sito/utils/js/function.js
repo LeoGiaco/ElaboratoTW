@@ -137,6 +137,7 @@ function visualizzaPost(numeroPost, aggiuntaPost=false, utente="", checked=false
         contentType: false
     })
     .done(function(data,success,response) {
+        console.log(data);
         const dati=data["posts"];
         postsLoaded+=data["posts"].length;
         let row = '';
@@ -165,7 +166,7 @@ function visualizzaPost(numeroPost, aggiuntaPost=false, utente="", checked=false
                     <div class="small d-flex justify-content-start">
                         <button id="btnLike${dati[i]["ID"]}" class="d-flex align-items-center me-3 like-button btn btn-3${temp[2] == 1 ? " btn-inverted" : ""} btn-transition-up btn-sm" data-type="like" data-numero="${dati[i]["ID"]}" >Like: ${like}</button>
                         <button id="btnDislike${dati[i]["ID"]}" class="d-flex align-items-center me-3 dislike-button btn btn-4${temp[2] == -1 ? " btn-inverted" : ""} btn-transition-down btn-sm" data-type="dislike" data-numero="${dati[i]["ID"]}">Dislike: ${dislike}</button>
-                        <button class="d-flex align-items-center me-3 btn btn-1 btn-sm" data-type="commento" data-numero="${dati[i]["ID"]}">Commento</button>
+                        <button class="d-flex align-items-center me-3 btn btn-1 btn-sm" data-type="commento" data-numero="${dati[i]["ID"]}">Commenti: ${dati[i]["commenti"]}</button>
                     </div>
                 </div>
             </div>
@@ -232,6 +233,7 @@ function gestioneBottoni(button){
                     $("#inpCommento"+numero).val("");
                     commentiPost(numero);
                     addNotification("commento", post.Utente, post.Titolo, datas.get("testo"));
+                    $('button[data-type="commento"]').text("Commenti: "+data.commenti);
                 })
                 .fail(function(response) {
                     console.log(response);

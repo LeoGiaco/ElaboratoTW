@@ -163,7 +163,7 @@
         }
 
         public function getUserInfo($username){
-            $query = 'SELECT * FROM Utente u JOIN Preferenza p ON u.Username = p.Username WHERE u.Username=?';
+            $query = 'SELECT u.*, p.InterNome FROM Utente u LEFT JOIN Preferenza p ON u.Username = p.Username WHERE u.Username=?';
             $stmt = $this->db->prepare($query);
             $stmt->bind_param('s', $username);
             $stmt->execute();
@@ -195,6 +195,14 @@
 
         public function getReactions($id){
             $query = "SELECT p.Titolo, p.Utente, PostID, SUM(CASE WHEN `Like` = 1 THEN 1 ELSE 0 END) AS NumLike, SUM(CASE WHEN Dislike = 1 THEN 1 ELSE 0 END) AS NumDislike FROM Reazione r JOIN Post p ON r.PostID=p.ID  WHERE PostId = ? GROUP BY PostId";
+            $stmt = $this->db->prepare($query);
+            $stmt->bind_param("s", $id);
+            $stmt->execute();
+            return $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
+        }
+        
+        public function getNumberComment($id){
+            $query = "SELECT COUNT(*) AS commenti FROM Commento WHERE Post=?";
             $stmt = $this->db->prepare($query);
             $stmt->bind_param("s", $id);
             $stmt->execute();

@@ -34,6 +34,7 @@ if(isset($_POST["request"])){
                     }
                     $posts[$i]['Data']=dataoraIT($posts[$i]['Data']);
                     $posts[$i]["reactions"]=$dbh->getReactions($posts[$i]["ID"]);
+                    $posts[$i]["commenti"]=$dbh->getNumberComment($posts[$i]["ID"])[0]["commenti"];
                 }
                 $result["posts"] = $posts;
             }
@@ -42,6 +43,7 @@ if(isset($_POST["request"])){
             if(isset($_POST["nPost"]) && isset($_POST["testo"]) && isUserLoggedIn()){
                 $dbh->addComment($_SESSION['user'], $_POST["nPost"], $_POST["testo"], today());
                 $result["dati"] = $dbh->getSelectedPost($_POST["nPost"]);
+                $result["commenti"]=$dbh->getNumberComment($_POST["nPost"])[0]["commenti"];
             }
             break;
         case 'aggiungiReaction':
