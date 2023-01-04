@@ -1,4 +1,4 @@
-<main>
+<main class="mt-5">
     <header>
     <h1 class="text-center">Impostazioni</h1>
     </header>

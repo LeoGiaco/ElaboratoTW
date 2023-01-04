@@ -62,6 +62,12 @@ html#page-profile #username::before {
   content: "- ";
 }
 
+body header {
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+
 .image-wrapper {
   width: 10vw;
   height: 10vw;

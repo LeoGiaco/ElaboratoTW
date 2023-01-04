@@ -1,4 +1,4 @@
-<main>
+<main class="mt-5">
     <div class="container-fluid p-0 overflow-hidden">
         <header>
             <h1 class="text-center">Profilo Utente</h1>

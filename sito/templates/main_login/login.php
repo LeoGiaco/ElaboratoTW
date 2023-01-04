@@ -1,4 +1,4 @@
-<main>
+<main class="mt-5">
     <input id="login" type="hidden" name="login" value="<?php if(isset($_GET["iscr"])){echo $_GET["iscr"];} ?>" />
     <div class="container-fluid p-0 overflow-hidden">
         <header>

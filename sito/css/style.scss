@@ -72,6 +72,14 @@ html {
     }
 }
 
+body {
+    header {
+        position: fixed;
+        width: 100%;
+        z-index: 1;
+    }
+}
+
 @mixin image-wrapper($wrapper_name, $w, $h, $minw, $minh, $maxw, $maxh) {
     .#{$wrapper-name} {
         width: $w;
