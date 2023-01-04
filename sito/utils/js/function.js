@@ -137,7 +137,6 @@ function visualizzaPost(numeroPost, aggiuntaPost=false, utente="", checked=false
         contentType: false
     })
     .done(function(data,success,response) {
-        console.log(data);
         const dati=data["posts"];
         postsLoaded+=data["posts"].length;
         let row = '';
