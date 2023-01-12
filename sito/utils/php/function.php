@@ -82,23 +82,23 @@
             if(!empty($file)){
                 if (!isset($file['error']) || is_array($file['error'])
                 ) {
-                    throw new RuntimeException('Invalid parameters.');
+                    throw new RuntimeException('Parametri non validi!');
                 }
         
                 switch ($file['error']) {
                     case UPLOAD_ERR_OK:
                         break;
                     case UPLOAD_ERR_NO_FILE:
-                        throw new RuntimeException('No file sent.');
+                        throw new RuntimeException('Nessun file inviato.');
                     case UPLOAD_ERR_INI_SIZE:
                     case UPLOAD_ERR_FORM_SIZE:
-                        throw new RuntimeException('Exceeded filesize limit.');
+                        throw new RuntimeException('File troppo pesante.');
                     default:
-                        throw new RuntimeException('Unknown errors.');
+                        throw new RuntimeException('Errore sconosciuto.');
                 }
         
                 if ($file['size'] > 10*1024*1024) {
-                    throw new RuntimeException('Exceeded filesize limit.: '.$file['size']);
+                    throw new RuntimeException('File troppo pesante: '.$file['size']);
                 }
         
                 $finfo = new finfo(FILEINFO_MIME_TYPE);
@@ -111,7 +111,7 @@
                     ),
                     true
                 )) {
-                    throw new RuntimeException('Invalid file format.');
+                    throw new RuntimeException('Formato file non valido.');
                 }
         
                 $file_name=uniqid();
@@ -122,7 +122,7 @@
                         $ext
                     )
                 )) {
-                    throw new RuntimeException('Failed to move uploaded file.');
+                    throw new RuntimeException('Errore nel caricamento del file.');
                 }
                 $file_name .= ".".$ext;
             } else {
